@@ -1,0 +1,1183 @@
+<!doctype html>
+      <html>
+      <head>
+        <meta charset="utf-8"/>
+        <title>运算、判断、条件</title>
+        
+        <style>
+          html, body { margin: 0; padding: 0; background-color: #ffffff; }
+          .markdown-body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px; }
+          @media (max-width: 767px) { .markdown-body { padding: 15px; } }
+          .markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: system-ui, -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li, .markdown-body li > ul {
+  margin-top: .25em;
+}
+
+.markdown-body ul li.task-list-item {
+  position: relative;
+  appearance: none;
+  list-style: none;
+}
+
+.markdown-body ul li.task-list-item.checked {
+  text-decoration: line-through;
+  color: #bdbdbd;
+}
+
+.markdown-body ul li.task-list-item::before {
+  content: '';
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+  position: absolute;
+  left: -28px;
+  top: 4px;
+  border-radius: 2px;
+  border: 2px solid #757575;
+}
+
+.markdown-body ul li.task-list-item.checked::before {
+  background-color: #1976d2;
+  border-color: #1976d2;
+}
+
+.markdown-body ul li.task-list-item.checked::after {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 5px;
+  width: 4px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+          .ace-tm{ background: transparent!important; }.ace_static_highlight{ font-size: unset!important; }.ace_static_highlight {font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', 'Droid Sans Mono', monospace;font-size: 12px;white-space: pre-wrap}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;contain: none;}.ace_static_highlight.ace_show_gutter .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line { position: relative; }.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+        </style>
+      </head>
+      <body>
+        <article class="markdown-body">
+          <br/>
+<blockquote>
+<p><strong>判断语句、条件语句、错误捕捉语句以及关键字</strong></p>
+</blockquote>
+<h3>1、<a href="https://www.w3school.com.cn/js/js_operators.asp">运算符</a></h3>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword ace_operator'>=</span>   <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>赋</span><span class='ace_cjk' style='width:NaNpx'>值</span></span>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>==</span>  <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>大</span><span class='ace_cjk' style='width:NaNpx'>小</span></span>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>===</span> <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>全</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>仅</span><span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>大</span><span class='ace_cjk' style='width:NaNpx'>小</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>类</span><span class='ace_cjk' style='width:NaNpx'>型</span></span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>!</span>   <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>非</span></span>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>!=</span>  <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span></span>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>!==</span> <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>全</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span></span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>&#38;&#38;</span>  <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>与</span></span>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>||</span>  <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>或</span></span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>>=</span>  <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>大</span><span class='ace_cjk' style='width:NaNpx'>于</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span></span>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>&#60;=</span>  <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>小</span><span class='ace_cjk' style='width:NaNpx'>于</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span></span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_identifier'>a</span><span class='ace_keyword ace_operator'>++</span>  <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>累</span><span class='ace_cjk' style='width:NaNpx'>加</span>1<span class='ace_cjk' style='width:NaNpx'>，</span>a</span><span class='ace_keyword ace_operator'>++</span><span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>相</span><span class='ace_cjk' style='width:NaNpx'>当</span><span class='ace_cjk' style='width:NaNpx'>于</span>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>先</span><span class='ace_cjk' style='width:NaNpx'>得</span><span class='ace_cjk' style='width:NaNpx'>出</span><span class='ace_cjk' style='width:NaNpx'>值</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>再</span><span class='ace_cjk' style='width:NaNpx'>运</span><span class='ace_cjk' style='width:NaNpx'>算</span></span>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>++</span><span class='ace_identifier'>a</span>  <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>累</span><span class='ace_cjk' style='width:NaNpx'>加</span>1<span class='ace_cjk' style='width:NaNpx'>，</span></span><span class='ace_keyword ace_operator'>++</span><span class='ace_identifier'>a<span class='ace_cjk' style='width:NaNpx'>相</span><span class='ace_cjk' style='width:NaNpx'>当</span><span class='ace_cjk' style='width:NaNpx'>于</span>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>先</span><span class='ace_cjk' style='width:NaNpx'>运</span><span class='ace_cjk' style='width:NaNpx'>算</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>再</span><span class='ace_cjk' style='width:NaNpx'>得</span><span class='ace_cjk' style='width:NaNpx'>出</span><span class='ace_cjk' style='width:NaNpx'>值</span></span>
+</div><div class='ace_line'><span class='ace_identifier'>a</span><span class='ace_keyword ace_operator'>+=</span>  <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>累</span><span class='ace_cjk' style='width:NaNpx'>加</span><span class='ace_cjk' style='width:NaNpx'>自</span><span class='ace_cjk' style='width:NaNpx'>身</span><span class='ace_cjk' style='width:NaNpx'>，</span>a</span><span class='ace_keyword ace_operator'>+=</span><span class='ace_constant ace_numeric'>2</span><span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>相</span><span class='ace_cjk' style='width:NaNpx'>当</span><span class='ace_cjk' style='width:NaNpx'>于</span>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_constant ace_numeric'>2</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>--</span>  <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>累</span><span class='ace_cjk' style='width:NaNpx'>减</span>1</span>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>-=</span>  <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>累</span><span class='ace_cjk' style='width:NaNpx'>减</span><span class='ace_cjk' style='width:NaNpx'>自</span><span class='ace_cjk' style='width:NaNpx'>身</span></span>
+</div></div></div></code></pre>
+<h4>avaScript 赋值运算符</h4>
+<p>{% spoiler 点击显/隐内容 %}</p>
+<blockquote>
+<p><strong>赋值运算符向 JavaScript 变量赋值。</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">例子</th>
+<th style="text-align:left">等同于</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">=</td>
+<td style="text-align:left">x = y</td>
+<td style="text-align:left">x = y</td>
+</tr>
+<tr>
+<td style="text-align:left">+=</td>
+<td style="text-align:left">x += y</td>
+<td style="text-align:left">x = x + y</td>
+</tr>
+<tr>
+<td style="text-align:left">-=</td>
+<td style="text-align:left">x -= y</td>
+<td style="text-align:left">x = x - y</td>
+</tr>
+<tr>
+<td style="text-align:left">*=</td>
+<td style="text-align:left">x *= y</td>
+<td style="text-align:left">x = x * y</td>
+</tr>
+<tr>
+<td style="text-align:left">/=</td>
+<td style="text-align:left">x /= y</td>
+<td style="text-align:left">x = x / y</td>
+</tr>
+<tr>
+<td style="text-align:left">%=</td>
+<td style="text-align:left">x %= y</td>
+<td style="text-align:left">x = x % y</td>
+</tr>
+</tbody>
+</table>
+<p>{% endspoiler %}</p>
+<blockquote>
+<p>加法<strong>赋值</strong>运算符**（+=）<strong>向变量</strong>添加**一个值。</p>
+</blockquote>
+<h5>赋值</h5>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>全</span><span class='ace_cjk' style='width:NaNpx'>写</span><span class='ace_cjk' style='width:NaNpx'>法</span><span class='ace_cjk' style='width:NaNpx'>（</span><span class='ace_cjk' style='width:NaNpx'>老</span><span class='ace_cjk' style='width:NaNpx'>实</span><span class='ace_cjk' style='width:NaNpx'>人</span><span class='ace_cjk' style='width:NaNpx'>写</span><span class='ace_cjk' style='width:NaNpx'>法</span><span class='ace_cjk' style='width:NaNpx'>）</span></span>
+</div><div class='ace_line'><span class='ace_identifier'>d</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>d</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>简</span><span class='ace_cjk' style='width:NaNpx'>写</span><span class='ace_cjk' style='width:NaNpx'>法</span><span class='ace_cjk' style='width:NaNpx'>（</span><span class='ace_cjk' style='width:NaNpx'>累</span><span class='ace_cjk' style='width:NaNpx'>加</span><span class='ace_cjk' style='width:NaNpx'>）</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>d</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span>
+</div><div class='ace_line'><span class='ace_identifier'>d</span> <span class='ace_keyword ace_operator'>+=</span> <span class='ace_constant ace_numeric'>4</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>d</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//5</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>简</span><span class='ace_cjk' style='width:NaNpx'>写</span><span class='ace_cjk' style='width:NaNpx'>法</span><span class='ace_cjk' style='width:NaNpx'>（</span><span class='ace_cjk' style='width:NaNpx'>累</span><span class='ace_cjk' style='width:NaNpx'>减</span><span class='ace_cjk' style='width:NaNpx'>）</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>d</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span>
+</div><div class='ace_line'><span class='ace_identifier'>d</span> <span class='ace_keyword ace_operator'>-=</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>d</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//0</span>
+</div></div></div></code></pre>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>d</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>8</span>
+</div><div class='ace_line'><span class='ace_identifier'>d</span> <span class='ace_keyword ace_operator'>+=</span> <span class='ace_constant ace_numeric'>4</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>d</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//12 =8+4    </span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>d</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>8</span>
+</div><div class='ace_line'><span class='ace_identifier'>d</span> <span class='ace_keyword ace_operator'>-=</span> <span class='ace_constant ace_numeric'>4</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>d</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//4 =8-4</span>
+</div></div></div></code></pre>
+<h4>逻辑【与】</h4>
+<blockquote>
+<p>表达式1 <strong>&amp;&amp;</strong> 表达2</p>
+</blockquote>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'>// <span class='ace_cjk' style='width:NaNpx'>如</span><span class='ace_cjk' style='width:NaNpx'>果</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>达</span><span class='ace_cjk' style='width:NaNpx'>式</span>1<span class='ace_cjk' style='width:NaNpx'>为</span><span class='ace_cjk' style='width:NaNpx'>真</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>则</span><span class='ace_cjk' style='width:NaNpx'>返</span><span class='ace_cjk' style='width:NaNpx'>回</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>达</span><span class='ace_cjk' style='width:NaNpx'>式</span>2</span>
+</div><div class='ace_line'><span class='ace_comment'>// <span class='ace_cjk' style='width:NaNpx'>如</span><span class='ace_cjk' style='width:NaNpx'>果</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>达</span><span class='ace_cjk' style='width:NaNpx'>式</span>1<span class='ace_cjk' style='width:NaNpx'>为</span><span class='ace_cjk' style='width:NaNpx'>假</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>则</span><span class='ace_cjk' style='width:NaNpx'>返</span><span class='ace_cjk' style='width:NaNpx'>回</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>达</span><span class='ace_cjk' style='width:NaNpx'>式</span>1</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_constant ace_numeric'>100</span> <span class='ace_keyword ace_operator'>&#38;&#38;</span> <span class='ace_constant ace_numeric'>200</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//true 200</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_constant ace_numeric'>0</span> <span class='ace_keyword ace_operator'>&#38;&#38;</span> <span class='ace_constant ace_numeric'>200</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//false 0</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>// <span class='ace_cjk' style='width:NaNpx'>两</span><span class='ace_cjk' style='width:NaNpx'>边</span><span class='ace_cjk' style='width:NaNpx'>都</span><span class='ace_cjk' style='width:NaNpx'>是</span>true<span class='ace_cjk' style='width:NaNpx'>才</span><span class='ace_cjk' style='width:NaNpx'>会</span><span class='ace_cjk' style='width:NaNpx'>返</span><span class='ace_cjk' style='width:NaNpx'>回</span>true<span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>否</span><span class='ace_cjk' style='width:NaNpx'>则</span><span class='ace_cjk' style='width:NaNpx'>返</span><span class='ace_cjk' style='width:NaNpx'>回</span><span class='ace_cjk' style='width:NaNpx'>错</span><span class='ace_cjk' style='width:NaNpx'>误</span>false</span>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>也</span><span class='ace_cjk' style='width:NaNpx'>有</span><span class='ace_cjk' style='width:NaNpx'>爱</span><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>也</span><span class='ace_cjk' style='width:NaNpx'>有</span><span class='ace_cjk' style='width:NaNpx'>爱</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>咋</span><span class='ace_cjk' style='width:NaNpx'>们</span><span class='ace_cjk' style='width:NaNpx'>迟</span><span class='ace_cjk' style='width:NaNpx'>早</span><span class='ace_cjk' style='width:NaNpx'>都</span><span class='ace_cjk' style='width:NaNpx'>要</span><span class='ace_cjk' style='width:NaNpx'>做</span><span class='ace_cjk' style='width:NaNpx'>爱</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b1</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_language ace_boolean'>true</span> <span class='ace_keyword ace_operator'>&#38;&#38;</span> <span class='ace_constant ace_language ace_boolean'>true</span><span class='ace_punctuation ace_operator'>;</span>  <span class='ace_comment'>//true</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b1</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_language ace_boolean'>true</span> <span class='ace_keyword ace_operator'>&#38;&#38;</span> <span class='ace_constant ace_language ace_boolean'>false</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//false</span>
+</div></div></div></code></pre>
+<h4>逻辑【或】</h4>
+<blockquote>
+<p>表达式1 <strong>||</strong> 表达式2</p>
+</blockquote>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'>// <span class='ace_cjk' style='width:NaNpx'>如</span><span class='ace_cjk' style='width:NaNpx'>果</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>达</span><span class='ace_cjk' style='width:NaNpx'>式</span>1<span class='ace_cjk' style='width:NaNpx'>为</span><span class='ace_cjk' style='width:NaNpx'>真</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>则</span><span class='ace_cjk' style='width:NaNpx'>返</span><span class='ace_cjk' style='width:NaNpx'>回</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>达</span><span class='ace_cjk' style='width:NaNpx'>式</span>1</span>
+</div><div class='ace_line'><span class='ace_comment'>// <span class='ace_cjk' style='width:NaNpx'>如</span><span class='ace_cjk' style='width:NaNpx'>果</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>达</span><span class='ace_cjk' style='width:NaNpx'>式</span>1<span class='ace_cjk' style='width:NaNpx'>为</span><span class='ace_cjk' style='width:NaNpx'>假</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>则</span><span class='ace_cjk' style='width:NaNpx'>返</span><span class='ace_cjk' style='width:NaNpx'>回</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>达</span><span class='ace_cjk' style='width:NaNpx'>式</span>2</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_constant ace_numeric'>100</span> <span class='ace_keyword ace_operator'>||</span> <span class='ace_constant ace_numeric'>200</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//true 100</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_constant ace_numeric'>0</span> <span class='ace_keyword ace_operator'>||</span> <span class='ace_constant ace_numeric'>200</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//false 200</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>// <span class='ace_cjk' style='width:NaNpx'>只</span><span class='ace_cjk' style='width:NaNpx'>要</span><span class='ace_cjk' style='width:NaNpx'>其</span><span class='ace_cjk' style='width:NaNpx'>中</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>边</span><span class='ace_cjk' style='width:NaNpx'>是</span>true<span class='ace_cjk' style='width:NaNpx'>正</span><span class='ace_cjk' style='width:NaNpx'>确</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>就</span><span class='ace_cjk' style='width:NaNpx'>会</span><span class='ace_cjk' style='width:NaNpx'>返</span><span class='ace_cjk' style='width:NaNpx'>回</span>true<span class='ace_cjk' style='width:NaNpx'>正</span><span class='ace_cjk' style='width:NaNpx'>确</span><span class='ace_cjk' style='width:NaNpx'>，</span></span>
+</div><div class='ace_line'><span class='ace_comment'>// <span class='ace_cjk' style='width:NaNpx'>两</span><span class='ace_cjk' style='width:NaNpx'>边</span><span class='ace_cjk' style='width:NaNpx'>都</span><span class='ace_cjk' style='width:NaNpx'>是</span>false<span class='ace_cjk' style='width:NaNpx'>错</span><span class='ace_cjk' style='width:NaNpx'>误</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>才</span><span class='ace_cjk' style='width:NaNpx'>返</span><span class='ace_cjk' style='width:NaNpx'>回</span>false<span class='ace_cjk' style='width:NaNpx'>错</span><span class='ace_cjk' style='width:NaNpx'>误</span></span>
+</div><div class='ace_line'><span class='ace_comment'>// <span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>也</span><span class='ace_cjk' style='width:NaNpx'>有</span><span class='ace_cjk' style='width:NaNpx'>爱</span> <span class='ace_cjk' style='width:NaNpx'>或</span><span class='ace_cjk' style='width:NaNpx'>者</span> <span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>没</span><span class='ace_cjk' style='width:NaNpx'>有</span><span class='ace_cjk' style='width:NaNpx'>爱</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>迟</span><span class='ace_cjk' style='width:NaNpx'>早</span><span class='ace_cjk' style='width:NaNpx'>会</span><span class='ace_cjk' style='width:NaNpx'>把</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>追</span><span class='ace_cjk' style='width:NaNpx'>到</span><span class='ace_cjk' style='width:NaNpx'>手</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b2</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_language ace_boolean'>true</span> <span class='ace_keyword ace_operator'>||</span> <span class='ace_constant ace_language ace_boolean'>true</span><span class='ace_punctuation ace_operator'>;</span>  <span class='ace_comment'>//true</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b2</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_language ace_boolean'>true</span> <span class='ace_keyword ace_operator'>||</span> <span class='ace_constant ace_language ace_boolean'>false</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//true</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b2</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_language ace_boolean'>false</span> <span class='ace_keyword ace_operator'>||</span> <span class='ace_constant ace_language ace_boolean'>false</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//false</span>
+</div></div></div></code></pre>
+<h4>逻辑【非】</h4>
+<blockquote>
+<p>**！**表达1</p>
+</blockquote>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'>// <span class='ace_cjk' style='width:NaNpx'>如</span><span class='ace_cjk' style='width:NaNpx'>果</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>达</span>1<span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>真</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>那</span><span class='ace_cjk' style='width:NaNpx'>么</span><span class='ace_cjk' style='width:NaNpx'>返</span><span class='ace_cjk' style='width:NaNpx'>回</span><span class='ace_cjk' style='width:NaNpx'>假</span><span class='ace_cjk' style='width:NaNpx'>（</span>false<span class='ace_cjk' style='width:NaNpx'>）</span>;</span>
+</div><div class='ace_line'><span class='ace_comment'>// <span class='ace_cjk' style='width:NaNpx'>如</span><span class='ace_cjk' style='width:NaNpx'>果</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>达</span>1<span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>假</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>那</span><span class='ace_cjk' style='width:NaNpx'>么</span><span class='ace_cjk' style='width:NaNpx'>返</span><span class='ace_cjk' style='width:NaNpx'>回</span><span class='ace_cjk' style='width:NaNpx'>真</span><span class='ace_cjk' style='width:NaNpx'>（</span>true<span class='ace_cjk' style='width:NaNpx'>）</span>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_keyword ace_operator'>!</span><span class='ace_constant ace_numeric'>0</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//true</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_keyword ace_operator'>!</span><span class='ace_constant ace_numeric'>22</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//false</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>// true<span class='ace_cjk' style='width:NaNpx'>正</span><span class='ace_cjk' style='width:NaNpx'>确</span><span class='ace_cjk' style='width:NaNpx'>会</span><span class='ace_cjk' style='width:NaNpx'>变</span><span class='ace_cjk' style='width:NaNpx'>成</span>false<span class='ace_cjk' style='width:NaNpx'>错</span><span class='ace_cjk' style='width:NaNpx'>误</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>，</span></span>
+</div><div class='ace_line'><span class='ace_comment'>// false<span class='ace_cjk' style='width:NaNpx'>错</span><span class='ace_cjk' style='width:NaNpx'>误</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>会</span><span class='ace_cjk' style='width:NaNpx'>变</span><span class='ace_cjk' style='width:NaNpx'>成</span>true<span class='ace_cjk' style='width:NaNpx'>正</span><span class='ace_cjk' style='width:NaNpx'>确</span><span class='ace_cjk' style='width:NaNpx'>的</span></span>
+</div><div class='ace_line'><span class='ace_comment'>// <span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>要</span><span class='ace_cjk' style='width:NaNpx'>爱</span> <span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>就</span><span class='ace_cjk' style='width:NaNpx'>全</span><span class='ace_cjk' style='width:NaNpx'>都</span><span class='ace_cjk' style='width:NaNpx'>要</span> <span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>包</span><span class='ace_cjk' style='width:NaNpx'>裹</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>心</span><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>也</span><span class='ace_cjk' style='width:NaNpx'>要</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b3</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_language ace_boolean'>false</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_keyword ace_operator'>!</span><span class='ace_identifier'>b3</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//true</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>b3</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//false</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b4</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_language ace_boolean'>true</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_keyword ace_operator'>!</span><span class='ace_identifier'>b4</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//false</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>b4</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//true</span>
+</div></div></div></code></pre>
+<h4>好多【===】</h4>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'>// 1= <span class='ace_cjk' style='width:NaNpx'>赋</span><span class='ace_cjk' style='width:NaNpx'>值</span>  </span>
+</div><div class='ace_line'><span class='ace_comment'>// 2==<span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>否</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span>  <span class='ace_cjk' style='width:NaNpx'>只</span><span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>值</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>类</span><span class='ace_cjk' style='width:NaNpx'>型</span>      ————<span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>发</span><span class='ace_cjk' style='width:NaNpx'>两</span><span class='ace_cjk' style='width:NaNpx'>倍</span><span class='ace_cjk' style='width:NaNpx'>工</span><span class='ace_cjk' style='width:NaNpx'>资</span><span class='ace_cjk' style='width:NaNpx'>给</span><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>那</span><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>就</span><span class='ace_cjk' style='width:NaNpx'>做</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>件</span><span class='ace_cjk' style='width:NaNpx'>事</span><span class='ace_cjk' style='width:NaNpx'>咯</span></span>
+</div><div class='ace_line'><span class='ace_comment'>// 3=== <span class='ace_cjk' style='width:NaNpx'>全</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span>  <span class='ace_cjk' style='width:NaNpx'>即</span><span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>又</span><span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>类</span><span class='ace_cjk' style='width:NaNpx'>型</span>           ————<span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>发</span><span class='ace_cjk' style='width:NaNpx'>三</span><span class='ace_cjk' style='width:NaNpx'>倍</span><span class='ace_cjk' style='width:NaNpx'>工</span><span class='ace_cjk' style='width:NaNpx'>资</span><span class='ace_cjk' style='width:NaNpx'>给</span><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>那</span><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>就</span><span class='ace_cjk' style='width:NaNpx'>全</span><span class='ace_cjk' style='width:NaNpx'>都</span><span class='ace_cjk' style='width:NaNpx'>做</span><span class='ace_cjk' style='width:NaNpx'>咯</span></span>
+</div><div class='ace_line'><span class='ace_comment'>// != <span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span>        ————<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>在</span><span class='ace_cjk' style='width:NaNpx'>考</span><span class='ace_cjk' style='width:NaNpx'>虑</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>下</span></span>
+</div><div class='ace_line'><span class='ace_comment'>//!== <span class='ace_cjk' style='width:NaNpx'>完</span><span class='ace_cjk' style='width:NaNpx'>全</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span>       ————<span class='ace_cjk' style='width:NaNpx'>那</span><span class='ace_cjk' style='width:NaNpx'>就</span><span class='ace_cjk' style='width:NaNpx'>真</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>要</span><span class='ace_cjk' style='width:NaNpx'>了</span></span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>// 2==<span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>否</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span>  <span class='ace_cjk' style='width:NaNpx'>只</span><span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>值</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>类</span><span class='ace_cjk' style='width:NaNpx'>型</span> </span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b5</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span> <span class='ace_keyword ace_operator'>==</span> <span class='ace_string'>&#39;1&#39;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>b5</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//true</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>// 3=== <span class='ace_cjk' style='width:NaNpx'>全</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span>  <span class='ace_cjk' style='width:NaNpx'>即</span><span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>又</span><span class='ace_cjk' style='width:NaNpx'>判</span><span class='ace_cjk' style='width:NaNpx'>断</span><span class='ace_cjk' style='width:NaNpx'>类</span><span class='ace_cjk' style='width:NaNpx'>型</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b5</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_string'>&#39;1&#39;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>b5</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//false</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//!== <span class='ace_cjk' style='width:NaNpx'>完</span><span class='ace_cjk' style='width:NaNpx'>全</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b5</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span> <span class='ace_keyword ace_operator'>!==</span> <span class='ace_string'>&#39;1&#39;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>b5</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//false</span>
+</div></div></div></code></pre>
+<h4>好多【++--】</h4>
+<blockquote>
+<p><em><u>加加在后</u> 先计算，后自增1 <strong>a++</strong></em>        ……<u><em>本身</em></u></p>
+<p><em><u>加加在前</u> <strong>先自身加1</strong>，后计算 <strong>++a</strong></em>    ……<em><u>本身加1</u></em></p>
+</blockquote>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>100</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_keyword ace_operator'>++</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//100</span>
+</div></div></div></code></pre>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>100</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_keyword ace_operator'>++</span><span class='ace_identifier'>a</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//101</span>
+</div></div></div></code></pre>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>100</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_keyword ace_operator'>--</span><span class='ace_identifier'>a</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//99</span>
+</div></div></div></code></pre>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>100</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_keyword ace_operator'>--</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//100</span>
+</div></div></div></code></pre>
+<h4>更多【++ --】</h4>
+<p>{% spoiler 点击显/隐内容 %}</p>
+<blockquote>
+<p><em><u>加加在后</u> 先计算，后自增1 <strong>a++</strong></em>        ……<u>相当于本身自己的职位</u></p>
+<p><em><u>加加在前</u> <strong>先自身加1</strong>，后计算 <strong>++a</strong></em>    ……<u>相当于本身就有1，就自己到哪都加一块钱</u></p>
+</blockquote>
+<blockquote>
+<p><em><u>减减在后</u>  <strong>a--</strong></em>        ……<u>相当于本身自己的职位</u></p>
+<p><em><u>减减在前</u> <strong>先自身减1</strong>，后计算 <strong>--a</strong></em>    ……<u>相当于本身自己减1，就自己到哪都缺一块钱</u></p>
+</blockquote>
+<p>{% endspoiler %}</p>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>100</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_keyword ace_operator'>++</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_identifier'>b</span><span class='ace_keyword ace_operator'>++</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//101</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_keyword ace_operator'>--</span><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_identifier'>b</span><span class='ace_keyword ace_operator'>++</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//100</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_keyword ace_operator'>--</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_keyword ace_operator'>--</span><span class='ace_identifier'>b</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//100</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>8</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>6</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_keyword ace_operator'>++</span> <span class='ace_keyword ace_operator'>-</span> <span class='ace_identifier'>b</span><span class='ace_keyword ace_operator'>++</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//2</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_keyword ace_operator'>--</span><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>-</span> <span class='ace_identifier'>b</span><span class='ace_keyword ace_operator'>++</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//1</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_keyword ace_operator'>--</span> <span class='ace_keyword ace_operator'>-</span> <span class='ace_keyword ace_operator'>--</span><span class='ace_identifier'>b</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//3</span>
+</div></div></div></code></pre>
+<h3>2、<a href="https://www.w3school.com.cn/js/js_if_else.asp">判断条件</a></h3>
+<h4>判断语句【if(){}】</h4>
+<p>{% spoiler 点击显/隐内容 %}</p>
+<blockquote>
+<p><em><strong>如果</strong> 肚子饿</em></p>
+<p>​    <em>我就去吃饭</em></p>
+<p><em>if(肚子饿){</em></p>
+<p><em>我就去吃饭</em></p>
+<p><em>}</em></p>
+</blockquote>
+<p>{% endspoiler %}</p>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'>//true=<span class='ace_cjk' style='width:NaNpx'>去</span> <span class='ace_cjk' style='width:NaNpx'>、</span> false=<span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>去</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>hungry</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_language ace_boolean'>true</span><span class='ace_punctuation ace_operator'>;</span> 
+</div><div class='ace_line'><span class='ace_keyword'>if</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>hungry</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'><span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>就</span><span class='ace_cjk' style='width:NaNpx'>去</span><span class='ace_cjk' style='width:NaNpx'>吃</span><span class='ace_cjk' style='width:NaNpx'>饭</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>案</span><span class='ace_cjk' style='width:NaNpx'>例</span> var = let</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>let</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span>
+</div><div class='ace_line'><span class='ace_keyword'>if</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>是</span>1&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div></div></div></code></pre>
+<h4>判断语句【if(){}else{}】</h4>
+<p>{% spoiler 点击显/隐内容 %}</p>
+<p>$$
+如果 今天下雨</p>
+<p>​    我就开车去上班</p>
+<p>否则</p>
+<p>​    我就走路去上班
+$$</p>
+<blockquote>
+<p>if(<strong>今天下雨</strong>){</p>
+<p>我就开车去上班</p>
+<p>}</p>
+<p><strong>else</strong>{</p>
+<p>我就走路去上班</p>
+<p>}</p>
+</blockquote>
+<p>{% endspoiler %}</p>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>rainy</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_language ace_boolean'>true</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>if</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>rainy</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>就</span><span class='ace_cjk' style='width:NaNpx'>开</span><span class='ace_cjk' style='width:NaNpx'>车</span><span class='ace_cjk' style='width:NaNpx'>去</span><span class='ace_cjk' style='width:NaNpx'>上</span><span class='ace_cjk' style='width:NaNpx'>班</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//true</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_keyword'>else</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>就</span><span class='ace_cjk' style='width:NaNpx'>走</span><span class='ace_cjk' style='width:NaNpx'>路</span><span class='ace_cjk' style='width:NaNpx'>去</span><span class='ace_cjk' style='width:NaNpx'>上</span><span class='ace_cjk' style='width:NaNpx'>班</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_comment'>//false</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>案</span><span class='ace_cjk' style='width:NaNpx'>例</span>1</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>name</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_string'>&#39;<span class='ace_cjk' style='width:NaNpx'>张</span><span class='ace_cjk' style='width:NaNpx'>三</span>&#39;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>name</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_string'>&#39;<span class='ace_cjk' style='width:NaNpx'>张</span><span class='ace_cjk' style='width:NaNpx'>三</span>&#39;</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#39;<span class='ace_cjk' style='width:NaNpx'>他</span><span class='ace_cjk' style='width:NaNpx'>叫</span>&#39;</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_identifier'>name</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>他</span><span class='ace_cjk' style='width:NaNpx'>叫</span><span class='ace_cjk' style='width:NaNpx'>张</span><span class='ace_cjk' style='width:NaNpx'>三</span>666</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#39;666&#39;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_keyword'>else</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#39;<span class='ace_cjk' style='width:NaNpx'>他</span><span class='ace_cjk' style='width:NaNpx'>叫</span><span class='ace_cjk' style='width:NaNpx'>李</span><span class='ace_cjk' style='width:NaNpx'>四</span>&#39;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>案</span><span class='ace_cjk' style='width:NaNpx'>例</span>2</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>let</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span>
+</div><div class='ace_line'><span class='ace_keyword'>if</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>是</span>1&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span><span class='ace_keyword'>else</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>是</span>1&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div></div></div></code></pre>
+<h4>判断语句【if(){}else if(){}else{}】</h4>
+<p>{% spoiler 点击显/隐内容 %}</p>
+<p>$$
+如果 你考100分</p>
+<p>​    我给你1000元</p>
+<p>或是如果 你考80以上</p>
+<p>​    我给你500元</p>
+<p>或是如果 你考60以上</p>
+<p>​    我给你100元</p>
+<p>否侧</p>
+<p>​    你给我300元
+$$</p>
+<blockquote>
+<p>if(<strong>如果</strong>){</p>
+<p>我给你1000元</p>
+<p>}</p>
+<p>else if(<strong>或是如果</strong>){</p>
+<p>我给你500元</p>
+<p>}</p>
+<p>else<strong>否则</strong>{</p>
+<p>你给我300元</p>
+<p>}</p>
+</blockquote>
+<p>{% endspoiler %}</p>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>score</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>100</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>if</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>score</span><span class='ace_keyword ace_operator'>==</span><span class='ace_constant ace_numeric'>100</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>给</span><span class='ace_cjk' style='width:NaNpx'>你</span>1000<span class='ace_cjk' style='width:NaNpx'>元</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_keyword'>else</span> <span class='ace_keyword'>if</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>score</span><span class='ace_keyword ace_operator'>>=</span><span class='ace_constant ace_numeric'>80</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>给</span><span class='ace_cjk' style='width:NaNpx'>你</span>500<span class='ace_cjk' style='width:NaNpx'>元</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_keyword'>else</span> <span class='ace_keyword'>if</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>score</span><span class='ace_keyword ace_operator'>>=</span><span class='ace_constant ace_numeric'>60</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>给</span><span class='ace_cjk' style='width:NaNpx'>你</span>100<span class='ace_cjk' style='width:NaNpx'>元</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_keyword'>else</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>给</span><span class='ace_cjk' style='width:NaNpx'>我</span>300<span class='ace_cjk' style='width:NaNpx'>元</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>案</span><span class='ace_cjk' style='width:NaNpx'>例</span>1</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>5</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>第</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>个</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_keyword'>else</span> <span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_constant ace_numeric'>2</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>第</span><span class='ace_cjk' style='width:NaNpx'>二</span><span class='ace_cjk' style='width:NaNpx'>个</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span> <span class='ace_keyword'>else</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>第</span><span class='ace_cjk' style='width:NaNpx'>三</span><span class='ace_cjk' style='width:NaNpx'>个</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>案</span><span class='ace_cjk' style='width:NaNpx'>例</span>2</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>prompt</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>请</span><span class='ace_cjk' style='width:NaNpx'>输</span><span class='ace_cjk' style='width:NaNpx'>入</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>成</span><span class='ace_cjk' style='width:NaNpx'>绩</span>&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_variable ace_language'>Number</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>>=</span> <span class='ace_constant ace_numeric'>90</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;2<span class='ace_cjk' style='width:NaNpx'>楼</span><span class='ace_cjk' style='width:NaNpx'>嫩</span><span class='ace_cjk' style='width:NaNpx'>模</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span> <span class='ace_keyword'>else</span> <span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>>=</span> <span class='ace_constant ace_numeric'>70</span> <span class='ace_keyword ace_operator'>&#38;&#38;</span> <span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>&#60;</span> <span class='ace_constant ace_numeric'>90</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>赠</span><span class='ace_cjk' style='width:NaNpx'>送</span><span class='ace_cjk' style='width:NaNpx'>搓</span><span class='ace_cjk' style='width:NaNpx'>衣</span><span class='ace_cjk' style='width:NaNpx'>板</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>块</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span> <span class='ace_keyword'>else</span> <span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>>=</span> <span class='ace_constant ace_numeric'>60</span> <span class='ace_keyword ace_operator'>&#38;&#38;</span> <span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>&#60;</span> <span class='ace_constant ace_numeric'>70</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>厕</span><span class='ace_cjk' style='width:NaNpx'>所</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>日</span><span class='ace_cjk' style='width:NaNpx'>游</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_keyword'>else</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>爬</span>....&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>案</span><span class='ace_cjk' style='width:NaNpx'>例</span>2<span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>简</span><span class='ace_cjk' style='width:NaNpx'>易</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>prompt</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>请</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>输</span><span class='ace_cjk' style='width:NaNpx'>入</span>1-100<span class='ace_cjk' style='width:NaNpx'>数</span><span class='ace_cjk' style='width:NaNpx'>字</span>&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_variable ace_language'>Number</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>==</span> <span class='ace_constant ace_numeric'>100</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>大</span><span class='ace_cjk' style='width:NaNpx'>了</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_keyword'>else</span> <span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>>=</span> <span class='ace_constant ace_numeric'>70</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>中</span><span class='ace_cjk' style='width:NaNpx'>的</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_keyword'>else</span> <span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>>=</span> <span class='ace_constant ace_numeric'>60</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>底</span><span class='ace_cjk' style='width:NaNpx'>的</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_keyword'>else</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>们</span><span class='ace_cjk' style='width:NaNpx'>心</span><span class='ace_cjk' style='width:NaNpx'>中</span><span class='ace_cjk' style='width:NaNpx'>的</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>案</span><span class='ace_cjk' style='width:NaNpx'>例</span>3</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>let</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span>
+</div><div class='ace_line'><span class='ace_keyword'>if</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>是</span>1&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span><span class='ace_keyword'>else</span> <span class='ace_keyword'>if</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_keyword ace_operator'>===</span><span class='ace_constant ace_numeric'>2</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>是</span>2&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span><span class='ace_keyword'>else</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>是</span>1<span class='ace_cjk' style='width:NaNpx'>也</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>是</span>2&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div></div></div></code></pre>
+<h4>三元运算</h4>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>女</span><span class='ace_cjk' style='width:NaNpx'>人</span>&#34;</span>
+</div><div class='ace_line'><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>男</span><span class='ace_cjk' style='width:NaNpx'>人</span>&#34;</span> <span class='ace_punctuation ace_operator'>?</span> 
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>去</span><span class='ace_cjk' style='width:NaNpx'>男</span><span class='ace_cjk' style='width:NaNpx'>厕</span>&#34;</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_punctuation ace_operator'>:</span> 
+</div><div class='ace_line'><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>女</span><span class='ace_cjk' style='width:NaNpx'>人</span>&#34;</span> <span class='ace_punctuation ace_operator'>?</span> 
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>去</span><span class='ace_cjk' style='width:NaNpx'>女</span><span class='ace_cjk' style='width:NaNpx'>厕</span>&#34;</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_punctuation ace_operator'>:</span> 
+</div><div class='ace_line'><span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>就</span><span class='ace_cjk' style='width:NaNpx'>地</span><span class='ace_cjk' style='width:NaNpx'>解</span><span class='ace_cjk' style='width:NaNpx'>决</span>&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>案</span><span class='ace_cjk' style='width:NaNpx'>例</span><span class='ace_cjk' style='width:NaNpx'>弹</span><span class='ace_cjk' style='width:NaNpx'>出</span><span class='ace_cjk' style='width:NaNpx'>框</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>那</span><span class='ace_cjk' style='width:NaNpx'>种</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>b</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>prompt</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;1-100&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_variable ace_language'>Number</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>b</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>>=</span> <span class='ace_constant ace_numeric'>100</span> <span class='ace_punctuation ace_operator'>?</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>是</span>100..&#34;</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>>=</span> <span class='ace_constant ace_numeric'>70</span> <span class='ace_punctuation ace_operator'>?</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>是</span>99-70&#34;</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>>=</span> <span class='ace_constant ace_numeric'>60</span> <span class='ace_punctuation ace_operator'>?</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>是</span>69-60&#34;</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>猜</span>&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>案</span><span class='ace_cjk' style='width:NaNpx'>例</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>阿</span><span class='ace_cjk' style='width:NaNpx'>丽</span><span class='ace_cjk' style='width:NaNpx'>塔</span>&#34;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>阿</span><span class='ace_cjk' style='width:NaNpx'>丽</span><span class='ace_cjk' style='width:NaNpx'>塔</span>&#34;</span> <span class='ace_punctuation ace_operator'>?</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>阿</span><span class='ace_cjk' style='width:NaNpx'>丽</span><span class='ace_cjk' style='width:NaNpx'>塔</span><span class='ace_cjk' style='width:NaNpx'>好</span><span class='ace_cjk' style='width:NaNpx'>美</span>&#34;</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>阿</span><span class='ace_cjk' style='width:NaNpx'>凡</span><span class='ace_cjk' style='width:NaNpx'>达</span>&#34;</span> <span class='ace_punctuation ace_operator'>?</span>
+</div><div class='ace_line'>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>阿</span><span class='ace_cjk' style='width:NaNpx'>凡</span><span class='ace_cjk' style='width:NaNpx'>达</span><span class='ace_cjk' style='width:NaNpx'>好</span><span class='ace_cjk' style='width:NaNpx'>帅</span>&#34;</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'><span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>啥</span><span class='ace_cjk' style='width:NaNpx'>也</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>是</span>&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>案</span><span class='ace_cjk' style='width:NaNpx'>例</span></span>
+</div><div class='ace_line'><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_constant ace_numeric'>1</span> <span class='ace_punctuation ace_operator'>?</span> <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>是</span>1&#34;</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_punctuation ace_operator'>:</span> <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>是</span>1&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_constant ace_numeric'>1</span> <span class='ace_punctuation ace_operator'>?</span> <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>是</span>1&#34;</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_punctuation ace_operator'>:</span> <span class='ace_identifier'>a</span><span class='ace_keyword ace_operator'>===</span><span class='ace_constant ace_numeric'>2</span> <span class='ace_punctuation ace_operator'>?</span> <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>是</span>2&#34;</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_punctuation ace_operator'>:</span> <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>是</span>1<span class='ace_cjk' style='width:NaNpx'>也</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>是</span>2&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_constant ace_numeric'>1</span> <span class='ace_punctuation ace_operator'>?</span> <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>是</span>1&#34;</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_punctuation ace_operator'>:</span> <span class='ace_constant ace_language'>null</span>
+</div></div></div></code></pre>
+<h4><a href="https://www.w3school.com.cn/js/js_switch.asp">判断语句</a><strong>switch</strong></h4>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>prompt</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>请</span><span class='ace_cjk' style='width:NaNpx'>输</span><span class='ace_cjk' style='width:NaNpx'>入</span><span class='ace_cjk' style='width:NaNpx'>内</span><span class='ace_cjk' style='width:NaNpx'>容</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>switch</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>*</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>苹</span><span class='ace_cjk' style='width:NaNpx'>果</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>2</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>雪</span><span class='ace_cjk' style='width:NaNpx'>梨</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>3</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>水</span><span class='ace_cjk' style='width:NaNpx'>果</span><span class='ace_cjk' style='width:NaNpx'>哦</span><span class='ace_cjk' style='width:NaNpx'>！</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_storage ace_type'>let</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span>
+</div><div class='ace_line'><span class='ace_keyword'>switch</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>是</span>1&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>2</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>是</span>2&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>default</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>是</span>1<span class='ace_cjk' style='width:NaNpx'>也</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>是</span>2&#34;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>如</span><span class='ace_cjk' style='width:NaNpx'>果</span><span class='ace_cjk' style='width:NaNpx'>要</span><span class='ace_cjk' style='width:NaNpx'>在</span>switch case<span class='ace_cjk' style='width:NaNpx'>里</span><span class='ace_cjk' style='width:NaNpx'>面</span><span class='ace_cjk' style='width:NaNpx'>返</span><span class='ace_cjk' style='width:NaNpx'>回</span><span class='ace_cjk' style='width:NaNpx'>值</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>需</span><span class='ace_cjk' style='width:NaNpx'>要</span><span class='ace_cjk' style='width:NaNpx'>把</span>break<span class='ace_cjk' style='width:NaNpx'>改</span><span class='ace_cjk' style='width:NaNpx'>为</span>return</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>function</span> <span class='ace_entity ace_name ace_function'>fn</span><span class='ace_paren ace_lparen'>(</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_storage ace_type'>let</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>switch</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>:</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>是</span>1&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  <span class='ace_keyword'>return</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>2</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>是</span>2&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>default</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;a<span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>是</span>1<span class='ace_cjk' style='width:NaNpx'>也</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>是</span>2&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_identifier'>fn</span><span class='ace_paren ace_lparen'>(</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>案</span><span class='ace_cjk' style='width:NaNpx'>例</span><span class='ace_cjk' style='width:NaNpx'>星</span><span class='ace_cjk' style='width:NaNpx'>期</span><span class='ace_cjk' style='width:NaNpx'>的</span></span>
+</div><div class='ace_line'><span class='ace_keyword ace_operator'>&#60;</span><span class='ace_identifier'>p</span> <span class='ace_identifier'>id</span><span class='ace_keyword ace_operator'>=</span><span class='ace_string'>&#34;demo&#34;</span><span class='ace_keyword ace_operator'>></span> <span class='ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml'>&#60;/</span><span class='ace_meta ace_tag ace_tag-name ace_xml'>p</span><span class='ace_meta ace_tag ace_punctuation ace_tag-close ace_xml'>></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>day</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>switch</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_keyword'>new</span> <span class='ace_variable ace_language'>Date</span><span class='ace_paren ace_lparen'>(</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function'>getDay</span><span class='ace_paren ace_lparen'>(</span><span class='ace_paren ace_rparen'>))</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>0</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>day</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>周</span><span class='ace_cjk' style='width:NaNpx'>日</span>&#34;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>day</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>周</span><span class='ace_cjk' style='width:NaNpx'>一</span>&#34;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>2</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>day</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>周</span><span class='ace_cjk' style='width:NaNpx'>二</span>&#34;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>3</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>day</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>周</span><span class='ace_cjk' style='width:NaNpx'>三</span>&#34;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>4</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>day</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>周</span><span class='ace_cjk' style='width:NaNpx'>四</span>&#34;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>case</span> <span class='ace_constant ace_numeric'>5</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>day</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>周</span><span class='ace_cjk' style='width:NaNpx'>五</span>&#34;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>break</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>case</span>  <span class='ace_constant ace_numeric'>6</span><span class='ace_punctuation ace_operator'>:</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>day</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>周</span><span class='ace_cjk' style='width:NaNpx'>六</span>&#34;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>getElementById</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;demo&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>innerHTML</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>今</span><span class='ace_cjk' style='width:NaNpx'>天</span><span class='ace_cjk' style='width:NaNpx'>是</span>&#34;</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_identifier'>day</span><span class='ace_punctuation ace_operator'>;</span>
+</div></div></div></code></pre>
+<h4>语句案例</h4>
+<blockquote>
+<p><strong>偶数</strong></p>
+</blockquote>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>for</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>0</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;=</span> <span class='ace_constant ace_numeric'>100</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>++</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>%</span> <span class='ace_constant ace_numeric'>2</span> <span class='ace_keyword ace_operator'>==</span> <span class='ace_constant ace_numeric'>0</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'> <span class='ace_paren ace_rparen'>}</span>
+</div></div></div></code></pre>
+<blockquote>
+<p><strong>奇数</strong></p>
+</blockquote>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>第</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>种</span></span>
+</div><div class='ace_line'><span class='ace_keyword'>for</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>0</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;=</span> <span class='ace_constant ace_numeric'>100</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>++</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>%</span> <span class='ace_constant ace_numeric'>2</span> <span class='ace_keyword ace_operator'>!=</span> <span class='ace_constant ace_numeric'>0</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>   <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>第</span><span class='ace_cjk' style='width:NaNpx'>二</span><span class='ace_cjk' style='width:NaNpx'>种</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>0</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>while</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;=</span> <span class='ace_constant ace_numeric'>10</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>%</span> <span class='ace_constant ace_numeric'>2</span> <span class='ace_keyword ace_operator'>!=</span> <span class='ace_constant ace_numeric'>0</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_string'>&#34;&#60;br>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>++</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>第</span><span class='ace_cjk' style='width:NaNpx'>三</span><span class='ace_cjk' style='width:NaNpx'>种</span></span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>0</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>do</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>%</span> <span class='ace_constant ace_numeric'>2</span> <span class='ace_keyword ace_operator'>!=</span> <span class='ace_constant ace_numeric'>0</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>++</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span> <span class='ace_keyword'>while</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;</span> <span class='ace_constant ace_numeric'>10</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div></div></div></code></pre>
+<blockquote>
+<p>用<strong>for</strong>循环输出<u>1、3、4、5、6、8、9</u> <strong>【0,2,7】</strong></p>
+</blockquote>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>for</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>0</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;</span> <span class='ace_constant ace_numeric'>10</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>++</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span> <span class='ace_keyword'>if</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>==</span> <span class='ace_constant ace_numeric'>0</span> <span class='ace_keyword ace_operator'>||</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>==</span> <span class='ace_constant ace_numeric'>2</span> <span class='ace_keyword ace_operator'>||</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>==</span> <span class='ace_constant ace_numeric'>7</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>continue</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>读</span><span class='ace_cjk' style='width:NaNpx'>取</span><span class='ace_cjk' style='width:NaNpx'>了</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>就</span><span class='ace_cjk' style='width:NaNpx'>跳</span><span class='ace_cjk' style='width:NaNpx'>过</span><span class='ace_cjk' style='width:NaNpx'>本</span><span class='ace_cjk' style='width:NaNpx'>次</span><span class='ace_cjk' style='width:NaNpx'>操</span><span class='ace_cjk' style='width:NaNpx'>作</span></span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span> <span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span> <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div></div></div></code></pre>
+<h3>3、<a href="https://www.w3school.com.cn/js/js_loop_for.asp">循环语句</a></h3>
+<h4>不同类型的循环</h4>
+<blockquote>
+<p><strong>JavaScript 支持不同类型的循环：</strong></p>
+<ul>
+<li><strong>for</strong> - 多次遍历代码块</li>
+<li><strong>for/in</strong> - 遍历对象属性</li>
+<li><strong>while</strong> - 当指定条件为 <strong>true</strong> 时循环一段代码块</li>
+<li><strong>do/while</strong> - 当指定条件为 <strong>true</strong> 时循环一段代码块</li>
+</ul>
+</blockquote>
+<h4>for(){}</h4>
+<h5>for 循环的语法如下</h5>
+<pre><code class="language-javascript"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>for</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>语</span><span class='ace_cjk' style='width:NaNpx'>句</span></span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>语</span><span class='ace_cjk' style='width:NaNpx'>句</span></span> <span class='ace_constant ace_numeric'>2</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>语</span><span class='ace_cjk' style='width:NaNpx'>句</span></span> <span class='ace_constant ace_numeric'>3</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span> <span class='ace_identifier'><span class='ace_cjk' style='width:NaNpx'>要</span><span class='ace_cjk' style='width:NaNpx'>执</span><span class='ace_cjk' style='width:NaNpx'>行</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>代</span><span class='ace_cjk' style='width:NaNpx'>码</span><span class='ace_cjk' style='width:NaNpx'>块</span></span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>text</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_string'>&#34;&#34;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>i</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>for</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>0</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;</span> <span class='ace_constant ace_numeric'>5</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>++</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span> <span class='ace_identifier'>text</span> <span class='ace_keyword ace_operator'>+=</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>数</span><span class='ace_cjk' style='width:NaNpx'>字</span><span class='ace_cjk' style='width:NaNpx'>是</span> &#34;</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_string'>&#34;&#60;br>&#34;</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_variable ace_language'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_dom'>getElementById</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;demo&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>innerHTML</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>text</span><span class='ace_punctuation ace_operator'>;</span>
+</div></div></div></code></pre>
+<blockquote>
+<p><strong>语句 1 在循环（代码块）开始之前执行。</strong></p>
+<ul>
+<li>在循环开始之前设置了一个变量<u>（var i = 0）</u></li>
+</ul>
+<p><strong>语句 2 定义运行循环（代码块）的条件。</strong></p>
+<ul>
+<li>定义运行循环的条件<u>（i 必须小于 5）</u></li>
+</ul>
+<p><strong>语句 3 会在循环（代码块）每次被执行后执行。</strong></p>
+<ul>
+<li>会在代码块每次执行之后对值进行递增**<u>（i++）</u>**</li>
+</ul>
+</blockquote>
+<pre><code class="language-jsx"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'>//1-10</span>
+</div><div class='ace_line'><span class='ace_keyword'>for</span><span class='ace_paren ace_lparen'>(</span><span class='ace_keyword'>let</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>&#60;=</span><span class='ace_constant ace_numeric'>10</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>++</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//10-1</span>
+</div><div class='ace_line'><span class='ace_keyword'>for</span><span class='ace_paren ace_lparen'>(</span><span class='ace_keyword'>let</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>10</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>>=</span><span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>--</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//99<span class='ace_cjk' style='width:NaNpx'>乘</span><span class='ace_cjk' style='width:NaNpx'>法</span><span class='ace_cjk' style='width:NaNpx'>表</span></span>
+</div><div class='ace_line'><span class='ace_identifier'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#39;&#60;table border=&#34;1&#34; cellspacing=&#34;0&#34; cellpadding=&#34;10&#34;>&#39;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>for</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_keyword'>let</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;=</span> <span class='ace_constant ace_numeric'>9</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>++</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;&#60;tr>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>for</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_keyword'>let</span> <span class='ace_identifier'>j</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>j</span> <span class='ace_keyword ace_operator'>&#60;=</span> <span class='ace_identifier'>i</span><span class='ace_punctuation ace_operator'>;</span> <span class='ace_identifier'>j</span><span class='ace_keyword ace_operator'>++</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;&#60;td>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_string'>&#34;*&#34;</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_identifier'>j</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_string'>&#34;=&#34;</span> <span class='ace_keyword ace_operator'>+</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>*</span> <span class='ace_identifier'>j</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;&#60;/td>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;&#60;/tr>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_identifier'>document</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>write</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;&#60;/table>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div></div></div></code></pre>
+<h4>for(in){}</h4>
+<pre><code class="language-jsx"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>循</span><span class='ace_cjk' style='width:NaNpx'>环</span><span class='ace_cjk' style='width:NaNpx'>数</span><span class='ace_cjk' style='width:NaNpx'>组</span></span>
+</div><div class='ace_line'><span class='ace_keyword'>let</span> <span class='ace_identifier'>arr</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_paren ace_lparen'>[</span><span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_constant ace_numeric'>2</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_constant ace_numeric'>3</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_constant ace_numeric'>4</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_constant ace_numeric'>5</span><span class='ace_paren ace_rparen'>]</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_keyword'>for</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_keyword'>let</span> <span class='ace_identifier'>i</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>arr</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>arr</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>])</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>循</span><span class='ace_cjk' style='width:NaNpx'>环</span><span class='ace_cjk' style='width:NaNpx'>对</span><span class='ace_cjk' style='width:NaNpx'>象</span></span>
+</div><div class='ace_line'><span class='ace_keyword'>let</span> <span class='ace_identifier'>obj</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_paren ace_lparen'>{</span> <span class='ace_identifier'>name</span><span class='ace_punctuation ace_operator'>:</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>小</span><span class='ace_cjk' style='width:NaNpx'>明</span>&#34;</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_identifier'>age</span><span class='ace_punctuation ace_operator'>:</span> <span class='ace_constant ace_numeric'>18</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_identifier'>sex</span><span class='ace_punctuation ace_operator'>:</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>男</span>&#34;</span> <span class='ace_paren ace_rparen'>}</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_keyword'>for</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>key</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>obj</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>obj</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>key</span><span class='ace_paren ace_rparen'>])</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div></div></div></code></pre>
+<h4>while(){}</h4>
+<pre><code class="language-jsx"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>let</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>while</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;=</span> <span class='ace_constant ace_numeric'>10</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>++</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div></div></div></code></pre>
+<h4>do()while(){}</h4>
+<pre><code class="language-jsx"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>let</span> <span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_keyword'>do</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>++</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span> <span class='ace_keyword'>while</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>i</span><span class='ace_keyword ace_operator'>&#60;=</span><span class='ace_constant ace_numeric'>10</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div></div></div></code></pre>
+<h3>4、错误捕捉语句</h3>
+<h4>try catch</h4>
+<pre><code class="language-jsx"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>try</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>let</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>成</span><span class='ace_cjk' style='width:NaNpx'>功</span></span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span> <span class='ace_keyword'>catch</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>error</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>error</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span><span class='ace_comment'>//<span class='ace_cjk' style='width:NaNpx'>失</span><span class='ace_cjk' style='width:NaNpx'>败</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>错</span><span class='ace_cjk' style='width:NaNpx'>误</span><span class='ace_cjk' style='width:NaNpx'>对</span><span class='ace_cjk' style='width:NaNpx'>象</span></span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div></div></div></code></pre>
+<h4>finally 最终，不管成功还是失败都执行</h4>
+<pre><code class="language-jsx"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>try</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>let</span> <span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_constant ace_numeric'>1</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span> <span class='ace_keyword'>catch</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>error</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>error</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span> <span class='ace_keyword'>finally</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>管</span><span class='ace_cjk' style='width:NaNpx'>成</span><span class='ace_cjk' style='width:NaNpx'>功</span><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>失</span><span class='ace_cjk' style='width:NaNpx'>败</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>都</span><span class='ace_cjk' style='width:NaNpx'>执</span><span class='ace_cjk' style='width:NaNpx'>行</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div></div></div></code></pre>
+<h4>throw</h4>
+<pre><code class="language-jsx"><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>try</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>a</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span> <span class='ace_keyword'>catch</span> <span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>error</span><span class='ace_paren ace_rparen'>)</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>if</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>error</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>name</span> <span class='ace_keyword ace_operator'>===</span> <span class='ace_string'>&#34;ReferenceError&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  <span class='ace_keyword'>throw</span> <span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>这</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>个</span><span class='ace_cjk' style='width:NaNpx'>引</span><span class='ace_cjk' style='width:NaNpx'>用</span><span class='ace_cjk' style='width:NaNpx'>错</span><span class='ace_cjk' style='width:NaNpx'>误</span>&#34;</span>
+</div><div class='ace_line'>  <span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span> <span class='ace_keyword'>finally</span> <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_keyword'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;<span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>管</span><span class='ace_cjk' style='width:NaNpx'>成</span><span class='ace_cjk' style='width:NaNpx'>功</span><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>失</span><span class='ace_cjk' style='width:NaNpx'>败</span><span class='ace_cjk' style='width:NaNpx'>，</span><span class='ace_cjk' style='width:NaNpx'>都</span><span class='ace_cjk' style='width:NaNpx'>执</span><span class='ace_cjk' style='width:NaNpx'>行</span>&#34;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div></div></div></code></pre>
+
+        </article>
+      </body>
+      </html>
