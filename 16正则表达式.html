@@ -1,0 +1,2124 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>16正则表达式 · 前端秘籍</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ashun">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="17异常错误对象.html" />
+    
+    
+    <link rel="prev" href="15日期对象.html" />
+    
+
+    <link href="http://gitbook.zhangjikai.com/rss" title="GitBook 使用教程" rel="alternate" type="application/rss+xml" />
+
+    
+        <link rel="shortcut icon" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://geda-999.github.io/book" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="phase01.html">
+            
+                <a href="phase01.html">
+            
+                    
+                    Phase I
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01html.html">
+            
+                <a href="01html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02css.html">
+            
+                <a href="02css.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03响应式.html">
+            
+                <a href="03响应式.html">
+            
+                    
+                    响应式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="phase02.html">
+            
+                <a href="phase02.html">
+            
+                    
+                    Phase II
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="JavaScriptES5.html">
+            
+                <a href="JavaScriptES5.html">
+            
+                    
+                    JavaScriptES5
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="01变量.html">
+            
+                <a href="01变量.html">
+            
+                    
+                    01变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="02常量.html">
+            
+                <a href="02常量.html">
+            
+                    
+                    02常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="03js数据类型.html">
+            
+                <a href="03js数据类型.html">
+            
+                    
+                    03js数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" >
+            
+                <a target="_blank" href="https://geda-999.github.io/book/04运算判断条件.html">
+            
+                    
+                    04运算判断条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="05数字类型.html">
+            
+                <a href="05数字类型.html">
+            
+                    
+                    05数字类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="06字符串.html">
+            
+                <a href="06字符串.html">
+            
+                    
+                    06字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="07布尔值.html">
+            
+                <a href="07布尔值.html">
+            
+                    
+                    07布尔值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="08空值.html">
+            
+                <a href="08空值.html">
+            
+                    
+                    08空值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="09未定义.html">
+            
+                <a href="09未定义.html">
+            
+                    
+                    09未定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="10唯一值.html">
+            
+                <a href="10唯一值.html">
+            
+                    
+                    10唯一值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="11对象.html">
+            
+                <a href="11对象.html">
+            
+                    
+                    11对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="12内置全局对象.html">
+            
+                <a href="12内置全局对象.html">
+            
+                    
+                    12内置全局对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="13数组.html">
+            
+                <a href="13数组.html">
+            
+                    
+                    13数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="14函数.html">
+            
+                <a href="14函数.html">
+            
+                    
+                    14函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="15日期对象.html">
+            
+                <a href="15日期对象.html">
+            
+                    
+                    15日期对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.16" data-path="16正则表达式.html">
+            
+                <a href="16正则表达式.html">
+            
+                    
+                    16正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.17" data-path="17异常错误对象.html">
+            
+                <a href="17异常错误对象.html">
+            
+                    
+                    17异常错误对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.18" data-path="18BOM浏览器对象模型.html">
+            
+                <a href="18BOM浏览器对象模型.html">
+            
+                    
+                    18BOM浏览器对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.19" data-path="19DOM文档对象模型.html">
+            
+                <a href="19DOM文档对象模型.html">
+            
+                    
+                    19DOM文档对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.20" data-path="20json.html">
+            
+                <a href="20json.html">
+            
+                    
+                    20json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.21" data-path="21Ajax.html">
+            
+                <a href="21Ajax.html">
+            
+                    
+                    21Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.22" data-path="22jQuery.html">
+            
+                <a href="22jQuery.html">
+            
+                    
+                    22jQuery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.23" data-path="23函数进阶.html">
+            
+                <a href="23函数进阶.html">
+            
+                    
+                    23函数进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.24" data-path="24面向对象.html">
+            
+                <a href="24面向对象.html">
+            
+                    
+                    24面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="phase03.html">
+            
+                <a href="phase03.html">
+            
+                    
+                    Phase III
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="phase04.html">
+            
+                <a href="phase04.html">
+            
+                    
+                    Phase IV
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="weekly.html">
+            
+                <a href="weekly.html">
+            
+                    
+                    Weekly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="每周测试01.html">
+            
+                <a href="每周测试01.html">
+            
+                    
+                    每周测试01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="每周测试02.html">
+            
+                <a href="每周测试02.html">
+            
+                    
+                    每周测试02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="每周测试03.html">
+            
+                <a href="每周测试03.html">
+            
+                    
+                    每周测试03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="每周测试04.html">
+            
+                <a href="每周测试04.html">
+            
+                    
+                    每周测试04
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >16正则表达式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><b></b>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E00;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x7B26;&#x5339;&#x914D;"><b></b>&#x4E00;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x7B26;&#x5339;&#x914D;</a></li><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><b></b>&#x521B;&#x5EFA;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B9;&#x6CD5;"><b></b>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x4FEE;&#x9970;&#x7B26;"><b></b>&#x4FEE;&#x9970;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x7EB5;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#x1F693;"><b></b>&#x7EB5;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#x1F693;</a></li><li><span class="title-icon "></span><a href="#&#x6A2A;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;"><b></b>&#x6A2A;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;</a></li><li><span class="title-icon "></span><a href="#&#x591A;&#x9009;&#x5206;&#x652F;"><b></b>&#x591A;&#x9009;&#x5206;&#x652F;</a></li><li><span class="title-icon "></span><a href="#&#x6848;&#x4F8B;_2"><b></b>&#x6848;&#x4F8B;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E8C;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4F4D;&#x7F6E;&#x5339;&#x914D;"><b></b>&#x4E8C;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4F4D;&#x7F6E;&#x5339;&#x914D;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F4D;&#x7F6E;"><b></b>&#x4F4D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x4F4D;&#x7F6E;&#x5339;&#x914D;"><b></b>&#x4F4D;&#x7F6E;&#x5339;&#x914D;</a></li><li><span class="title-icon "></span><a href="#&#x6848;&#x4F8B;_3"><b></b>&#x6848;&#x4F8B;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E09;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x62EC;&#x53F7;&#x4F5C;&#x7528;"><b></b>&#x4E09;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x62EC;&#x53F7;&#x4F5C;&#x7528;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;"><b></b>&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;</a></li></ul><li><span class="title-icon "></span><a href="#&#x56DB;&#x3001;&#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;"><b></b>&#x56DB;&#x3001;&#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;</a></li></ul></ul></div><a href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><div class="treeview__container-title"></div><ul>
+<li><div><a href="#&#x4E00;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x7B26;&#x5339;&#x914D;">&#x4E00;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x7B26;&#x5339;&#x914D;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x521B;&#x5EFA;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;">&#x521B;&#x5EFA;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</a><i></i></div></li>
+<li><div><a href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B9;&#x6CD5;">&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B9;&#x6CD5;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1test-&#xFF08;&#x6B63;&#x5219;&#x65B9;&#x6CD5;&#xFF09;&#x1F3F3;&#x200D;&#x1F308;">1)test &#xFF08;&#x6B63;&#x5219;&#x65B9;&#x6CD5;&#xFF09;&#x1F3F3;&#x200D;&#x1F308;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x5728;hello&#x5916;&#x9762;new&#x4E00;&#x4E2A;&#x6570;">&#x5728;hello&#x5916;&#x9762;new&#x4E00;&#x4E2A;&#x6570;</a><i></i></div></li>
+<li><div><a href="#&#x5728;hello&#x91CC;&#x9762;new&#x4E00;&#x4E2A;&#x6570;">&#x5728;hello&#x91CC;&#x9762;new&#x4E00;&#x4E2A;&#x6570;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#2-search-&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#xFF09;">2. search &#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#xFF09;</a><i></i></div></li>
+<li><div><a href="#3-match&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;">3. match(&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;)</a><i></i></div></li>
+<li><div><a href="#4-exec&#x6B63;&#x5219;&#x65B9;&#x6CD5;-&#x1F3F3;&#x200D;&#x1F308;">4. exec(&#x6B63;&#x5219;&#x65B9;&#x6CD5;) &#x1F3F3;&#x200D;&#x1F308;</a><i></i></div></li>
+<li><div><a href="#5-replace&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#xFF09;">5. replace&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#xFF09;</a><i></i></div></li>
+<li><div><a href="#&#x6848;&#x4F8B;">&#x6848;&#x4F8B;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x4FEE;&#x9970;&#x7B26;">&#x4FEE;&#x9970;&#x7B26;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1-&#x52A0;&#x7684;&#x3010;i&#x3011;">1. &#x52A0;&#x7684;&#x3010;i&#x3011;</a><i></i></div></li>
+<li><div><a href="#2-&#x52A0;&#x7684;&#x3010;g&#x3011;&#x1F431;&#x200D;&#x1F464;">2 )&#x52A0;&#x7684;&#x3010;g&#x3011;&#x1F431;&#x200D;&#x1F464;</a><i></i></div></li>
+<li><div><a href="#3-&#x52A0;&#x7684;&#x3010;m&#x3011;">3. &#x52A0;&#x7684;&#x3010;m&#x3011;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x7EB5;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#x1F693;">&#x7EB5;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#x1F693;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1&#x3001;&#x5B57;&#x7B26;&#x7EC4;">1&#x3001;&#x5B57;&#x7B26;&#x7EC4;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1-&#x8303;&#x56F4;&#x8868;&#x793A;">1. &#x8303;&#x56F4;&#x8868;&#x793A;</a><i></i></div></li>
+<li><div><a href="#2-&#x6392;&#x9664;&#x5B57;&#x7B26;&#x7EC4;">2. &#x6392;&#x9664;&#x5B57;&#x7B26;&#x7EC4;</a><i></i></div></li>
+<li><div><a href="#3-&#x5B57;&#x7B26;&#x7EC4;&#x7B80;&#x5199;">3. &#x5B57;&#x7B26;&#x7EC4;&#x7B80;&#x5199;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x5927;&#x6CD5;&#x4E2D;&#x1F431;&#x200D;&#x1F464;&#x1F4A8;">&#x5927;&#x6CD5;&#x4E2D;&#x1F431;&#x200D;&#x1F464;&#x1F4A8;</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#&#x6A2A;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;">&#x6A2A;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1&#x3001;&#x91CF;&#x8BCD;">1&#x3001;&#x91CF;&#x8BCD;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x6848;&#x4F8B;">&#x6848;&#x4F8B;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#2&#x3001;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x548C;&#x60F0;&#x6027;&#x5339;&#x914D;">2&#x3001;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x548C;&#x60F0;&#x6027;&#x5339;&#x914D;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x591A;&#x9009;&#x5206;&#x652F;">&#x591A;&#x9009;&#x5206;&#x652F;</a><i></i></div></li>
+<li><div><a href="#&#x6848;&#x4F8B;">&#x6848;&#x4F8B;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x4E8C;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4F4D;&#x7F6E;&#x5339;&#x914D;">&#x4E8C;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4F4D;&#x7F6E;&#x5339;&#x914D;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x4F4D;&#x7F6E;">&#x4F4D;&#x7F6E;</a><i></i></div></li>
+<li><div><a href="#&#x4F4D;&#x7F6E;&#x5339;&#x914D;">&#x4F4D;&#x7F6E;&#x5339;&#x914D;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1&#x3001;&#x951A;&#x5B57;&#x7B26;&#xFF0C;&#x5339;&#x914D;&#x4F4D;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x3002;">1&#x3001;&#x951A;&#x5B57;&#x7B26;&#xFF0C;&#x5339;&#x914D;&#x4F4D;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x3002;</a><i></i></div></li>
+<li><div><a href="#2&#x3001;&#x548C;">2&#x3001;^&#x548C;$</a><i></i></div></li>
+<li><div><a href="#3&#x3001;b&#x548C;b">3&#x3001;\b&#x548C;\B</a><i></i></div></li>
+<li><div><a href="#4&#x3001;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x548C;&#x540E;&#x884C;&#x65AD;&#x8A00;">4&#x3001;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x548C;&#x540E;&#x884C;&#x65AD;&#x8A00;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x6848;&#x4F8B;">&#x6848;&#x4F8B;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1&#x3001;&#x4E0D;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;">1&#x3001;&#x4E0D;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;</a><i></i></div></li>
+<li><div><a href="#2&#x3001;&#x6570;&#x5B57;&#x7684;&#x5343;&#x4F4D;&#x5206;&#x9694;&#x7B26;&#x8868;&#x793A;&#x6CD5;">2&#x3001;&#x6570;&#x5B57;&#x7684;&#x5343;&#x4F4D;&#x5206;&#x9694;&#x7B26;&#x8868;&#x793A;&#x6CD5;</a><i></i></div></li>
+<li><div><a href="#3&#x3001;&#x66FF;&#x6362;&#x6CD5;">3&#x3001;&#x66FF;&#x6362;&#x6CD5;</a><i></i></div></li>
+<li><div><a href="#4&#x3001;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;">4&#x3001;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#&#x4E09;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x62EC;&#x53F7;&#x4F5C;&#x7528;">&#x4E09;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x62EC;&#x53F7;&#x4F5C;&#x7528;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;">&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x4E00;&#x3001;&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;">&#x4E00;&#x3001;&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;</a><i></i></div></li>
+<li><div><a href="#&#x4E8C;&#x3001;&#x5F15;&#x7528;&#x5206;&#x7EC4;">&#x4E8C;&#x3001;&#x5F15;&#x7528;&#x5206;&#x7EC4;</a><i></i></div></li>
+<li><div><a href="#&#x4E09;&#x3001;&#x53CD;&#x5411;&#x5F15;&#x7528;">&#x4E09;&#x3001;&#x53CD;&#x5411;&#x5F15;&#x7528;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1&#x3001;&#x62EC;&#x53F7;&#x5D4C;&#x5957;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4EE5;&#x5DE6;&#x62EC;&#x53F7;&#x4E3A;&#x51C6;">1&#x3001;&#x62EC;&#x53F7;&#x5D4C;&#x5957;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4EE5;&#x5DE6;&#x62EC;&#x53F7;&#x4E3A;&#x51C6;</a><i></i></div></li>
+<li><div><a href="#2&#x3001;10&#x8868;&#x793A;&#x4EC0;&#x4E48;&#x5462;">2&#x3001;\10&#x8868;&#x793A;&#x4EC0;&#x4E48;&#x5462;</a><i></i></div></li>
+<li><div><a href="#3&#x3001;&#x5F15;&#x7528;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5206;&#x7EC4;">3&#x3001;&#x5F15;&#x7528;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5206;&#x7EC4;</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#&#x56DB;&#x3001;&#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;">&#x56DB;&#x3001;&#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;</a><i></i></div></li>
+</ul>
+</div>
+
+<h1 id="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><a name="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h1>
+<h2 id="&#x4E00;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x7B26;&#x5339;&#x914D;"><a name="&#x4E00;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x7B26;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x7B26;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x7B26;&#x5339;&#x914D;</h2>
+<h3 id="&#x521B;&#x5EFA;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><a name="&#x521B;&#x5EFA;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/hello/</span>  <span class="hljs-comment">//&#x5B57;&#x9762;&#x91CF;&#x521B;&#x5EFA;</span>
+<span class="hljs-built_in">console</span>.log(reg);
+<span class="hljs-keyword">var</span> reg = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(hello)<span class="hljs-comment">//&#x6784;&#x9020;&#x51FD;&#x6570;&#x521B;&#x5EFA;</span>
+</code></pre>
+<h3 id="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B9;&#x6CD5;"><a name="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B9;&#x6CD5;</h3>
+<h4 id="1test-&#xFF08;&#x6B63;&#x5219;&#x65B9;&#x6CD5;&#xFF09;&#x1F3F3;&#x200D;&#x1F308;"><a name="1test-&#xFF08;&#x6B63;&#x5219;&#x65B9;&#x6CD5;&#xFF09;&#x1F3F3;&#x200D;&#x1F308;" class="anchor-navigation-ex-anchor" href="#1test-&#xFF08;&#x6B63;&#x5219;&#x65B9;&#x6CD5;&#xFF09;&#x1F3F3;&#x200D;&#x1F308;"><i class="fa fa-link" aria-hidden="true"></i></a>1)test &#xFF08;&#x6B63;&#x5219;&#x65B9;&#x6CD5;&#xFF09;&#x1F3F3;&#x200D;&#x1F308;</h4>
+<blockquote>
+<p><u><em>&#x6B63;&#x5219;</em></u> &#x5728;&#x524D;&#x9762; <u><em>&#x5B57;&#x7B26;&#x4E32;</em></u> &#x5728;&#x540E;&#x9762;</p>
+<p><strong>&#x68C0;&#x6D4B;&#x51FA;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x7B26;&#x5408;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</strong></p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello&quot;</span> <span class="hljs-comment">//&#x539F;&#x751F;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/hello/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str)); <span class="hljs-comment">//true</span>
+</code></pre>
+<h5 id="&#x5728;hello&#x5916;&#x9762;new&#x4E00;&#x4E2A;&#x6570;"><a name="&#x5728;hello&#x5916;&#x9762;new&#x4E00;&#x4E2A;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5728;hello&#x5916;&#x9762;new&#x4E00;&#x4E2A;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5728;hello&#x5916;&#x9762;new&#x4E00;&#x4E2A;&#x6570;</h5>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello&#x6211;&#x662F;&#x5728;&#x5916;&#x9762;new&#x4E00;&#x4E2A;&quot;</span>  <span class="hljs-comment">//&#x5728;&#x5916;&#x9762;&#x5C31;&#x53EF;&#x4EE5;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/hello/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str)); <span class="hljs-comment">//true</span>
+</code></pre>
+<h5 id="&#x5728;hello&#x91CC;&#x9762;new&#x4E00;&#x4E2A;&#x6570;"><a name="&#x5728;hello&#x91CC;&#x9762;new&#x4E00;&#x4E2A;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5728;hello&#x91CC;&#x9762;new&#x4E00;&#x4E2A;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5728;hello&#x91CC;&#x9762;new&#x4E00;&#x4E2A;&#x6570;</h5>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hell&#x6211;&#x662F;&#x5728;&#x91CC;new&#x4E00;&#x4E2A;o&quot;</span> <span class="hljs-comment">//&#x5728;&#x91CC;&#x9762;&#x5C31;&#x4E0D;&#x53EF;&#x4EE5;&#x4E86;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/hello/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str)); <span class="hljs-comment">//false</span>
+</code></pre>
+<h4 id="2-search-&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#xFF09;"><a name="2-search-&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#xFF09;" class="anchor-navigation-ex-anchor" href="#2-search-&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>2) search &#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#xFF09;</h4>
+<blockquote>
+<p><u><em>&#x5B57;&#x7B26;&#x4E32;</em></u> &#x5728;&#x524D;&#x9762;<u><em>&#x6B63;&#x5219;</em></u> &#x5728;&#x540E;&#x9762;</p>
+<p><strong><em><u>&#x68C0;&#x7D22;</u></em> &#x51FA;&#x5B57;&#x7B26;&#x4E32;&#x7B26;&#x5408;&#x6B63;&#x5219;&#x7684;&#x5B57;&#x7B26;&#x7684;<u>&#x7D22;&#x5F15;&#x503C;</u></strong></p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello world&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/world/</span>
+<span class="hljs-built_in">console</span>.log(str.search(reg));<span class="hljs-comment">//6</span>
+</code></pre>
+<h4 id="3-match&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;"><a name="3-match&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#3-match&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>3) match(&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;)</h4>
+<blockquote>
+<p><u><em>&#x5B57;&#x7B26;&#x4E32;</em></u> &#x5728;&#x524D;&#x9762;<u><em>&#x6B63;&#x5219;</em></u> &#x5728;&#x540E;&#x9762;</p>
+<p><strong>&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x641C;&#x7D22;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x641C;&#x7D22;&#x6210;&#x529F;&#x5C31;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;&#x5931;&#x8D25;&#x5C31;&#x8FD4;&#x56DE;null</strong></p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello world&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/l/</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg));
+<span class="hljs-comment">//[&quot;l&quot;, index: 2, input: &quot;hello world&quot;, groups: undefined]</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello world&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/p/</span> <span class="hljs-comment">//p&#x4E0D;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x5C31;&#x4F1A;&#x8FD4;&#x56DE;null</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg));<span class="hljs-comment">//null</span>
+</code></pre>
+<h4 id="4-exec&#x6B63;&#x5219;&#x65B9;&#x6CD5;-&#x1F3F3;&#x200D;&#x1F308;"><a name="4-exec&#x6B63;&#x5219;&#x65B9;&#x6CD5;-&#x1F3F3;&#x200D;&#x1F308;" class="anchor-navigation-ex-anchor" href="#4-exec&#x6B63;&#x5219;&#x65B9;&#x6CD5;-&#x1F3F3;&#x200D;&#x1F308;"><i class="fa fa-link" aria-hidden="true"></i></a>4) exec(&#x6B63;&#x5219;&#x65B9;&#x6CD5;) &#x1F3F3;&#x200D;&#x1F308;</h4>
+<blockquote>
+<p><u><em>&#x6B63;&#x5219;</em></u> &#x5728;&#x524D;&#x9762; <u><em>&#x5B57;&#x7B26;&#x4E32;</em></u> &#x5728;&#x540E;&#x9762;</p>
+<p><strong>&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x641C;&#x7D22;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x641C;&#x7D22;&#x6210;&#x529F;&#x5C31;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;&#x5931;&#x8D25;&#x5C31;&#x8FD4;&#x56DE;null</strong></p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello world&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/l/</span>
+<span class="hljs-built_in">console</span>.log(reg.exec(str));
+<span class="hljs-comment">//[&quot;l&quot;, index: 2, input: &quot;hello world&quot;, groups: undefined]</span>
+</code></pre>
+<h4 id="5-replace&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#xFF09;"><a name="5-replace&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#xFF09;" class="anchor-navigation-ex-anchor" href="#5-replace&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>5) replace&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#xFF09;</h4>
+<blockquote>
+<p><em><u>&#x5B57;&#x7B26;&#x4E32;</u></em> &#x5728;&#x524D;&#x9762;<em><u>&#x6B63;&#x5219;</u></em> &#x5728;&#x540E;&#x9762;</p>
+<p><strong>&#x67E5;&#x627E;&#x7B26;&#x5408;&#x6B63;&#x5219;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5C31;&#x66FF;&#x6362;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8FD4;&#x56DE;&#x66FF;&#x6362;&#x540E;&#x7684;&#x5185;&#x5BB9;</strong></p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello world&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/o/</span>
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;a&quot;</span>)); <span class="hljs-comment">//hella world</span>
+</code></pre>
+<blockquote>
+<p>&#x52A0;&#x4E2A;<strong>g</strong>&#x5C31;&#x53EF;&#x4EE5;<em>&#x66FF;&#x6362;</em>&#x540E;&#x9762;&#x7684;<strong>o</strong>&#x54AF;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello world&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/o/g</span>  <span class="hljs-comment">//&#x8FD9;&#x91CC;&#x52A0;&#x4E2A;g&#x5C31;&#x53EF;&#x4EE5;&#x66FF;&#x6362;&#x540E;&#x9762;&#x7684;o&#x54AF;</span>
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;a&quot;</span>)); <span class="hljs-comment">//hella warld</span>
+</code></pre>
+<h4 id="&#x6848;&#x4F8B;"><a name="&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6848;&#x4F8B;</h4>
+<blockquote>
+<p>&#x6253;&#x5370;&#x51FA;<u>hello world</u>&#x91CC;&#x9762;&#x6BCF;&#x4E00;&#x4E2A;l&#x7684;<em>&#x7D22;&#x5F15;&#x503C;</em></p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello world&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-string">&quot;l&quot;</span>
+<span class="hljs-keyword">var</span> arr = str.split(<span class="hljs-string">&quot;&quot;</span>)<span class="hljs-comment">//&#x8F6C;&#x6362;&#x6570;&#x7EC4;</span>
+<span class="hljs-comment">// console.log([...new Set(arr)]);//&#x8FD9;&#x91CC;&#x662F;&#x53EF;&#x4EE5;&#x53BB;&#x91CD;</span>
+<span class="hljs-comment">//[&quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;o&quot;, &quot; &quot;, &quot;w&quot;, &quot;r&quot;, &quot;d&quot;]</span>
+arr.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item, idx</span>) </span>{
+    <span class="hljs-keyword">if</span> (item === reg) {
+        <span class="hljs-built_in">console</span>.log(idx); <span class="hljs-comment">//2,3,9</span>
+    }
+})
+</code></pre>
+<h3 id="&#x4FEE;&#x9970;&#x7B26;"><a name="&#x4FEE;&#x9970;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x9970;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x9970;&#x7B26;</h3>
+<h4 id="1-&#x52A0;&#x7684;&#x3010;i&#x3011;"><a name="1-&#x52A0;&#x7684;&#x3010;i&#x3011;" class="anchor-navigation-ex-anchor" href="#1-&#x52A0;&#x7684;&#x3010;i&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>1) &#x52A0;&#x7684;&#x3010;i&#x3011;</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello world&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/HELLO/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//false</span>
+</code></pre>
+<blockquote>
+<p><strong>i</strong>&#x53EF;&#x4EE5;&#x8BA9;&#x6B63;&#x5219;&#x5BF9;<em>&#x5927;&#x5C0F;&#x5199;</em>&#x4E0D;&#x654F;&#x611F;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello world&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/HELLO/i</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+</code></pre>
+<h4 id="2-&#x52A0;&#x7684;&#x3010;g&#x3011;&#x1F431;&#x200D;&#x1F464;"><a name="2-&#x52A0;&#x7684;&#x3010;g&#x3011;&#x1F431;&#x200D;&#x1F464;" class="anchor-navigation-ex-anchor" href="#2-&#x52A0;&#x7684;&#x3010;g&#x3011;&#x1F431;&#x200D;&#x1F464;"><i class="fa fa-link" aria-hidden="true"></i></a>2 )&#x52A0;&#x7684;&#x3010;g&#x3011;&#x1F431;&#x200D;&#x1F464;</h4>
+<blockquote>
+<p><strong>g</strong>&#x53EF;&#x4EE5;&#x8BA9;&#x6B63;&#x5219;&#x5339;&#x914D; <u><em>&#x6240;&#x6709;</em></u> &#x7684;<u>&#x5B57;&#x7B26;&#x4E32;</u></p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello wold&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/l/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg));<span class="hljs-comment">//(3) [&quot;l&quot;, &quot;l&quot;, &quot;l&quot;]</span>
+</code></pre>
+<h4 id="3-&#x52A0;&#x7684;&#x3010;m&#x3011;"><a name="3-&#x52A0;&#x7684;&#x3010;m&#x3011;" class="anchor-navigation-ex-anchor" href="#3-&#x52A0;&#x7684;&#x3010;m&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>3) &#x52A0;&#x7684;&#x3010;m&#x3011;</h4>
+<blockquote>
+<p>m&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x6362;&#x884C;<strong>&#x6CE8;&#x610F;</strong>&#xFF1A;</p>
+<blockquote>
+<p>&#x53EA;&#x6709;&#x5F53;&#x76EE;&#x6807;<em><u>&#x5B57;&#x7B26;&#x4E32;</u></em> &#x542B;&#x6709;<strong>\n</strong>    &#x3010;\n&#x662F;&#x6362;&#x884C;&#x54E6;&#x3011;</p>
+<p>&#x800C;&#x4E14;<em><u>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</u></em> &#x4E2D;&#x542B;&#x6709;<strong>^</strong>&#x6216;<strong>$</strong>&#x7684;&#x65F6;&#x5019;&#xFF0C;<strong>/m</strong>&#x4FEE;&#x9970;&#x7B26;&#x624D;&#x6709;&#x4F5C;&#x7528;</p>
+</blockquote>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;a0b\na1b\na2b\na3b\na4b&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/^a[1-3]b$/m</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+</code></pre>
+<h3 id="&#x7EB5;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#x1F693;"><a name="&#x7EB5;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#x1F693;" class="anchor-navigation-ex-anchor" href="#&#x7EB5;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#x1F693;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EB5;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#x1F693;</h3>
+<blockquote>
+<p>&#x7EB5;&#x5411;&#x6A21;&#x7CCA;&#x6307;&#x7684;&#x662F;&#xFF0C;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5177;&#x4F53;&#x5230;&#x67D0;&#x4E00;&#x4F4D;&#x5B57;&#x7B26;&#x65F6;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x4E0D;&#x662F;&#x67D0;&#x4E2A;&#x786E;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x79CD;&#x53EF;&#x80FD;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;a1b a2b a3b a4b a5b&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/a[12345]b/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))<span class="hljs-comment">//[&quot;a1b&quot;, &quot;a2b&quot;, &quot;a3b&quot;]</span>
+</code></pre>
+<h4 id="1&#x3001;&#x5B57;&#x7B26;&#x7EC4;"><a name="1&#x3001;&#x5B57;&#x7B26;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x5B57;&#x7B26;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x5B57;&#x7B26;&#x7EC4;</h4>
+<blockquote>
+<p>&#x9700;&#x8981;&#x5F3A;&#x8C03;&#x7684;&#x662F;&#xFF0C;&#x867D;&#x53EB;&#x5B57;&#x7B26;&#x7EC4;&#xFF08;&#x5B57;&#x7B26;&#x7C7B;&#xFF09;&#xFF0C;&#x4F46;&#x53EA;&#x662F;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x3002;&#x4F8B;&#x5982;[abc]&#xFF0C;&#x8868;&#x793A;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x201C;a&#x201D;&#x3001;&#x201C;b&#x201D;&#x3001;&#x201C;c&#x201D;&#x4E4B;&#x4E00;&#x3002;</p>
+</blockquote>
+<h5 id="1-&#x8303;&#x56F4;&#x8868;&#x793A;"><a name="1-&#x8303;&#x56F4;&#x8868;&#x793A;" class="anchor-navigation-ex-anchor" href="#1-&#x8303;&#x56F4;&#x8868;&#x793A;"><i class="fa fa-link" aria-hidden="true"></i></a>1) &#x8303;&#x56F4;&#x8868;&#x793A;</h5>
+<blockquote>
+<p>&#x5982;&#x679C;&#x5B57;&#x7B26;&#x7EC4;&#x91CC;&#x7684;&#x5B57;&#x7B26;&#x7279;&#x522B;&#x591A;&#x7684;&#x8BDD;&#xFF0C;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8303;&#x56F4;&#x8868;&#x793A;&#x6CD5;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">//&#x5339;&#x914D;a20 a30 a40</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;a10 a20 a30 a40 a50&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/a[2-4]0/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))
+
+<span class="hljs-comment">//&#x5339;&#x914D;b c d</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;a b c d e&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/[b-d]/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))
+
+<span class="hljs-comment">//&#x5339;&#x914D;&#x6240;&#x6709;&#x7684;&#x6570;&#x5B57;</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;1 2 3 4 5&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/[0-9]/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))
+
+<span class="hljs-comment">//&#x5339;&#x914D;&#x6240;&#x6709;&#x7684;&#x5927;&#x5C0F;&#x5199;&#x82F1;&#x6587;&#x5B57;&#x6BCD;</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;a b c d e A B C D&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/[A-Za-z]/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))
+
+<span class="hljs-comment">//&#x5339;&#x914D; a - z</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;a - z&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/[a\\-z]/g</span> &#x6216; /[az-]/g &#x6216; /[-az]/g
+<span class="hljs-built_in">console</span>.log(str.match(reg))
+</code></pre>
+<blockquote>
+<p><strong>&#x7EC3;&#x4E60;&#x4E2D;&#x1F4A8;</strong></p>
+<p>&#x6570;&#x5B57;&#x5339;&#x914D;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;5.5&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[1-9]/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;1000&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[1-9]/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;55000&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[1-9]/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+</code></pre>
+<blockquote>
+<p>&#x82F1;&#x6587;&#x5339;&#x914D;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;d&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[a-z]/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+
+<span class="hljs-comment">// &#x82F1;&#x6587;&#x5927;&#x5C0F;&#x5199;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;A&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[A-Ca-c]/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;D&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[A-Ca-c]/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//false</span>
+</code></pre>
+<h5 id="2-&#x6392;&#x9664;&#x5B57;&#x7B26;&#x7EC4;"><a name="2-&#x6392;&#x9664;&#x5B57;&#x7B26;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#2-&#x6392;&#x9664;&#x5B57;&#x7B26;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>2) &#x6392;&#x9664;&#x5B57;&#x7B26;&#x7EC4;</h5>
+<blockquote>
+<p>&#x7EB5;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x60C5;&#x5F62;&#x5C31;&#x662F;&#xFF0C;&#x67D0;&#x4F4D;&#x5B57;&#x7B26;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#xFF0C;&#x4F46;&#x5C31;&#x4E0D;&#x80FD;&#x662F;&quot;a&quot;&#x3001;&quot;b&quot;&#x3001;&quot;c&quot;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">//&#x5339;&#x914D;&#x9664;&#x4E86;abc&#x4EE5;&#x5916;&#x7684;&#x82F1;&#x6587;&#x5B57;&#x6BCD;</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;d e f g h i j k&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/[^abc]/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))
+</code></pre>
+<blockquote>
+<p><strong>&#x7EC3;&#x4E60;&#x4E2D;&#x1F4A8;</strong></p>
+<p>&#x53D6;&#x53CD;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;d&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[^abc]/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;a&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[^abc]/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//false</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;c&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[^abc]/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+</code></pre>
+<h5 id="3-&#x5B57;&#x7B26;&#x7EC4;&#x7B80;&#x5199;"><a name="3-&#x5B57;&#x7B26;&#x7EC4;&#x7B80;&#x5199;" class="anchor-navigation-ex-anchor" href="#3-&#x5B57;&#x7B26;&#x7EC4;&#x7B80;&#x5199;"><i class="fa fa-link" aria-hidden="true"></i></a>3) &#x5B57;&#x7B26;&#x7EC4;&#x7B80;&#x5199;</h5>
+<pre><code class="lang-jsx">\\d&#x5C31;&#x662F;[<span class="hljs-number">0</span><span class="hljs-number">-9</span>]&#x3002;&#x8868;&#x793A;&#x662F;&#x4E00;&#x4F4D;&#x6570;&#x5B57;&#x3002;
+\\D&#x5C31;&#x662F;[^<span class="hljs-number">0</span><span class="hljs-number">-9</span>]&#x3002;&#x8868;&#x793A;&#x9664;&#x6570;&#x5B57;&#x5916;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x3002;
+
+\\w&#x5C31;&#x662F;[<span class="hljs-number">0</span><span class="hljs-number">-9</span>a-zA-Z_]&#x3002;&#x8868;&#x793A;&#x6570;&#x5B57;&#x3001;&#x5927;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#x3002;
+\\W&#x662F;[^<span class="hljs-number">0</span><span class="hljs-number">-9</span>a-zA-Z_]&#x3002;&#x975E;&#x5355;&#x8BCD;&#x5B57;&#x7B26;&#x3002;
+
+\\s&#x662F;[\\t\\v\\n\\r\\f]&#x3002;&#x8868;&#x793A;&#x7A7A;&#x767D;&#x7B26;&#xFF0C;&#x5305;&#x62EC;&#x7A7A;&#x683C;&#x3001;&#x6C34;&#x5E73;&#x5236;&#x8868;&#x7B26;&#x3001;&#x5782;&#x76F4;&#x5236;&#x8868;&#x7B26;&#x3001;&#x6362;&#x884C;&#x7B26;&#x3001;&#x56DE;&#x8F66;&#x7B26;&#x3001;&#x6362;&#x9875;&#x7B26;&#x3002;
+\\S&#x662F;[^\\t\\v\\n\\r\\f]&#x3002; &#x975E;&#x7A7A;&#x767D;&#x7B26;&#x3002;
+
+.&#x5C31;&#x662F;[^\\n\\r\\u2028\\u2029]&#x3002;&#x901A;&#x914D;&#x7B26;&#xFF0C;&#x8868;&#x793A;&#x51E0;&#x4E4E;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x3002;&#x6362;&#x884C;&#x7B26;&#x3001;&#x56DE;&#x8F66;&#x7B26;&#x3001;&#x884C;&#x5206;&#x9694;&#x7B26;&#x548C;&#x6BB5;&#x5206;&#x9694;&#x7B26;&#x9664;&#x5916;&#x3002;
+
+<span class="hljs-comment">//&#x5339;&#x914D;&#x6240;&#x6709;&#x7684;&#x6570;&#x5B57;</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;1 2 3&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/\\d/g</span>
+
+<span class="hljs-built_in">console</span>.log(str.match(reg))
+
+<span class="hljs-comment">//&#x5339;&#x914D;&#x6240;&#x6709;&#x7684;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x548C;&#x4E0B;&#x5212;&#x7EBF;</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;a b c _&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/\\w/g</span>
+
+<span class="hljs-built_in">console</span>.log(str.match(reg))
+
+<span class="hljs-comment">//&#x5339;&#x914D;&#x6240;&#x6709;&#x7279;&#x6B8A;&#x7B26;&#x53F7;(&#x8868;&#x793A;&#x7A7A;&#x767D;&#x7B26;&#xFF0C;&#x5305;&#x62EC;&#x7A7A;&#x683C;&#x3001;&#x6C34;&#x5E73;&#x5236;&#x8868;&#x7B26;&#x3001;&#x5782;&#x76F4;&#x5236;&#x8868;&#x7B26;&#x3001;&#x6362;&#x884C;&#x7B26;&#x3001;&#x56DE;&#x8F66;&#x7B26;&#x3001;&#x6362;&#x9875;&#x7B26;)</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;a b c _&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/\\s/g</span>
+
+<span class="hljs-built_in">console</span>.log(str.match(reg))
+
+<span class="hljs-comment">//&#x901A;&#x914D;&#x7B26;&#xFF08;&#x8868;&#x793A;&#x51E0;&#x4E4E;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x3002;&#x6362;&#x884C;&#x7B26;&#x3001;&#x56DE;&#x8F66;&#x7B26;&#x3001;&#x884C;&#x5206;&#x9694;&#x7B26;&#x548C;&#x6BB5;&#x5206;&#x9694;&#x7B26;&#x9664;&#x5916;&#xFF09;</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;a b c _&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/./g</span>
+
+<span class="hljs-built_in">console</span>.log(str.match(reg))
+</code></pre>
+<h6 id="&#x5927;&#x6CD5;&#x4E2D;&#x1F431;&#x200D;&#x1F464;&#x1F4A8;"><a name="&#x5927;&#x6CD5;&#x4E2D;&#x1F431;&#x200D;&#x1F464;&#x1F4A8;" class="anchor-navigation-ex-anchor" href="#&#x5927;&#x6CD5;&#x4E2D;&#x1F431;&#x200D;&#x1F464;&#x1F4A8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5927;&#x6CD5;&#x4E2D;&#x1F431;&#x200D;&#x1F464;&#x1F4A8;</h6>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x6570;&#x5B57;&#x5339;&#x914D;&#x7B80;&#x5199;</span>
+<span class="hljs-comment">// &#x53D6;&#x53CD;</span>
+<span class="hljs-comment">// \d&#x5C31;&#x662F;[0 - 9]&#x3002;&#x8868;&#x793A;&#x662F;&#x4E00;&#x4F4D;&#x6570;&#x5B57;&#x3002;&#x1F496;</span>
+<span class="hljs-comment">// \D&#x5C31;&#x662F;[^ 0 - 9]&#x3002;&#x8868;&#x793A;&#x9664;&#x6570;&#x5B57;&#x5916;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x3002;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;s&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\D/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;g&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\D/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;H&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\a/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//false</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;j&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\a/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//false</span>
+
+<span class="hljs-comment">// &#x8868;&#x793A;&#x6570;&#x5B57;&#x3001;&#x5927;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#x3002;\w&#x5C31;&#x662F;[0-9a-zA-Z_]&#x1F496;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;-&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\w/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//false</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;-j&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\w/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;1&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\w/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;_&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\w/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+
+<span class="hljs-comment">//\s&#x662F;[\t\v\n\r\f]&#x3002;&#x8868;&#x793A;&#x7A7A;&#x767D;&#x7B26;&#xFF0C;&#x5305;&#x62EC;&#x7A7A;&#x683C;&#x3001;&#x6C34;&#x5E73;&#x5236;&#x8868;&#x7B26;&#x3001;&#x5782;&#x76F4;&#x5236;&#x8868;&#x7B26;&#x3001;&#x6362;&#x884C;&#x7B26;&#x3001;&#x56DE;&#x8F66;&#x7B26;&#x3001;&#x6362;&#x9875;&#x7B26;&#x3002;</span>
+<span class="hljs-comment">// &#x5927;&#x5199;S&#x5C31;&#x53D6;&#x53CD;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;\n&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\s/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;$&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\s/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//false</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;$&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\S/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+
+<span class="hljs-comment">// &#x901A;&#x7528;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;j&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/./</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+
+<span class="hljs-comment">//&#x65E0;&#x654C;&#x4EC0;&#x4E48;&#x90FD;&#x80FD;&#x5339;&#x914D;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;\n&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[\w\w]/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//false</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;^%&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[\w\D]/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+
+
+<span class="hljs-comment">// &#x8FD9;&#x79CD;&#x4EC0;&#x4E48;&#x90FD;&#x5339;&#x914D;&#x4E0D;&#x4E86;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;$&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[^\d\D]/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//false</span>
+
+
+<span class="hljs-comment">// &#x7279;&#x6B8A;&#x7528;&#x6CD5;&#x1F4A8;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;1&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[\w\w]/</span>  <span class="hljs-comment">//&#x5339;&#x914D;&#x6240;&#x6709;&#x5B57;&#x7B26;</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[^\w\w]/</span> <span class="hljs-comment">//&#x4E0D;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x5B57;&#x7B26;</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//false</span>
+
+
+<span class="hljs-comment">//&#x5339;&#x914D;a20 a30 a40</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;a10 a20 a30 a40 a50&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/a[2-4]0/g</span>
+<span class="hljs-built_in">console</span>.log(reg.test(reg))<span class="hljs-comment">//false</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))<span class="hljs-comment">//[&quot;a20&quot;, &quot;a30&quot;, &quot;a40&quot;]</span>
+
+<span class="hljs-comment">//&#x5339;&#x914D;b c d</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;a b c d e&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[b-d]/g</span>
+<span class="hljs-built_in">console</span>.log(reg.test(reg))<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))<span class="hljs-comment">// [&quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span>
+
+<span class="hljs-comment">//&#x5339;&#x914D;&#x6240;&#x6709;&#x7684;&#x6570;&#x5B57;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;1 2 3 4 5&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[0-9]/g</span>
+<span class="hljs-built_in">console</span>.log(reg.test(reg))<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))<span class="hljs-comment">//[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;]</span>
+
+
+<span class="hljs-comment">//&#x5339;&#x914D;&#x6240;&#x6709;&#x7684;&#x5927;&#x5C0F;&#x5199;&#x82F1;&#x6587;&#x5B57;&#x6BCD;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;a b c d e A B C D&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[A-Za-z]/g</span>
+<span class="hljs-built_in">console</span>.log(reg.test(reg))<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))<span class="hljs-comment">//[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;]</span>
+
+<span class="hljs-comment">//&#x5339;&#x914D; a - z</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;a - z&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/[a\\-z]/g</span>    <span class="hljs-comment">//&#x6216;   /[az-]/g   &#x6216;   / [-az] / g</span>
+<span class="hljs-built_in">console</span>.log(reg.test(reg))<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))<span class="hljs-comment">//[&quot;a&quot;, &quot;z&quot;]</span>
+</code></pre>
+<h3 id="&#x6A2A;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;"><a name="&#x6A2A;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x6A2A;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A2A;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;</h3>
+<blockquote>
+<p>&#x6A2A;&#x5411;&#x6A21;&#x7CCA;&#x6307;&#x7684;&#x662F;&#xFF0C;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x53EF;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#x4E0D;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x591A;&#x79CD;&#x60C5;&#x51B5;&#x7684;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">//&#x5339;&#x914D;abbc abbbc</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;abc abbc abbbc&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/ab{2,3}c/g</span>
+
+<span class="hljs-built_in">console</span>.log(str.match(reg))
+</code></pre>
+<h4 id="1&#x3001;&#x91CF;&#x8BCD;"><a name="1&#x3001;&#x91CF;&#x8BCD;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x91CF;&#x8BCD;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x91CF;&#x8BCD;</h4>
+<blockquote>
+<p>&#x91CF;&#x8BCD;&#x4E5F;&#x79F0;&#x91CD;&#x590D;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx">{m,} &#x8868;&#x793A;&#x81F3;&#x5C11;&#x51FA;&#x73B0;m&#x6B21;&#x3002;
+{m} &#x7B49;&#x4EF7;&#x4E8E;{m,m}&#xFF0C;&#x8868;&#x793A;&#x51FA;&#x73B0;m&#x6B21;&#x3002;
+? &#x7B49;&#x4EF7;&#x4E8E;{<span class="hljs-number">0</span>,<span class="hljs-number">1</span>}&#xFF0C;&#x8868;&#x793A;&#x51FA;&#x73B0;&#x6216;&#x8005;&#x4E0D;&#x51FA;&#x73B0;&#x3002;
++ &#x7B49;&#x4EF7;&#x4E8E;{<span class="hljs-number">1</span>,}&#xFF0C;&#x8868;&#x793A;&#x51FA;&#x73B0;&#x81F3;&#x5C11;&#x4E00;&#x6B21;&#x3002;
+* &#x7B49;&#x4EF7;&#x4E8E;{<span class="hljs-number">0</span>,}&#xFF0C;&#x8868;&#x793A;&#x51FA;&#x73B0;&#x4EFB;&#x610F;&#x6B21;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x4E0D;&#x51FA;&#x73B0;&#x3002;
+
+<span class="hljs-comment">//&#x5339;&#x914D;&#x51FA;&#x73B0;0&#x6B21;&#x6216;1&#x6B21;</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;ac abc abbc abbbc&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/ab{0,1}c/g</span>
+<span class="hljs-keyword">let</span> reg= <span class="hljs-regexp">/ab?c/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg)) <span class="hljs-comment">//[&quot;ac&quot;, &quot;abc&quot;]</span>
+
+<span class="hljs-comment">//&#x5339;&#x914D;&#x51FA;&#x73B0;&#x81F3;&#x5C11;&#x4E00;&#x6B21;</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;ac abc abbc abbbc&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/ab{1,}c/g</span>
+<span class="hljs-keyword">let</span> reg= <span class="hljs-regexp">/ab+c/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg)) <span class="hljs-comment">//[&quot;abc&quot;, &quot;abbc&quot;, &quot;abbbc&quot;]</span>
+
+<span class="hljs-comment">//&#x5339;&#x914D;&#x51FA;&#x73B0;&#x4EFB;&#x610F;&#x6B21;&#x6570;</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;ac abc abbc abbbc&quot;</span>
+<span class="hljs-keyword">let</span> reg= <span class="hljs-regexp">/ab*c/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg)) <span class="hljs-comment">// [&quot;ac&quot;, &quot;abc&quot;, &quot;abbc&quot;, &quot;abbbc&quot;]</span>
+</code></pre>
+<blockquote>
+<p>&#x7EC3;&#x4E60;&#x4E2D;&#x1F4A8;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;heo helo hello helllo hellllo&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/hel{1,3}o/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg));<span class="hljs-comment">//[&quot;helo&quot;, &quot;hello&quot;, &quot;helllo&quot;]</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;heo helo hello helllo hellllo&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/hel{1,}o/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg));<span class="hljs-comment">//[&quot;helo&quot;, &quot;hello&quot;, &quot;helllo&quot;, &quot;hellllo&quot;]</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;heo helo hello helllo hellllo&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/hel{2}o/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg));<span class="hljs-comment">//[&quot;hello&quot;]</span>
+
+<span class="hljs-comment">//&#x3010;?&#x3011;0&#x6B21;&#x6216;&#x8005;1&#x6B21;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;heo helo hello helllo hellllo&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/hel?o/g</span> 
+<span class="hljs-built_in">console</span>.log(str.match(reg));<span class="hljs-comment">//[&quot;heo&quot;, &quot;helo&quot;]</span>
+
+<span class="hljs-comment">//&#x3010;+&#x3011;&#x81F3;&#x5C11;&#x51FA;&#x73B0;&#x4E86;1&#x6B21;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;heo helo hello helllo hellllo&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/hel+o/g</span> 
+<span class="hljs-built_in">console</span>.log(str.match(reg));<span class="hljs-comment">//[&quot;helo&quot;, &quot;hello&quot;, &quot;helllo&quot;, &quot;hellllo&quot;]</span>
+
+<span class="hljs-comment">//&#x3010;*&#x3011;&#x4EFB;&#x610F;&#x6B21;&#x6570;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;heo helo hello helllo hellllo&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/hel*o/g</span> 
+<span class="hljs-built_in">console</span>.log(str.match(reg));<span class="hljs-comment">//[&quot;heo&quot;, &quot;helo&quot;, &quot;hello&quot;, &quot;helllo&quot;, &quot;hellllo&quot;]</span>
+</code></pre>
+<h5 id="&#x6848;&#x4F8B;_1"><a name="&#x6848;&#x4F8B;_1" class="anchor-navigation-ex-anchor" href="#&#x6848;&#x4F8B;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6848;&#x4F8B;</h5>
+<blockquote>
+<p>1&#x3001;&#x5339;&#x914D;&#x6211;&#x4EEC;&#x7684;&#x624B;&#x673A;&#x53F7;&#x7801;&#xFF08;&#x677E;&#x6563;&#x5339;&#x914D;&#xFF09; 1[3-9]&#x540E;&#x9762;9&#x4F4D;&#x6570;&#x5B57;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;15866393005&quot;</span>;
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/^1[3-9]\d{9}$/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str)); <span class="hljs-comment">//true</span>
+</code></pre>
+<blockquote>
+<p>&#x7528;&#x5224;&#x65AD;&#x8BED;&#x53E5;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;15866393005&quot;</span>;
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/^1[3-9]\d{9}$/</span>
+<span class="hljs-keyword">var</span> arr = reg.exec(str)
+<span class="hljs-keyword">if</span> (arr === <span class="hljs-literal">null</span> || arr === <span class="hljs-string">&quot;&quot;</span>) {
+    alert(<span class="hljs-string">&quot;&#x6CA1;&#x5339;&#x914D;!&quot;</span>)
+} <span class="hljs-keyword">else</span> {
+    alert(arr[<span class="hljs-number">0</span>]) <span class="hljs-comment">//15866393005</span>
+}
+</code></pre>
+<blockquote>
+<p>2&#x3001;qq&#x90AE;&#x7BB1;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;15866393@qq.com&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/^[1-9][0-9]{4,10}@qq.com$/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+</code></pre>
+<blockquote>
+<p>3&#x3001;24&#x5C0F;&#x65F6;&#x6B63;&#x5219;&#x5F0F;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-comment">// 23:59</span>
+<span class="hljs-comment">// 00:00</span>
+<span class="hljs-comment">// 09</span>
+<span class="hljs-comment">// 19</span>
+<span class="hljs-comment">// 23</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;24:00&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/^[0-1][0-9]|[2][0-3]:[0-5][0-9]$/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//false</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;00:00&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/^[0-1][0-9]|[2][0-3]:[0-5][0-9]$/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;23:59&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/^[0-1][0-9]|[2][0-3]:[0-5][0-9]$/</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str));<span class="hljs-comment">//true</span>
+</code></pre>
+<h4 id="2&#x3001;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x548C;&#x60F0;&#x6027;&#x5339;&#x914D;"><a name="2&#x3001;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x548C;&#x60F0;&#x6027;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x548C;&#x60F0;&#x6027;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x548C;&#x60F0;&#x6027;&#x5339;&#x914D;</h4>
+<blockquote>
+<p>&#x91CF;&#x8BCD;&#x9ED8;&#x8BA4;&#x90FD;&#x662F;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x7684;&#xFF0C;&#x5373;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x5C31;&#x5339;&#x914D;&#x591A;&#x5C11;&#x4E2A;&#xFF0C;&#x8D8A;&#x591A;&#x8D8A;&#x597D;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;123 1234 12345 123456&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/\\d{2,5}/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))<span class="hljs-comment">//[&quot;123&quot;, &quot;1234&quot;, &quot;12345&quot;, &quot;12345&quot;]</span>
+</code></pre>
+<blockquote>
+<p>&#x800C;&#x6709;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x7684;&#x662F;&#x60F0;&#x6027;&#x5339;&#x914D;&#xFF0C;&#x5373;&#x5C3D;&#x53EF;&#x80FD;&#x5C11;&#x7684;&#x5339;&#x914D;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">//&#x5176;&#x4E2D;/\\d{2,5}?/&#x8868;&#x793A;&#xFF0C;&#x867D;&#x7136;2&#x5230;5&#x6B21;&#x90FD;&#x884C;&#xFF0C;&#x5F53;2&#x4E2A;&#x5C31;&#x591F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4E0D;&#x5728;&#x5F80;&#x4E0B;&#x5C1D;&#x8BD5;&#x4E86;&#x3002;</span>
+<span class="hljs-keyword">let</span> str= <span class="hljs-string">&quot;123 1234 12345 123456&quot;</span>;
+<span class="hljs-keyword">let</span> reg= <span class="hljs-regexp">/\\d{2,5}?/g</span>;
+<span class="hljs-built_in">console</span>.log( str.match(reg) )<span class="hljs-comment">//[&quot;12&quot;, &quot;12&quot;, &quot;34&quot;, &quot;12&quot;, &quot;34&quot;, &quot;12&quot;, &quot;34&quot;, &quot;56&quot;]</span>
+</code></pre>
+<blockquote>
+<p>&#x901A;&#x8FC7;&#x5728;&#x91CF;&#x8BCD;&#x540E;&#x9762;&#x52A0;&#x4E2A;&#x95EE;&#x53F7;&#x5C31;&#x80FD;&#x5B9E;&#x73B0;&#x60F0;&#x6027;&#x5339;&#x914D;&#xFF0C;&#x56E0;&#x6B64;&#x6240;&#x6709;&#x60F0;&#x6027;&#x5339;&#x914D;&#x60C5;&#x5F62;&#x5982;&#x4E0B;</p>
+</blockquote>
+<pre><code class="lang-jsx">{m,n}?
+{m,}?
+??
++?
+*?
+</code></pre>
+<h3 id="&#x591A;&#x9009;&#x5206;&#x652F;"><a name="&#x591A;&#x9009;&#x5206;&#x652F;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x9009;&#x5206;&#x652F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x591A;&#x9009;&#x5206;&#x652F;</h3>
+<blockquote>
+<p>&#x4E00;&#x4E2A;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x6A2A;&#x5411;&#x548C;&#x7EB5;&#x5411;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#x3002;&#x800C;&#x591A;&#x9009;&#x5206;&#x652F;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x591A;&#x4E2A;&#x5B50;&#x6A21;&#x5F0F;&#x4EFB;&#x9009;&#x5176;&#x4E00;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;(p1|p2|p3)&#xFF0C;&#x5176;&#x4E2D;p1&#x3001;p2&#x548C;p3&#x662F;&#x5B50;&#x6A21;&#x5F0F;&#xFF0C;&#x7528;|&#xFF08;&#x7BA1;&#x9053;&#x7B26;&#xFF09;&#x5206;&#x9694;&#xFF0C;&#x8868;&#x793A;&#x5176;&#x4E2D;&#x4EFB;&#x4F55;&#x4E4B;&#x4E00;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;hello world&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/hello|world/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))<span class="hljs-comment">//[hello,world]</span>
+</code></pre>
+<blockquote>
+<p>&#x4F46;&#x662F;&#x591A;&#x9009;&#x5206;&#x652F;&#x9ED8;&#x8BA4;&#x662F;&#x60F0;&#x6027;&#x7684;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;good goodbye&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/good|goodbye/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))<span class="hljs-comment">//[&apos;good&apos;, &apos;good&apos;]</span>
+</code></pre>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x5199;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;good goodbye&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/goodbye|good/g</span><span class="hljs-comment">//&#x628A;goodbye&#x653E;&#x524D;&#x9762;&#x5C31;&#x53EF;&#x4EE5;&#x51C6;&#x786E;&#x7684;&#x83B7;&#x53D6;&#x5230;goodbye</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))<span class="hljs-comment">//[&apos;good&apos;, &apos;goodbye&apos;]</span>
+
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;good goodbye&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/^good|goodbye$/g</span><span class="hljs-comment">//^$&#x662F;&#x4EE5;&#x4EC0;&#x4E48;&#x4E3A;&#x5F00;&#x5934;&#xFF0C;&#x4EC0;&#x4E48;&#x5473;&#x7ED3;&#x675F;</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg))<span class="hljs-comment">//[&apos;good&apos;, &apos;goodbye&apos;]</span>
+</code></pre>
+<h3 id="&#x6848;&#x4F8B;_2"><a name="&#x6848;&#x4F8B;_2" class="anchor-navigation-ex-anchor" href="#&#x6848;&#x4F8B;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6848;&#x4F8B;</h3>
+<p>1&#x3001;&#x5339;&#x914D;16&#x8FDB;&#x5236;&#x989C;&#x8272;&#x503C;</p>
+<pre><code class="lang-jsx">#ffbbad
+
+#Fc01DF
+
+#FFF
+
+#ffE
+
+var regex = /#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})/g;
+var string = &quot;#ffbbad #Fc01DF #FFF #ffE&quot;;
+console.log( string.match(regex) ); 
+// =&gt; [&quot;#ffbbad&quot;, &quot;#Fc01DF&quot;, &quot;#FFF&quot;, &quot;#ffE&quot;]
+</code></pre>
+<p>2&#x3001;&#x5339;&#x914D;24&#x5C0F;&#x65F6;&#x5236;&#x65F6;&#x95F4;</p>
+<pre><code class="lang-jsx"><span class="hljs-number">23</span>:<span class="hljs-number">59</span>
+
+<span class="hljs-number">02</span>:<span class="hljs-number">07</span>
+
+<span class="hljs-keyword">var</span> regex = <span class="hljs-regexp">/^([01][0-9]|[2][0-3]):[0-5][0-9]$/</span>;
+<span class="hljs-built_in">console</span>.log( regex.test(<span class="hljs-string">&quot;23:59&quot;</span>) ); 
+<span class="hljs-built_in">console</span>.log( regex.test(<span class="hljs-string">&quot;02:07&quot;</span>) ); 
+<span class="hljs-comment">// =&gt; true</span>
+<span class="hljs-comment">// =&gt; true</span>
+</code></pre>
+<p>3&#x3001;&#x5339;&#x914D;&#x65E5;&#x671F;,yyyy-mm-dd&#x683C;&#x5F0F;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">var</span> regex = <span class="hljs-regexp">/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/</span>;
+<span class="hljs-built_in">console</span>.log( regex.test(<span class="hljs-string">&quot;2017-06-10&quot;</span>) ); 
+<span class="hljs-comment">// =&gt; true</span>
+</code></pre>
+<h2 id="&#x4E8C;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4F4D;&#x7F6E;&#x5339;&#x914D;"><a name="&#x4E8C;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4F4D;&#x7F6E;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4F4D;&#x7F6E;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4F4D;&#x7F6E;&#x5339;&#x914D;</h2>
+<h3 id="&#x4F4D;&#x7F6E;"><a name="&#x4F4D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x4F4D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F4D;&#x7F6E;</h3>
+<blockquote>
+<p>&#x4F4D;&#x7F6E;&#x6307;&#x7684;&#x662F;&#x76F8;&#x90BB;&#x5B57;&#x7B26;&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">//&#x53EF;&#x4EE5;&#x628A;&#x4F4D;&#x7F6E;&#x7406;&#x89E3;&#x6210;&#x6BCF;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5DE6;&#x53F3;&#x4E24;&#x8FB9;&#x7684;&#x7A7A;&#x5B57;&#x7B26;</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;hello&quot;</span>
+
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;&quot;</span>+<span class="hljs-string">&quot;h&quot;</span>+<span class="hljs-string">&quot;e&quot;</span>+<span class="hljs-string">&quot;l&quot;</span>+<span class="hljs-string">&quot;l&quot;</span>+<span class="hljs-string">&quot;o&quot;</span>+<span class="hljs-string">&quot;&quot;</span>
+</code></pre>
+<h3 id="&#x4F4D;&#x7F6E;&#x5339;&#x914D;"><a name="&#x4F4D;&#x7F6E;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x4F4D;&#x7F6E;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F4D;&#x7F6E;&#x5339;&#x914D;</h3>
+<h4 id="1&#x3001;&#x951A;&#x5B57;&#x7B26;&#xFF0C;&#x5339;&#x914D;&#x4F4D;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x3002;"><a name="1&#x3001;&#x951A;&#x5B57;&#x7B26;&#xFF0C;&#x5339;&#x914D;&#x4F4D;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x3002;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x951A;&#x5B57;&#x7B26;&#xFF0C;&#x5339;&#x914D;&#x4F4D;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x951A;&#x5B57;&#x7B26;&#xFF0C;&#x5339;&#x914D;&#x4F4D;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x3002;</h4>
+<pre><code class="lang-jsx">^       <span class="hljs-comment">//&#xFF08;&#x8131;&#x5B57;&#x7B26;&#xFF09;&#x5339;&#x914D;&#x5F00;&#x5934;&#xFF0C;&#x5728;&#x591A;&#x884C;&#x5339;&#x914D;&#x4E2D;&#x5339;&#x914D;&#x884C;&#x5F00;&#x5934;&#x3002;</span>
+
+$       <span class="hljs-comment">//&#xFF08;&#x7F8E;&#x5143;&#x7B26;&#x53F7;&#xFF09;&#x5339;&#x914D;&#x7ED3;&#x5C3E;&#xFF0C;&#x5728;&#x591A;&#x884C;&#x5339;&#x914D;&#x4E2D;&#x5339;&#x914D;&#x884C;&#x7ED3;&#x5C3E;&#x3002;</span>
+
+\\b      <span class="hljs-comment">//\\w&#x548C;\\W&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E5F;&#x5305;&#x62EC;\\w&#x548C;^&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E5F;&#x5305;&#x62EC;\\w&#x548C;$&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</span>
+
+\\B      <span class="hljs-comment">//\\w&#x4E0E;\\w&#x3001;\\W&#x4E0E;\\W&#x3001;^&#x4E0E;\\W&#xFF0C;\\W&#x4E0E;$&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;</span>
+
+(?=p)   <span class="hljs-comment">//&#x6B63;&#x5411;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x3002;(?=p)&#xFF0C;&#x5176;&#x4E2D;p&#x662F;&#x4E00;&#x4E2A;&#x5B50;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;p&#x524D;&#x9762;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</span>
+
+(?!p)   <span class="hljs-comment">//&#x8D1F;&#x5411;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x3002;(?!p)&#xFF0C;&#x5C31;&#x662F;(?=p)&#x7684;&#x53CD;&#x9762;&#x610F;&#x601D;</span>
+
+(?<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">=p)</span>  //&#x6B63;&#x5411;&#x540E;&#x884C;&#x65AD;&#x8A00;&#x3002;(?&lt;=<span class="hljs-string">p)&#xFF0C;&#x5373;p&#x540E;&#x9762;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</span>
+
+(?&lt;!<span class="hljs-attr">p</span>)  //&#x8D1F;&#x5411;&#x540E;&#x884C;&#x65AD;&#x8A00;&#x3002;(?&lt;!<span class="hljs-attr">p</span>)&#xFF0C;&#x5C31;&#x662F;(?&lt;=<span class="hljs-string">p)&#x7684;&#x53CD;&#x9762;&#x610F;&#x601D;</span>
+</span></span></code></pre>
+<blockquote>
+<p>&#x7EC3;&#x4E60;&#x4E2D;&#x1F4A8;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x3010;^&#x3011;&#xFF08;&#x8131;&#x5B57;&#x7B26;&#xFF09;&#x5339;&#x914D;&#x5F00;&#x5934;&#xFF0C;&#x5728;&#x591A;&#x884C;&#x5339;&#x914D;&#x4E2D;&#x5339;&#x914D;&#x884C;&#x5F00;&#x5934;&#x3002;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello heooo llo&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/^he/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg));<span class="hljs-comment">//[&quot;he&quot;]</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello heooo llo&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/he$/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg));<span class="hljs-comment">//null</span>
+
+
+<span class="hljs-comment">// &#x3010;$&#x3011;&#xFF08;&#x7F8E;&#x5143;&#x7B26;&#x53F7;&#xFF09;&#x5339;&#x914D;&#x7ED3;&#x5C3E;&#xFF0C;&#x5728;&#x591A;&#x884C;&#x5339;&#x914D;&#x4E2D;&#x5339;&#x914D;&#x884C;&#x7ED3;&#x5C3E;&#x3002;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello heooo llo&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/llo$/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg));<span class="hljs-comment">//[&quot;llo&quot;]</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello heooo llo&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/^llo/g</span>
+<span class="hljs-built_in">console</span>.log(str.match(reg));<span class="hljs-comment">//null</span>
+
+
+<span class="hljs-comment">// &#x3010;\\b&#x3011; \\w&#x548C;\\W&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E5F;&#x5305;&#x62EC;\\w&#x548C;^&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E5F;&#x5305;&#x62EC;\\w&#x548C;$&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;h e l l o&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\b/g</span>
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//#h# #e# #l# #l# #o#</span>
+
+
+<span class="hljs-comment">// &#x3010;\\B&#x3011; \\w&#x4E0E;\\w&#x3001;\\W&#x4E0E;\\W&#x3001;^&#x4E0E;\\W&#xFF0C;\\W&#x4E0E;$&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\B/g</span>
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//h#e#l#l#o</span>
+
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;h e l l o&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/\B/g</span>
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//h e l l o</span>
+</code></pre>
+<blockquote>
+<p>&#x1F4A8;&#x1F431;&#x200D;&#x1F464;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x3010;(?= p)&#x3011; &#x6B63;&#x5411;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x3002;(?=p)&#xFF0C;&#x5176;&#x4E2D;p&#x662F;&#x4E00;&#x4E2A;&#x5B50;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;p&#x524D;&#x9762;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</span>
+<span class="hljs-keyword">var</span> str1 = <span class="hljs-string">&quot;hello&quot;</span>
+<span class="hljs-keyword">var</span> reg1 = <span class="hljs-regexp">/(?=l)/g</span>
+<span class="hljs-built_in">console</span>.log(str1.replace(reg1, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//he#l#lo</span>
+
+
+<span class="hljs-comment">// &#x3010;(? !p)&#x3011; &#x8D1F;&#x5411;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x3002;(?!p)&#xFF0C;&#x5C31;&#x662F;(?=p)&#x7684;&#x53CD;&#x9762;&#x610F;&#x601D;</span>
+<span class="hljs-keyword">var</span> str2 = <span class="hljs-string">&quot;hello&quot;</span>
+<span class="hljs-keyword">var</span> reg2 = <span class="hljs-regexp">/(?!l)/g</span>
+<span class="hljs-built_in">console</span>.log(str2.replace(reg2, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//#h#ell#o#</span>
+
+
+<span class="hljs-comment">// &#x3010;(?&lt;=p)&#x3011; &#x6B63;&#x5411;&#x540E;&#x884C;&#x65AD;&#x8A00;&#x3002;(?&lt;=p)&#xFF0C;&#x5373;p&#x540E;&#x9762;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</span>
+<span class="hljs-keyword">var</span> str3 = <span class="hljs-string">&quot;hello&quot;</span>
+<span class="hljs-keyword">var</span> reg3 = <span class="hljs-regexp">/(?&lt;=l)/g</span>
+<span class="hljs-built_in">console</span>.log(str3.replace(reg3, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//hel#l#o</span>
+
+
+<span class="hljs-comment">// &#x3010;(?&lt;!p)&#x3011; &#x8D1F;&#x5411;&#x540E;&#x884C;&#x65AD;&#x8A00;&#x3002;(?&lt;!p)&#xFF0C;&#x5C31;&#x662F;(?&lt;=p)&#x7684;&#x53CD;&#x9762;&#x610F;&#x601D;</span>
+<span class="hljs-keyword">var</span> str4 = <span class="hljs-string">&quot;hello&quot;</span>
+<span class="hljs-keyword">var</span> reg4 = <span class="hljs-regexp">/(?&lt;!l)/g</span>
+<span class="hljs-built_in">console</span>.log(str4.replace(reg4, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//#h#e#llo#</span>
+</code></pre>
+<blockquote>
+<p><strong>&#x6848;&#x4F8B;</strong></p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-comment">// 12345678 &#x53D8;&#x6210; 12,345,678</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;12345678&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/(?!^)(?=(\d{3})+$)/g</span>
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;,&quot;</span>));<span class="hljs-comment">//12,345,678</span>
+</code></pre>
+<blockquote>
+<p>&#x76F8;&#x8BC6;-&#x534A;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;123456789&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/(?&lt;=2)|(?&lt;=5)/g</span>
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;,&quot;</span>));<span class="hljs-comment">//12,345,678</span>
+<span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;123456789&quot;</span>
+<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/(?=3)|(?=6)/g</span>
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;,&quot;</span>));<span class="hljs-comment">//12,345,678</span>
+</code></pre>
+<h4 id="2&#x3001;&#x548C;"><a name="2&#x3001;&#x548C;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x548C;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;^&#x548C;$</h4>
+<blockquote>
+<p><code>^</code>&#xFF08;&#x8131;&#x5B57;&#x7B26;&#xFF09;&#x5339;&#x914D;&#x5F00;&#x5934;&#xFF0C;&#x5728;&#x591A;&#x884C;&#x5339;&#x914D;&#x4E2D;&#x5339;&#x914D;&#x884C;&#x5F00;&#x5934;&#x3002;</p>
+<p><code>$</code>&#xFF08;&#x7F8E;&#x5143;&#x7B26;&#x53F7;&#xFF09;&#x5339;&#x914D;&#x7ED3;&#x5C3E;&#xFF0C;&#x5728;&#x591A;&#x884C;&#x5339;&#x914D;&#x4E2D;&#x5339;&#x914D;&#x884C;&#x7ED3;&#x5C3E;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;hello&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/^|$/g</span>
+<span class="hljs-built_in">console</span>.log(str.replace(reg,<span class="hljs-string">&quot;#&quot;</span>))<span class="hljs-comment">//#hello#</span>
+</code></pre>
+<blockquote>
+<p>&#x8981;&#x6CE8;&#x610F;&#x591A;&#x884C;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;&#x4E8C;&#x8005;&#x662F;&#x884C;&#x7684;&#x6982;&#x5FF5;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;i\\nlove\\njavascript&quot;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/^|$/g</span>
+<span class="hljs-built_in">console</span>.log(str.replace(reg,<span class="hljs-string">&quot;#&quot;</span>))
+<span class="hljs-comment">// #i</span>
+<span class="hljs-comment">// love</span>
+<span class="hljs-comment">// javascript#</span>
+
+<span class="hljs-comment">//&#x9700;&#x8981;&#x52A0;&#x4FEE;&#x9970;&#x7B26;m</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;i\\nlove\\njavascript&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/^|$/gm</span>;
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;#&quot;</span>));
+<span class="hljs-comment">// #i#</span>
+<span class="hljs-comment">// #love#</span>
+<span class="hljs-comment">// #javascript#</span>
+</code></pre>
+<h4 id="3&#x3001;b&#x548C;b"><a name="3&#x3001;b&#x548C;b" class="anchor-navigation-ex-anchor" href="#3&#x3001;b&#x548C;b"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;\b&#x548C;\B</h4>
+<blockquote>
+<p><code>\b</code>&#x662F;&#x5355;&#x8BCD;&#x8FB9;&#x754C;&#xFF0C;&#x5177;&#x4F53;&#x5C31;&#x662F;\w&#x548C;\W&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E5F;&#x5305;&#x62EC;<code>\w</code>&#x548C;<code>^</code>&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E5F;&#x5305;&#x62EC;\w&#x548C;$&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;[JS] Lesson_01.mp4&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/\\b/g</span>;
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//[#JS#] #Lesson_01#.#mp4#</span>
+</code></pre>
+<blockquote>
+<p><code>\B</code>&#x5C31;&#x662F;<code>\b</code>&#x7684;&#x53CD;&#x9762;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x975E;&#x5355;&#x8BCD;&#x8FB9;&#x754C;&#x3002;&#x4F8B;&#x5982;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6240;&#x6709;&#x4F4D;&#x7F6E;&#x4E2D;&#xFF0C;&#x6263;&#x6389;<code>\b</code>&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x90FD;&#x662F;<code>\B</code>&#x7684;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x8BF4;&#x6765;&#x5C31;&#x662F;<code>\w&#x4E0E;\w&#x3001;\W&#x4E0E;\W&#x3001;^&#x4E0E;\W&#xFF0C;\W&#x4E0E;$&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;</code>&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;[JS] Lesson_01.mp4&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/\\B/g</span>;
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//#[J#S]# L#e#s#s#o#n#_#0#1.m#p#4</span>
+</code></pre>
+<h4 id="4&#x3001;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x548C;&#x540E;&#x884C;&#x65AD;&#x8A00;"><a name="4&#x3001;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x548C;&#x540E;&#x884C;&#x65AD;&#x8A00;" class="anchor-navigation-ex-anchor" href="#4&#x3001;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x548C;&#x540E;&#x884C;&#x65AD;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>4&#x3001;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x548C;&#x540E;&#x884C;&#x65AD;&#x8A00;</h4>
+<blockquote>
+<p>&#x5148;&#x884C;&#x65AD;&#x8A00;&#x548C;&#x540E;&#x884C;&#x65AD;&#x8A00;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x73AF;&#x89C6;&#x3002;</p>
+<p>&#x6B63;&#x5411;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x3002;<code>(?=p)</code>&#xFF0C;&#x5176;&#x4E2D;<code>p</code>&#x662F;&#x4E00;&#x4E2A;&#x5B50;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;<code>p</code>&#x524D;&#x9762;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;hello&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/(?=l)/g</span>;
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//he#l#lo</span>
+</code></pre>
+<blockquote>
+<p>&#x8D1F;&#x5411;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x3002;<code>(?!p)</code>&#xFF0C;&#x5C31;&#x662F;<code>(?=p)</code>&#x7684;&#x53CD;&#x9762;&#x610F;&#x601D;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;hello&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/(?!l)/g</span>;
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//#h#ell#o#</span>
+</code></pre>
+<blockquote>
+<p>&#x6B63;&#x5411;&#x540E;&#x884C;&#x65AD;&#x8A00;&#x3002;<code>(?&lt;=p)</code>&#xFF0C;&#x5373;<code>p</code>&#x540E;&#x9762;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;hello&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/(?&lt;=l)/g</span>;
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//hel#l#o</span>
+</code></pre>
+<blockquote>
+<p>&#x8D1F;&#x5411;&#x540E;&#x884C;&#x65AD;&#x8A00;&#x3002;<code>(?&lt;!p)</code>&#xFF0C;&#x5C31;&#x662F;<code>(?&lt;=p)</code>&#x7684;&#x53CD;&#x9762;&#x610F;&#x601D;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;hello&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/(?&lt;!l)/g</span>;
+<span class="hljs-built_in">console</span>.log(str.replace(reg, <span class="hljs-string">&quot;#&quot;</span>));<span class="hljs-comment">//#h#e#llo#</span>
+</code></pre>
+<h3 id="&#x6848;&#x4F8B;_3"><a name="&#x6848;&#x4F8B;_3" class="anchor-navigation-ex-anchor" href="#&#x6848;&#x4F8B;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6848;&#x4F8B;</h3>
+<h4 id="1&#x3001;&#x4E0D;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;"><a name="1&#x3001;&#x4E0D;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x4E0D;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x4E0D;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;</h4>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;hello&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/.^/g</span>;
+
+<span class="hljs-built_in">console</span>.log(str.match(reg))<span class="hljs-comment">//null</span>
+</code></pre>
+<h4 id="2&#x3001;&#x6570;&#x5B57;&#x7684;&#x5343;&#x4F4D;&#x5206;&#x9694;&#x7B26;&#x8868;&#x793A;&#x6CD5;"><a name="2&#x3001;&#x6570;&#x5B57;&#x7684;&#x5343;&#x4F4D;&#x5206;&#x9694;&#x7B26;&#x8868;&#x793A;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x6570;&#x5B57;&#x7684;&#x5343;&#x4F4D;&#x5206;&#x9694;&#x7B26;&#x8868;&#x793A;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x6570;&#x5B57;&#x7684;&#x5343;&#x4F4D;&#x5206;&#x9694;&#x7B26;&#x8868;&#x793A;&#x6CD5;</h4>
+<blockquote>
+<p>&#x628A;<code>&quot;12345678&quot;</code>&#xFF0C;&#x53D8;&#x6210;<code>&quot;12,345,678&quot;</code>&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;123456789&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/(?!^)(?=(\\d{3})+$)/g</span>;
+
+<span class="hljs-built_in">console</span>.log(str.replace(reg,<span class="hljs-string">&quot;,&quot;</span>))<span class="hljs-comment">//123,456,789</span>
+</code></pre>
+<h4 id="3&#x3001;&#x66FF;&#x6362;&#x6CD5;"><a name="3&#x3001;&#x66FF;&#x6362;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#3&#x3001;&#x66FF;&#x6362;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x66FF;&#x6362;&#x6CD5;</h4>
+<blockquote>
+<p>&#x628A;<code>&quot;12345678 123456789&quot;</code>&#x66FF;&#x6362;&#x6210;<code>&quot;12,345,678 123,456,789&quot;</code></p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;12345678 123456789&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/\\B(?=(\\d{3})+\\b)/g</span>;
+
+<span class="hljs-built_in">console</span>.log(str.replace(reg,<span class="hljs-string">&quot;,&quot;</span>))<span class="hljs-comment">//12,345,678 123,456,789</span>
+</code></pre>
+<h4 id="4&#x3001;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;"><a name="4&#x3001;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;" class="anchor-navigation-ex-anchor" href="#4&#x3001;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>4&#x3001;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;</h4>
+<blockquote>
+<p>&#x5BC6;&#x7801;&#x957F;&#x5EA6;<code>6-12</code>&#x4F4D;&#xFF0C;&#x7531;&#x6570;&#x5B57;&#x3001;&#x5C0F;&#x5199;&#x5B57;&#x7B26;&#x548C;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x7EC4;&#x6210;&#xFF0C;&#x4F46;&#x5FC5;&#x987B;&#x81F3;&#x5C11;&#x5305;&#x62EC;2&#x79CD;&#x5B57;&#x7B26;&#x3002;</p>
+<ol>
+<li>&#x540C;&#x65F6;&#x5305;&#x542B;&#x6570;&#x5B57;&#x548C;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;</li>
+<li>&#x540C;&#x65F6;&#x5305;&#x542B;&#x6570;&#x5B57;&#x548C;&#x5927;&#x5199;&#x5B57;&#x6BCD;</li>
+<li>&#x540C;&#x65F6;&#x5305;&#x542B;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x548C;&#x5927;&#x5199;&#x5B57;&#x6BCD;</li>
+<li>&#x540C;&#x65F6;&#x5305;&#x542B;&#x6570;&#x5B57;&#x3001;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x548C;&#x5927;&#x5199;&#x5B57;&#x6BCD;</li>
+</ol>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;123abcdef112&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/((?=.*\\d)(?=.*[a-z])|(?=.*\\d)(?=.*[A-Z])|(?=.*[A-Z])(?=.*[a-z]))^[0-9A-Za-z]{6,12}$/g</span>;
+
+<span class="hljs-built_in">console</span>.log(reg.test(str))<span class="hljs-comment">//true</span>
+</code></pre>
+<blockquote>
+<p>&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x89E3;&#x6CD5;</p>
+<ol>
+<li>&#x4E0D;&#x80FD;&#x662F;&#x7EAF;&#x6570;&#x5B57;</li>
+<li>&#x4E0D;&#x80FD;&#x662F;&#x7EAF;&#x5C0F;&#x5199;</li>
+<li>&#x4E0D;&#x80FD;&#x662F;&#x7EAF;&#x5927;&#x5199;</li>
+</ol>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;AAAAAA&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/(?!^\\d{6,12}$)(?!^[a-z]{6,12}$)(?!^[A-Z]{6,12}$)^[0-9A-Za-z]{6,12}$/</span>;
+
+<span class="hljs-built_in">console</span>.log(reg.test(str))<span class="hljs-comment">//false</span>
+</code></pre>
+<h2 id="&#x4E09;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x62EC;&#x53F7;&#x4F5C;&#x7528;"><a name="&#x4E09;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x62EC;&#x53F7;&#x4F5C;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x62EC;&#x53F7;&#x4F5C;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x62EC;&#x53F7;&#x4F5C;&#x7528;</h2>
+<h3 id="&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;"><a name="&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;</h3>
+<h4 id="&#x4E00;&#x3001;&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;"><a name="&#x4E00;&#x3001;&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x5206;&#x7EC4;&#x548C;&#x5206;&#x652F;&#x7ED3;&#x6784;</h4>
+<blockquote>
+<p>&#x5206;&#x7EC4;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">var</span> regex = <span class="hljs-regexp">/(ab)+/g</span>;
+<span class="hljs-keyword">var</span> string = <span class="hljs-string">&quot;ababa abbb ababab&quot;</span>;
+<span class="hljs-built_in">console</span>.log( string.match(regex) ); 
+<span class="hljs-comment">// =&gt; [&quot;abab&quot;, &quot;ab&quot;, &quot;ababab&quot;]</span>
+</code></pre>
+<blockquote>
+<p>&#x5206;&#x652F;&#x7ED3;&#x6784;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">var</span> regex = <span class="hljs-regexp">/^I love (JavaScript|Regular Expression)$/</span>;
+<span class="hljs-built_in">console</span>.log( regex.test(<span class="hljs-string">&quot;I love JavaScript&quot;</span>) );
+<span class="hljs-built_in">console</span>.log( regex.test(<span class="hljs-string">&quot;I love Regular Expression&quot;</span>) );
+<span class="hljs-comment">// =&gt; true</span>
+<span class="hljs-comment">// =&gt; true</span>
+</code></pre>
+<h4 id="&#x4E8C;&#x3001;&#x5F15;&#x7528;&#x5206;&#x7EC4;"><a name="&#x4E8C;&#x3001;&#x5F15;&#x7528;&#x5206;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x3001;&#x5F15;&#x7528;&#x5206;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x5F15;&#x7528;&#x5206;&#x7EC4;</h4>
+<blockquote>
+<p>&#x8FD9;&#x662F;&#x62EC;&#x53F7;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x6709;&#x4E86;&#x5B83;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x63D0;&#x53D6;&#xFF0C;&#x4EE5;&#x53CA;&#x66F4;&#x5F3A;&#x5927;&#x7684;&#x66FF;&#x6362;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x63D0;&#x53D6;&#x6570;&#x636E;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;2021-10-06&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/(\\d{4})-(\\d{2})-(\\d{2})/</span>;
+<span class="hljs-built_in">console</span>.log(reg.test(str))<span class="hljs-comment">//&#x4EFB;&#x610F;&#x7684;&#x6B63;&#x5219;&#x64CD;&#x4F5C;,&#x4EE5;&#x4E0B;&#x90FD;&#x53EF;&#x4EE5;</span>
+<span class="hljs-comment">// console.log(reg.exec(str))</span>
+<span class="hljs-comment">// console.log(str.match(reg))</span>
+
+<span class="hljs-comment">//&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x5168;&#x5C40;&#x5C5E;&#x6027;$1&#x81F3;$9&#x6765;&#x83B7;&#x53D6;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">RegExp</span>.$<span class="hljs-number">1</span>)<span class="hljs-comment">//2021</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">RegExp</span>.$<span class="hljs-number">2</span>)<span class="hljs-comment">//2021</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">RegExp</span>.$<span class="hljs-number">3</span>)<span class="hljs-comment">//2021</span>
+</code></pre>
+<blockquote>
+<p>&#x66FF;&#x6362;&#x6570;&#x636E;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;2021-10-06&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/(\\d{4})-(\\d{2})-(\\d{2})/</span>;
+
+<span class="hljs-built_in">console</span>.log(str.replace(reg,<span class="hljs-string">&quot;$2/$3/$1&quot;</span>))<span class="hljs-comment">//10/06/2021</span>
+
+<span class="hljs-comment">//&#x7B49;&#x4EF7;&#x4E8E;</span>
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&quot;2021-10-06&quot;</span>;
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/(\\d{4})-(\\d{2})-(\\d{2})/</span>;
+
+<span class="hljs-built_in">console</span>.log(str.replace(reg,()=&gt;{
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">RegExp</span>.$<span class="hljs-number">2</span> + <span class="hljs-string">&quot;/&quot;</span> + <span class="hljs-built_in">RegExp</span>.$<span class="hljs-number">3</span> + <span class="hljs-string">&quot;/&quot;</span> + <span class="hljs-built_in">RegExp</span>.$<span class="hljs-number">1</span>
+}))
+</code></pre>
+<h4 id="&#x4E09;&#x3001;&#x53CD;&#x5411;&#x5F15;&#x7528;"><a name="&#x4E09;&#x3001;&#x53CD;&#x5411;&#x5F15;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x3001;&#x53CD;&#x5411;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x53CD;&#x5411;&#x5F15;&#x7528;</h4>
+<blockquote>
+<p>&#x9664;&#x4E86;&#x4F7F;&#x7528;&#x76F8;&#x5E94;API&#x6765;&#x5F15;&#x7528;&#x5206;&#x7EC4;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x6B63;&#x5219;&#x672C;&#x8EAB;&#x91CC;&#x5F15;&#x7528;&#x5206;&#x7EC4;&#x3002;&#x4F46;&#x53EA;&#x80FD;&#x5F15;&#x7528;&#x4E4B;&#x524D;&#x51FA;&#x73B0;&#x7684;&#x5206;&#x7EC4;&#xFF0C;&#x5373;&#x53CD;&#x5411;&#x5F15;&#x7528;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">//\\1&#x7684;&#x610F;&#x601D;&#x662F;&#x5F15;&#x7528;&#x524D;&#x9762;&#x7684;(-|\\/|\\.)&#x5206;&#x7EC4;</span>
+<span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/\\d{4}(-|\\/</span>|\\.)\\d{<span class="hljs-number">2</span>}\\<span class="hljs-number">1</span>\\d{<span class="hljs-number">2</span>}/;
+<span class="hljs-keyword">let</span> str1 = <span class="hljs-string">&quot;2021-10-06&quot;</span>;
+<span class="hljs-keyword">let</span> str2 = <span class="hljs-string">&quot;2021/10/06&quot;</span>;
+<span class="hljs-keyword">let</span> str3 = <span class="hljs-string">&quot;2021.10.06&quot;</span>;
+<span class="hljs-keyword">let</span> str4 = <span class="hljs-string">&quot;2021-10/06&quot;</span>;
+<span class="hljs-built_in">console</span>.log(reg.test(str1))<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str2))<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str3))<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(reg.test(str4))<span class="hljs-comment">//false</span>
+</code></pre>
+<h5 id="1&#x3001;&#x62EC;&#x53F7;&#x5D4C;&#x5957;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4EE5;&#x5DE6;&#x62EC;&#x53F7;&#x4E3A;&#x51C6;"><a name="1&#x3001;&#x62EC;&#x53F7;&#x5D4C;&#x5957;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4EE5;&#x5DE6;&#x62EC;&#x53F7;&#x4E3A;&#x51C6;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x62EC;&#x53F7;&#x5D4C;&#x5957;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4EE5;&#x5DE6;&#x62EC;&#x53F7;&#x4E3A;&#x51C6;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x62EC;&#x53F7;&#x5D4C;&#x5957;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4EE5;&#x5DE6;&#x62EC;&#x53F7;&#x4E3A;&#x51C6;</h5>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> reg = <span class="hljs-regexp">/^((\\d)(\\d(\\d)))\\1\\2\\3\\4$/</span>;
+<span class="hljs-keyword">let</span> str1 = <span class="hljs-string">&quot;1231231233&quot;</span>;
+<span class="hljs-built_in">console</span>.log(reg.test(str1))<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">RegExp</span>.$<span class="hljs-number">1</span>)<span class="hljs-comment">//123</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">RegExp</span>.$<span class="hljs-number">2</span>)<span class="hljs-comment">//1</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">RegExp</span>.$<span class="hljs-number">3</span>)<span class="hljs-comment">//23</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">RegExp</span>.$<span class="hljs-number">4</span>)<span class="hljs-comment">//3</span>
+</code></pre>
+<h5 id="2&#x3001;10&#x8868;&#x793A;&#x4EC0;&#x4E48;&#x5462;"><a name="2&#x3001;10&#x8868;&#x793A;&#x4EC0;&#x4E48;&#x5462;" class="anchor-navigation-ex-anchor" href="#2&#x3001;10&#x8868;&#x793A;&#x4EC0;&#x4E48;&#x5462;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;\10&#x8868;&#x793A;&#x4EC0;&#x4E48;&#x5462;</h5>
+<blockquote>
+<p>\10&#x662F;&#x8868;&#x793A;&#x7B2C;10&#x4E2A;&#x5206;&#x7EC4;&#xFF0C;&#x4E0D;&#x662F;&#x8868;&#x793A;\1&#x548C;0</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">var</span> regex = <span class="hljs-regexp">/(1)(2)(3)(4)(5)(6)(7)(8)(9)(#) \\10+/</span>;
+<span class="hljs-keyword">var</span> string = <span class="hljs-string">&quot;123456789# ######&quot;</span>
+<span class="hljs-built_in">console</span>.log( regex.test(string) );
+<span class="hljs-comment">// =&gt; true</span>
+</code></pre>
+<h5 id="3&#x3001;&#x5F15;&#x7528;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5206;&#x7EC4;"><a name="3&#x3001;&#x5F15;&#x7528;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5206;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#3&#x3001;&#x5F15;&#x7528;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5206;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x5F15;&#x7528;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5206;&#x7EC4;</h5>
+<blockquote>
+<p>&#x56E0;&#x4E3A;&#x53CD;&#x5411;&#x5F15;&#x7528;&#xFF0C;&#x662F;&#x5F15;&#x7528;&#x524D;&#x9762;&#x7684;&#x5206;&#x7EC4;&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x5728;&#x6B63;&#x5219;&#x91CC;&#x5F15;&#x7528;&#x4E86;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5206;&#x7EC4;&#x65F6;&#xFF0C;&#x6B64;&#x65F6;&#x6B63;&#x5219;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x53EA;&#x662F;&#x5339;&#x914D;&#x53CD;&#x5411;&#x5F15;&#x7528;&#x7684;&#x5B57;&#x7B26;&#x672C;&#x8EAB;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">var</span> regex = <span class="hljs-regexp">/\\1\\2\\3\\4\\5\\6\\7\\8\\9/</span>;
+<span class="hljs-built_in">console</span>.log( regex.test(<span class="hljs-string">&quot;\\1\\2\\3\\4\\5\\6\\7\\8\\9&quot;</span>) ); 
+<span class="hljs-built_in">console</span>.log( <span class="hljs-string">&quot;\\1\\2\\3\\4\\5\\6\\7\\8\\9&quot;</span>.split(<span class="hljs-string">&quot;&quot;</span>) );
+</code></pre>
+<h2 id="&#x56DB;&#x3001;&#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;"><a name="&#x56DB;&#x3001;&#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x56DB;&#x3001;&#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x3001;&#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;</h2>
+<blockquote>
+<p>&#x5982;&#x679C;&#x53EA;&#x60F3;&#x8981;&#x62EC;&#x53F7;&#x6700;&#x539F;&#x59CB;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x5F15;&#x7528;&#x5B83;&#xFF0C;&#x5373;&#xFF0C;&#x65E2;&#x4E0D;&#x5728;API&#x91CC;&#x5F15;&#x7528;&#xFF0C;&#x4E5F;&#x4E0D;&#x5728;&#x6B63;&#x5219;&#x91CC;&#x53CD;&#x5411;&#x5F15;&#x7528;&#x3002;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;(?:p)&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">var</span> regex = <span class="hljs-regexp">/(?:ab)+/g</span>;
+<span class="hljs-keyword">var</span> string = <span class="hljs-string">&quot;ababa abbb ababab&quot;</span>;
+<span class="hljs-built_in">console</span>.log( string.match(regex) ); 
+<span class="hljs-comment">// =&gt; [&quot;abab&quot;, &quot;ab&quot;, &quot;ababab&quot;]</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-12-31 18:52:54
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="15日期对象.html" class="navigation navigation-prev " aria-label="Previous page: 15日期对象">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="17异常错误对象.html" class="navigation navigation-next " aria-label="Next page: 17异常错误对象">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"16正则表达式","level":"1.3.1.16","depth":3,"next":{"title":"17异常错误对象","level":"1.3.1.17","depth":3,"path":"17异常错误对象.md","ref":"17异常错误对象.md","articles":[]},"previous":{"title":"15日期对象","level":"1.3.1.15","depth":3,"path":"15日期对象.md","ref":"15日期对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://cdn.jsdelivr.net/gh/ashunun/image@main/img/1639747635776%E7%A7%91%E5%B9%BB%E5%B0%91%E5%A5%B3%20%E8%83%8C%E5%BD%B1%20%E6%97%B6%E5%B0%9A%20%E7%99%BD%E8%89%B2%E8%A1%AC%E8%A1%AB%20%E9%BB%91%E8%89%B2%E7%9F%AD%E8%A3%A4%20%E7%BE%8E%E8%85%BF%20%E9%AB%98%E6%B8%85%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%A5%B3%E4%BA%BA%E7%89%A9%E5%A3%81%E7%BA%B8.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/床上白色小吊带养眼美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/居家小清新美女唯美壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/干净 简单 美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/image@main/img/1638544109137bg.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/下午 趴在桌子的女孩 好看动漫插画人物壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/cos美女原神刻晴2k壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/《王牌竞速》真人美女cosplay白色裙子美腿壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/可爱cos美女白色裙子《王牌竞速》美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/好好学习 天天向上 厚涂 女孩子眼镜 笔 工程师 板绘 好看动漫壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/侧卧睡觉好身材美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/cos刻晴 原神 美腿美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/可爱衣服 短裤 运动美女桌面壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/image@main/img/1638529545190Winnie%E5%B0%8F%E9%9B%AA%E9%BB%91%E8%89%B2%E4%B8%9D%E8%A2%9C%E7%BE%8E%E8%85%BF%E5%86%99%E7%9C%9F%E5%A3%81%E7%BA%B8.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/蓝色眼睛猫耳少女 尾巴 可爱二次元动漫壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/夏木颖 牛仔 长发 性感好身材美女4k壁纸_彼岸图网.jpg"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"16正则表达式.md","mtime":"2021-12-31T10:52:54.989Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-31T11:28:00.164Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

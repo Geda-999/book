@@ -1,0 +1,1704 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>23函数进阶 · 前端秘籍</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ashun">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="24面向对象.html" />
+    
+    
+    <link rel="prev" href="22jQuery.html" />
+    
+
+    <link href="http://gitbook.zhangjikai.com/rss" title="GitBook 使用教程" rel="alternate" type="application/rss+xml" />
+
+    
+        <link rel="shortcut icon" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://geda-999.github.io/book" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="phase01.html">
+            
+                <a href="phase01.html">
+            
+                    
+                    Phase I
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01html.html">
+            
+                <a href="01html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02css.html">
+            
+                <a href="02css.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03响应式.html">
+            
+                <a href="03响应式.html">
+            
+                    
+                    响应式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="phase02.html">
+            
+                <a href="phase02.html">
+            
+                    
+                    Phase II
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="JavaScriptES5.html">
+            
+                <a href="JavaScriptES5.html">
+            
+                    
+                    JavaScriptES5
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="01变量.html">
+            
+                <a href="01变量.html">
+            
+                    
+                    01变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="02常量.html">
+            
+                <a href="02常量.html">
+            
+                    
+                    02常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="03js数据类型.html">
+            
+                <a href="03js数据类型.html">
+            
+                    
+                    03js数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" >
+            
+                <a target="_blank" href="https://geda-999.github.io/book/04运算判断条件.html">
+            
+                    
+                    04运算判断条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="05数字类型.html">
+            
+                <a href="05数字类型.html">
+            
+                    
+                    05数字类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="06字符串.html">
+            
+                <a href="06字符串.html">
+            
+                    
+                    06字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="07布尔值.html">
+            
+                <a href="07布尔值.html">
+            
+                    
+                    07布尔值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="08空值.html">
+            
+                <a href="08空值.html">
+            
+                    
+                    08空值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="09未定义.html">
+            
+                <a href="09未定义.html">
+            
+                    
+                    09未定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="10唯一值.html">
+            
+                <a href="10唯一值.html">
+            
+                    
+                    10唯一值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="11对象.html">
+            
+                <a href="11对象.html">
+            
+                    
+                    11对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="12内置全局对象.html">
+            
+                <a href="12内置全局对象.html">
+            
+                    
+                    12内置全局对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="13数组.html">
+            
+                <a href="13数组.html">
+            
+                    
+                    13数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="14函数.html">
+            
+                <a href="14函数.html">
+            
+                    
+                    14函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="15日期对象.html">
+            
+                <a href="15日期对象.html">
+            
+                    
+                    15日期对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.16" data-path="16正则表达式.html">
+            
+                <a href="16正则表达式.html">
+            
+                    
+                    16正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.17" data-path="17异常错误对象.html">
+            
+                <a href="17异常错误对象.html">
+            
+                    
+                    17异常错误对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.18" data-path="18BOM浏览器对象模型.html">
+            
+                <a href="18BOM浏览器对象模型.html">
+            
+                    
+                    18BOM浏览器对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.19" data-path="19DOM文档对象模型.html">
+            
+                <a href="19DOM文档对象模型.html">
+            
+                    
+                    19DOM文档对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.20" data-path="20json.html">
+            
+                <a href="20json.html">
+            
+                    
+                    20json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.21" data-path="21Ajax.html">
+            
+                <a href="21Ajax.html">
+            
+                    
+                    21Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.22" data-path="22jQuery.html">
+            
+                <a href="22jQuery.html">
+            
+                    
+                    22jQuery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.23" data-path="23函数进阶.html">
+            
+                <a href="23函数进阶.html">
+            
+                    
+                    23函数进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.24" data-path="24面向对象.html">
+            
+                <a href="24面向对象.html">
+            
+                    
+                    24面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="phase03.html">
+            
+                <a href="phase03.html">
+            
+                    
+                    Phase III
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="phase04.html">
+            
+                <a href="phase04.html">
+            
+                    
+                    Phase IV
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="weekly.html">
+            
+                <a href="weekly.html">
+            
+                    
+                    Weekly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="每周测试01.html">
+            
+                <a href="每周测试01.html">
+            
+                    
+                    每周测试01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="每周测试02.html">
+            
+                <a href="每周测试02.html">
+            
+                    
+                    每周测试02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="每周测试03.html">
+            
+                <a href="每周测试03.html">
+            
+                    
+                    每周测试03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="每周测试04.html">
+            
+                <a href="每周测试04.html">
+            
+                    
+                    每周测试04
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >23函数进阶</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x51FD;&#x6570;&#x8FDB;&#x9636;"><b></b>&#x51FD;&#x6570;&#x8FDB;&#x9636;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E00;&#x3001;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x7ED9;&#x51FD;&#x6570;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;"><b></b>&#x4E00;&#x3001;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x7ED9;&#x51FD;&#x6570;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;&#x3001;&#x4FEE;&#x6539;-this-&#x6307;&#x9488;"><b></b>&#x4E8C;&#x3001;&#x4FEE;&#x6539; this &#x6307;&#x9488;</a></li><ul><li><span class="title-icon "></span><a href="#call&#x3001;apply&#x3001;bind"><b></b>call&#x3001;apply&#x3001;bind</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E09;&#x3001;&#x9AD8;&#x9636;&#x51FD;&#x6570;"><b></b>&#x4E09;&#x3001;&#x9AD8;&#x9636;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x56DB;&#x3001;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;"><b></b>&#x56DB;&#x3001;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;</a></li><li><span class="title-icon "></span><a href="#&#x4E94;&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;&#x548C;&#x9632;&#x6296;&#x51FD;&#x6570;"><b></b>&#x4E94;&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;&#x548C;&#x9632;&#x6296;&#x51FD;&#x6570;</a></li></ul></ul></div><a href="#&#x51FD;&#x6570;&#x8FDB;&#x9636;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><div class="treeview__container-title"></div><ul>
+<li><div><a href="#&#x4E00;&#x3001;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x7ED9;&#x51FD;&#x6570;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;">&#x4E00;&#x3001;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x7ED9;&#x51FD;&#x6570;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;</a><i></i></div></li>
+<li><div><a href="#&#x4E8C;&#x3001;&#x4FEE;&#x6539;-this-&#x6307;&#x9488;">&#x4E8C;&#x3001;&#x4FEE;&#x6539; this &#x6307;&#x9488;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#call&#x3001;apply&#x3001;bind">call&#x3001;apply&#x3001;bind</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x4E09;&#x3001;&#x9AD8;&#x9636;&#x51FD;&#x6570;">&#x4E09;&#x3001;&#x9AD8;&#x9636;&#x51FD;&#x6570;</a><i></i></div></li>
+<li><div><a href="#&#x56DB;&#x3001;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;">&#x56DB;&#x3001;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#1&#x3001;&#x521B;&#x5EFA;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;">1&#x3001;&#x521B;&#x5EFA;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;</a><i></i></div></li>
+<li><div><a href="#2&#x3001;&#x53C2;&#x6570;&#x9012;&#x5F52;">2&#x3001;&#x53C2;&#x6570;&#x9012;&#x5F52;</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#&#x4E94;&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;&#x548C;&#x9632;&#x6296;&#x51FD;&#x6570;">&#x4E94;&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;&#x548C;&#x9632;&#x6296;&#x51FD;&#x6570;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#1&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;">1&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;</a><i></i></div></li>
+<li><div><a href="#2&#x3001;&#x9632;&#x6296;&#x51FD;&#x6570;">2&#x3001;&#x9632;&#x6296;&#x51FD;&#x6570;</a><i></i></div></li>
+<li><div><a href="#3&#x3001;&#x4F18;&#x5316;&#x7248;&#x7684;&#x9632;&#x6296;&#x51FD;&#x6570;">3&#x3001;&#x4F18;&#x5316;&#x7248;&#x7684;&#x9632;&#x6296;&#x51FD;&#x6570;</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="&#x51FD;&#x6570;&#x8FDB;&#x9636;"><a name="&#x51FD;&#x6570;&#x8FDB;&#x9636;" class="anchor-navigation-ex-anchor" href="#&#x51FD;&#x6570;&#x8FDB;&#x9636;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51FD;&#x6570;&#x8FDB;&#x9636;</h1>
+<h2 id="&#x4E00;&#x3001;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x7ED9;&#x51FD;&#x6570;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;"><a name="&#x4E00;&#x3001;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x7ED9;&#x51FD;&#x6570;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x7ED9;&#x51FD;&#x6570;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x7ED9;&#x51FD;&#x6570;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;</h2>
+<pre><code class="lang-jsx"><span class="hljs-comment">//&#x62A5;&#x9519;&#xFF0C;fn&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;</span>
+<span class="hljs-comment">//&#x539F;&#x56E0;&#x662F;var&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x5728;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;fn&#x4E3A;undefined&#xFF0C;</span>
+<span class="hljs-comment">//&#x6240;&#x4EE5;undefined&#x65E0;&#x6CD5;&#x6267;&#x884C;</span>
+fn();
+<span class="hljs-keyword">var</span> fn = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-number">123</span>);
+};
+</code></pre>
+<h2 id="&#x4E8C;&#x3001;&#x4FEE;&#x6539;-this-&#x6307;&#x9488;"><a name="&#x4E8C;&#x3001;&#x4FEE;&#x6539;-this-&#x6307;&#x9488;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x3001;&#x4FEE;&#x6539;-this-&#x6307;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x4FEE;&#x6539; this &#x6307;&#x9488;</h2>
+<pre><code class="lang-jsx"><span class="hljs-comment">//&#x628A;&#x51FD;&#x6570;fn&#x7684;&#x6307;&#x9488;&#x4FEE;&#x6539;&#x4E3A;&#x6307;&#x5411;&#x5BF9;&#x8C61;obj</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">num</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>);
+  <span class="hljs-built_in">console</span>.log(num);
+}
+<span class="hljs-keyword">let</span> obj = {
+  name: <span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>,
+};
+fn.call(obj, <span class="hljs-number">123</span>);
+</code></pre>
+<h3 id="call&#x3001;apply&#x3001;bind"><a name="call&#x3001;apply&#x3001;bind" class="anchor-navigation-ex-anchor" href="#call&#x3001;apply&#x3001;bind"><i class="fa fa-link" aria-hidden="true"></i></a>call&#x3001;apply&#x3001;bind</h3>
+<blockquote>
+<p><strong>[warning]call\apply\bind&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF1F;</strong><span class="pg-emphasize pg-emphasize-red" style=""> &#x9762;&#x8BD5;&#x9898; </span></p>
+<p>1&#x3001;<code>call</code>&#x548C;<code>apply</code>&#x662F;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;<code>bind</code>&#x662F;&#x8FD4;&#x56DE;&#x51FD;&#x6570;</p>
+<p>2&#x3001;<code>call</code>&#x548C;<code>bind</code>&#x662F;&#x9009;&#x9879;&#x5F0F;&#x53C2;&#x6570;&#x3001;<code>apply</code>&#x662F;&#x6570;&#x7EC4;&#x53C2;&#x6570;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">var</span> obj = {
+  name:<span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">a,b,c</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>)
+  <span class="hljs-built_in">console</span>.log(a)
+  <span class="hljs-built_in">console</span>.log(b)
+  <span class="hljs-built_in">console</span>.log(c)
+}
+
+<span class="hljs-comment">// fn.call(obj,1,2,3)</span>
+<span class="hljs-comment">// fn.apply(obj,[1,2,3])</span>
+<span class="hljs-keyword">var</span> f = fn.bind(obj,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)
+f()
+<span class="hljs-comment">//&#x628A;&#x5BF9;&#x8C61;obj&#x91CC;&#x9762;&#x7684;fn2&#x51FD;&#x6570;&#x7684;&#x6307;&#x9488;&#x4FEE;&#x6539;&#x4E3A;&#x6307;&#x5411;&#x51FD;&#x6570;fn&#x7684;this</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>)</span>{
+  obj.fn2.call(<span class="hljs-keyword">this</span>)
+}
+
+<span class="hljs-keyword">let</span> obj = {
+  fn2:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>)
+  }
+}
+fn()
+
+
+<span class="hljs-comment">//&#x6848;&#x4F8B;</span>
+<span class="hljs-keyword">var</span> name = <span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>
+<span class="hljs-keyword">var</span> obj = {
+  name:<span class="hljs-string">&quot;&#x5C0F;&#x7EA2;&quot;</span>,
+  obj2:{
+    name:<span class="hljs-string">&quot;&#x5C0F;&#x7EFF;&quot;</span>,
+    fn:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+      <span class="hljs-keyword">var</span> a = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-comment">//&#x867D;&#x7136;&#x51FD;&#x6570;&#x5916;&#x5C42;&#x662F;obj2&#x7684;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x51FD;&#x6570;&#x9ED8;&#x8BA4;&#x6307;&#x5411;&#x4E86;window&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x6307;&#x7684;&#x662F;window</span>
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name)<span class="hljs-comment">//&#x5C0F;&#x660E;</span>
+      }
+      a()
+    }
+  }
+}
+obj.obj2.fn()
+
+<span class="hljs-keyword">var</span> name = <span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>
+<span class="hljs-keyword">var</span> obj = {
+  name:<span class="hljs-string">&quot;&#x5C0F;&#x7EA2;&quot;</span>,
+  obj2:{
+    name:<span class="hljs-string">&quot;&#x5C0F;&#x7EFF;&quot;</span>,
+    fn:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+      <span class="hljs-keyword">var</span> a = ()=&gt;{<span class="hljs-comment">//&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x8BA9;this&#x7ED1;&#x5B9A;&#x5728;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#xFF0C;&#x65E0;&#x6CD5;&#x4FEE;&#x6539;this&#x6307;&#x9488;</span>
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name)<span class="hljs-comment">//&#x5C0F;&#x7EFF;</span>
+      }
+      a()
+    }
+  }
+}
+obj.obj2.fn()
+</code></pre>
+<blockquote>
+<p>[!cogs]</p>
+</blockquote>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x6A21;&#x5757;&#x6807;&#x9898; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-ejs">&lt;script&gt;
+    var obj = {
+        name: &quot;&#x5A1C;&#x7F8E;&quot;
+    }
+    function fn(a, b, c) {
+        console.log(this);
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+    fn.call(obj, 1, 2, 3) //&#x8FD4;&#x56DE;&#x503C;&#x2014;&#x2014;&#x662F;&#x9009;&#x62E9;&#x5F0F;&#x53C2;&#x6570;
+    // fn.apply(obj,[1,2,3])//&#x8FD4;&#x56DE;&#x503C;&#x2014;&#x2014;&#x662F;&#x9009;&#x62E9;&#x5F0F;&#x53C2;&#x6570;
+    // var f=fn.bind(obj,1,2,3)//&#x8FD4;&#x56DE;&#x51FD;&#x6570;&#x2014;&#x2014;&#x662F;&#x6570;&#x7EC4;&#x53C2;&#x6570;
+    // f()
+
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x6A21;&#x5757;&#x6807;&#x9898; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-ejs">&lt;script&gt;
+    var obj = {
+        name: &quot;&#x5A1C;&#x7F8E;&quot;,
+        fn1: function () {
+            fn2.call(this) //&#x4FEE;&#x6539;&#x4ED6;&#x6307;&#x9488;
+        },
+    }
+
+    function fn2() {
+        console.log(this);
+    }
+    obj.fn1()
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-ejs">
+&lt;script&gt;
+    var name = &quot;&#x5A1C;&#x7F8E;&quot;
+    var obj = {
+        name: &quot;&#x59AE;&#x53EF;&#x7F57;&#x5BBE;&quot;,
+        obj2: {
+            name: &quot;&#x5927;&#x548C;&quot;,
+            fn: function () {
+                var a = function () {
+                    // console.log(this);
+                    console.log(this.name);//&#x5A1C;&#x7F8E;
+                }
+                a()
+            },
+        },
+    }
+    obj.obj2.fn()
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x51FD;&#x6570;tkis </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-ejs">&lt;script&gt;
+    var name = &quot;&#x5A1C;&#x7F8E;&quot;
+    var obj = {
+        name: &quot;&#x59AE;&#x53EF;&#x7F57;&#x5BBE;&quot;,
+        obj2: {
+            name: &quot;&#x5927;&#x548C;&quot;,
+            fn: function () {
+
+                var a = () =&gt; {
+                    console.log(this.name); //&#x5927;&#x548C;
+                }
+
+                a()
+            },
+        },
+    }
+    obj.obj2.fn()
+&lt;/script&gt;
+
+
+&lt;script&gt;
+    var name = &quot;&#x5A1C;&#x7F8E;&quot;
+    var obj = {
+        name: &quot;&#x59AE;&#x53EF;&#x7F57;&#x5BBE;&quot;,
+        obj2: {
+            name: &quot;&#x5927;&#x548C;&quot;,
+            fn: function () {
+                var a = () =&gt; {
+                    console.log(this.name); //&#x5927;&#x548C;
+                }
+                a.call() //&#x5C31;&#x8BE5;&#x8FD9;&#x91CC;
+            },
+        },
+    }
+    obj.obj2.fn()
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h2 id="&#x4E09;&#x3001;&#x9AD8;&#x9636;&#x51FD;&#x6570;"><a name="&#x4E09;&#x3001;&#x9AD8;&#x9636;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x3001;&#x9AD8;&#x9636;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x9AD8;&#x9636;&#x51FD;&#x6570;</h2>
+<blockquote>
+<p><strong>[info] &#x9AD8;&#x9636;&#x51FD;&#x6570;</strong></p>
+<p>&#x5C31;&#x662F;&#x4F7F;&#x51FD;&#x6570;&#x62BD;&#x8C61;&#x5316;&#xFF0C;&#x62BD;&#x8C61;&#x5C31;&#x662F;&#x9690;&#x85CF;&#x66F4;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#xFF0C;&#x4ECE;&#x66F4;&#x9AD8;&#x7684;&#x5C42;&#x6B21;&#x770B;&#x5F85;&#x6211;&#x4EEC;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">// &#x7ED9;&#x6240;&#x6709;&#x7684;&#x6570;&#x7EC4;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x8FED;&#x4EE3;&#x65B9;&#x6CD5;</span>
+<span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+<span class="hljs-comment">// arr.forEach(function(item,i){</span>
+<span class="hljs-comment">//   console.log(item)</span>
+<span class="hljs-comment">// })</span>
+
+<span class="hljs-built_in">Array</span>.prototype.myForEach = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">f</span>) </span>{
+  <span class="hljs-keyword">let</span> arr = <span class="hljs-keyword">this</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) {
+    f(arr[i], i);
+  }
+};
+
+arr.myForEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item, i</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(i);
+});
+</code></pre>
+<blockquote>
+<p>[!cogs]</p>
+</blockquote>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x9AD8;&#x9636;&#x51FD;&#x6570; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<blockquote>
+<p><strong>[warning] &#x51FD;&#x6570;myForEach</strong></p>
+<p>&#x7ED9;&#x6240;&#x6709;&#x7684;&#x6570;&#x7EC4;&#x90FD;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;myForEach&#x7684;&#x65B9;&#x6CD5;</p>
+</blockquote>
+<pre><code class="lang-ejs">&lt;script&gt;
+    Array.prototype.myForEach = function (f) {
+        var arr = this
+        for (var i = 0; i &lt; arr.length; i++) {
+            f(arr[i], i)
+        }
+    }
+    var arr = [1, 2, 3, 4, 5]
+    arr.myForEach(function (item, idx) {//idx&#x7D22;&#x5F15;&#x662F;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;
+        // console.log(item);
+        console.log(idx);//0,1,2,3,4
+    })
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h2 id="&#x56DB;&#x3001;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;"><a name="&#x56DB;&#x3001;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x56DB;&#x3001;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x3001;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;</h2>
+<blockquote>
+<p><strong>[info] &#x67EF;&#x91CC;&#x5316;</strong></p>
+<p>&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;&#x662F;&#x628A;&#x63A5;&#x53D7;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#x53D8;&#x6362;&#x6210;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x53C2;&#x6570;&#xFF08;&#x6700;&#x521D;&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF09;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x63A5;&#x53D7;&#x4F59;&#x4E0B;&#x7684;&#x53C2;&#x6570;&#x800C;&#x4E14;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7684;&#x65B0;&#x51FD;&#x6570;&#x3002;</p>
+</blockquote>
+<p>&#x76EE;&#x7684;&#x662F;&#x590D;&#x7528;&#x53C2;&#x6570;&#x3002;</p>
+<h4 id="1&#x3001;&#x521B;&#x5EFA;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;"><a name="1&#x3001;&#x521B;&#x5EFA;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x521B;&#x5EFA;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x521B;&#x5EFA;&#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;</h4>
+<pre><code class="lang-jsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">a, b</span>) </span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
+fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+fn(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>);
+
+<span class="hljs-comment">//&#x590D;&#x7528;&#x53C2;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">a</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">b</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(a + b);
+  };
+}
+
+<span class="hljs-keyword">let</span> f = fn(<span class="hljs-number">1</span>);
+f(<span class="hljs-number">2</span>);
+f(<span class="hljs-number">3</span>);
+</code></pre>
+<h4 id="2&#x3001;&#x53C2;&#x6570;&#x9012;&#x5F52;"><a name="2&#x3001;&#x53C2;&#x6570;&#x9012;&#x5F52;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x53C2;&#x6570;&#x9012;&#x5F52;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x53C2;&#x6570;&#x9012;&#x5F52;</h4>
+<pre><code class="lang-jsx"><span class="hljs-comment">//&#x53C2;&#x6570;&#x56FA;&#x5B9A;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">curry</span>(<span class="hljs-params">f, args = []</span>) </span>{
+  <span class="hljs-comment">//&#x67EF;&#x91CC;&#x5316;&#x51FD;&#x6570;</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> arr = [...args, ...arguments];
+
+    <span class="hljs-keyword">if</span> (arr.length &lt; f.length) {
+      <span class="hljs-comment">//&#x5982;&#x679C;add(1)(2)&#x4F20;&#x7684;&#x6570;&#x91CF;&#x5C0F;&#x4E8E;argSum&#x7684;&#x5F62;&#x53C2;&#x6570;&#x91CF;</span>
+      <span class="hljs-keyword">return</span> curry.call(<span class="hljs-keyword">this</span>, f, arr); <span class="hljs-comment">//&#x5C31;&#x9012;&#x5F52;</span>
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> f.apply(<span class="hljs-keyword">this</span>, arr); <span class="hljs-comment">//&#x5982;&#x679C;&#x6570;&#x91CF;&#x76F8;&#x7B49;&#xFF0C;&#x5C31;&#x8FD4;&#x56DE;&#x7D2F;&#x52A0;&#x7684;&#x6570;&#x7EC4;</span>
+    }
+  };
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">argSum</span>(<span class="hljs-params">a, b, c, d</span>) </span>{
+  <span class="hljs-comment">//&#x7D2F;&#x52A0;&#x5B9E;&#x9645;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x6570;&#x503C;&#x7ED9;&#x67EF;&#x91CC;&#x5316;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;</span>
+  <span class="hljs-keyword">let</span> arr = <span class="hljs-built_in">Array</span>.from(<span class="hljs-built_in">arguments</span>); <span class="hljs-comment">//&#x83B7;&#x53D6;&#x8FD4;&#x56DE;&#x6765;&#x7684;&#x5B9E;&#x9645;&#x53C2;&#x6570;</span>
+
+  <span class="hljs-keyword">let</span> sum = arr.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-comment">//&#x7D2F;&#x52A0;</span>
+    <span class="hljs-keyword">return</span> a + b;
+  });
+  <span class="hljs-keyword">return</span> sum;
+}
+
+<span class="hljs-keyword">let</span> add = curry(argSum);
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">1</span>)(<span class="hljs-number">2</span>)(<span class="hljs-number">3</span>)(<span class="hljs-number">4</span>)); <span class="hljs-comment">//10</span>
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)); <span class="hljs-comment">//10</span>
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)(<span class="hljs-number">3</span>)(<span class="hljs-number">4</span>)); <span class="hljs-comment">//10</span>
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">1</span>)(<span class="hljs-number">2</span>)(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)); <span class="hljs-comment">//10</span>
+
+<span class="hljs-comment">//&#x53C2;&#x6570;&#x4E0D;&#x56FA;&#x5B9A;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">curry</span>(<span class="hljs-params">f</span>) </span>{
+  <span class="hljs-comment">//&#x67EF;&#x91CC;&#x5316;&#x51FD;&#x6570;</span>
+  <span class="hljs-keyword">let</span> args = [];
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cb</span>(<span class="hljs-params">...arg</span>) </span>{
+    <span class="hljs-keyword">if</span> (arg.length) {
+      args = [...args, ...arg];
+      <span class="hljs-keyword">return</span> cb;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> f.apply(<span class="hljs-keyword">this</span>, args);
+    }
+  };
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addArg</span>(<span class="hljs-params">...arr</span>) </span>{
+  <span class="hljs-comment">//&#x7D2F;&#x52A0;</span>
+  <span class="hljs-keyword">let</span> sum = arr.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a + b;
+  });
+  <span class="hljs-keyword">return</span> sum;
+}
+
+<span class="hljs-keyword">let</span> add = curry(addArg);
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">1</span>)(<span class="hljs-number">2</span>)(<span class="hljs-number">3</span>)(<span class="hljs-number">4</span>)()); <span class="hljs-comment">//10</span>
+</code></pre>
+<blockquote>
+<p>[!cogs]</p>
+</blockquote>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x51FD;&#x6570;&#x67EF;&#x91CC;&#x5316;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<p><span class="pg-emphasize pg-emphasize-red" style=""> &#x590D;&#x7528;&#x53C2;&#x6570; </span></p>
+<pre><code class="lang-ejs">&lt;script&gt;
+    function fn(a) {
+        return function (b) {
+            return a + b
+        }
+    }
+    var f = fn(1)//&#x56FA;&#x5B9A;&#x503C;
+    console.log(f(2));//3
+    console.log(f(3));//4
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x53C2;&#x6570;&#x56FA;&#x5B9A; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-ejs">&lt;script&gt;
+    function curry(fn,arr=[]){
+        return function(){
+            var arg=[...arguments]
+            var len=fn.length
+            var allArr=[...arg,...arr]
+
+            if(allArr.length&lt;len){
+                return curry(fn,allArr)
+            }else{
+                return fn(...allArr)
+            }
+        }
+    }
+
+    var handler=curry(function(a,b,c,d){
+        var arr=[...arguments]
+        return arr.reduce(function(x,y){
+            return x+y
+        })
+    })
+    console.log(handler(1)(2,3)(4));
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x53C2;&#x6570;&#x4E0D;&#x56FA;&#x5B9A; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-ejs">&lt;script&gt;
+    function curry(fn, arg = []) {
+        return function () {
+            var allArr = [...arg, ...arguments];
+
+            if (arguments.length) {
+                return curry(fn, allArr);
+            } else {
+                return fn(...allArr);
+            }
+        };
+    }
+    var handler = curry(function () {
+        var arr = [...arguments];
+        return arr.reduce(function (x, y) {
+            return x + y;
+        });
+    });
+    console.log(handler(1)(2)(3)(4));
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h2 id="&#x4E94;&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;&#x548C;&#x9632;&#x6296;&#x51FD;&#x6570;"><a name="&#x4E94;&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;&#x548C;&#x9632;&#x6296;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x4E94;&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;&#x548C;&#x9632;&#x6296;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E94;&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;&#x548C;&#x9632;&#x6296;&#x51FD;&#x6570;</h2>
+<h4 id="1&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;"><a name="1&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x8282;&#x6D41;&#x51FD;&#x6570;</h4>
+<blockquote>
+<p><strong>[info] &#x8282;&#x6D41;&#x51FD;&#x6570;</strong></p>
+<p>&#x5728;&#x67D0;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x4E0D;&#x7BA1;&#x89E6;&#x53D1;&#x4E86;&#x591A;&#x5C11;&#x6B21;&#x56DE;&#x8C03;&#xFF0C;&#x53EA;&#x8BA4;&#x7B2C;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#xFF0C;&#x65E0;&#x89C6;&#x540E;&#x9762;&#x6B21;&#x6570;&#x4EA7;&#x751F;&#x7684;&#x89E6;&#x53D1;&#xFF0C;&#x5E76;&#x5728;&#x8BA1;&#x65F6;&#x7ED3;&#x675F;&#x65F6;&#x7ED9;&#x4E88;&#x54CD;&#x5E94;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">var</span> div = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;div&quot;</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">throttle</span>(<span class="hljs-params">fn, time</span>) </span>{
+  <span class="hljs-comment">//&#x8282;&#x6D41;&#x51FD;&#x6570;</span>
+  <span class="hljs-keyword">var</span> last = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime();
+
+    <span class="hljs-keyword">if</span> (now - last &gt;= time) {
+      last = now;
+      fn.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+    }
+  };
+}
+<span class="hljs-keyword">var</span> clickHandler = throttle(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">//&#x5177;&#x4F53;&#x903B;&#x8F91;</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x89E6;&#x53D1;&#x4E86;&quot;</span>);
+}, <span class="hljs-number">3000</span>);
+
+div.onclick = clickHandler;
+</code></pre>
+<blockquote>
+<p>[!cogs]</p>
+</blockquote>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x8282;&#x70B9;&#x51FD;&#x6570;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<blockquote>
+<p><span class="pg-emphasize pg-emphasize-red" style=""> &#x7B2C;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#xFF0C;&#x5C31;&#x6267;&#x884C;&#xFF0C;&#x5982;&#x518D;&#x7EE7;&#x7EED;&#x89E6;&#x53D1;&#x4E0B;&#x53BB;&#x5C31;&#x7B49;&#x5F85;3&#x79D2;&#x949F;&#x624D;&#x6267;&#x884C;&#x3002; </span></p>
+</blockquote>
+<pre><code class="lang-ejs">&lt;button class=&quot;btn&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt;
+&lt;script&gt;
+    var btn = document.querySelector(&quot;.btn&quot;);
+    function throttle(fn, delayTime) {
+        var endTime = 0;
+        return function () {
+            var nowTime = +new Date();
+            if (nowTime - endTime &gt; delayTime) {
+                fn();
+                endTime = nowTime;
+            }
+        };
+    }
+    var handler = throttle(function () {
+        console.log(123);
+    }, 3000);
+
+    btn.addEventListener(&quot;click&quot;, handler);
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h4 id="2&#x3001;&#x9632;&#x6296;&#x51FD;&#x6570;"><a name="2&#x3001;&#x9632;&#x6296;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x9632;&#x6296;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x9632;&#x6296;&#x51FD;&#x6570;</h4>
+<blockquote>
+<p><strong>[info] &#x9632;&#x6296;&#x51FD;&#x6570;</strong></p>
+<p>&#x5728;&#x67D0;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x6BCF;&#x6B21;&#x89E6;&#x53D1;&#x90FD;&#x4F1A;&#x91CD;&#x65B0;&#x8BA1;&#x65F6;&#xFF0C;&#x76F4;&#x5230;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#x8D85;&#x8FC7;&#x4E86;&#x9650;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">var</span> div = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;div&quot;</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">debounce</span>(<span class="hljs-params">fn, time</span>) </span>{
+  <span class="hljs-keyword">var</span> timer;
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">if</span> (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      fn.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+    }, time);
+  };
+}
+<span class="hljs-keyword">var</span> clickHandler = debounce(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x89E6;&#x53D1;&#x4E86;&quot;</span>);
+}, <span class="hljs-number">3000</span>);
+
+div.onclick = clickHandler;
+</code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x9632;&#x6296;&#x51FD;&#x6570;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<blockquote>
+<p><span class="pg-emphasize pg-emphasize-red" style=""> &#x7B2C;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#x7B49;&#x5F85;3&#x79D2;&#x624D;&#x6267;&#x884C;&#xFF0C;&#x5982;&#x9891;&#x7E41;&#x89E6;&#x53D1;&#x5C31;&#x4ECE;0&#x5F00;&#x59CB;&#x76F4;&#x5230;&#x4F60;&#x4E0D;&#x6309;&#x4E3A;&#x6B62;&#xFF0C;&#x5F85;3&#x79D2;&#x624D;&#x6267;&#x884C;&#x3002; </span></p>
+</blockquote>
+<pre><code class="lang-ejs">&lt;button class=&quot;btn&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt;
+&lt;script&gt;
+    var btn = document.querySelector(&quot;.btn&quot;)
+    function deBounce(fn, delayTime) {
+        var timer
+        return function () {
+            if (timer) {
+                clearTimeout(timer)
+            }
+            timer = setTimeout(function () {
+                fn()
+            }, delayTime)
+        }
+    }
+
+    var handler = deBounce(function () {
+        console.log(123);
+    }, 3000)
+    btn.addEventListener(&quot;click&quot;, handler)
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h4 id="3&#x3001;&#x4F18;&#x5316;&#x7248;&#x7684;&#x9632;&#x6296;&#x51FD;&#x6570;"><a name="3&#x3001;&#x4F18;&#x5316;&#x7248;&#x7684;&#x9632;&#x6296;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#3&#x3001;&#x4F18;&#x5316;&#x7248;&#x7684;&#x9632;&#x6296;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x4F18;&#x5316;&#x7248;&#x7684;&#x9632;&#x6296;&#x51FD;&#x6570;</h4>
+<blockquote>
+<p><strong>[info] &#x4F18;&#x5316;&#x7248;</strong></p>
+<p>&#x9632;&#x6296;&#x51FD;&#x6570;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x9891;&#x7E41;&#x7684;&#x5EF6;&#x8FDF;&#x4F1A;&#x5BFC;&#x81F4;&#x7528;&#x6237;&#x8FDF;&#x8FDF;&#x5F97;&#x4E0D;&#x5230;&#x54CD;&#x5E94;&#x3002;&#x4F18;&#x5316;&#x7248;&#x7684;&#x9632;&#x6296;&#x51FD;&#x6570;&#x672C;&#x8D28;&#x4E0A;&#x8FD8;&#x662F;&#x8282;&#x6D41;&#x51FD;&#x6570;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx">&lt;button id=<span class="hljs-string">&quot;div&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+<span class="hljs-keyword">var</span> div = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;div&quot;</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">betterDebounce</span>(<span class="hljs-params">fn, time</span>) </span>{
+  <span class="hljs-keyword">var</span> timer;
+  <span class="hljs-keyword">var</span> last = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> now = +<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+
+    <span class="hljs-keyword">if</span> (now - last &lt; time) {
+      clearTimeout(timer);
+
+      timer = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        last = now;
+        fn.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+      }, time);
+    } <span class="hljs-keyword">else</span> {
+      clearTimeout(timer);
+      last = now;
+      fn.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+    }
+  };
+}
+<span class="hljs-keyword">var</span> clickHandler = betterDebounce(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x89E6;&#x53D1;&#x4E86;&quot;</span>);
+}, <span class="hljs-number">3000</span>);
+
+div.onclick = clickHandler;
+</code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x4F18;&#x5316;&#x7248;&#x7684;&#x9632;&#x6296;&#x51FD;&#x6570;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<blockquote>
+<p><span class="pg-emphasize pg-emphasize-red" style=""> &#x7B2C;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#x5C31;&#x6267;&#x884C;&#xFF0C;&#x5982;&#x9891;&#x7E41;&#x89E6;&#x53D1;&#x5C31;&#x4ECE;0&#x5F00;&#x59CB;&#x76F4;&#x5230;&#x4F60;&#x4E0D;&#x6309;&#x4E3A;&#x6B62;&#xFF0C;&#x624D;&#x6267;&#x884C; </span></p>
+</blockquote>
+<pre><code class="lang-ejs">&lt;button class=&quot;btn&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt;
+&lt;script&gt;
+    var btn = document.querySelector(&quot;.btn&quot;)
+    function deBounce(fn, delayTime) {
+        var timer
+        var endTime = 0
+        return function () {
+            var nowTime = +new Date()
+            if (nowTime - endTime &lt; delayTime) {
+                clearTimeout(timer)
+                endTime = nowTime //&#x6E05;&#x9664;&#x8BA1;&#x65F6;&#x5668;
+                timer = setTimeout(function () {
+                    fn()
+                }, delayTime)
+            } else {
+                clearTimeout(timer)
+                endTime = nowTime //&#x6E05;&#x9664;&#x8BA1;&#x65F6;&#x5668;
+                fn()
+            }
+        }
+    }
+    var handler = deBounce(function () {
+        console.log(123);
+    }, 3000)
+    btn.addEventListener(&quot;click&quot;, handler)
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-12-31 18:52:54
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="22jQuery.html" class="navigation navigation-prev " aria-label="Previous page: 22jQuery">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="24面向对象.html" class="navigation navigation-next " aria-label="Next page: 24面向对象">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"23函数进阶","level":"1.3.1.23","depth":3,"next":{"title":"24面向对象","level":"1.3.1.24","depth":3,"path":"24面向对象.md","ref":"24面向对象.md","articles":[]},"previous":{"title":"22jQuery","level":"1.3.1.22","depth":3,"path":"22jQuery.md","ref":"22jQuery.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://cdn.jsdelivr.net/gh/ashunun/image@main/img/1639747635776%E7%A7%91%E5%B9%BB%E5%B0%91%E5%A5%B3%20%E8%83%8C%E5%BD%B1%20%E6%97%B6%E5%B0%9A%20%E7%99%BD%E8%89%B2%E8%A1%AC%E8%A1%AB%20%E9%BB%91%E8%89%B2%E7%9F%AD%E8%A3%A4%20%E7%BE%8E%E8%85%BF%20%E9%AB%98%E6%B8%85%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%A5%B3%E4%BA%BA%E7%89%A9%E5%A3%81%E7%BA%B8.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/床上白色小吊带养眼美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/居家小清新美女唯美壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/干净 简单 美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/image@main/img/1638544109137bg.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/下午 趴在桌子的女孩 好看动漫插画人物壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/cos美女原神刻晴2k壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/《王牌竞速》真人美女cosplay白色裙子美腿壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/可爱cos美女白色裙子《王牌竞速》美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/好好学习 天天向上 厚涂 女孩子眼镜 笔 工程师 板绘 好看动漫壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/侧卧睡觉好身材美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/cos刻晴 原神 美腿美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/可爱衣服 短裤 运动美女桌面壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/image@main/img/1638529545190Winnie%E5%B0%8F%E9%9B%AA%E9%BB%91%E8%89%B2%E4%B8%9D%E8%A2%9C%E7%BE%8E%E8%85%BF%E5%86%99%E7%9C%9F%E5%A3%81%E7%BA%B8.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/蓝色眼睛猫耳少女 尾巴 可爱二次元动漫壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/夏木颖 牛仔 长发 性感好身材美女4k壁纸_彼岸图网.jpg"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"23函数进阶.md","mtime":"2021-12-31T10:52:54.992Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-31T11:28:00.164Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1351 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>18BOM浏览器对象模型 · 前端秘籍</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ashun">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="19DOM文档对象模型.html" />
+    
+    
+    <link rel="prev" href="17异常错误对象.html" />
+    
+
+    <link href="http://gitbook.zhangjikai.com/rss" title="GitBook 使用教程" rel="alternate" type="application/rss+xml" />
+
+    
+        <link rel="shortcut icon" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://geda-999.github.io/book" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="phase01.html">
+            
+                <a href="phase01.html">
+            
+                    
+                    Phase I
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01html.html">
+            
+                <a href="01html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02css.html">
+            
+                <a href="02css.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03响应式.html">
+            
+                <a href="03响应式.html">
+            
+                    
+                    响应式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="phase02.html">
+            
+                <a href="phase02.html">
+            
+                    
+                    Phase II
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="JavaScriptES5.html">
+            
+                <a href="JavaScriptES5.html">
+            
+                    
+                    JavaScriptES5
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="01变量.html">
+            
+                <a href="01变量.html">
+            
+                    
+                    01变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="02常量.html">
+            
+                <a href="02常量.html">
+            
+                    
+                    02常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="03js数据类型.html">
+            
+                <a href="03js数据类型.html">
+            
+                    
+                    03js数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" >
+            
+                <a target="_blank" href="https://geda-999.github.io/book/04运算判断条件.html">
+            
+                    
+                    04运算判断条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="05数字类型.html">
+            
+                <a href="05数字类型.html">
+            
+                    
+                    05数字类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="06字符串.html">
+            
+                <a href="06字符串.html">
+            
+                    
+                    06字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="07布尔值.html">
+            
+                <a href="07布尔值.html">
+            
+                    
+                    07布尔值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="08空值.html">
+            
+                <a href="08空值.html">
+            
+                    
+                    08空值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="09未定义.html">
+            
+                <a href="09未定义.html">
+            
+                    
+                    09未定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="10唯一值.html">
+            
+                <a href="10唯一值.html">
+            
+                    
+                    10唯一值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="11对象.html">
+            
+                <a href="11对象.html">
+            
+                    
+                    11对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="12内置全局对象.html">
+            
+                <a href="12内置全局对象.html">
+            
+                    
+                    12内置全局对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="13数组.html">
+            
+                <a href="13数组.html">
+            
+                    
+                    13数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="14函数.html">
+            
+                <a href="14函数.html">
+            
+                    
+                    14函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="15日期对象.html">
+            
+                <a href="15日期对象.html">
+            
+                    
+                    15日期对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.16" data-path="16正则表达式.html">
+            
+                <a href="16正则表达式.html">
+            
+                    
+                    16正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.17" data-path="17异常错误对象.html">
+            
+                <a href="17异常错误对象.html">
+            
+                    
+                    17异常错误对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.18" data-path="18BOM浏览器对象模型.html">
+            
+                <a href="18BOM浏览器对象模型.html">
+            
+                    
+                    18BOM浏览器对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.19" data-path="19DOM文档对象模型.html">
+            
+                <a href="19DOM文档对象模型.html">
+            
+                    
+                    19DOM文档对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.20" data-path="20json.html">
+            
+                <a href="20json.html">
+            
+                    
+                    20json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.21" data-path="21Ajax.html">
+            
+                <a href="21Ajax.html">
+            
+                    
+                    21Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.22" data-path="22jQuery.html">
+            
+                <a href="22jQuery.html">
+            
+                    
+                    22jQuery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.23" data-path="23函数进阶.html">
+            
+                <a href="23函数进阶.html">
+            
+                    
+                    23函数进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.24" data-path="24面向对象.html">
+            
+                <a href="24面向对象.html">
+            
+                    
+                    24面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="phase03.html">
+            
+                <a href="phase03.html">
+            
+                    
+                    Phase III
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="phase04.html">
+            
+                <a href="phase04.html">
+            
+                    
+                    Phase IV
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="weekly.html">
+            
+                <a href="weekly.html">
+            
+                    
+                    Weekly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="每周测试01.html">
+            
+                <a href="每周测试01.html">
+            
+                    
+                    每周测试01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="每周测试02.html">
+            
+                <a href="每周测试02.html">
+            
+                    
+                    每周测试02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="每周测试03.html">
+            
+                <a href="每周测试03.html">
+            
+                    
+                    每周测试03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="每周测试04.html">
+            
+                <a href="每周测试04.html">
+            
+                    
+                    每周测试04
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >18BOM浏览器对象模型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#bom-&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#x6A21;&#x578B;"><b></b>BOM &#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#x6A21;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#1&#x3001;&#x8BA1;&#x65F6;&#x5668;"><b></b>1&#x3001;&#x8BA1;&#x65F6;&#x5668;</a></li><ul><li><span class="title-icon "></span><a href="#1&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;"><b></b>1)&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;</a></li><li><span class="title-icon "></span><a href="#2&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;"><b></b>2)&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;</a></li><li><span class="title-icon "></span><a href="#3&#x6E05;&#x7A7A;&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;"><b></b>3)&#x6E05;&#x7A7A;&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;</a></li><li><span class="title-icon "></span><a href="#4&#x6E05;&#x7A7A;&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;"><b></b>4)&#x6E05;&#x7A7A;&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;</a></li></ul><li><span class="title-icon "></span><a href="#2&#x3001;&#x9875;&#x9762;&#x6808;&#x5BF9;&#x8C61;&#x548C;&#x5386;&#x53F2;&#x5BF9;&#x8C61;"><b></b>2&#x3001;&#x9875;&#x9762;&#x6808;&#x5BF9;&#x8C61;&#x548C;&#x5386;&#x53F2;&#x5BF9;&#x8C61;</a></li><li><span class="title-icon "></span><a href="#3&#x3001;&#x672C;&#x5730;&#x7F13;&#x5B58;"><b></b>3&#x3001;&#x672C;&#x5730;&#x7F13;&#x5B58;</a></li><ul><li><span class="title-icon "></span><a href="#1&#x5B58;&#x50A8;&#x548C;&#x83B7;&#x53D6;"><b></b>1)&#x5B58;&#x50A8;&#x548C;&#x83B7;&#x53D6;</a></li><li><span class="title-icon "></span><a href="#2&#x5220;&#x9664;&#x5355;&#x4E2A;"><b></b>2)&#x5220;&#x9664;&#x5355;&#x4E2A;</a></li><li><span class="title-icon "></span><a href="#3&#x6E05;&#x7A7A;&#x6240;&#x6709;"><b></b>3)&#x6E05;&#x7A7A;&#x6240;&#x6709;</a></li><li><span class="title-icon "></span><a href="#&#x6848;&#x4F8B;"><b></b>&#x6848;&#x4F8B;</a></li></ul></ul></ul></div><a href="#bom-&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#x6A21;&#x578B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><div class="treeview__container-title"></div><ul>
+<li><div><a href="#1&#x3001;&#x8BA1;&#x65F6;&#x5668;">1&#x3001;&#x8BA1;&#x65F6;&#x5668;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;">1)&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;</a><i></i></div></li>
+<li><div><a href="#2&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;">2)&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;</a><i></i></div></li>
+<li><div><a href="#3&#x6E05;&#x7A7A;&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;">3)&#x6E05;&#x7A7A;&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;</a><i></i></div></li>
+<li><div><a href="#4&#x6E05;&#x7A7A;&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;">4)&#x6E05;&#x7A7A;&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#2&#x3001;&#x9875;&#x9762;&#x6808;&#x5BF9;&#x8C61;&#x548C;&#x5386;&#x53F2;&#x5BF9;&#x8C61;">2&#x3001;&#x9875;&#x9762;&#x6808;&#x5BF9;&#x8C61;&#x548C;&#x5386;&#x53F2;&#x5BF9;&#x8C61;</a><i></i></div></li>
+<li><div><a href="#3&#x3001;&#x672C;&#x5730;&#x7F13;&#x5B58;">3&#x3001;&#x672C;&#x5730;&#x7F13;&#x5B58;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1&#x5B58;&#x50A8;&#x548C;&#x83B7;&#x53D6;">1)&#x5B58;&#x50A8;&#x548C;&#x83B7;&#x53D6;</a><i></i></div></li>
+<li><div><a href="#2&#x5220;&#x9664;&#x5355;&#x4E2A;">2)&#x5220;&#x9664;&#x5355;&#x4E2A;</a><i></i></div></li>
+<li><div><a href="#3&#x6E05;&#x7A7A;&#x6240;&#x6709;">3)&#x6E05;&#x7A7A;&#x6240;&#x6709;</a><i></i></div></li>
+<li><div><a href="#&#x6848;&#x4F8B;">&#x6848;&#x4F8B;</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="bom-&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#x6A21;&#x578B;"><a name="bom-&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#x6A21;&#x578B;" class="anchor-navigation-ex-anchor" href="#bom-&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#x6A21;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>BOM &#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#x6A21;&#x578B;</h1>
+<h2 id="1&#x3001;&#x8BA1;&#x65F6;&#x5668;"><a name="1&#x3001;&#x8BA1;&#x65F6;&#x5668;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x8BA1;&#x65F6;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x8BA1;&#x65F6;&#x5668;</h2>
+<h3 id="1&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;"><a name="1&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;" class="anchor-navigation-ex-anchor" href="#1&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>1)&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;</h3>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>
+setInterval(()=&gt;{
+  i++
+  <span class="hljs-built_in">console</span>.log(i)
+},<span class="hljs-number">1000</span>)<span class="hljs-comment">//&#x8FD9;&#x91CC;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x65E0;&#x9650;&#x6B21;&#x8BA1;&#x65F6;&#x5668;&#x3010;&#x7B80;&#x5199;&#x3011;</span>
+setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-number">123</span>);<span class="hljs-comment">//</span>
+}, <span class="hljs-number">2000</span>)
+</code></pre>
+<h3 id="2&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;"><a name="2&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;" class="anchor-navigation-ex-anchor" href="#2&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>2)&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;</h3>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">timeHandler</span>(<span class="hljs-params"></span>) </span>{
+  setTimeout(() =&gt; {
+    i++
+    <span class="hljs-built_in">console</span>.log(i)
+    timeHandler()
+  }, <span class="hljs-number">1000</span>);<span class="hljs-comment">//&#x8FD9;&#x91CC;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;</span>
+}
+
+timeHandler()
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668; &#x3010;&#x7B80;&#x5199;&#x3011;</span>
+setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-number">123</span>);
+}, <span class="hljs-number">2000</span>)<span class="hljs-comment">//&#x8FD9;&#x91CC;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;</span>
+</code></pre>
+<blockquote>
+<p><strong>&#x6848;&#x4F8B;</strong></p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x4F7F;&#x7528;&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;&#xFF0C;&#x5B9E;&#x73B0;&#x65E0;&#x9650;&#x6B21;&#x8BA1;&#x65F6;&#x5668;&#x7684;&#x6548;&#x679C;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>) </span>{
+    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;&#x54E6;&#xFF01;&quot;</span>);
+        fn()<span class="hljs-comment">//&#x9012;&#x5F52;</span>
+    }, <span class="hljs-number">1000</span>)
+}
+fn()
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x81EA;&#x5DF1;&#x6267;&#x884C;&#x81EA;&#x5DF1;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>) </span>{
+    fn()<span class="hljs-comment">//&#x9012;&#x5F52;</span>
+}
+
+<span class="hljs-comment">//&#x56DE;&#x8C03;&#x662F;&#x628A;&#x522B;&#x7684;&#x51FD;&#x6570;&#x5F53;&#x6210;&#x53C2;&#x6570;&#x6267;&#x884C;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">f</span>) </span>{
+    f()
+}
+</code></pre>
+<h3 id="3&#x6E05;&#x7A7A;&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;"><a name="3&#x6E05;&#x7A7A;&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;" class="anchor-navigation-ex-anchor" href="#3&#x6E05;&#x7A7A;&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>3)&#x6E05;&#x7A7A;&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;</h3>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>
+<span class="hljs-keyword">let</span> timer = setInterval(()=&gt;{
+  i++
+  <span class="hljs-built_in">console</span>.log(i)
+},<span class="hljs-number">1000</span>)
+
+clearInterval(timer)
+</code></pre>
+<h3 id="4&#x6E05;&#x7A7A;&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;"><a name="4&#x6E05;&#x7A7A;&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;" class="anchor-navigation-ex-anchor" href="#4&#x6E05;&#x7A7A;&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>4)&#x6E05;&#x7A7A;&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x65F6;&#x5668;</h3>
+<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> timer = setTimeout(() =&gt; {
+  i++;
+  <span class="hljs-built_in">console</span>.log(i);
+  timeHandler();
+}, <span class="hljs-number">1000</span>);
+clearTimeout(timer);
+</code></pre>
+<blockquote>
+<p><strong>&#x6848;&#x4F8B;</strong></p>
+</blockquote>
+<pre><code class="lang-js">&lt;body&gt;
+    &lt;button&gt;&#x6309;&#x94AE;&lt;/button&gt;
+    &lt;script&gt;
+        //3)&#x6E05;&#x7A7A;&#x65E0;&#x9650;&#x8BA1;&#x65F6;&#x5668;
+        var timeHandler = setInterval(function () {
+            console.log(123);
+        }, 1000)
+        var btn = document.querySelector(&quot;button&quot;)
+        btn.onclick = function () {
+            clearInterval(timeHandler)
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<blockquote>
+<p>&#x6E05;&#x7A7A;&#x5373;&#x5F00;&#x59CB;</p>
+</blockquote>
+<pre><code class="lang-js">&lt;body&gt;
+    &lt;button class=&quot;stop&quot;&gt;&#x6682;&#x505C;&lt;/button&gt;
+    &lt;button class=&quot;start&quot;&gt;&#x5F00;&#x59CB;&lt;/button&gt;
+&lt;/body&gt;
+&lt;script&gt;
+    var timeHandler
+    var i = 0
+    function time() {
+        timeHandler = setInterval(function () {
+            console.log(++i);
+        }, 1000)
+    }
+
+    //&#x5F00;&#x59CB;
+    var start = document.querySelector(&quot;.start&quot;)
+    start.onclick = function () {
+        clearInterval(timeHandler)
+        time()
+    }
+
+    //&#x6682;&#x505C;
+    var stop = document.querySelector(&quot;.stop&quot;)
+    stop.onclick = function () {
+        clearInterval(timeHandler)
+        i = 0
+    }
+&lt;/script&gt;
+</code></pre>
+<h2 id="2&#x3001;&#x9875;&#x9762;&#x6808;&#x5BF9;&#x8C61;&#x548C;&#x5386;&#x53F2;&#x5BF9;&#x8C61;"><a name="2&#x3001;&#x9875;&#x9762;&#x6808;&#x5BF9;&#x8C61;&#x548C;&#x5386;&#x53F2;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x9875;&#x9762;&#x6808;&#x5BF9;&#x8C61;&#x548C;&#x5386;&#x53F2;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x9875;&#x9762;&#x6808;&#x5BF9;&#x8C61;&#x548C;&#x5386;&#x53F2;&#x5BF9;&#x8C61;</h2>
+<pre><code class="lang-ejs">&lt;!--//index.html--&gt;
+&lt;!--index&#x9875;&#x9762;--&gt;
+&lt;button&gt;&#x8DF3;&#x5230;a&#x9875;&#x9762;&lt;/button&gt;
+&lt;script&gt;
+    let btn = document.querySelector(&quot;button&quot;)
+    btn.onclick = ()=&gt;{
+        location.href = &quot;a.html&quot;//location&#x662F;&#x9875;&#x9762;&#x6808;&#x5BF9;&#x8C61;&#xFF0C;&#x8BB0;&#x5F55;&#x4E86;&#x8DF3;&#x8F6C;&#x9875;&#x9762;&#x7684;&#x4FE1;&#x606F;
+    }
+&lt;/script&gt;
+
+&lt;!--a.html--&gt;
+&lt;!--a&#x9875;&#x9762;--&gt;
+&lt;button&gt;&#x8FD4;&#x56DE;&#x9996;&#x9875;&lt;/button&gt;
+&lt;script&gt;
+    let btn = document.querySelector(&quot;button&quot;)
+    btn.onclick = ()=&gt;{
+        // history.back()
+        history.go(-1)//history&#x662F;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x5BF9;&#x8C61;&#xFF0C;&#x8BB0;&#x5F55;&#x4E86;&#x6BCF;&#x4E00;&#x6B21;&#x8DF3;&#x8F6C;&#x7684;&#x4FE1;&#x606F;
+    }
+&lt;/script&gt;
+</code></pre>
+<h2 id="3&#x3001;&#x672C;&#x5730;&#x7F13;&#x5B58;"><a name="3&#x3001;&#x672C;&#x5730;&#x7F13;&#x5B58;" class="anchor-navigation-ex-anchor" href="#3&#x3001;&#x672C;&#x5730;&#x7F13;&#x5B58;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x672C;&#x5730;&#x7F13;&#x5B58;</h2>
+<pre><code class="lang-html">        &#x524D;&#x7AEF;&#xFF1A;
+            cookie;
+            localStorage;
+            sessionStorage;
+
+        &#x540E;&#x7AEF;&#xFF1A;
+            session;
+</code></pre>
+<pre><code class="lang-html">session&#xFF1B;&#x540E;&#x7AEF;&#x624D;&#x6709;&#x4F7F;&#x7528;&#xFF0C;&#x8DDF;&#x524D;&#x7AEF;&#x6CA1;&#x6709;&#x5173;&#x7CFB;&#x3002;
+
+cookie;           
+    1&#x3001;&#x6700;&#x65E9;&#xFF0C;&#x517C;&#x5BB9;&#x6027;&#x6700;&#x597D;
+    2&#x3001;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5728;&#x8C37;&#x6B4C;&#x6D4F;&#x89C8;&#x5668;&#x4E0B;&#x64CD;&#x4F5C;&#xFF0C;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x6D4F;&#x89C8;&#x5668;&#x6216;&#x8005;&#x5728;&#x670D;&#x52A1;&#x5668;&#x73AF;&#x5883;&#x64CD;&#x63A7;
+    3&#x3001;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF08;4kb&#xFF0C;&#x8C37;&#x6B4C;&#x6D4F;&#x89C8;&#x5668;&#xFF09;
+    4&#x3001;&#x5B58;&#x50A8;&#x6761;&#x6570;&#xFF08;20&#x6761;&#xFF0C;&#x8C37;&#x6B4C;&#x6D4F;&#x89C8;&#x5668;&#xFF09;
+    5&#x3001;&#x64CD;&#x4F5C;&#x7E41;&#x7410;&#xFF08;&#x76F8;&#x5BF9;&#x4E8E;&#x53E6;&#x5916;&#x4E24;&#x4E2A;&#xFF09;
+    6&#x3001;&#x9ED8;&#x8BA4;&#x5173;&#x95ED;&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x4F1A;&#x6D88;&#x5931;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x4FDD;&#x5B58;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x8FC7;&#x671F;&#x65F6;&#x95F4;
+
+localStorage;&#x672C;&#x5730;&#x6301;&#x4E45;&#x7EA7;&#x5B58;&#x50A8;
+    1&#x3001;h5&#x65B0;&#x7279;&#x6027;&#xFF0C;&#x4E0D;&#x80FD;&#x517C;&#x5BB9;&#x4F4E;&#x7248;&#x672C;&#x6D4F;&#x89C8;&#x5668;
+    2&#x3001;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6C38;&#x4E45;&#x5B58;&#x50A8;
+    3&#x3001;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x53D8;&#x6210;&#x5B57;&#x7B26;&#x4E32;
+    4&#x3001;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF08;5mb&#xFF0C;&#x8C37;&#x6B4C;&#x6D4F;&#x89C8;&#x5668;&#xFF09;
+    5&#x3001;&#x5B58;&#x50A8;&#x6761;&#x6570;&#xFF08;&#x5B58;&#x50A8;&#x6761;&#x6570;&#x4E0D;&#x9650;&#x5236;&#xFF09;
+    6&#x3001;&#x64CD;&#x4F5C;&#x76F8;&#x5BF9;&#x7B80;&#x5355;&#xFF08;&#x76F8;&#x5BF9;&#x4E8E;cookie&#xFF09;
+
+sessionStorage;&#x672C;&#x5730;&#x4F1A;&#x8BDD;&#x7EA7;&#x5B58;&#x50A8;
+    1&#x3001;&#x6240;&#x6709;&#x7279;&#x6027;&#x90FD;&#x4E0E;localStorage&#x4E00;&#x6837;&#xFF0C;&#x53EA;&#x6709;&#x5B58;&#x50A8;&#x65F6;&#x95F4;&#x4E0D;&#x540C;&#xFF0C;sessionStorage&#x9ED8;&#x8BA4;&#x5173;&#x95ED;&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x6D88;&#x5931;
+
+&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;
+    1&#x3001;&#x6709;&#x540C;&#x6B65;&#x5F02;&#x6B65;
+    2&#x3001;&#x4E0D;&#x9650;&#x4E8E;&#x53EA;&#x5B58;&#x50A8;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5B58;&#x5BF9;&#x8C61;
+</code></pre>
+<h3 id="1&#x5B58;&#x50A8;&#x548C;&#x83B7;&#x53D6;"><a name="1&#x5B58;&#x50A8;&#x548C;&#x83B7;&#x53D6;" class="anchor-navigation-ex-anchor" href="#1&#x5B58;&#x50A8;&#x548C;&#x83B7;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>1)&#x5B58;&#x50A8;&#x548C;&#x83B7;&#x53D6;</h3>
+<pre><code class="lang-jsx"><span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x53EA;&#x80FD;&#x5B58;&#x5B57;&#x7B26;&#x4E32;</span>
+localStorage.setItem(<span class="hljs-string">&quot;name&quot;</span>,<span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>)
+<span class="hljs-built_in">console</span>.log(localStorage.getItem(<span class="hljs-string">&quot;name&quot;</span>))
+
+<span class="hljs-comment">//&#x5B58;&#x6570;&#x7EC4;&#x9700;&#x8981;&#x5148;&#x8F6C;json&#x5B57;&#x7B26;&#x4E32;</span>
+localStorage.setItem(<span class="hljs-string">&quot;obj&quot;</span>,<span class="hljs-built_in">JSON</span>.stringify({name:<span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>}))
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.parse(localStorage.getItem(<span class="hljs-string">&quot;obj&quot;</span>)))
+</code></pre>
+<h3 id="2&#x5220;&#x9664;&#x5355;&#x4E2A;"><a name="2&#x5220;&#x9664;&#x5355;&#x4E2A;" class="anchor-navigation-ex-anchor" href="#2&#x5220;&#x9664;&#x5355;&#x4E2A;"><i class="fa fa-link" aria-hidden="true"></i></a>2)&#x5220;&#x9664;&#x5355;&#x4E2A;</h3>
+<pre><code class="lang-jsx">localStorage.removeItem()
+</code></pre>
+<h3 id="3&#x6E05;&#x7A7A;&#x6240;&#x6709;"><a name="3&#x6E05;&#x7A7A;&#x6240;&#x6709;" class="anchor-navigation-ex-anchor" href="#3&#x6E05;&#x7A7A;&#x6240;&#x6709;"><i class="fa fa-link" aria-hidden="true"></i></a>3)&#x6E05;&#x7A7A;&#x6240;&#x6709;</h3>
+<pre><code class="lang-jsx">localStorage.clear()
+</code></pre>
+<h3 id="&#x6848;&#x4F8B;"><a name="&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6848;&#x4F8B;</h3>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x5B58;</span>
+localStorage.setItem(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>)
+
+<span class="hljs-comment">//&#x53D6;</span>
+<span class="hljs-built_in">console</span>.log(localStorage.getItem(<span class="hljs-string">&quot;name&quot;</span>));
+</code></pre>
+<pre><code class="lang-js">localStorage.setItem(<span class="hljs-string">&quot;bool&quot;</span>, <span class="hljs-literal">true</span>)
+<span class="hljs-built_in">console</span>.log(localStorage.getItem(<span class="hljs-string">&quot;bool&quot;</span>));
+
+localStorage.setItem(<span class="hljs-string">&quot;arr&quot;</span>, <span class="hljs-built_in">JSON</span>.stringify([{ name: <span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>, age: <span class="hljs-number">18</span> }]))
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.parse(localStorage.setItem(<span class="hljs-string">&quot;arr&quot;</span>)));
+</code></pre>
+<footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-12-31 18:52:54
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="17异常错误对象.html" class="navigation navigation-prev " aria-label="Previous page: 17异常错误对象">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="19DOM文档对象模型.html" class="navigation navigation-next " aria-label="Next page: 19DOM文档对象模型">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"18BOM浏览器对象模型","level":"1.3.1.18","depth":3,"next":{"title":"19DOM文档对象模型","level":"1.3.1.19","depth":3,"path":"19DOM文档对象模型.md","ref":"19DOM文档对象模型.md","articles":[]},"previous":{"title":"17异常错误对象","level":"1.3.1.17","depth":3,"path":"17异常错误对象.md","ref":"17异常错误对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://cdn.jsdelivr.net/gh/ashunun/image@main/img/1639747635776%E7%A7%91%E5%B9%BB%E5%B0%91%E5%A5%B3%20%E8%83%8C%E5%BD%B1%20%E6%97%B6%E5%B0%9A%20%E7%99%BD%E8%89%B2%E8%A1%AC%E8%A1%AB%20%E9%BB%91%E8%89%B2%E7%9F%AD%E8%A3%A4%20%E7%BE%8E%E8%85%BF%20%E9%AB%98%E6%B8%85%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%A5%B3%E4%BA%BA%E7%89%A9%E5%A3%81%E7%BA%B8.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/床上白色小吊带养眼美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/居家小清新美女唯美壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/干净 简单 美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/image@main/img/1638544109137bg.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/下午 趴在桌子的女孩 好看动漫插画人物壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/cos美女原神刻晴2k壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/《王牌竞速》真人美女cosplay白色裙子美腿壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/可爱cos美女白色裙子《王牌竞速》美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/好好学习 天天向上 厚涂 女孩子眼镜 笔 工程师 板绘 好看动漫壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/侧卧睡觉好身材美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/cos刻晴 原神 美腿美女壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/可爱衣服 短裤 运动美女桌面壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/image@main/img/1638529545190Winnie%E5%B0%8F%E9%9B%AA%E9%BB%91%E8%89%B2%E4%B8%9D%E8%A2%9C%E7%BE%8E%E8%85%BF%E5%86%99%E7%9C%9F%E5%A3%81%E7%BA%B8.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/蓝色眼睛猫耳少女 尾巴 可爱二次元动漫壁纸.jpg","https://cdn.jsdelivr.net/gh/ashunun/Picture/img/夏木颖 牛仔 长发 性感好身材美女4k壁纸_彼岸图网.jpg"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"18BOM浏览器对象模型.md","mtime":"2021-12-31T10:52:54.990Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-31T11:28:00.164Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

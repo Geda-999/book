@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[GitBook 使用教程]]></title>
+        <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
+        <link>http://gitbook.zhangjikai.com/</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Fri, 31 Dec 2021 11:28:06 GMT</lastBuildDate>
+        <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[Jikai Zhang]]></author>
+        <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
+        <webMaster><![CDATA[me@zhangjikai.com]]></webMaster>
+        <category><![CDATA[gitbook]]></category>
+        <item>
+            <title><![CDATA[Introduction]]></title>
+            <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/未标题-1.jpg"/>]]></description>
+            <link>http://gitbook.zhangjikai.com/</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[HTML CSS 响应式]]></title>
+            <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/猫女2k动漫壁纸.jpg"/>]]></description>
+            <link>http://gitbook.zhangjikai.com/phase01.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/phase01.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[笔记]]></title>
+            <description><![CDATA[1）普遍比其他的行业薪资高。]]></description>
+            <link>http://gitbook.zhangjikai.com/01html.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/01html.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[CSS]]></title>
+            <link>http://gitbook.zhangjikai.com/02css.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/02css.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[响应式]]></title>
+            <link>http://gitbook.zhangjikai.com/03响应式.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/03响应式.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[JavaScript]]></title>
+            <link>http://gitbook.zhangjikai.com/phase02.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/phase02.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[JavaScriptES5]]></title>
+            <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/芯觉念念高清壁纸.jpg"/>]]></description>
+            <link>http://gitbook.zhangjikai.com/JavaScriptES5.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/JavaScriptES5.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[变量]]></title>
+            <link>http://gitbook.zhangjikai.com/01变量.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/01变量.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[常量]]></title>
+            <link>http://gitbook.zhangjikai.com/02常量.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/02常量.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>http://gitbook.zhangjikai.com/03js数据类型.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/03js数据类型.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[数字类型]]></title>
+            <link>http://gitbook.zhangjikai.com/05数字类型.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/05数字类型.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[字符串]]></title>
+            <link>http://gitbook.zhangjikai.com/06字符串.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/06字符串.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>http://gitbook.zhangjikai.com/07布尔值.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/07布尔值.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>http://gitbook.zhangjikai.com/08空值.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/08空值.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>http://gitbook.zhangjikai.com/09未定义.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/09未定义.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>http://gitbook.zhangjikai.com/10唯一值.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/10唯一值.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[对象]]></title>
+            <link>http://gitbook.zhangjikai.com/11对象.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/11对象.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[内置对象、全局对象]]></title>
+            <link>http://gitbook.zhangjikai.com/12内置全局对象.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/12内置全局对象.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[数组]]></title>
+            <link>http://gitbook.zhangjikai.com/13数组.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/13数组.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>http://gitbook.zhangjikai.com/14函数.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/14函数.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[日期对象]]></title>
+            <link>http://gitbook.zhangjikai.com/15日期对象.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/15日期对象.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[正则表达式]]></title>
+            <description><![CDATA[1、匹配16进制颜色值]]></description>
+            <link>http://gitbook.zhangjikai.com/16正则表达式.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/16正则表达式.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[异常错误对象]]></title>
+            <link>http://gitbook.zhangjikai.com/17异常错误对象.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/17异常错误对象.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[BOM 浏览器对象模型]]></title>
+            <link>http://gitbook.zhangjikai.com/18BOM浏览器对象模型.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/18BOM浏览器对象模型.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[DOM文档对象模型]]></title>
+            <description><![CDATA[image-20211215171959496]]></description>
+            <link>http://gitbook.zhangjikai.com/19DOM文档对象模型.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/19DOM文档对象模型.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[json]]></title>
+            <link>http://gitbook.zhangjikai.com/20json.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/20json.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Ajax]]></title>
+            <description><![CDATA[%accordion% 这是我们发送请求了 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/21Ajax.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/21Ajax.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[jQuery]]></title>
+            <link>http://gitbook.zhangjikai.com/22jQuery.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/22jQuery.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[函数进阶]]></title>
+            <description><![CDATA[%accordion% 模块标题 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/23函数进阶.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/23函数进阶.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[面向对象]]></title>
+            <description><![CDATA[%accordion% 历史解说🚀 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/24面向对象.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/24面向对象.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[正在修复中，请稍待...]]></title>
+            <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/how.jpg"/>]]></description>
+            <link>http://gitbook.zhangjikai.com/repair.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/repair.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[正在修复中，请稍待...]]></title>
+            <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/how.jpg"/>]]></description>
+            <link>http://gitbook.zhangjikai.com/phase03.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/phase03.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[正在修复中，请稍待...]]></title>
+            <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/how.jpg"/>]]></description>
+            <link>http://gitbook.zhangjikai.com/phase04.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/phase04.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Welcome to my world]]></title>
+            <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/辛巴狗2020年高考励志高清壁纸.jpg"/>]]></description>
+            <link>http://gitbook.zhangjikai.com/testing.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/testing.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/教室 班级 女学生 手机 听音乐 课桌 动漫壁纸.jpg"/>]]></description>
+            <link>http://gitbook.zhangjikai.com/weekly.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/weekly.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>http://gitbook.zhangjikai.com/每周测试01.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/每周测试01.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>http://gitbook.zhangjikai.com/每周测试02.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/每周测试02.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>http://gitbook.zhangjikai.com/每周测试03.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/每周测试03.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>http://gitbook.zhangjikai.com/每周测试04.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/每周测试04.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+    </channel>
+</rss>
