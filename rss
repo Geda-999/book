@@ -4,7 +4,7 @@
         <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
         <link>http://gitbook.zhangjikai.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 02 Jan 2022 14:36:57 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 04 Jan 2022 15:48:20 GMT</lastBuildDate>
         <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Jikai Zhang]]></author>
         <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
@@ -204,6 +204,75 @@
             <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/how.jpg"/>]]></description>
             <link>http://gitbook.zhangjikai.com/repair.html</link>
             <guid isPermaLink="true">http://gitbook.zhangjikai.com/repair.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[ES6]]></title>
+            <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/程潇壁纸.jpg"/>]]></description>
+            <link>http://gitbook.zhangjikai.com/es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[变量]]></title>
+            <description><![CDATA[%accordion% 历史解说 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/01变量-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/01变量-es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[常量]]></title>
+            <link>http://gitbook.zhangjikai.com/02常量-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/02常量-es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[解构赋值]]></title>
+            <description><![CDATA[%accordion% es5与es6写法 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/03解构赋值-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/03解构赋值-es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[字符串拓展]]></title>
+            <description><![CDATA[%accordion% for of 字符串遍历 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/04字符串拓展-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/04字符串拓展-es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[数字拓展]]></title>
+            <description><![CDATA[%accordion% 用来判断一个值是否为整数 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/05数字拓展-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/05数字拓展-es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[数组拓展]]></title>
+            <description><![CDATA[%accordion% 把类数组转化成数组 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/06数组拓展-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/06数组拓展-es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[函数拓展]]></title>
+            <description><![CDATA[%accordion% 练习 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/07函数拓展-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/07函数拓展-es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[对象拓展]]></title>
+            <description><![CDATA[%accordion% Object.is() 判断两个值是否相等 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/08对象拓展-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/08对象拓展-es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[类拓展]]></title>
+            <description><![CDATA[%accordion% 这种是活了 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/09类拓展-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/09类拓展-es6.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>
