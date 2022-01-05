@@ -374,7 +374,7 @@ table {
         -webkit-transform: rotate(359deg);
         transform: rotate(359deg)
     }
-    }
+}
 
 @keyframes fa-spin {
     0% {
@@ -386,7 +386,7 @@ table {
         -webkit-transform: rotate(359deg);
         transform: rotate(359deg)
     }
-    }
+}
 
 .fa-rotate-90 {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
@@ -3526,7 +3526,7 @@ table {
         -o-transform: translate(calc(100% - 60px), 0);
         transform: translate(calc(100% - 60px), 0)
     }
-    }
+}
 
 .book.without-animation .book-body {
     -webkit-transition: none !important;
@@ -3572,7 +3572,7 @@ table {
         position: static;
         min-height: calc(100% - 50px)
     }
-    }
+}
 
 .page-wrapper {
     position: relative;
@@ -3961,7 +3961,7 @@ table {
         max-width: 100%;
         width: 100%
     }
-    }
+}
 
 #book-search-input {
     padding: 6px;

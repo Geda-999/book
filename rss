@@ -4,7 +4,7 @@
         <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
         <link>http://gitbook.zhangjikai.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 04 Jan 2022 15:48:20 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 05 Jan 2022 14:58:33 GMT</lastBuildDate>
         <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Jikai Zhang]]></author>
         <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
@@ -276,10 +276,56 @@
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[扩展运算符]]></title>
+            <link>http://gitbook.zhangjikai.com/10扩展运算符-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/10扩展运算符-es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[set数据结构]]></title>
+            <link>http://gitbook.zhangjikai.com/11set数据结构-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/11set数据结构-es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[map数据结构]]></title>
+            <link>http://gitbook.zhangjikai.com/12map数据结构-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/12map数据结构-es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[同步和异步]]></title>
+            <description><![CDATA[%accordion% 历史解说 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/13同步和异步-es6.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/13同步和异步-es6.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[正在修复中，请稍待...]]></title>
             <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/how.jpg"/>]]></description>
             <link>http://gitbook.zhangjikai.com/phase03.html</link>
             <guid isPermaLink="true">http://gitbook.zhangjikai.com/phase03.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Vue框架]]></title>
+            <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/《原神》不动鸣神 泡影断灭壁纸.jpg"/>]]></description>
+            <link>http://gitbook.zhangjikai.com/vue.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/vue.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[mvvm和mvc]]></title>
+            <description><![CDATA[%accordion% js&vue %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/01mvvm和mvc.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/01mvvm和mvc.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[生命周期]]></title>
+            <description><![CDATA[%accordion%必记🚀%accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/04生命周期.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/04生命周期.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>
