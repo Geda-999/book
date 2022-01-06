@@ -4,7 +4,7 @@
         <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
         <link>http://gitbook.zhangjikai.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 05 Jan 2022 14:58:33 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 06 Jan 2022 09:23:26 GMT</lastBuildDate>
         <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Jikai Zhang]]></author>
         <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
@@ -326,6 +326,20 @@
             <description><![CDATA[%accordion%必记🚀%accordion%]]></description>
             <link>http://gitbook.zhangjikai.com/04生命周期.html</link>
             <guid isPermaLink="true">http://gitbook.zhangjikai.com/04生命周期.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[指令]]></title>
+            <description><![CDATA[%accordion% 解说 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/05指令.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/05指令.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[方法、计算属性、监听器]]></title>
+            <description><![CDATA[%accordion% 🚀 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/06方法-计算属性-监听器.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/06方法-计算属性-监听器.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>

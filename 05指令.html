@@ -1,0 +1,2018 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>05指令 · 前端秘籍</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ashun">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06方法-计算属性-监听器.html" />
+    
+    
+    <link rel="prev" href="04生命周期.html" />
+    
+
+    <link href="http://gitbook.zhangjikai.com/rss" title="GitBook 使用教程" rel="alternate" type="application/rss+xml" />
+
+    
+        <link rel="shortcut icon" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://geda-999.github.io/book" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="phase01.html">
+            
+                <a href="phase01.html">
+            
+                    
+                    Phase I
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01html.html">
+            
+                <a href="01html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02css.html">
+            
+                <a href="02css.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03响应式.html">
+            
+                <a href="03响应式.html">
+            
+                    
+                    响应式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="phase02.html">
+            
+                <a href="phase02.html">
+            
+                    
+                    Phase II
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="JavaScriptES5.html">
+            
+                <a href="JavaScriptES5.html">
+            
+                    
+                    JavaScriptES5
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="01变量.html">
+            
+                <a href="01变量.html">
+            
+                    
+                    01变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="02常量.html">
+            
+                <a href="02常量.html">
+            
+                    
+                    02常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="03js数据类型.html">
+            
+                <a href="03js数据类型.html">
+            
+                    
+                    03js数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" >
+            
+                <a target="_blank" href="https://geda-999.github.io/book/04运算判断条件.html">
+            
+                    
+                    04运算判断条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="05数字类型.html">
+            
+                <a href="05数字类型.html">
+            
+                    
+                    05数字类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="06字符串.html">
+            
+                <a href="06字符串.html">
+            
+                    
+                    06字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="07布尔值.html">
+            
+                <a href="07布尔值.html">
+            
+                    
+                    07布尔值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="08空值.html">
+            
+                <a href="08空值.html">
+            
+                    
+                    08空值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="09未定义.html">
+            
+                <a href="09未定义.html">
+            
+                    
+                    09未定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="10唯一值.html">
+            
+                <a href="10唯一值.html">
+            
+                    
+                    10唯一值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="11对象.html">
+            
+                <a href="11对象.html">
+            
+                    
+                    11对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="12内置全局对象.html">
+            
+                <a href="12内置全局对象.html">
+            
+                    
+                    12内置全局对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="13数组.html">
+            
+                <a href="13数组.html">
+            
+                    
+                    13数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="14函数.html">
+            
+                <a href="14函数.html">
+            
+                    
+                    14函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="15日期对象.html">
+            
+                <a href="15日期对象.html">
+            
+                    
+                    15日期对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.16" data-path="16正则表达式.html">
+            
+                <a href="16正则表达式.html">
+            
+                    
+                    16正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.17" data-path="17异常错误对象.html">
+            
+                <a href="17异常错误对象.html">
+            
+                    
+                    17异常错误对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.18" data-path="18BOM浏览器对象模型.html">
+            
+                <a href="18BOM浏览器对象模型.html">
+            
+                    
+                    18BOM浏览器对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.19" data-path="19DOM文档对象模型.html">
+            
+                <a href="19DOM文档对象模型.html">
+            
+                    
+                    19DOM文档对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.20" data-path="20json.html">
+            
+                <a href="20json.html">
+            
+                    
+                    20json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.21" data-path="21Ajax.html">
+            
+                <a href="21Ajax.html">
+            
+                    
+                    21Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.22" data-path="22jQuery.html">
+            
+                <a href="22jQuery.html">
+            
+                    
+                    22jQuery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.23" data-path="23函数进阶.html">
+            
+                <a href="23函数进阶.html">
+            
+                    
+                    23函数进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.24" data-path="24面向对象.html">
+            
+                <a href="24面向对象.html">
+            
+                    
+                    24面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    npm包管理系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="es6.html">
+            
+                <a href="es6.html">
+            
+                    
+                    Es6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="01变量-es6.html">
+            
+                <a href="01变量-es6.html">
+            
+                    
+                    01变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="02常量-es6.html">
+            
+                <a href="02常量-es6.html">
+            
+                    
+                    02常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="03解构赋值-es6.html">
+            
+                <a href="03解构赋值-es6.html">
+            
+                    
+                    03解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="04字符串拓展-es6.html">
+            
+                <a href="04字符串拓展-es6.html">
+            
+                    
+                    04字符串拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="05数字拓展-es6.html">
+            
+                <a href="05数字拓展-es6.html">
+            
+                    
+                    05数字拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="06数组拓展-es6.html">
+            
+                <a href="06数组拓展-es6.html">
+            
+                    
+                    06数组拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="07函数拓展-es6.html">
+            
+                <a href="07函数拓展-es6.html">
+            
+                    
+                    07函数拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.8" data-path="08对象拓展-es6.html">
+            
+                <a href="08对象拓展-es6.html">
+            
+                    
+                    08对象拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.9" data-path="09类拓展-es6.html">
+            
+                <a href="09类拓展-es6.html">
+            
+                    
+                    09类拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.10" data-path="10扩展运算符-es6.html">
+            
+                <a href="10扩展运算符-es6.html">
+            
+                    
+                    10扩展运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.11" data-path="11set数据结构-es6.html">
+            
+                <a href="11set数据结构-es6.html">
+            
+                    
+                    11set数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.12" data-path="12map数据结构-es6.html">
+            
+                <a href="12map数据结构-es6.html">
+            
+                    
+                    12map数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.13" data-path="13同步和异步-es6.html">
+            
+                <a href="13同步和异步-es6.html">
+            
+                    
+                    13同步和异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="phase03.html">
+            
+                <a href="phase03.html">
+            
+                    
+                    Phase III
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="vue.html">
+            
+                <a href="vue.html">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="01mvvm和mvc.html">
+            
+                <a href="01mvvm和mvc.html">
+            
+                    
+                    01mvvm和mvc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" >
+            
+                <a target="_blank" href="https://geda-999.github.io/test-book/02安装和使用.html">
+            
+                    
+                    02安装和使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" >
+            
+                <a target="_blank" href="https://geda-999.github.io/test-book/03模版语法.html">
+            
+                    
+                    03模版语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="04生命周期.html">
+            
+                <a href="04生命周期.html">
+            
+                    
+                    04生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.5" data-path="05指令.html">
+            
+                <a href="05指令.html">
+            
+                    
+                    05指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="06方法-计算属性-监听器.html">
+            
+                <a href="06方法-计算属性-监听器.html">
+            
+                    
+                    06方法-计算属性-监听器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="phase04.html">
+            
+                <a href="phase04.html">
+            
+                    
+                    Phase IV
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="weekly.html">
+            
+                <a href="weekly.html">
+            
+                    
+                    Weekly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="每周测试01.html">
+            
+                <a href="每周测试01.html">
+            
+                    
+                    每周测试01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="每周测试02.html">
+            
+                <a href="每周测试02.html">
+            
+                    
+                    每周测试02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="每周测试03.html">
+            
+                <a href="每周测试03.html">
+            
+                    
+                    每周测试03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="每周测试04.html">
+            
+                <a href="每周测试04.html">
+            
+                    
+                    每周测试04
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >05指令</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x6307;&#x4EE4;"><b></b>&#x6307;&#x4EE4;</a></li><ul><li><span class="title-icon "></span><a href="#v-html-&#x6E32;&#x67D3;&#x6807;&#x7B7E;"><b></b>v-html &#x6E32;&#x67D3;&#x6807;&#x7B7E;</a></li><li><span class="title-icon "></span><a href="#v-bind-&#x7ED1;&#x5B9A;&#x5C5E;&#x6027;"><b></b>v-bind &#x7ED1;&#x5B9A;&#x5C5E;&#x6027;</a></li><li><span class="title-icon "></span><a href="#v-if-&#x662F;&#x5426;&#x6E32;&#x67D3;&#x6807;&#x7B7E;"><b></b>v-if &#x662F;&#x5426;&#x6E32;&#x67D3;&#x6807;&#x7B7E;</a></li><li><span class="title-icon "></span><a href="#v-show&#x662F;&#x5426;&#x663E;&#x793A;&#x6807;&#x7B7E;"><b></b>v-show&#x662F;&#x5426;&#x663E;&#x793A;&#x6807;&#x7B7E;</a></li><li><span class="title-icon "></span><a href="#v-for-&#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;"><b></b>v-for &#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;</a></li><ul><li><span class="title-icon "></span><a href="#1&#x3001;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;"><b></b>1&#x3001;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#2&#x3001;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;"><b></b>2&#x3001;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;</a></li><li><span class="title-icon "></span><a href="#3&#x3001;v-for&#x548C;v-if&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x95EE;&#x9898;"><b></b>3&#x3001;v-for&#x548C;v-if&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x95EE;&#x9898;</a></li></ul><li><span class="title-icon "></span><a href="#v-on-&#x4E8B;&#x4EF6;"><b></b>v-on &#x4E8B;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#v-model-&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;"><b></b>v-model &#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;</a></li><li><span class="title-icon "></span><a href="#&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x548C;&#x4FEE;&#x9970;&#x7B26;"><b></b>&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x548C;&#x4FEE;&#x9970;&#x7B26;</a></li></ul></ul></div><a href="#&#x6307;&#x4EE4;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><div class="treeview__container-title"></div><ul>
+<li><div><a href="#v-html-&#x6E32;&#x67D3;&#x6807;&#x7B7E;">v-html &#x6E32;&#x67D3;&#x6807;&#x7B7E;</a><i></i></div></li>
+<li><div><a href="#v-bind-&#x7ED1;&#x5B9A;&#x5C5E;&#x6027;">v-bind &#x7ED1;&#x5B9A;&#x5C5E;&#x6027;</a><i></i></div></li>
+<li><div><a href="#v-if-&#x662F;&#x5426;&#x6E32;&#x67D3;&#x6807;&#x7B7E;">v-if &#x662F;&#x5426;&#x6E32;&#x67D3;&#x6807;&#x7B7E;</a><i></i></div></li>
+<li><div><a href="#v-show&#x662F;&#x5426;&#x663E;&#x793A;&#x6807;&#x7B7E;">v-show&#x662F;&#x5426;&#x663E;&#x793A;&#x6807;&#x7B7E;</a><i></i></div></li>
+<li><div><a href="#v-for-&#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;">v-for &#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#1&#x3001;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;">1&#x3001;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;</a><i></i></div></li>
+<li><div><a href="#2&#x3001;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;">2&#x3001;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;</a><i></i></div></li>
+<li><div><a href="#3&#x3001;v-for&#x548C;v-if&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x95EE;&#x9898;">3&#x3001;v-for&#x548C;v-if&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x95EE;&#x9898;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#v-on-&#x4E8B;&#x4EF6;">v-on &#x4E8B;&#x4EF6;</a><i></i></div></li>
+<li><div><a href="#v-model-&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;">v-model &#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;</a><i></i></div></li>
+<li><div><a href="#&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x548C;&#x4FEE;&#x9970;&#x7B26;">&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x548C;&#x4FEE;&#x9970;&#x7B26;</a><i></i></div></li>
+</ul>
+</div>
+
+<h1 id="&#x6307;&#x4EE4;"><a name="&#x6307;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x4EE4;</h1>
+<blockquote>
+<p>&#x6307;&#x4EE4;&#x5C31;&#x662F;vue&#x63D0;&#x4F9B;&#x7ED9;&#x6211;&#x4EEC;&#x7684;&#x4E00;&#x4E9B;&#x5FEB;&#x6377;&#x64CD;&#x4F5C;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<h2 id="v-html-&#x6E32;&#x67D3;&#x6807;&#x7B7E;"><a name="v-html-&#x6E32;&#x67D3;&#x6807;&#x7B7E;" class="anchor-navigation-ex-anchor" href="#v-html-&#x6E32;&#x67D3;&#x6807;&#x7B7E;"><i class="fa fa-link" aria-hidden="true"></i></a>v-html &#x6E32;&#x67D3;&#x6807;&#x7B7E;</h2>
+<pre><code class="lang-jsx">//&#x6E32;&#x67D3;&#x6807;&#x7B7E;
+&lt;p v-html=&quot;msg&quot;&gt;&lt;/p&gt;
+
+new Vue({
+  el:&quot;##app&quot;,
+  data:{
+    msg:&quot;&lt;a&gt;&#x5185;&#x5BB9;&lt;/a&gt;&quot;
+  }
+})
+&lt;div id=&quot;app&quot;&gt;
+  &lt;div v-html=&quot;msg&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+new Vue({
+  el:&quot;##app&quot;,
+  data:{
+    msg:`
+      &lt;div&gt;
+        &lt;ul&gt;
+          &lt;li&gt;1&lt;/li&gt;
+          &lt;li&gt;2&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    `
+  }
+})
+</code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x89E3;&#x8BF4; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;(B&#x7AEF;)   &#x5546;&#x54C1;&#x7684;&#x589E;&#x52A0;&#x3001;&#x51CF;&#x5C11;&#x3001;&#x66F4;&#x65B0;
+    &#x5B58;&#x540E;&#x7AEF;&#xFF08;&#x63A5;&#x53E3;&#x3001;&#x670D;&#x52A1;&#x5668;&#x3001;&#x6570;&#x636E;&#x5E93;&#x3001;&#xFF09;&#x540E;&#x7AEF;
+    &#x540E;&#x53F0;&#x754C;&#x9762;    &#x540E;&#x7AEF;/&#x524D;&#x7AEF;
+&#x5BA2;&#x6237;&#x7AEF;&#x754C;&#x9762;&#xFF08;c&#x7AEF;&#xFF09;&#x524D;&#x7AEF;
+</code></pre>
+</div></div>
+<blockquote>
+<p>[!cogs]</p>
+<p>&#x8BB0;&#x5F97;&#x5F15;&#x5165;&#x54E6;&#xFF1A;</p>
+<pre><code class="lang-js">&lt;script src=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+</blockquote>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;div V-html=&quot;element&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;1
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {
+            element: &quot;&lt;p&gt;&lt;/P&gt;&quot;,
+        },
+    })
+&lt;/script&gt;
+</code></pre>
+<pre><code class="lang-jsx"><span class="hljs-keyword">new</span> Vue({
+    el: <span class="hljs-string">&quot;#app&quot;</span>,
+    data: {
+        element: <span class="hljs-string">`
+                &lt;ul&gt;
+                    &lt;li&gt;1&lt;/li&gt;
+                    &lt;li&gt;2&lt;/li&gt;
+                &lt;/ul&gt;
+                `</span>,
+    },
+})
+</code></pre>
+</div></div>
+<h2 id="v-bind-&#x7ED1;&#x5B9A;&#x5C5E;&#x6027;"><a name="v-bind-&#x7ED1;&#x5B9A;&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#v-bind-&#x7ED1;&#x5B9A;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>v-bind &#x7ED1;&#x5B9A;&#x5C5E;&#x6027;</h2>
+<pre><code class="lang-jsx">&lt;div v-bind:<span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;msg&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="hljs-comment">//&#x7B80;&#x5199;</span>
+&lt;div :<span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;msg&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+<span class="hljs-keyword">new</span> Vue({
+  el:<span class="hljs-string">&quot;##app&quot;</span>,
+  data:{
+    msg:<span class="hljs-string">&quot;a&quot;</span>
+  }
+})
+&lt;div :<span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;bool ? &apos;a&apos; : &apos;b&apos;&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+<span class="hljs-keyword">new</span> Vue({
+  el:<span class="hljs-string">&quot;##app&quot;</span>,
+  data:{
+    bool:<span class="hljs-literal">true</span>
+  }
+})
+</code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F4A2; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;3
+    //&lt;div V-bind:class=&quot;className&quot;&gt;&lt;/div&gt;
+    //&lt;div V-bind:class=&quot;bool ? &apos;a&apos; : &apos;b&apos; &quot;&gt;&lt;/div&gt;
+        //&#x7B80;&#x5199;
+    &lt;div :class=&quot;bool ? &apos;a&apos; :  &apos;b&apos;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    new Vue({
+        el: &quot; #app&quot;,
+        data: {
+            className: &quot;a&quot;,
+            bool: false,
+        },
+    })
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h2 id="v-if-&#x662F;&#x5426;&#x6E32;&#x67D3;&#x6807;&#x7B7E;"><a name="v-if-&#x662F;&#x5426;&#x6E32;&#x67D3;&#x6807;&#x7B7E;" class="anchor-navigation-ex-anchor" href="#v-if-&#x662F;&#x5426;&#x6E32;&#x67D3;&#x6807;&#x7B7E;"><i class="fa fa-link" aria-hidden="true"></i></a>v-if &#x662F;&#x5426;&#x6E32;&#x67D3;&#x6807;&#x7B7E;</h2>
+<blockquote>
+<p>&#x663E;&#x793A;&#x4E0E;&#x6D88;&#x5931;&#x662F;&#x6574;&#x4E2A;&#x539F;&#x751F;&#x663E;&#x793A;&#x548C;&#x9500;&#x6BC1;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx">&lt;div v-if=&quot;bool&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt;
+
+new Vue({
+  el:&quot;##app&quot;,
+  data:{
+    bool:false
+  }
+})
+&lt;div v-if=&quot;bool&quot;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;
+&lt;div v-else&gt;&#x5185;&#x5BB9;2&lt;/div&gt;
+
+new Vue({
+  el:&quot;##app&quot;,
+  data:{
+    bool:false
+  }
+})
+&lt;div v-if=&quot;msg===1&quot;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;
+&lt;div v-else-if=&quot;msg===2&quot;&gt;&#x5185;&#x5BB9;2&lt;/div&gt;
+&lt;div v-else&gt;&#x5185;&#x5BB9;3&lt;/div&gt;
+
+new Vue({
+    el:&quot;##app&quot;,
+    data:{
+      msg:3
+    }
+  })
+</code></pre>
+<h2 id="v-show&#x662F;&#x5426;&#x663E;&#x793A;&#x6807;&#x7B7E;"><a name="v-show&#x662F;&#x5426;&#x663E;&#x793A;&#x6807;&#x7B7E;" class="anchor-navigation-ex-anchor" href="#v-show&#x662F;&#x5426;&#x663E;&#x793A;&#x6807;&#x7B7E;"><i class="fa fa-link" aria-hidden="true"></i></a>v-show&#x662F;&#x5426;&#x663E;&#x793A;&#x6807;&#x7B7E;</h2>
+<blockquote>
+<p>v-show&#x7684;&#x5207;&#x6362;&#x5F00;&#x9500;&#x4F1A;&#x66F4;&#x5C0F;&#xFF0C;&#x800C;v-if&#x4F1A;&#x66F4;&#x591A;</p>
+</blockquote>
+<pre><code class="lang-jsx">&lt;div v-show=&quot;bool&quot;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;//&#x5728;&#x6807;&#x7B7E;&#x4E0A;&#x6DFB;&#x52A0;display:none
+&lt;div v-if=&quot;bool&quot;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;//&#x6574;&#x4E2A;&#x6807;&#x7B7E;&#x6D88;&#x5931;
+
+new Vue({
+  el:&quot;##app&quot;,
+  data:{
+    bool:false
+  }
+})
+</code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x89E3;&#x8BF4;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&#x91CD;&#x4F1A;&#x4E0E;&#x56DE;&#x6D41;
+&#x6837;&#x5F0F;&#x5BF9;&#x5143;&#x7D20;&#x7684;&#x8BBE;&#x7F6E;&#x7684;&#x8BA1;&#x7B97;
+
+&#x8BA1;&#x7B97;&#x6D88;&#x8017;
+v-<span class="hljs-keyword">if</span>&#x66F4;&#x5927;
+v-show&#x66F4;&#x5C0F;
+
+&#x53CD;&#x590D;&#x6E32;&#x67D3;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5EFA;&#x8BAE;&#x7528;v-show
+&#x5982;&#x679C;&#x662F;&#x5C11;&#x91CF;&#x6E32;&#x67D3;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5EFA;&#x8BAE;&#x7528;v-<span class="hljs-keyword">if</span>
+
+&#x63D2;&#x4EF6;&#xFF1A;
+vetur&#x2014;&#x2014;vue2
+volar&#x2014;&#x2014;Vue3
+</code></pre>
+</div></div>
+<blockquote>
+<p><strong>[success] &#x5FC5;&#x8BB0;</strong></p>
+<p>v-if:&#x9996;&#x6B21;&#x6E32;&#x67D3;&#x5F00;&#x9500;&#x66F4;&#x5C0F;&#xFF0C;&#x53CD;&#x590D;&#x6E32;&#x67D3;&#x5F00;&#x9500;&#x5927;</p>
+<p>v-show:&#x9996;&#x6B21;&#x6E32;&#x67D3;&#x5F00;&#x9500;&#x66F4;&#x5927;&#xFF0C;&#x53CD;&#x590D;&#x6E32;&#x67D3;&#x5F00;&#x9500;&#x5C0F;</p>
+</blockquote>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> v-if&#x4E0E;v-show </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;div v-if=&quot;bool&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt; //&#x8FD9;&#x79CD;&#x76F4;&#x63A5;&#x5728;&#x5143;&#x7D20;&#x4E2D;&#x6D88;&#x5931;&#x754C;&#x9762;&#x4E5F;&#x6D88;&#x5931;
+    &lt;div v-show=&quot;bool&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt; //&#x8FD9;&#x79CD;&#x5143;&#x7D20;&#x8FD8;&#x5728;&#x4F46;&#x662F;&#x754C;&#x9762;&#x662F;&#x770B;&#x4E0D;&#x89C1;&#x4E86; &#x2728;
+
+&lt;/div&gt;
+&lt;script&gt;
+    new Vue({
+        el: &quot; #app&quot;,
+        data: {
+            bool: false,
+        },
+    })
+
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F4A2; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;div v-if=&quot;num===1&quot;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;
+    &lt;div v-else-if=&quot;num===2&quot;&gt;&#x5185;&#x5BB9;2&lt;/div&gt;
+    &lt;div v-else&gt;&#x5185;&#x5BB9;3&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    new Vue({
+        el: &quot; #app&quot;,
+        data: {
+            num: 3, //&#x5185;&#x5BB9;3
+        },
+    })
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h2 id="v-for-&#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;"><a name="v-for-&#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#v-for-&#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>v-for &#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;</h2>
+<h3 id="1&#x3001;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;"><a name="1&#x3001;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;</h3>
+<pre><code class="lang-jsx">//item&#x662F;&#x6570;&#x7EC4;&#x6210;&#x5458;&#xFF0C;idx&#x662F;&#x7D22;&#x5F15;&#x503C;
+&lt;div v-for=&quot;(item,idx) of arr&quot;&gt;&lt;/div&gt;
+
+new Vue({
+  el:&quot;##app&quot;,
+  data:{
+    arr:[&quot;&#x5C0F;&#x660E;&quot;,&quot;&#x5C0F;&#x7EA2;&quot;,&quot;&#x5C0F;&#x9EC4;&quot;]
+  }
+})
+&lt;div v-for=&quot;items of arr&quot;&gt;
+  &lt;div v-for=&quot;item of items.cities&quot;&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+new Vue({
+  el: &quot;##app&quot;,
+  data: {
+    arr: [
+      {
+        countryName: &quot;&#x4E2D;&#x56FD;&quot;,
+        cities: [
+          { cityName: &quot;&#x5E7F;&#x5DDE;&quot; },
+          { cityName: &quot;&#x5317;&#x4EAC;&quot; },
+          { cityName: &quot;&#x4E0A;&#x6D77;&quot; },
+        ],
+      },
+      {
+        countryName: &quot;&#x7F8E;&#x56FD;&quot;,
+        cities: [
+          { cityName: &quot;&#x7EBD;&#x7EA6;&quot; },
+          { cityName: &quot;&#x534E;&#x76DB;&#x987F;&quot; },
+          { cityName: &quot;&#x6D1B;&#x6749;&#x77F6;&quot; },
+        ],
+      },
+      {
+        countryName: &quot;&#x65E5;&#x672C;&quot;,
+        cities: [
+          { cityName: &quot;&#x4E1C;&#x4EAC;&quot; },
+          { cityName: &quot;&#x5317;&#x6D77;&#x9053;&quot; },
+          { cityName: &quot;&#x5927;&#x962A;&quot; },
+        ],
+      },
+    ],
+  },
+});
+</code></pre>
+<h3 id="2&#x3001;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;"><a name="2&#x3001;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;</h3>
+<pre><code class="lang-jsx">&lt;div v-<span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;(val,key,idx) of obj&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&quot;##app&quot;</span>,
+  data: {
+    obj:{
+      name:<span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>,
+      age:<span class="hljs-number">18</span>,
+      sex:<span class="hljs-string">&quot;&#x7537;&quot;</span>
+    }
+  },
+});
+</code></pre>
+<h3 id="3&#x3001;v-for&#x548C;v-if&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x95EE;&#x9898;"><a name="3&#x3001;v-for&#x548C;v-if&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#3&#x3001;v-for&#x548C;v-if&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;v-for&#x548C;v-if&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x95EE;&#x9898;</h3>
+<pre><code class="lang-jsx">//vue2 v-for&#x7684;&#x6743;&#x91CD;&#x9AD8;&#x4E8E;v-if
+//vue3 &#x53CD;&#x8FC7;&#x6765;
+//&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x628A;v-for&#x548C;v-if&#x5199;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E0A;
+
+&lt;div v-for=&quot;item of arr&quot;&gt;
+  &lt;div v-if=&quot;item.bool&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+new Vue({
+    el: &quot;##app&quot;,
+    data: {
+      arr: [
+        { bool: true, name: &quot;&#x5C0F;&#x660E;&quot; },
+        { bool: false, name: &quot;&#x5C0F;&#x7EA2;&quot; },
+        { bool: true, name: &quot;&#x5C0F;&#x9EC4;&quot; },
+      ],
+    },
+  });
+</code></pre>
+<blockquote>
+<p>[!cogs]</p>
+</blockquote>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> v-for </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;!- idx:&#x7D22;&#x5F15;&#x503C;&#x653E;&#x5728;&#x524D;&#x9762;&#x5C31;&#x51FA;&#x73B0;&#x5728;&#x524D; --
+    &lt;div v-for=&quot;(item,idx) of arr&quot;&gt;&lt;/div&gt;
+    &lt;div v-for=&quot;(val,key,idx) of obj&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    new Vue({
+        el: &quot; #app&quot;,
+        data: {
+            arr: [&quot;&#x5F20;&#x4E09;&quot;, &quot;&#x674E;&#x56DB;&quot;, &quot;&#x8001;&#x738B;&quot;],
+            obj: {
+                name: &quot;&#x5F20;&#x4E09;&quot;,
+                age: &quot;&#x674E;&#x56DB;&quot;,
+                sex: &quot;&#x7537;&quot;
+            },
+        },
+    })
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;div v-for=&quot;items in arr&quot;&gt;
+        &lt;div v-for=&quot;item of items.cities&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+new Vue({
+    el: &quot;#app&quot;,
+    data: {
+        arr: [
+            {
+                countryName: &quot;&#x4E2D;&#x56FD;&quot;,
+                cities: [
+                    { cityName: &quot;&#x5E7F;&#x5DDE;&quot; },
+                    { cityName: &quot;&#x6DF1;&#x5733;&quot; },
+                    { cityName: &quot;&#x4E0A;&#x6D77;&quot; },
+                ],
+            },
+            {
+                countryName: &quot;&#x7F8E;&#x56FD;&quot;,
+                cities: [
+                    { cityName: &quot;&#x534E;&#x76DB;&#x987F;&quot; },
+                    { cityName: &quot;&#x7EBD;&#x7EA6;&quot; },
+                    { cityName: &quot;&#x6D1B;&#x6749;&#x77F6;&quot; },
+                ],
+            },
+            {
+                countryName: &quot;&#x65E5;&#x672C;&quot;,
+                cities: [
+                    { cityName: &quot;&#x4E1C;&#x4EAC;&quot; },
+                    { cityName: &quot;&#x5927;&#x962A;&quot; },
+                    { cityName: &quot;&#x5317;&#x6D77;&#x9053;&quot; },
+                ],
+            },
+        ]
+    }
+})
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h2 id="v-on-&#x4E8B;&#x4EF6;"><a name="v-on-&#x4E8B;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#v-on-&#x4E8B;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>v-on &#x4E8B;&#x4EF6;</h2>
+<pre><code class="lang-jsx">&lt;div v-on:click=&quot;fn&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt;
+
+//&#x7B80;&#x5199;&#x3002;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x662F;$event
+&lt;div @click=&quot;fn($event)&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt;
+
+new Vue({
+  el: &quot;##app&quot;,
+  data: {
+
+  },
+  methods: {//&#x5B58;&#x653E;&#x65B9;&#x6CD5;&#x7684;&#x5730;&#x65B9;
+    fn(e){
+      console.log(e.target)
+    }
+  },
+});
+&lt;div v-for=&quot;(item,idx) of arr&quot; @click=&quot;fn(item,idx)&quot;&gt;
+
+&lt;/div&gt;
+
+new Vue({
+  el: &quot;##app&quot;,
+  data: {
+    arr:[1,2,3,4,5]
+  },
+  methods: {
+    fn(item,idx){
+      console.log(idx)
+    }
+  },
+});
+</code></pre>
+<blockquote>
+<p>[!cogs]</p>
+</blockquote>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;@click </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;button v-on:click=&quot;fn&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt;
+    &lt;button @click=&quot;fn($event)&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {},
+        methods: {
+            //&#x5B58;&#x653E;&#x65B9;&#x6CD5;
+            fn(e) {
+                console.log(e);
+            },
+        },
+    })
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x8FD0;&#x7528;@click </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;div v-for=&quot;item of arr&quot; @click=&quot;fn(item)&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {
+            arr: [&quot;&#x5F20;&#x4E09;&quot;, &quot;&#x674E;&#x56DB;&quot;, &quot;&#x8001;&#x738B;&quot;],
+        },
+        methods: {
+            //&#x5B58;&#x653E;&#x65B9;&#x6CD5;
+            fn(item) {
+                console.log(item);
+            },
+        },
+    })
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h2 id="v-model-&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;"><a name="v-model-&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;" class="anchor-navigation-ex-anchor" href="#v-model-&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;"><i class="fa fa-link" aria-hidden="true"></i></a>v-model &#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;</h2>
+<blockquote>
+<p>&#x5BF9;&#x8868;&#x5355;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x53CC;&#x5411;&#x7684;&#x6570;&#x636E;&#x7ED1;&#x5B9A;</p>
+</blockquote>
+<pre><code class="lang-jsx">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> v-model=<span class="hljs-string">&quot;msg&quot;</span>&gt;
+
+
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&quot;##app&quot;</span>,
+  data: {
+    msg:<span class="hljs-string">&quot;123&quot;</span>
+  }
+});
+</code></pre>
+<blockquote>
+<p>v-mode&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;</p>
+</blockquote>
+<pre><code class="lang-jsx">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> @input=<span class="hljs-string">&quot;fn($event)&quot;</span>&gt;
+
+
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&quot;##app&quot;</span>,
+  data: {
+    msg:<span class="hljs-string">&quot;&quot;</span>
+  },
+  methods: {
+    fn(e){
+      <span class="hljs-keyword">this</span>.msg = e.target.value
+    }
+  },
+});
+<span class="hljs-comment">//&#x5355;&#x9009;</span>
+&lt;input type=<span class="hljs-string">&quot;radio&quot;</span> name=<span class="hljs-string">&quot;sex&quot;</span> value=<span class="hljs-string">&quot;&#x7537;&quot;</span> v-model=<span class="hljs-string">&quot;sex&quot;</span>&gt;&#x7537;
+&lt;input type=<span class="hljs-string">&quot;radio&quot;</span> name=<span class="hljs-string">&quot;sex&quot;</span> value=<span class="hljs-string">&quot;&#x5973;&quot;</span> v-model=<span class="hljs-string">&quot;sex&quot;</span>&gt;&#x5973;
+
+
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&quot;##app&quot;</span>,
+  data: {
+    sex:<span class="hljs-string">&quot;&#x7537;&quot;</span>
+  }
+});
+&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;&#x9493;&#x9C7C;&quot; v-model=&quot;hobby&quot;&gt;&#x9493;&#x9C7C;
+&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;&#x5403;&#x9C7C;&quot; v-model=&quot;hobby&quot;&gt;&#x5403;&#x9C7C;
+&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;&#x6740;&#x9C7C;&quot; v-model=&quot;hobby&quot;&gt;&#x6740;&#x9C7C;
+
+
+new Vue({
+  el: &quot;##app&quot;,
+  data: {
+    hobby:[]
+  }
+});
+&lt;select name=&quot;city&quot; v-model=&quot;city&quot;&gt;
+  &lt;option value=&quot;&#x5E7F;&#x5DDE;&quot;&gt;&#x5E7F;&#x5DDE;&lt;/option&gt;
+  &lt;option value=&quot;&#x6DF1;&#x5733;&quot;&gt;&#x6DF1;&#x5733;&lt;/option&gt;
+  &lt;option value=&quot;&#x4E1C;&#x839E;&quot;&gt;&#x4E1C;&#x839E;&lt;/option&gt;
+&lt;/select&gt;
+
+
+new Vue({
+  el: &quot;##app&quot;,
+  data: {
+    city:&quot;&quot;
+  }
+});
+</code></pre>
+<blockquote>
+<p><strong>[success] &#x9762;&#x8BD5;&#x9898;&#x95EE;</strong></p>
+<p>  &#x2728; &#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x539F;&#x7406;&#xFF0C;&#x6307;&#x7684;&#x662F;data&#x5728;&#x6807;&#x7B7E;&#x4E0A;&#x9762;&#x7684;&#x6E32;&#x67D3;</p>
+<p>&#x200B;        &#x800C;&#x4E0D;&#x662F; v-model &#x4ED6;&#x53EA;&#x662F;&#x4E2A;&#x6307;&#x4EE4;&#x800C;&#x5DF2;</p>
+</blockquote>
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;form&gt;
+        &lt;input type=&quot;text&quot; v-model=&quot;msg&quot;&gt;
+
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {
+            msg: &quot;&quot;,
+        },
+
+    })
+&lt;/script&gt;
+</code></pre>
+<blockquote>
+<p>[!cogs]</p>
+</blockquote>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x8BED;&#x6CD5;&#x7CD6; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;form&gt;
+        &lt;input type=&quot;text&quot; @input=&quot;fn($event)&quot;&gt;
+
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    //&#x8BED;&#x6CD5;&#x7CD6;
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {
+            msg: &quot;&quot;,
+        },
+        methods: {
+            fn(e) {
+                this.msg = e.target.value
+            }
+        },
+    })
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h2 id="&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x548C;&#x4FEE;&#x9970;&#x7B26;"><a name="&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x548C;&#x4FEE;&#x9970;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x548C;&#x4FEE;&#x9970;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x548C;&#x4FEE;&#x9970;&#x7B26;</h2>
+<pre><code class="lang-jsx">//:click&#x662F;&#x53C2;&#x6570;
+//.prevent&#x662F;&#x4FEE;&#x9970;&#x7B26;
+&lt;button v-on:click.prevent=&quot;fn&quot;&gt;&#x63D0;&#x4EA4;&lt;/button&gt;
+</code></pre>
+<footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-01-06 17:21:45
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04生命周期.html" class="navigation navigation-prev " aria-label="Previous page: 04生命周期">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06方法-计算属性-监听器.html" class="navigation navigation-next " aria-label="Next page: 06方法-计算属性-监听器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"05指令","level":"1.4.1.5","depth":3,"next":{"title":"06方法-计算属性-监听器","level":"1.4.1.6","depth":3,"path":"06方法-计算属性-监听器.md","ref":"06方法-计算属性-监听器.md","articles":[]},"previous":{"title":"04生命周期","level":"1.4.1.4","depth":3,"path":"04生命周期.md","ref":"04生命周期.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"05指令.md","mtime":"2022-01-06T09:21:45.795Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-06T09:23:04.164Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

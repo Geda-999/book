@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>02常量 · 前端秘籍</title>
+        <title>06方法-计算属性-监听器 · 前端秘籍</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -163,10 +163,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="03js数据类型.html" />
+    <link rel="next" href="repair.html" />
     
     
-    <link rel="prev" href="01变量.html" />
+    <link rel="prev" href="05指令.html" />
     
 
     <link href="http://gitbook.zhangjikai.com/rss" title="GitBook 使用教程" rel="alternate" type="application/rss+xml" />
@@ -335,7 +335,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.1.2" data-path="02常量.html">
+        <li class="chapter " data-level="1.3.1.2" data-path="02常量.html">
             
                 <a href="02常量.html">
             
@@ -989,7 +989,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.6" data-path="06方法-计算属性-监听器.html">
+        <li class="chapter active" data-level="1.4.1.6" data-path="06方法-计算属性-监听器.html">
             
                 <a href="06方法-计算属性-监听器.html">
             
@@ -1260,7 +1260,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >02常量</a>
+        <a href="." >06方法-计算属性-监听器</a>
     </h1>
 </div>
 
@@ -1275,15 +1275,443 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x91CF;"><b></b>&#x5E38;&#x91CF;</a></li></ul></div><a href="#&#x5E38;&#x91CF;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5E38;&#x91CF;"><a name="&#x5E38;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x91CF;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;&#x3001;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x3001;&#x76D1;&#x542C;&#x5668;"><b></b>&#x65B9;&#x6CD5;&#x3001;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x3001;&#x76D1;&#x542C;&#x5668;</a></li><ul><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;"><b></b>&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x8BA1;&#x7B97;&#x5C5E;&#x6027;"><b></b>&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</a></li><li><span class="title-icon "></span><a href="#&#x76D1;&#x542C;&#x5668;"><b></b>&#x76D1;&#x542C;&#x5668;</a></li><ul><li><span class="title-icon "></span><a href="#&#x9ED8;&#x8BA4;&#x76D1;&#x542C;"><b></b>&#x9ED8;&#x8BA4;&#x76D1;&#x542C;</a></li><li><span class="title-icon "></span><a href="#&#x6DF1;&#x5EA6;&#x76D1;&#x542C;"><b></b>&#x6DF1;&#x5EA6;&#x76D1;&#x542C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7EC3;&#x4E60;"><b></b>&#x7EC3;&#x4E60;</a></li></ul></ul></div><a href="#&#x65B9;&#x6CD5;&#x3001;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x3001;&#x76D1;&#x542C;&#x5668;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><div class="treeview__container-title"></div><ul>
+<li><div><a href="#&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</a><i></i></div></li>
+<li><div><a href="#&#x8BA1;&#x7B97;&#x5C5E;&#x6027;">&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</a><i></i></div></li>
+<li><div><a href="#&#x76D1;&#x542C;&#x5668;">&#x76D1;&#x542C;&#x5668;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x9ED8;&#x8BA4;&#x76D1;&#x542C;">&#x9ED8;&#x8BA4;&#x76D1;&#x542C;</a><i></i></div></li>
+<li><div><a href="#&#x6DF1;&#x5EA6;&#x76D1;&#x542C;">&#x6DF1;&#x5EA6;&#x76D1;&#x542C;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60;</a><i></i></div></li>
+</ul>
+</div>
+
+<h1 id="&#x65B9;&#x6CD5;&#x3001;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x3001;&#x76D1;&#x542C;&#x5668;"><a name="&#x65B9;&#x6CD5;&#x3001;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x3001;&#x76D1;&#x542C;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;&#x3001;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x3001;&#x76D1;&#x542C;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x3001;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x3001;&#x76D1;&#x542C;&#x5668;</h1>
+<h2 id="&#x65B9;&#x6CD5;"><a name="&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;</h2>
 <blockquote>
-<p><u>&#x4E0D;&#x80FD;&#x518D;&#x8FDB;&#x884C;&#x66F4;&#x6539;</u>&#x7684;<strong>&#x91CF;</strong>&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x505A;&#x4E00;&#x4E9B;<u>&#x4E0D;&#x518D;&#x66F4;&#x6539;</u>&#x7684;<strong>&#x91CF;</strong>&#xFF0C;&#x6BD4;&#x5982; <strong><u>baseUrl</u></strong> &#x7B49;</p>
+<p>&#x5B58;&#x653E;&#x51FD;&#x6570;&#x7684;&#x5730;&#x65B9;</p>
 </blockquote>
-<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> a = <span class="hljs-number">1</span>
-<span class="hljs-keyword">const</span> a = <span class="hljs-number">2</span><span class="hljs-comment">//&#x62A5;&#x9519;</span>
+<pre><code class="lang-jsx">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> @<span class="hljs-attr">input</span>=<span class="hljs-string">&quot;fn($event)&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+&lt;script&gt;
+    <span class="hljs-comment">//&#x8BED;&#x6CD5;&#x7CD6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+            msg: <span class="hljs-string">&quot;&quot;</span>,
+        },
+        methods: {
+            fn1() {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-number">123</span>);
+            },
+            fn2() {
+                <span class="hljs-keyword">this</span>.fn1();
+            },
+        },
+        created() {
+            <span class="hljs-keyword">this</span>.fn2();
+        },
+    });
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+<h2 id="&#x8BA1;&#x7B97;&#x5C5E;&#x6027;"><a name="&#x8BA1;&#x7B97;&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x8BA1;&#x7B97;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</h2>
+<pre><code class="lang-jsx">
+
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&quot;#app&quot;</span>,
+  data: {
+    msg:<span class="hljs-string">&quot;hello world&quot;</span>
+  },
+  computed:{<span class="hljs-comment">//&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</span>
+    myreverse(){
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.msg.split(<span class="hljs-string">&quot;&quot;</span>).reverse().join(<span class="hljs-string">&quot;&quot;</span>)
+    }
+  }
+});
+</code></pre>
+<blockquote>
+<p>[!cogs]</p>
+</blockquote>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {
+            msg: &quot;hello world&quot;,
+        },
+        computed: {
+            reverse() {
+                //console.log(this.msg.split(&quot;&quot;));              //(11) [&quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;, &quot; &quot;, &quot;w&quot;, &quot;o&quot;, &quot;r&quot;, &quot;l&quot;, &quot;d&quot;]
+                //console.log(this.msg.split(&quot;&quot;).reverse(&quot;&quot;)); //(11) [&quot;d&quot;, &quot;l&quot;, &quot;r&quot;, &quot;o&quot;, &quot;w&quot;, &quot; &quot;, &quot;o&quot;, &quot;l&quot;, &quot;l&quot;, &quot;e&quot;, &quot;h&quot;]
+                return this.msg.split(&quot;&quot;).reverse(&quot;&quot;).join(&quot;&quot;)//dlrow olleh
+            },
+        },
+    })
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<blockquote>
+<p>&#x8BA1;&#x7B97;&#x5C5E;&#x6027;get&#x3001;set&#x5199;&#x6CD5;</p>
+</blockquote>
+<pre><code class="lang-jsx">&#x59D3;&#xFF1A;&lt;input type=<span class="hljs-string">&quot;text&quot;</span> v-model=<span class="hljs-string">&quot;firstName&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">br</span>&gt;</span></span>
+&#x540D;&#xFF1A;&lt;input type=<span class="hljs-string">&quot;text&quot;</span>  v-model=<span class="hljs-string">&quot;lastName&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">br</span>&gt;</span></span>
+&#x5168;&#x540D;&#xFF1A;&lt;input type=<span class="hljs-string">&quot;text&quot;</span> v-model=<span class="hljs-string">&quot;fullName&quot;</span>&gt;
+
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&quot;#app&quot;</span>,
+  data: {
+    firstName:<span class="hljs-string">&quot;&quot;</span>,
+    lastName:<span class="hljs-string">&quot;&quot;</span>,
+  },
+  computed:{<span class="hljs-comment">//&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</span>
+    <span class="hljs-comment">// fullName(){</span>
+    <span class="hljs-comment">//   return this.firstName + this.lastName</span>
+    <span class="hljs-comment">// }</span>
+    fullName:{
+      get(){<span class="hljs-comment">//&#x83B7;&#x53D6;&#xFF0C;&#x8DDF;&#x4E0D;&#x5199;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x4F5C;&#x7528;&#x53EA;&#x662F;&#x4E3A;&#x4E86;&#x5F15;&#x7533;&#x51FA;set</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.firstName + <span class="hljs-keyword">this</span>.lastName
+      },
+      set(newVal){<span class="hljs-comment">//&#x4FEE;&#x6539;</span>
+        <span class="hljs-built_in">console</span>.log(newVal)<span class="hljs-comment">//&#x8FD4;&#x56DE;&#x65B0;&#x7684;fullName</span>
+      }
+    }
+  }
+});
+</code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F680;</div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;input type=&quot;text&quot; v-model=&quot;reverse&quot;&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {
+            msg: &quot;hello world&quot;
+        },
+        computed: {
+            reverse: {
+                get() {
+                    //get&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x610F;&#x4E49;&#xFF0C;&#x53EA;&#x6709;&#x4E3A;&#x4E86;&#x5F15;&#x7533;&#x51FA;&#x540E;&#x9762;&#x7684;set
+                    return this.msg.split(&quot;&quot;).reverse().join(&quot;&quot;)
+                },
+                set(newVal) {
+                    console.log(newVal);
+                }
+            }
+        }
+    })
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h2 id="&#x76D1;&#x542C;&#x5668;"><a name="&#x76D1;&#x542C;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x76D1;&#x542C;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x76D1;&#x542C;&#x5668;</h2>
+<blockquote>
+<p>&#x5F53;data&#x6570;&#x636E;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD4;&#x56DE;&#x53D8;&#x5316;&#x7684;&#x6570;&#x636E;</p>
+</blockquote>
+<pre><code class="lang-jsx">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> v-model=<span class="hljs-string">&quot;msg&quot;</span>&gt;
+
+
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&quot;#app&quot;</span>,
+  data: {
+    msg:<span class="hljs-string">&quot;&quot;</span>
+  },
+  watch:{
+    msg(newVal,oldVal){
+      <span class="hljs-built_in">console</span>.log(newVal)<span class="hljs-comment">//&#x65B0;&#x7684;&#x503C;</span>
+      <span class="hljs-built_in">console</span>.log(oldVal)<span class="hljs-comment">//&#x65E7;&#x7684;&#x503C;</span>
+    }
+  }
+});
+</code></pre>
+<h3 id="&#x9ED8;&#x8BA4;&#x76D1;&#x542C;"><a name="&#x9ED8;&#x8BA4;&#x76D1;&#x542C;" class="anchor-navigation-ex-anchor" href="#&#x9ED8;&#x8BA4;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9ED8;&#x8BA4;&#x76D1;&#x542C;</h3>
+<pre><code class="lang-jsx">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> v-model=<span class="hljs-string">&quot;msg&quot;</span>&gt;
+
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&quot;#app&quot;</span>,
+  data: {
+    msg:<span class="hljs-string">&quot;123&quot;</span>
+  },
+  watch:{
+    msg:{
+      handler(newVal){<span class="hljs-comment">//&#x53E5;&#x67C4;&#xFF0C;&#x65E0;&#x4EFB;&#x4F55;&#x542B;&#x4E49;&#xFF0C;&#x76EE;&#x7684;&#x53EA;&#x662F;&#x4E3A;&#x4E86;&#x5F15;&#x7533;&#x51FA;&#x540E;&#x9762;&#x7684;&#x5C5E;&#x6027;</span>
+        <span class="hljs-built_in">console</span>.log(newVal)<span class="hljs-comment">//&#x65B0;&#x7684;&#x503C;</span>
+      },
+      immediate:<span class="hljs-literal">true</span><span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x76D1;&#x542C;</span>
+    }
+  }
+});
+</code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;input type=&quot;text&quot; v-model=&quot;num&quot;&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {
+            num: 1,
+        },
+        watch: {
+            num(newVal) {
+                console.log(newVal);
+            }
+        }
+
+    })
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h3 id="&#x6DF1;&#x5EA6;&#x76D1;&#x542C;"><a name="&#x6DF1;&#x5EA6;&#x76D1;&#x542C;" class="anchor-navigation-ex-anchor" href="#&#x6DF1;&#x5EA6;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6DF1;&#x5EA6;&#x76D1;&#x542C;</h3>
+<pre><code class="lang-jsx">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> v-model=<span class="hljs-string">&quot;msg.name&quot;</span>&gt;
+
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&quot;#app&quot;</span>,
+  data: {
+    msg:{
+      name:<span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>
+    }
+  },
+  watch:{
+    msg:{
+      handler(newVal){<span class="hljs-comment">//&#x53E5;&#x67C4;&#xFF0C;&#x65E0;&#x4EFB;&#x4F55;&#x542B;&#x4E49;&#xFF0C;&#x76EE;&#x7684;&#x53EA;&#x662F;&#x4E3A;&#x4E86;&#x5F15;&#x7533;&#x51FA;&#x540E;&#x9762;&#x7684;&#x5C5E;&#x6027;</span>
+        <span class="hljs-built_in">console</span>.log(newVal)<span class="hljs-comment">//&#x65B0;&#x7684;&#x503C;</span>
+      },
+      immediate:<span class="hljs-literal">true</span>,<span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x76D1;&#x542C;</span>
+      deep:<span class="hljs-literal">true</span><span class="hljs-comment">//&#x6DF1;&#x5EA6;&#x76D1;&#x542C;&#xFF08;&#x7528;&#x4E8E;&#x76D1;&#x542C;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x6570;&#x636E;&#xFF09;</span>
+    }
+  }
+});
+</code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;obj.num&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;script&gt;
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+            obj: {
+                name: <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span>,
+            },
+        },
+        watch: {
+            obj: {
+                handler(newVal) {
+                    <span class="hljs-comment">//&#x53E5;&#x67C4;&#xFF0C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x542B;&#x4E49;&#xFF0C;&#x4E3A;&#x4E86;&#x5F15;&#x7533;&#x51FA;&#x540E;&#x9762;&#x7684;&#x5C5E;&#x6027;</span>
+                    <span class="hljs-built_in">console</span>.log(newVal);
+                },
+                immediate: <span class="hljs-literal">true</span>, <span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x76D1;&#x542C;</span>
+                deep: <span class="hljs-literal">true</span>, <span class="hljs-comment">//&#x6DF1;&#x5EA6;&#x76D1;&#x542C;&#xFF0C;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x6570;&#x636E;</span>
+            },
+        },
+    });
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+</div></div>
+<h2 id="&#x7EC3;&#x4E60;"><a name="&#x7EC3;&#x4E60;" class="anchor-navigation-ex-anchor" href="#&#x7EC3;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC3;&#x4E60;</h2>
+<pre><code class="lang-jsx"><span class="hljs-number">1</span>&#x3001;&#x505A;&#x4E00;&#x4E2A;&#x57CE;&#x5E02;&#x4E8C;&#x7EA7;&#x8054;&#x52A8;&#x529F;&#x80FD;
+<span class="hljs-number">2</span>&#x3001;&#x8D2D;&#x7269;&#x8F66;&#x529F;&#x80FD;
+    <span class="hljs-number">1</span>)&#x8D2D;&#x4E70;&#x6570;&#x91CF;&#x9700;&#x8981;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;<span class="hljs-number">1</span>&#x7684;&#x6B63;&#x6574;&#x6570;
+    <span class="hljs-number">2</span>)&#x5C0F;&#x8BA1;&#x529F;&#x80FD;
+    <span class="hljs-number">3</span>)&#x5546;&#x54C1;&#x603B;&#x8BA1;&#xFF0C;&#x52FE;&#x9009;&#x7684;&#x624D;&#x8BA1;&#x7B97;
+    <span class="hljs-number">4</span>)&#x5F53;&#x6240;&#x6709;&#x7684;&#x52FE;&#x9009;&#x6846;&#x90FD;&#x6709;&#x52FE;&#x9009;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6700;&#x9876;&#x90E8;&#x7684;&#x52FE;&#x9009;&#x6846;&#x8981;&#x663E;&#x793A;&#x52FE;&#x9009;
+    <span class="hljs-number">5</span>)&#x5168;&#x9009;&#x529F;&#x80FD;/&#x53CD;&#x9009;&#x529F;&#x80FD;
+    <span class="hljs-number">6</span>)&#x5546;&#x54C1;&#x4EF7;&#x94B1;&#x3001;&#x6570;&#x91CF;&#x3001;&#x5C0F;&#x8BA1;&#x8981;&#x505A;&#x6392;&#x5E8F;&#x529F;&#x80FD;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;app&quot;&gt;
+      &lt;select name=&quot;country&quot; v-model=&quot;country&quot;&gt;
+        &lt;option value=&quot;&quot;&gt;==&#x8BF7;&#x6C42;&#x9009;&#x62E9;&#x56FD;&#x5BB6;==&lt;/option&gt;
+        &lt;option v-for=&quot;item of arr&quot; :value=&quot;item.countryName&quot;&gt;&lt;/option&gt;
+      &lt;/select&gt;
+
+      &lt;select name=&quot;city&quot; v-model=&quot;city&quot;&gt;
+        &lt;option value=&quot;&quot;&gt;==&#x8BF7;&#x6C42;&#x9009;&#x62E9;&#x57CE;&#x5E02;==&lt;/option&gt;
+        &lt;option v-for=&quot;item of cities&quot; :value=&quot;item.cityName&quot;&gt;&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;&lt;https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js&gt;&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+      new Vue({
+        el: &quot;#app&quot;,
+        data: {
+          country:&quot;&quot;,
+          cities:[],
+          arr: [
+            {
+              countryName: &quot;&#x4E2D;&#x56FD;&quot;,
+              cities: [
+                { cityName: &quot;&#x5E7F;&#x5DDE;&quot; },
+                { cityName: &quot;&#x4E1C;&#x839E;&quot; },
+                { cityName: &quot;&#x4F5B;&#x5C71;&quot; },
+              ],
+            },
+            {
+              countryName: &quot;&#x7F8E;&#x56FD;&quot;,
+              cities: [
+                { cityName: &quot;&#x6D1B;&#x6749;&#x77F6;&quot; },
+                { cityName: &quot;&#x7EBD;&#x7EA6;&quot; },
+                { cityName: &quot;&#x534E;&#x76DB;&#x987F;&quot; },
+              ],
+            },
+            {
+              countryName: &quot;&#x65E5;&#x672C;&quot;,
+              cities: [
+                { cityName: &quot;&#x4E1C;&#x4EAC;&quot; },
+                { cityName: &quot;&#x5927;&#x962A;&quot; },
+                { cityName: &quot;&#x5317;&#x6D77;&#x9053;&quot; },
+              ],
+            },
+          ],
+        },
+        watch:{
+          country(newCountry){
+            let newCities = []
+            this.arr.forEach((item)=&gt;{
+              if(item.countryName === newCountry){
+                newCities = item.cities
+              }
+            })
+            this.cities = newCities
+          }
+        }
+      });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;app&quot;&gt;
+      &lt;table border=&quot;1&quot; cellspacing=&quot;0&quot;&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;input type=&quot;checkbox&quot; v-model=&quot;allChecked&quot; /&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&#x5546;&#x54C1;&#x540D;&#x79F0;&lt;/td&gt;
+          &lt;td&gt;
+            &#x5546;&#x54C1;&#x4EF7;&#x683C;
+            &lt;button @click=&quot;priceUp&quot;&gt;&#x4E0A;&lt;/button&gt;
+            &lt;button @click=&quot;priceDown&quot;&gt;&#x4E0B;&lt;/button&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&#x5546;&#x54C1;&#x6570;&#x91CF;&lt;/td&gt;
+          &lt;td&gt;&#x5546;&#x54C1;&#x5C0F;&#x8BA1;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr v-for=&quot;(item,idx) of arr&quot;&gt;
+          &lt;td&gt;
+            &lt;input type=&quot;checkbox&quot; v-model=&quot;item.isChecked&quot; /&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;
+            &lt;input
+              type=&quot;number&quot;
+              v-model=&quot;item.num&quot;
+              @change=&quot;changeNum(item.num,idx)&quot;
+            /&gt;
+          &lt;/td&gt;
+          &lt;td&gt;NaN&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+      &#x603B;&#x8BA1;:
+    &lt;/div&gt;
+
+    &lt;script src=&quot;&lt;https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js&gt;&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+      new Vue({
+        el: &quot;#app&quot;,
+        data: {
+          arr: [
+            { name: &quot;&#x82F9;&#x679C;13&quot;, price: 5000, num: 1, isChecked: true },
+            { name: &quot;&#x534E;&#x4E3A;p50&quot;, price: 6000, num: 2, isChecked: true },
+            { name: &quot;&#x5C0F;&#x7C73;14&quot;, price: 7000, num: 3, isChecked: true },
+          ],
+        },
+        methods: {
+          changeNum(num, idx) {
+            //&#x6539;&#x53D8;&#x6570;&#x91CF;
+            let n = Number(num);
+            if (n &gt;= 1 &amp;&amp; Number.isInteger(n)) {
+              this.arr[idx].num = n;
+            } else {
+              this.arr[idx].num = 1;
+            }
+          },
+          priceUp(){//&#x4EF7;&#x683C;&#x7531;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;
+            this.arr.sort((a,b)=&gt;{
+              return a.price - b.price 
+            })
+          },
+          priceDown(){//&#x4EF7;&#x683C;&#x7531;&#x5927;&#x5230;&#x5C0F;&#x6392;&#x5E8F;
+            this.arr.sort((a,b)=&gt;{
+              return b.price - a.price 
+            })
+          }
+        },
+        computed: {
+          allTotal() {
+            //&#x603B;&#x8BA1;
+            let sum = 0;
+            this.arr.forEach((item) =&gt; {
+              if (item.isChecked) {
+                sum += item.price * item.num;
+              }
+            });
+            return sum;
+          },
+          allChecked: {
+            //&#x5168;&#x9009;
+            get() {
+              return this.arr.every((item) =&gt; {
+                return item.isChecked;
+              });
+            },
+            set(newVal) {
+              if(newVal){
+                this.arr.map((item)=&gt;{
+                  item.isChecked = true
+                })
+              }else{
+                this.arr.map((item)=&gt;{
+                  item.isChecked = false
+                })
+              }
+            },
+          },
+        },
+      });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 <footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-01-03 23:18:23
+2022-01-06 17:08:03
 </span></footer>
                                 
                                 </section>
@@ -1311,12 +1739,12 @@
 
             
                 
-                <a href="01变量.html" class="navigation navigation-prev " aria-label="Previous page: 01变量">
+                <a href="05指令.html" class="navigation navigation-prev " aria-label="Previous page: 05指令">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="03js数据类型.html" class="navigation navigation-next " aria-label="Next page: 03js数据类型">
+                <a href="repair.html" class="navigation navigation-next " aria-label="Next page: 待续中...">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1327,7 +1755,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"02常量","level":"1.3.1.2","depth":3,"next":{"title":"03js数据类型","level":"1.3.1.3","depth":3,"path":"03js数据类型.md","ref":"03js数据类型.md","articles":[]},"previous":{"title":"01变量","level":"1.3.1.1","depth":3,"path":"01变量.md","ref":"01变量.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"02常量.md","mtime":"2022-01-03T15:18:23.788Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-06T09:23:04.164Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"06方法-计算属性-监听器","level":"1.4.1.6","depth":3,"next":{"title":"待续中...","level":"1.4.2","depth":2,"path":"repair.md","ref":"repair.md","articles":[{"title":"待续中...","level":"1.4.2.1","depth":3,"path":"repair.md","ref":"repair.md","articles":[]}]},"previous":{"title":"05指令","level":"1.4.1.5","depth":3,"path":"05指令.md","ref":"05指令.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"06方法-计算属性-监听器.md","mtime":"2022-01-06T09:08:03.016Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-06T09:23:04.164Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -49,6 +49,8 @@
 <url> <loc>http://gitbook.zhangjikai.com/vue.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://gitbook.zhangjikai.com/01mvvm和mvc.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://gitbook.zhangjikai.com/04生命周期.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://gitbook.zhangjikai.com/05指令.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://gitbook.zhangjikai.com/06方法-计算属性-监听器.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://gitbook.zhangjikai.com/phase04.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://gitbook.zhangjikai.com/testing.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://gitbook.zhangjikai.com/weekly.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
