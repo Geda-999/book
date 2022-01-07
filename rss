@@ -4,7 +4,7 @@
         <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
         <link>http://gitbook.zhangjikai.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 06 Jan 2022 16:45:22 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 07 Jan 2022 08:19:08 GMT</lastBuildDate>
         <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Jikai Zhang]]></author>
         <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
@@ -385,6 +385,12 @@
             <title><![CDATA[No title]]></title>
             <link>http://gitbook.zhangjikai.com/每周测试04.html</link>
             <guid isPermaLink="true">http://gitbook.zhangjikai.com/每周测试04.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[每周测试05]]></title>
+            <link>http://gitbook.zhangjikai.com/每周测试05.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/每周测试05.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
     </channel>
