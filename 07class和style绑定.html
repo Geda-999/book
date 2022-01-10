@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>06数组拓展 · 前端秘籍</title>
+        <title>07class和style绑定 · 前端秘籍</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -163,10 +163,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="07函数拓展-es6.html" />
+    <link rel="next" href="08条件渲染.html" />
     
     
-    <link rel="prev" href="05数字拓展-es6.html" />
+    <link rel="prev" href="06方法-计算属性-监听器.html" />
     
 
     <link href="http://gitbook.zhangjikai.com/rss" title="GitBook 使用教程" rel="alternate" type="application/rss+xml" />
@@ -782,7 +782,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.4.6" data-path="06数组拓展-es6.html">
+        <li class="chapter " data-level="1.3.4.6" data-path="06数组拓展-es6.html">
             
                 <a href="06数组拓展-es6.html">
             
@@ -1002,7 +1002,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.7" data-path="07class和style绑定.html">
+        <li class="chapter active" data-level="1.4.1.7" data-path="07class和style绑定.html">
             
                 <a href="07class和style绑定.html">
             
@@ -1364,7 +1364,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >06数组拓展</a>
+        <a href="." >07class和style绑定</a>
     </h1>
 </div>
 
@@ -1379,82 +1379,103 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x6570;&#x7EC4;&#x62D3;&#x5C55;"><b></b>&#x6570;&#x7EC4;&#x62D3;&#x5C55;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6570;&#x7EC4;&#x6241;&#x5E73;&#x5316;&#x2728;"><b></b>&#x6570;&#x7EC4;&#x6241;&#x5E73;&#x5316;&#x2728;</a></li></ul></ul></div><a href="#&#x6570;&#x7EC4;&#x62D3;&#x5C55;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6570;&#x7EC4;&#x62D3;&#x5C55;"><a name="&#x6570;&#x7EC4;&#x62D3;&#x5C55;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x7EC4;&#x62D3;&#x5C55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x7EC4;&#x62D3;&#x5C55;</h1>
-<pre><code class="lang-jsx"><span class="hljs-comment">//Array.from() &#x628A;&#x7C7B;&#x6570;&#x7EC4;&#x8F6C;&#x5316;&#x6210;&#x6570;&#x7EC4;</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>)</span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Array</span>.from(<span class="hljs-built_in">arguments</span>))
-}
-fn(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#class&#x548C;style&#x7ED1;&#x5B9A;"><b></b>class&#x548C;style&#x7ED1;&#x5B9A;</a></li><ul><li><span class="title-icon "></span><a href="#class&#x7ED1;&#x5B9A;"><b></b>class&#x7ED1;&#x5B9A;</a></li><li><span class="title-icon "></span><a href="#style&#x7ED1;&#x5B9A;"><b></b>style&#x7ED1;&#x5B9A;</a></li><li><span class="title-icon "></span><a href="#&#x7EC3;&#x4E60;"><b></b>&#x7EC3;&#x4E60;</a></li></ul></ul></div><a href="#class&#x548C;style&#x7ED1;&#x5B9A;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><div class="treeview__container-title"></div><ul>
+<li><div><a href="#class&#x7ED1;&#x5B9A;">class&#x7ED1;&#x5B9A;</a><i></i></div></li>
+<li><div><a href="#style&#x7ED1;&#x5B9A;">style&#x7ED1;&#x5B9A;</a><i></i></div></li>
+<li><div><a href="#&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60;</a><i></i></div></li>
+</ul>
+</div>
 
-<span class="hljs-comment">//Array.of &#x5C06;&#x4E00;&#x7EC4;&#x503C;&#xFF0C;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x7EC4;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Array</span>.of(<span class="hljs-number">3</span>, <span class="hljs-number">11</span>, <span class="hljs-number">8</span>)) <span class="hljs-comment">// [3,11,8]</span>
+<h1 id="class&#x548C;style&#x7ED1;&#x5B9A;"><a name="class&#x548C;style&#x7ED1;&#x5B9A;" class="anchor-navigation-ex-anchor" href="#class&#x548C;style&#x7ED1;&#x5B9A;"><i class="fa fa-link" aria-hidden="true"></i></a>class&#x548C;style&#x7ED1;&#x5B9A;</h1>
+<h2 id="class&#x7ED1;&#x5B9A;"><a name="class&#x7ED1;&#x5B9A;" class="anchor-navigation-ex-anchor" href="#class&#x7ED1;&#x5B9A;"><i class="fa fa-link" aria-hidden="true"></i></a>class&#x7ED1;&#x5B9A;</h2>
+<pre><code class="lang-jsx">&lt;div :<span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;[{a:bool},&apos;b&apos;]&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 
-<span class="hljs-comment">//find() &#x627E;&#x51FA;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6570;&#x7EC4;&#x6210;&#x5458;</span>
-<span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]
-<span class="hljs-keyword">let</span> newArr = arr.find(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item</span>)</span>{
-  <span class="hljs-keyword">return</span> item % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>
-})
-<span class="hljs-built_in">console</span>.log(newArr)<span class="hljs-comment">//2</span>
-
-<span class="hljs-comment">//findIndex() &#x627E;&#x51FA;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6570;&#x7EC4;&#x6210;&#x5458;&#x7684;&#x7D22;&#x5F15;&#x503C;</span>
-<span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]
-<span class="hljs-keyword">let</span> newArr = arr.findIndex(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item</span>)</span>{
-  <span class="hljs-keyword">return</span> item % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>
-})
-<span class="hljs-built_in">console</span>.log(newArr)<span class="hljs-comment">//1</span>
-
-<span class="hljs-comment">//fill() &#x586B;&#x5145;&#x6570;&#x7EC4;</span>
-<span class="hljs-built_in">console</span>.log([<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>].fill(<span class="hljs-number">7</span>))<span class="hljs-comment">//[7, 7, 7]</span>
-<span class="hljs-built_in">console</span>.log([,,,].fill(<span class="hljs-number">6</span>))<span class="hljs-comment">//[6,6,6]</span>
-
-<span class="hljs-comment">//flat() &#x6570;&#x7EC4;&#x6241;&#x5E73;&#x5316;</span>
-<span class="hljs-keyword">let</span> arr = [[<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;&#x5C0F;&#x660E;&apos;</span>], [<span class="hljs-string">&apos;age&apos;</span>, <span class="hljs-number">18</span>], [<span class="hljs-string">&apos;sex&apos;</span>, <span class="hljs-string">&apos;&#x7537;&apos;</span>]]
-<span class="hljs-built_in">console</span>.log(arr.flat(<span class="hljs-number">1</span>))<span class="hljs-comment">//[&quot;name&quot;,&quot;&#x5C0F;&#x660E;&quot;,&quot;age&quot;,18,&quot;sex&quot;,&quot;&#x7537;&quot;]</span>
-
-<span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,[<span class="hljs-number">5</span>,<span class="hljs-number">6</span>]]]
- <span class="hljs-built_in">console</span>.log(arr.flat(<span class="hljs-literal">Infinity</span>))<span class="hljs-comment">//&#x6C38;&#x8FDC;&#x53D8;&#x6210;1&#x7EF4;&#x6570;&#x7EC4;</span>
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&quot;#app&quot;</span>,
+  data: {
+    bool:<span class="hljs-literal">false</span>,
+  }
+});
 </code></pre>
-<blockquote>
-<p>[!cogs]</p>
-</blockquote>
-<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x628A;&#x7C7B;&#x6570;&#x7EC4;&#x8F6C;&#x5316;&#x6210;&#x6570;&#x7EC4; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-built_in">console</span>.log([...arguments]); <span class="hljs-comment">//[1, 2, 3]</span>
-    <span class="hljs-comment">// console.log(Array.from(arguments)); //[1, 2, 3]</span>
-}
-fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;div :class=&quot;{&apos;a&apos;:isClass}&quot;&gt; &#x6253;&#x5370;&#xFF1A;class=&quot;a&quot; &lt;/div&gt;
+    &lt;div :class=&quot;[&apos;a&apos;,{&apos;b&apos;:isClass}]&quot;&gt; &#x6253;&#x5370;&#xFF1A;&#x4E3A;false:a&#xFF0C;&#x4E3A;true&#x7684;&#x65F6;&#x5019;&#x6253;&#x5370;&#xFF1A;class=&quot;a b&quot; &lt;/div&gt;
+&lt;/div&gt;
 
-
-<span class="hljs-comment">//Array.of &#x5C06;&#x4E00;&#x7EC4;&#x503C;&#xFF0C;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x7EC4;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Array</span>.of(<span class="hljs-number">3</span>, <span class="hljs-number">11</span>, <span class="hljs-number">8</span>)) <span class="hljs-comment">// [3,11,8]</span>
-</code></pre>
-<pre><code class="lang-js"><span class="hljs-comment">//find() &#x627E;&#x51FA;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6570;&#x7EC4;&#x6210;&#x5458;</span>
-<span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
-<span class="hljs-keyword">let</span> newArr = arr.find(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item</span>) </span>{
-    <span class="hljs-keyword">return</span> item % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>
-})
-<span class="hljs-built_in">console</span>.log(newArr)<span class="hljs-comment">//2</span>
+&lt;script&gt;
+    new Vue({
+        el: &quot;#app&quot;,
+            data: {
+                isClass: true, //true:&#x51FA;&#x73B0;a,b   false:&#x51FA;&#x73B0;a
+            }
+    })
+&lt;/script&gt;
 </code></pre>
 </div></div>
-<h2 id="&#x6570;&#x7EC4;&#x6241;&#x5E73;&#x5316;&#x2728;"><a name="&#x6570;&#x7EC4;&#x6241;&#x5E73;&#x5316;&#x2728;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x7EC4;&#x6241;&#x5E73;&#x5316;&#x2728;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x7EC4;&#x6241;&#x5E73;&#x5316;&#x2728;</h2>
-<pre><code class="lang-js"><span class="hljs-comment">//flat() &#x6570;&#x7EC4;&#x6241;&#x5E73;&#x5316;</span>
-<span class="hljs-keyword">let</span> arr = [
-    [<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;&#x5C0F;&#x660E;&apos;</span>],
-    [<span class="hljs-string">&apos;age&apos;</span>, <span class="hljs-number">18</span>],
-    [<span class="hljs-string">&apos;sex&apos;</span>, <span class="hljs-string">&apos;&#x7537;&apos;</span>]
-]
-<span class="hljs-built_in">console</span>.log(arr.flat(<span class="hljs-number">1</span>)) <span class="hljs-comment">//[&quot;name&quot;,&quot;&#x5C0F;&#x660E;&quot;,&quot;age&quot;,18,&quot;sex&quot;,&quot;&#x7537;&quot;]</span>
+<h2 id="style&#x7ED1;&#x5B9A;"><a name="style&#x7ED1;&#x5B9A;" class="anchor-navigation-ex-anchor" href="#style&#x7ED1;&#x5B9A;"><i class="fa fa-link" aria-hidden="true"></i></a>style&#x7ED1;&#x5B9A;</h2>
+<pre><code class="lang-jsx">//vue&#x81EA;&#x52A8;&#x5E2E;&#x6211;&#x4EEC;&#x6DFB;&#x52A0;&#x4E86;&#x6D4F;&#x89C8;&#x5668;&#x524D;&#x7F00;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x5199;&#x6D4F;&#x89C8;&#x5668;&#x524D;&#x7F00;
+&lt;div :style=&quot;[{color: abc},{background:&apos;blue&apos;}]&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt;
 
+new Vue({
+  el: &quot;#app&quot;,
+  data: {
+    abc:&quot;red&quot;
+  }
+});
+</code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F4A2; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+    &lt;div :style=&quot;{color:abc}&quot;&gt;&#x8FD9;&#x79CD;&#x7ED9;&#x6587;&#x5B57;&#x6DFB;&#x52A0;&#x989C;&#x8272;&lt;/div&gt;
+    &lt;div :style=&quot;[{color: abc},{background:&apos;red&apos;}]&quot;&gt;&#x8FD9;&#x79CD;&#x7ED9;&#x6587;&#x5B57;&#x548C;&#x80CC;&#x666F;&#x6DFB;&#x52A0;&#x989C;&#x8272;&lt;/div&gt;
+&lt;/div&gt;
 
-<span class="hljs-comment">//flat() &#x6570;&#x7EC4;&#x6241;&#x5E73;&#x5316;</span>
-<span class="hljs-comment">//Infinity&#x6C38;&#x8FDC;&#x90FD;&#x662F;&#x4E00;&#x7EF4;</span>
-<span class="hljs-keyword">let</span> arr = [
-    [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>]]]
-]
-<span class="hljs-built_in">console</span>.log(arr.flat(<span class="hljs-literal">Infinity</span>)) <span class="hljs-comment">//[1, 2, 3, 4, 5, 6]</span>
+&lt;script&gt;
+    new Vue({
+        el: &quot;#app&quot;,
+            data: {
+                abc: &quot;yellow&quot;,
+            }
+    });
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<h2 id="&#x7EC3;&#x4E60;"><a name="&#x7EC3;&#x4E60;" class="anchor-navigation-ex-anchor" href="#&#x7EC3;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC3;&#x4E60;</h2>
+<blockquote>
+<p>&#x4F7F;&#x7528;vue&#x505A;&#x4E00;&#x4E2A;&#x9009;&#x9879;&#x5361;&#x6548;&#x679C;</p>
+</blockquote>
+<pre><code class="lang-jsx">&lt;div class=&quot;tab&quot;&gt;
+  &lt;div class=&quot;tab-title&quot;&gt;
+    &lt;div 
+      v-for=&quot;(item,idx) of title&quot; 
+      :class=&quot;idx === current ? &apos;on&apos; : null&quot;
+      @click=&quot;changeTitle(idx)&quot;
+    &gt;{ {item} }&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab-content&quot;&gt;
+    &lt;div 
+      v-for=&quot;(item,idx) of content&quot; 
+      :class=&quot;idx === current ? &apos;on&apos; : null&quot;
+    &gt;{ {item} }&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+new Vue({
+  el: &quot;#app&quot;,
+  data: {
+    current:0,
+    title:[&quot;&#x6807;&#x9898;&#x4E00;&quot;,&quot;&#x6807;&#x9898;&#x4E8C;&quot;,&quot;&#x6807;&#x9898;&#x4E09;&quot;],
+    content:[&quot;123&quot;,&quot;456&quot;,&quot;789&quot;]
+  },
+  methods: {
+    changeTitle(idx){
+      this.current = idx
+    }
+  }
+});
 </code></pre>
 <footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-01-04 20:47:12
+2022-01-10 13:05:22
 </span></footer>
                                 
                                 </section>
@@ -1482,12 +1503,12 @@ fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span
 
             
                 
-                <a href="05数字拓展-es6.html" class="navigation navigation-prev " aria-label="Previous page: 05数字拓展">
+                <a href="06方法-计算属性-监听器.html" class="navigation navigation-prev " aria-label="Previous page: 06方法-计算属性-监听器">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="07函数拓展-es6.html" class="navigation navigation-next " aria-label="Next page: 07函数拓展">
+                <a href="08条件渲染.html" class="navigation navigation-next " aria-label="Next page: 08条件渲染">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1498,7 +1519,7 @@ fn(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"06数组拓展","level":"1.3.4.6","depth":3,"next":{"title":"07函数拓展","level":"1.3.4.7","depth":3,"path":"07函数拓展-es6.md","ref":"07函数拓展-es6.md","articles":[]},"previous":{"title":"05数字拓展","level":"1.3.4.5","depth":3,"path":"05数字拓展-es6.md","ref":"05数字拓展-es6.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"06数组拓展-es6.md","mtime":"2022-01-04T12:47:12.734Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-10T15:59:49.826Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"07class和style绑定","level":"1.4.1.7","depth":3,"next":{"title":"08条件渲染","level":"1.4.1.8","depth":3,"path":"08条件渲染.md","ref":"08条件渲染.md","articles":[]},"previous":{"title":"06方法-计算属性-监听器","level":"1.4.1.6","depth":3,"path":"06方法-计算属性-监听器.md","ref":"06方法-计算属性-监听器.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"07class和style绑定.md","mtime":"2022-01-10T05:05:22.141Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-10T15:59:49.826Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

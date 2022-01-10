@@ -4,7 +4,7 @@
         <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
         <link>http://gitbook.zhangjikai.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 07 Jan 2022 08:19:08 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 10 Jan 2022 16:00:08 GMT</lastBuildDate>
         <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Jikai Zhang]]></author>
         <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
@@ -340,6 +340,55 @@
             <description><![CDATA[%accordion% 🚀 %accordion%]]></description>
             <link>http://gitbook.zhangjikai.com/06方法-计算属性-监听器.html</link>
             <guid isPermaLink="true">http://gitbook.zhangjikai.com/06方法-计算属性-监听器.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[class和style绑定]]></title>
+            <description><![CDATA[%accordion% 练习🚀 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/07class和style绑定.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/07class和style绑定.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[条件渲染]]></title>
+            <description><![CDATA[%accordion% 练习🚀 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/08条件渲染.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/08条件渲染.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[列表渲染]]></title>
+            <description><![CDATA[%accordion% 练习🚀 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/09列表渲染.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/09列表渲染.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[事件处理]]></title>
+            <description><![CDATA[%accordion% 仅参考💢 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/10事件处理.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/10事件处理.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[表单输入绑定]]></title>
+            <description><![CDATA[%accordion% 练习🚀 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/11表单输入绑定.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/11表单输入绑定.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[组件]]></title>
+            <description><![CDATA[%accordion% 全局组件(全局注册)🚀 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/12组件.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/12组件.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[组件之间传递数据方式]]></title>
+            <description><![CDATA[%accordion%  参考...💢 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/13组件之间传递数据方式.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/13组件之间传递数据方式.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>
