@@ -1399,7 +1399,7 @@
 <blockquote>
 <p>&#x53EA;&#x8981;&#x6CE8;&#x518C;&#x4E86;&#xFF0C;&#x5728;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#x90FD;&#x80FD;&#x4F7F;&#x7528;&#x3002;</p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
   &lt;!-- &#x4F7F;&#x7528;&#x7EC4;&#x4EF6; --&gt;
   &lt;my-component&gt;&lt;/my-component&gt;
   &lt;my-component&gt;&lt;/my-component&gt;
@@ -1420,7 +1420,7 @@ new Vue({
 });
 </code></pre>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5168;&#x5C40;&#x7EC4;&#x4EF6;(&#x5168;&#x5C40;&#x6CE8;&#x518C;)&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-ejs">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;component2&gt;&lt;/component2&gt;
 &lt;/div&gt;
 &lt;script&gt;
@@ -1449,7 +1449,7 @@ new Vue({
 <blockquote>
 <p>&#x5728;&#x9700;&#x8981;&#x7528;&#x5230;&#x7684;&#x5730;&#x65B9;&#x8FDB;&#x884C;&#x6CE8;&#x518C;&#xFF0C;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#x3002;</p>
 </blockquote>
-<pre><code class="lang-jsx"><span class="hljs-comment">// &#x6CE8;&#x518C;&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;</span>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x6CE8;&#x518C;&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;</span>
 <span class="hljs-keyword">let</span> myComponent2 = {
   template:<span class="hljs-string">&quot;&lt;div&gt;&#x6211;&#x7684;&#x7EC4;&#x4EF6;2&lt;/div&gt;&quot;</span>
 }
@@ -1466,40 +1466,40 @@ new Vue({
 });
 </code></pre>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5C40;&#x90E8;&#x7EC4;&#x4EF6;(&#x533A;&#x57DF;&#x6CE8;&#x518C;)&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-ejs">&lt;div id=&quot;app&quot;&gt;
-    &lt;my-component2&gt;&lt;/my-component2&gt;
-&lt;/div&gt;
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component2</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component2</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 &lt;script&gt;
-    //&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;(&#x533A;&#x57DF;&#x6CE8;&#x518C;)
-    let myComponent1 = {
-        template: &quot;&lt;div&gt;&#x6211;&#x662F;&#x7EC4;&#x4EF6;1&lt;/div&gt;&quot;,
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;(&#x533A;&#x57DF;&#x6CE8;&#x518C;)</span>
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x6211;&#x662F;&#x7EC4;&#x4EF6;1&lt;/div&gt;&quot;</span>,
     };
-    let myComponent2 = {
-        template: `
+    <span class="hljs-keyword">let</span> myComponent2 = {
+        template: <span class="hljs-string">`
             &lt;div&gt;
                 &#x6211;&#x662F;&#x7EC4;&#x4EF6;2
                 &lt;my-component1&gt;&lt;/my-component1&gt;
             &lt;/div&gt;
-        `,
-        //&#x6CE8;&#x518C;&#x533A;
+        `</span>,
+        <span class="hljs-comment">//&#x6CE8;&#x518C;&#x533A;</span>
         components: {
             myComponent1,
         },
     };
-    new Vue({
-        el: &quot;#app&quot;,
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
         components: {
             myComponent2,
         },
     });
-&lt;/script&gt;
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
 </code></pre>
 </div></div>
 <h3 id="3&#x3001;&#x7EC4;&#x4EF6;&#x91CC;&#x9762;&#x7684;data&#x6570;&#x636E;&#x53EA;&#x80FD;&#x662F;&#x51FD;&#x6570;"><a name="3&#x3001;&#x7EC4;&#x4EF6;&#x91CC;&#x9762;&#x7684;data&#x6570;&#x636E;&#x53EA;&#x80FD;&#x662F;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#3&#x3001;&#x7EC4;&#x4EF6;&#x91CC;&#x9762;&#x7684;data&#x6570;&#x636E;&#x53EA;&#x80FD;&#x662F;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x7EC4;&#x4EF6;&#x91CC;&#x9762;&#x7684;data&#x6570;&#x636E;&#x53EA;&#x80FD;&#x662F;&#x51FD;&#x6570;</h3>
 <blockquote>
 <p>&#x5982;&#x679C;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x590D;&#x7528;&#x7684;&#x6240;&#x6709;&#x7EC4;&#x4EF6;&#x90FD;&#x4F1A;&#x5171;&#x7528;&#x540C;&#x4E00;&#x4E2A;&#x6570;&#x636E;</p>
 </blockquote>
-<pre><code class="lang-jsx"><span class="hljs-keyword">let</span> myComponent1 = {
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> myComponent1 = {
   template:<span class="hljs-string">&quot;&lt;div&gt;{ {msg} }&lt;/div&gt;&quot;</span>,
   data(){
     <span class="hljs-keyword">return</span>{
@@ -1524,7 +1524,7 @@ new Vue({
 <p>&#x7236;&#xFF1A;&#x88AB;&#x6CE8;&#x518C;&#x7684;&#x7EC4;&#x4EF6; </p>
 <p>&#x5B50;&#xFF1A;&#x6CE8;&#x518C;&#x7684;&#x7EC4;&#x4EF6;</p>
 </blockquote>
-<pre><code class="lang-jsx"><span class="hljs-comment">//&#x513F;&#x5B50;</span>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x513F;&#x5B50;</span>
 <span class="hljs-keyword">let</span> myComponent2 = {
   template:<span class="hljs-string">&quot;&lt;div&gt;&#x7EC4;&#x4EF6;2&lt;/div&gt;&quot;</span>,
 }
@@ -1549,7 +1549,7 @@ new Vue({
 });
 </code></pre>
 <footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-01-10 23:54:16
+2022-01-11 23:23:46
 </span></footer>
                                 
                                 </section>
@@ -1593,7 +1593,7 @@ new Vue({
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"12组件","level":"1.4.1.12","depth":3,"next":{"title":"13组件之间传递数据方式","level":"1.4.1.13","depth":3,"path":"13组件之间传递数据方式.md","ref":"13组件之间传递数据方式.md","articles":[]},"previous":{"title":"11表单输入绑定","level":"1.4.1.11","depth":3,"path":"11表单输入绑定.md","ref":"11表单输入绑定.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"12组件.md","mtime":"2022-01-10T15:54:16.095Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-10T15:59:49.826Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"12组件","level":"1.4.1.12","depth":3,"next":{"title":"13组件之间传递数据方式","level":"1.4.1.13","depth":3,"path":"13组件之间传递数据方式.md","ref":"13组件之间传递数据方式.md","articles":[]},"previous":{"title":"11表单输入绑定","level":"1.4.1.11","depth":3,"path":"11表单输入绑定.md","ref":"11表单输入绑定.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"12组件.md","mtime":"2022-01-11T15:23:46.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-11T15:39:40.206Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

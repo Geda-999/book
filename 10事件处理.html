@@ -1391,7 +1391,7 @@
 <blockquote>
 <p>&#x4FEE;&#x9970;&#x7B26;3&#x4E2A;&#xFF1A;<code>event</code>&#xFF0C;<code>stop</code>&#xFF0C;<code>self</code></p>
 </blockquote>
-<pre><code class="lang-jsx">//stop &#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x4F20;&#x64AD;
+<pre><code class="lang-js">//stop &#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x4F20;&#x64AD;
 
 &lt;div @click=&quot;fn($event)&quot;&gt;
   &#x5185;&#x5BB9;2
@@ -1487,7 +1487,7 @@ new Vue({
 //passive &#x4E0D;&#x9700;&#x8981;&#x95EE;&#x6211;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x4E0D;&#x963B;&#x6B62;&#x3002;&#x76EE;&#x7684;&#x662F;&#x63D0;&#x5347;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8FD0;&#x884C;&#x6548;&#x7387;
 </code></pre>
 <h2 id="&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;"><a name="&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;</h2>
-<pre><code class="lang-jsx">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> @keydown.q=<span class="hljs-string">&quot;fn&quot;</span>&gt;
+<pre><code class="lang-js">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> @keydown.q=<span class="hljs-string">&quot;fn&quot;</span>&gt;
 
 <span class="hljs-keyword">new</span> Vue({
   el: <span class="hljs-string">&quot;#app&quot;</span>,
@@ -1503,7 +1503,7 @@ new Vue({
 </code></pre>
 <h2 id="&#x7EC3;&#x4E60;"><a name="&#x7EC3;&#x4E60;" class="anchor-navigation-ex-anchor" href="#&#x7EC3;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC3;&#x4E60;</h2>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x4EC5;&#x53C2;&#x8003;&#x1F4A2; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;button @click=&quot;handlerClick($event)&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt;
 &lt;/div&gt;
 
@@ -1519,7 +1519,7 @@ new Vue({
     })
 &lt;/script&gt;
 </code></pre>
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;form&gt;
         &lt;input type=&quot;text&quot;&gt;
         &lt;button @click=&quot;submit($event)&quot;&gt;&#x63D0;&#x4EA4;&lt;/button&gt;
@@ -1541,7 +1541,7 @@ new Vue({
 </code></pre>
 </div></div>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;form&gt;
         &lt;input type=&quot;text&quot;&gt;
         &lt;!-- &lt;button @click.stop=&quot;submit()&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt; --&gt;
@@ -1567,7 +1567,7 @@ new Vue({
 <blockquote>
 <p>&#x6DFB;&#x52A0;&#x4E86;<code>.self</code></p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;style&gt;
+<pre><code class="lang-js">&lt;style&gt;
     .a {
         width: 500px;
         height: 500px;
@@ -1603,7 +1603,7 @@ new Vue({
 <blockquote>
 <p>&#x4F20;&#x64AD;&#x4E8B;&#x4EF6;</p>
 </blockquote>
-<pre><code class="lang-jsx">
+<pre><code class="lang-js">
 &lt;style&gt;
     .a {
         width: 500px;
@@ -1638,7 +1638,7 @@ new Vue({
 &lt;/script&gt;
 </code></pre>
 <footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-01-10 23:12:20
+2022-01-11 23:23:43
 </span></footer></div></div>
                                 
                                 </section>
@@ -1682,7 +1682,7 @@ new Vue({
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"10事件处理","level":"1.4.1.10","depth":3,"next":{"title":"11表单输入绑定","level":"1.4.1.11","depth":3,"path":"11表单输入绑定.md","ref":"11表单输入绑定.md","articles":[]},"previous":{"title":"09列表渲染","level":"1.4.1.9","depth":3,"path":"09列表渲染.md","ref":"09列表渲染.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"10事件处理.md","mtime":"2022-01-10T15:12:20.192Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-10T15:59:49.826Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"10事件处理","level":"1.4.1.10","depth":3,"next":{"title":"11表单输入绑定","level":"1.4.1.11","depth":3,"path":"11表单输入绑定.md","ref":"11表单输入绑定.md","articles":[]},"previous":{"title":"09列表渲染","level":"1.4.1.9","depth":3,"path":"09列表渲染.md","ref":"09列表渲染.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"10事件处理.md","mtime":"2022-01-11T15:23:43.242Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-11T15:39:40.206Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

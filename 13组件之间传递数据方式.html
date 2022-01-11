@@ -1396,12 +1396,18 @@
 </div>
 
 <h1 id="&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x6570;&#x636E;&#x65B9;&#x5F0F;"><a name="&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x6570;&#x636E;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x6570;&#x636E;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x6570;&#x636E;&#x65B9;&#x5F0F;</h1>
+<blockquote>
+<p><strong>[success] vue&#x7684;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x662F;&#x5982;&#x4F55;&#x4F20;&#x9012;&#x6570;&#x636E;</strong></p>
+<p>&#x7236;&#x4F20;&#x5B50;&#xFF1A;<strong>propos</strong></p>
+<p>&#x5B50;&#x4F20;&#x7236;&#xFF1A;<strong>$emit</strong></p>
+<p>&#x975E;&#x7236;&#x5B50;&#xFF1A;<strong>eventBus</strong>&#x3001;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x3001;<strong>v-bind=&quot;$attrs&quot;&#x548C;v-on=&quot;$listeners&quot;&#x3001;vuex</strong></p>
+</blockquote>
 <h2 id="&#x7236;&#x4F20;&#x5B50;"><a name="&#x7236;&#x4F20;&#x5B50;" class="anchor-navigation-ex-anchor" href="#&#x7236;&#x4F20;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7236;&#x4F20;&#x5B50;</h2>
-<pre><code class="lang-jsx">&lt;my-component1 :child-msg=<span class="hljs-string">&quot;fathermsg&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<pre><code class="lang-js">&lt;my-component1 :child-msg=<span class="hljs-string">&quot;fathermsg&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
 
 let myComponent1 = {
   props:[&quot;childMsg&quot;],//&#x63A5;&#x6536;&#x5668;
-  template:&quot;<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x7EC4;&#x4EF6;1{ {childMsg} }<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>&quot;,
+  template:&quot;<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x7EC4;&#x4EF6;1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>&quot;,
 }
 
 //&#x6839;&#x7EC4;&#x4EF6;
@@ -1421,9 +1427,9 @@ new Vue({
 &lt;/div&gt;
 
 &lt;script&gt;
-    //&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;
+    //&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x1F466;&#x5B50;&#x7EC4;&#x4EF6;
     let myComponent1 = {
-        template: &quot;&lt;div&gt;&#x6211;&#x7684;&#x7EC4;&#x4EF6;{ {msg} }&lt;/div&gt;&quot;,
+        template: &quot;&lt;div&gt;&#x6211;&#x7684;&#x7EC4;&#x4EF6;&lt;/div&gt;&quot;,
         data() {
             return {
                 msg: &quot;hello&quot;,
@@ -1431,7 +1437,7 @@ new Vue({
         }
     }
 
-    //&#x7236;&#x7EC4;&#x4EF6;
+    //&#x1F468;&#x7236;&#x7EC4;&#x4EF6;
     new Vue({
         el: &quot;#app&quot;,
         data: {
@@ -1449,18 +1455,18 @@ new Vue({
 <p><code>fathermsg</code>&#x662F;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;</p>
 <p><code>childmsg</code>  &#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x63A5;&#x6536;&#x5668;</p>
 </blockquote>
-<pre><code class="lang-ejs">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;my-component1 :childmsg=&quot;fathermsg&quot;&gt;&lt;/my-component1&gt;
 &lt;/div&gt;
 
 &lt;script&gt;
-    //&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;
+    //&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x1F466;&#x5B50;&#x7EC4;&#x4EF6;
     let myComponent1 = {
-        template: &quot;&lt;div&gt;&#x6211;&#x7684;&#x7EC4;&#x4EF6;1{ {childmsg} }&lt;/div&gt;&quot;,
-        props: [&quot;childmsg&quot;] //&#x63A5;&#x6536;&#x5668;&#xFF08;&#x8DDF;data&#x7684;&#x6570;&#x636E;&#x7528;&#x6CD5;&#x4E00;&#x6837;&#xFF09;
+        props: [&quot;childmsg&quot;], //&#x63A5;&#x6536;&#x5668;&#xFF08;&#x8DDF;data&#x7684;&#x6570;&#x636E;&#x7528;&#x6CD5;&#x4E00;&#x6837;&#xFF09;
+        template: &quot;&lt;div&gt;&#x6211;&#x7684;&#x7EC4;&#x4EF6;1&lt;/div&gt;&quot;,
     }
 
-    //&#x7236;&#x7EC4;&#x4EF6;
+    //&#x1F468;&#x7236;&#x7EC4;&#x4EF6;
     new Vue({
         el: &quot;#app&quot;,
         data: {
@@ -1476,11 +1482,11 @@ new Vue({
 <blockquote>
 <p><strong>&#x4F20;&#x591A;&#x4E2A;&#x6570;&#x636E;</strong></p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;my-component1 :child-msg=<span class="hljs-string">&quot;{fathermsg,fathermsg2}&quot;</span>&gt;&lt;/my-component1&gt;
+<pre><code class="lang-js">&lt;my-component1 :child-msg=<span class="hljs-string">&quot;{fathermsg,fathermsg2}&quot;</span>&gt;&lt;/my-component1&gt;
 
 let myComponent1 = {
   props:[&quot;childMsg&quot;],
-  template:&quot;&lt;div&gt;&#x7EC4;&#x4EF6;1{ {childMsg.fathermsg} }{ {childMsg.fathermsg2} }&lt;/div&gt;&quot;,
+  template:&quot;&lt;div&gt;&#x7EC4;&#x4EF6;1&lt;/div&gt;&quot;,
 }
 
 //&#x6839;&#x7EC4;&#x4EF6;
@@ -1498,7 +1504,7 @@ new Vue({
 
 let myComponent1 = {
   props:[&quot;childMsg&quot;,&quot;childMsg2&quot;],
-  template:&quot;&lt;div&gt;&#x7EC4;&#x4EF6;1{ {childMsg} }{ {childMsg2} }&lt;/div&gt;&quot;,
+  template:&quot;&lt;div&gt;&#x7EC4;&#x4EF6;1&lt;/div&gt;&quot;,
 }
 
 //&#x6839;&#x7EC4;&#x4EF6;
@@ -1514,7 +1520,7 @@ new Vue({
 });
 </code></pre>
 <h2 id="&#x5B50;&#x4F20;&#x7236;"><a name="&#x5B50;&#x4F20;&#x7236;" class="anchor-navigation-ex-anchor" href="#&#x5B50;&#x4F20;&#x7236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B50;&#x4F20;&#x7236;</h2>
-<pre><code class="lang-jsx">&lt;my-component1 @childevent=<span class="hljs-string">&quot;fatherevent($event)&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<pre><code class="lang-js">&lt;my-component1 @childevent=<span class="hljs-string">&quot;fatherevent($event)&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
 
 let myComponent1 = {
   template:&quot;<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x7EC4;&#x4EF6;1<span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&apos;change&apos;</span>&gt;</span>&#x6309;&#x94AE;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>&quot;,
@@ -1543,52 +1549,52 @@ new Vue({
   },
 });
 </span></code></pre>
-<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5B50;&#x4F20;&#x7236;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5B50;&#x4F20;&#x7236; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
 <blockquote>
 <p><code>fathermsg</code> &#x662F;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;</p>
 <p><code>childmsg</code>  &#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x63A5;&#x6536;&#x5668;</p>
 </blockquote>
-<pre><code class="lang-ejs">&lt;div id=&quot;app&quot;&gt;
-    &lt;my-component1 @childevent=&quot;fatherevent($event)&quot;&gt;&lt;/my-component1&gt;
-&lt;/div&gt;
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span> @<span class="hljs-attr">childevent</span>=<span class="hljs-string">&quot;fatherevent($event)&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 
 &lt;script&gt;
-    //&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;
-    let myComponent1 = {
-        template: &quot;&lt;div&gt;&#x6211;&#x7684;&#x7EC4;&#x4EF6;1&lt;button @click=&apos;handler&apos;&gt;&#x6309;&#x94AE;&lt;/button&gt;&lt;/div&gt;&quot;,
-        //&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;&#x6DFB;&#x52A0;&#x6570;&#x636E;
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x1F466;&#x5B50;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x6211;&#x7684;&#x7EC4;&#x4EF6;1&lt;button @click=&apos;handler&apos;&gt;&#x6309;&#x94AE;&lt;/button&gt;&lt;/div&gt;&quot;</span>,
+        <span class="hljs-comment">//&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;&#x6DFB;&#x52A0;&#x6570;&#x636E;</span>
         data() {
-            return {
-                msg: &quot;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;,
+            <span class="hljs-keyword">return</span> {
+                msg: <span class="hljs-string">&quot;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;</span>,
             };
         },
-        //&#x4F20;&#x4E8B;&#x4EF6;
+        <span class="hljs-comment">//&#x4F20;&#x4E8B;&#x4EF6;</span>
         methods: {
             handler() {
-                this.$emit(&quot;childevent&quot;, this.msg); //&#x89E6;&#x53D1;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;
+                <span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&quot;childevent&quot;</span>, <span class="hljs-keyword">this</span>.msg); <span class="hljs-comment">//&#x89E6;&#x53D1;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;</span>
             },
         },
     };
 
-    //&#x7236;&#x7EC4;&#x4EF6;
-    new Vue({
-        el: &quot;#app&quot;,
+    <span class="hljs-comment">//&#x1F468;&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
         components: {
             myComponent1,
         },
         methods: {
             fatherevent(e) {
-                console.log(e);
+                <span class="hljs-built_in">console</span>.log(e);
             },
         },
     });
-&lt;/script&gt;
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
 </code></pre>
 </div></div>
 <blockquote>
 <p><strong>&#x5B50;&#x4F20;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x7ED9;&#x7236;</strong></p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;my-component1 @childevent=<span class="hljs-string">&quot;parentsevent($event)&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<pre><code class="lang-js">&lt;my-component1 @childevent=<span class="hljs-string">&quot;parentsevent($event)&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
 
 let myComponent1 = {
   data(){
@@ -1597,7 +1603,7 @@ let myComponent1 = {
       value2:&quot;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;2&quot;
     }
   },
-  template:&quot;<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x7EC4;&#x4EF6;1<span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&apos;change&apos;</span>&gt;</span>&#x6309;&#x94AE;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>{ {value} }<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>&quot;,
+  template:&quot;<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x7EC4;&#x4EF6;1<span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&apos;change&apos;</span>&gt;</span>&#x6309;&#x94AE;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>&quot;,
   methods: {
     change(){
       this.$emit(&quot;childevent&quot;,[this.value,this.value2])
@@ -1618,17 +1624,17 @@ new Vue({
   },
 });
 </span></code></pre>
-<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5B50;&#x4F20;&#x7236;-&#x591A;&#x7EBF;&#x7A0B;&#x1F4A2; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5B50;&#x4F20;&#x7236;-&#x591A;&#x7EBF;&#x7A0B; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
 <blockquote>
 <p><code>fathermsg</code> &#x662F;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;</p>
 <p><code>childmsg</code>  &#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x63A5;&#x6536;&#x5668;</p>
 </blockquote>
-<pre><code class="lang-ejs">&lt;div id=&quot;app&quot;&gt; 
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt; 
     &lt;my-component1 @childevent=&quot;fatherevent($event)&quot;&gt;&lt;/my-component1&gt;
 &lt;/div&gt;
 
 &lt;script&gt;
-    //&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;
+    //&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x1F466;&#x5B50;&#x7EC4;&#x4EF6;
     let myComponent1 = {
         template: &quot;&lt;div&gt;&#x6211;&#x7684;&#x7EC4;&#x4EF6;1&lt;button @click=&apos;handler&apos;&gt;&#x6309;&#x94AE;&lt;/button&gt;&lt;/div&gt;&quot;,
         data() {
@@ -1644,7 +1650,7 @@ new Vue({
         },
     }
 
-    //&#x7236;&#x7EC4;&#x4EF6;
+    //&#x1F468;&#x7236;&#x7EC4;&#x4EF6;
     new Vue({
         el: &quot;#app&quot;,
         components: {
@@ -1663,7 +1669,7 @@ new Vue({
 <blockquote>
 <p>vue&#x89C4;&#x5B9A;&#x6570;&#x636E;&#x7684;&#x6D41;&#x5411;&#x53EA;&#x80FD;&#x662F;&#x5355;&#x5411;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x4FEE;&#x6539;props&#x6570;&#x636E;&#xFF0C;<strong>&#x5FC5;&#x987B;&#x628A;&#x6570;&#x636E;&#x8D4B;&#x7ED9;data&#x6216;&#x8005;computed</strong></p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;my-component1 :msg=<span class="hljs-string">&quot;msg&quot;</span> @childevent=<span class="hljs-string">&quot;parentsevent($event)&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<pre><code class="lang-js">&lt;my-component1 :msg=<span class="hljs-string">&quot;msg&quot;</span> @childevent=<span class="hljs-string">&quot;parentsevent($event)&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
 
 let myComponent1 = {
     props:[&quot;msg&quot;],
@@ -1672,7 +1678,7 @@ let myComponent1 = {
         value:this.msg//&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x4FEE;&#x6539;props&#xFF0C;&#x9700;&#x8981;&#x8D4B;&#x503C;&#x7ED9;data&#x6216;&#x8005;computed
       }
     },
-    template:&quot;<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x7EC4;&#x4EF6;1<span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&apos;change&apos;</span>&gt;</span>&#x6309;&#x94AE;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>{ {value} }<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>&quot;,
+    template:&quot;<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x7EC4;&#x4EF6;1<span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&apos;change&apos;</span>&gt;</span>&#x6309;&#x94AE;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>&quot;,
     methods: {
       change(){
         this.value = &quot;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;
@@ -1697,8 +1703,109 @@ let myComponent1 = {
     },
   });
 </span></code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;&#x7236;&#x66FF;&#x5B50;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
+    &lt;my-component1 :msg=&quot;msg&quot;&gt;&lt;/my-component1&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    //&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;
+    let myComponent1 = {
+        template: &quot;&lt;div&gt;&#x1F466;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;,&lt;/div&gt;&quot;,
+        props: [&quot;msg&quot;],
+
+        //&#x66F4;&#x6539;&#x6570;&#x636E;
+        data() {
+            return {
+                childmsg: this.msg
+            }
+        },
+        created() {
+            this.childmsg = &quot;&#x6211;&#x662F;&#x66FF;&#x6362;&#x7684;&#x6570;&#x636E;&quot;
+        },
+    }
+    //&#x7236;&#x7EC4;&#x4EF6;
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {
+            msg: &quot;&#x1F468;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;
+        },
+        components: {
+            myComponent1,
+        }
+    })
+&lt;/script&gt;
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;&#x7684;&#x6CE8;&#x610F;&#x70B9;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<blockquote>
+<p>&#x5BF9;&#x8C61;</p>
+</blockquote>
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
+
+    &lt;my-component1 :obj=&quot;obj&quot;&gt;&lt;/my-component1&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    let myComponent1 = {
+        template: &quot;&lt;div&gt;&#x6211;&#x7684;&#x7EC4;&#x4EF6;1&lt;/div&gt;&quot;,
+        props: [&quot;obj&quot;],
+        data() {
+            return {
+                //: JSON.assign({},this.obj) //&#x8FD9;&#x91CC;&#x662F;&#x6D45;&#x514B;&#x9686;
+                childobj: JSON.parse(JSON.stringify(this.obj)) &#x2728;//&#x8FD9;&#x91CC;&#x662F;&#x6DF1;&#x514B;&#x9686;
+            }
+        },
+        created() {
+            this.childobj.name = &quot;&#x674E;&#x56DB;&quot;
+        },
+    }
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {
+            obj: { name: &quot;&#x5F20;&#x4E09;&quot; }
+        },
+        components: {
+            myComponent1,
+        }
+    })
+&lt;/script&gt;
+</code></pre>
+<blockquote>
+<p>&#x6570;&#x7EC4;</p>
+</blockquote>
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
+    &lt;my-component1 :obj=&quot;arr&quot;&gt;&lt;/my-component1&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    let myComponent1 = {
+        template: &quot;&lt;div&gt;&#x6211;&#x7684;&#x7EC4;&#x4EF6;1&lt;/div&gt;&quot;,
+        props: [&quot;obj&quot;],
+        data() {
+            return {
+                childobj: this.obj
+            }
+        },
+        created() {
+            this.childobj[0] = &quot;&#x674E;&#x56DB;&quot;
+            // console.log(this.childobj[0]);
+        },
+    }
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {
+            arr: [&quot;&#x5F20;&#x4E09;&quot;, &apos;a&apos;]
+        },
+        components: {
+            myComponent1,
+        }
+    })
+&lt;/script&gt;
+</code></pre>
+</div></div>
 <h2 id="v-model&#x7684;&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;"><a name="v-model&#x7684;&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#v-model&#x7684;&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>v-model&#x7684;&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;</h2>
-<pre><code class="lang-jsx">&lt;my-component v-model=<span class="hljs-string">&quot;bool&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component</span>&gt;</span>
+<pre><code class="lang-js">&lt;my-component v-model=<span class="hljs-string">&quot;bool&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component</span>&gt;</span>
 
 let myComponent = {
   props: {
@@ -1727,11 +1834,102 @@ new Vue({
   },
 });
 </span></code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> v-model&#x7684;&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;&#x7EC3;&#x4E60;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;num&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;script&gt;
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x1F466;&#x5B50;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&lt;button @click=&apos;change&apos;&gt;&#x6309;&#x94AE;&lt;/button&gt;&lt;/div&gt;&quot;</span>,
+        props: [<span class="hljs-string">&quot;num&quot;</span>],
+        data() {
+            <span class="hljs-keyword">return</span> {
+                childnum: <span class="hljs-keyword">this</span>.num,
+            };
+        },
+        model: {
+            prop: <span class="hljs-string">&quot;num&quot;</span>,
+            event: <span class="hljs-string">&quot;childevent&quot;</span>,
+        },
+        methods: {
+            change() {
+                <span class="hljs-keyword">this</span>.childnum = <span class="hljs-number">2</span>;
+                <span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&quot;childevent&quot;</span>, <span class="hljs-keyword">this</span>.childnum);<span class="hljs-comment">//&#x5B50;&#x4F20;&#x7236;</span>
+            },
+        },
+    };
+
+    <span class="hljs-comment">//&#x1F468;&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+            num: <span class="hljs-number">1</span>,
+        },
+        components: {
+            myComponent1,
+        },
+    });
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x6848;&#x4F8B;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">
+&lt;style&gt;
+    .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid;
+    }
+&lt;/style&gt;
+
+&lt;div id=&quot;app&quot;&gt;
+    &lt;button @click=&quot;bool=true&quot;&gt;&#x5F00;&lt;/button&gt;
+    &lt;my-component1 v-model=&quot;bool&quot;&gt;&lt;/my-component1&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    //&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;
+    let myComponent1 = {
+        template: &quot;&lt;div class=&apos;box&apos; v-if=&apos;bool&apos;&gt;&lt;button @click=&apos;close&apos;&gt;&#x5173;&#x95ED;&lt;/button&gt;&lt;/div&gt;&quot;,
+        props: [&quot;bool&quot;],
+        model: {
+            prop: &quot;bool&quot;,
+            event: &quot;childevent&quot;,
+        },
+        data() {
+            return {
+                mybool: this.bool,
+            }
+        },
+        methods: {
+            close() {
+                this.mybool = false;
+                this.$emit(&quot;childevent&quot;, this.mybool)
+            }
+        }
+    };
+
+    //&#x7236;&#x7EC4;&#x4EF6;
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {
+            bool: false,
+        },
+        components: {
+            myComponent1,
+        },
+    });
+&lt;/script&gt;
+</code></pre>
+</div></div>
 <h2 id="sync&#x4FEE;&#x9970;&#x7B26;"><a name="sync&#x4FEE;&#x9970;&#x7B26;" class="anchor-navigation-ex-anchor" href="#sync&#x4FEE;&#x9970;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>.sync&#x4FEE;&#x9970;&#x7B26;</h2>
 <blockquote>
 <p>&#x4E0E;v-model&#x6548;&#x679C;&#x4E00;&#x81F4;&#xFF0C;&#x4EE5;&#x524D;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x4E0D;&#x63A8;&#x8350;&#xFF0C;<strong>&#x63A8;&#x8350;&#x4F7F;&#x7528;v-model</strong></p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;my-component :bool.sync=<span class="hljs-string">&quot;bool&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component</span>&gt;</span>
+<pre><code class="lang-js">&lt;my-component :bool.sync=<span class="hljs-string">&quot;bool&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component</span>&gt;</span>
 
 let myComponent = {
   props: {
@@ -1758,7 +1956,7 @@ new Vue({
 </span></code></pre>
 <h2 id="&#x975E;&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x6570;&#x636E;"><a name="&#x975E;&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x975E;&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x975E;&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x6570;&#x636E;</h2>
 <h3 id="1&#x3001;eventbus&#x8BA2;&#x9605;&#x53D1;&#x5E03;&#x6A21;&#x5F0F;&#x3001;&#x603B;&#x7EBF;&#x6A21;&#x5F0F;"><a name="1&#x3001;eventbus&#x8BA2;&#x9605;&#x53D1;&#x5E03;&#x6A21;&#x5F0F;&#x3001;&#x603B;&#x7EBF;&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#1&#x3001;eventbus&#x8BA2;&#x9605;&#x53D1;&#x5E03;&#x6A21;&#x5F0F;&#x3001;&#x603B;&#x7EBF;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;eventBus(&#x8BA2;&#x9605;&#x53D1;&#x5E03;&#x6A21;&#x5F0F;&#x3001;&#x603B;&#x7EBF;&#x6A21;&#x5F0F;)</h3>
-<pre><code class="lang-jsx">&lt;my-component1&gt;&lt;/my-component1&gt;
+<pre><code class="lang-js">&lt;my-component1&gt;&lt;/my-component1&gt;
 &lt;my-component2&gt;&lt;/my-component2&gt;
 
 Vue.prototype.$eventBus = new Vue()//&#x5B9E;&#x4F8B;&#x5316;vue(&#x603B;&#x7EBF;)
@@ -1798,19 +1996,121 @@ new Vue({
   }
 });
 </code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x975E;&#x7236;&#x5B50;&#x4F20;&#x9012;&#x65B9;&#x6CD5; &#x4E24;&#x5B50;&#x4E4B;&#x95F4;&#x7684;&#x4F20;&#x9012;&#x6570;&#x636E;&#x1F466; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span> @<span class="hljs-attr">childeventa</span>=<span class="hljs-string">&quot;fatherevent($event)&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">my-component2</span> <span class="hljs-attr">:childevent</span>=<span class="hljs-string">&quot;fathermsg&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component2</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F466;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&lt;button @click=&apos;handler&apos;&gt;&#x6309;&#x94AE;&lt;/button&gt;&lt;/div&gt;&quot;</span>,
+        data() {
+            <span class="hljs-keyword">return</span> {
+                msg: <span class="hljs-string">&quot;,&#x1F466;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;1&quot;</span>
+            }
+        },
+        methods: {
+            handler() {
+                <span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&quot;childeventa&quot;</span>, <span class="hljs-keyword">this</span>.msg)
+            }
+        }
+    };
+    <span class="hljs-keyword">let</span> myComponent2 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F9D1;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;2&lt;/div&gt;&quot;</span>,
+        props: [<span class="hljs-string">&quot;childevent&quot;</span>]
+
+    };
+
+    <span class="hljs-comment">//&#x1F468;&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+            fathermsg: <span class="hljs-string">&quot;&quot;</span>,
+        },
+        components: {
+            myComponent1,
+            myComponent2,
+        },
+        methods: {
+            fatherevent(e) {
+                <span class="hljs-keyword">this</span>.fathermsg = e;
+            }
+        }
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</span></code></pre>
+<p><a href="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/image-20220111230810557.png" data-lightbox="2e7f9b02-daac-47f5-a365-f284840c3b30" data-title="image-20220111230810557" target="_blank"><img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/image-20220111230810557.png" alt="image-20220111230810557"></a></p>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x975E;&#x7236;&#x5B50;&#x4F20;&#x9012;-&#x8BA2;&#x9605;&#x53D1;&#x5E03;&#x6A21;&#x5F0F;&#x7EC3;&#x4E60;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">my-component2</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component2</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    Vue.prototype.$eventBus = <span class="hljs-keyword">new</span> Vue();
+
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F466;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&lt;button @click=&apos;handler&apos;&gt;&#x6309;&#x94AE;&lt;/button&gt;&lt;/div&gt;&quot;</span>,
+        data() {
+            <span class="hljs-keyword">return</span> {
+                msg: <span class="hljs-string">&quot;&#xFF1B;&#x1F467;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x6D3E;&#x6765;&#x7684;&#x6570;&#x636E;&quot;</span>,
+            };
+        },
+        methods: {
+            handler() {
+                <span class="hljs-keyword">this</span>.$eventBus.$emit(<span class="hljs-string">&quot;aevent&quot;</span>, <span class="hljs-keyword">this</span>.msg);
+            },
+        },
+    };
+
+    <span class="hljs-comment">//&#x5B59;&#x5B50;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent2 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F476;&#x6211;&#x662F;&#x5B59;&#x7EC4;&#x4EF6;&lt;/div&gt;&quot;</span>,
+        data() {
+            <span class="hljs-keyword">return</span> {
+                msg: <span class="hljs-string">&quot;&quot;</span>,
+            };
+        },
+        created() {
+            <span class="hljs-keyword">this</span>.$eventBus.$on(<span class="hljs-string">&quot;aevent&quot;</span>, (res) =&gt; {
+                <span class="hljs-keyword">this</span>.msg = res;
+            });
+        },
+    };
+
+    <span class="hljs-comment">//&#x1F468;&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+            fathermsg: <span class="hljs-string">&quot;&quot;</span>,
+        },
+        components: {
+            myComponent1,
+            myComponent2,
+        },
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</span></code></pre>
+<p><a href="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/image-20220111125040509.png" data-lightbox="81380641-e7dc-4154-bc65-3eba4565d1f4" data-title="image-20220111125040509" target="_blank"><img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/image-20220111125040509.png" alt="image-20220111125040509"></a></p>
+</div></div>
 <h3 id="2&#x3001;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;"><a name="2&#x3001;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;</h3>
 <blockquote>
 <p><strong>&#x53EA;&#x8981;&#x5728;&#x7236;&#x7EC4;&#x4EF6;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x76F4;&#x5C5E;&#x540E;&#x4EE3;&#x90FD;&#x6709;&#x6570;&#x636E;&#x3002;</strong></p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;mycomponent2&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">mycomponent2</span>&gt;</span></span>
+<pre><code class="lang-js">&lt;mycomponent2&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">mycomponent2</span>&gt;</span></span>
 
 <span class="hljs-keyword">let</span> mycomponent1 = {
-  template:<span class="hljs-string">&quot;&lt;div&gt;a&#x7EC4;&#x4EF6;{ {msg} }&lt;/div&gt;&quot;</span>,
+  template:<span class="hljs-string">&quot;&lt;div&gt;a&#x7EC4;&#x4EF6;&lt;/div&gt;&quot;</span>,
   inject:[<span class="hljs-string">&quot;msg&quot;</span>]
 }
 
 <span class="hljs-keyword">let</span> mycomponent2 = {
-  template:<span class="hljs-string">&quot;&lt;div&gt;b&#x7EC4;&#x4EF6;{ {msg} }&lt;mycomponent1&gt;&lt;/mycomponent1&gt;&lt;/div&gt;&quot;</span>,
+  template:<span class="hljs-string">&quot;&lt;div&gt;b&#x7EC4;&#x4EF6;&lt;mycomponent1&gt;&lt;/mycomponent1&gt;&lt;/div&gt;&quot;</span>,
   components:{
     mycomponent1
   },
@@ -1830,11 +2130,52 @@ new Vue({
   }
 });
 </code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x4F9D;&#x8D56;&#x6CE8;&#x518C;&#x7EC3;&#x4E60;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;script&gt;
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6; &#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B59;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent2 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F476;&#x6211;&#x662F;&#x5B59;&#x7EC4;&#x4EF6;&#xFF0C;&lt;/div&gt;&quot;</span>,
+        inject: [<span class="hljs-string">&quot;msg&quot;</span>],
+    };
+
+    <span class="hljs-comment">//&#x5B50;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F466;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;&lt;my-component2&gt;&lt;/my-component2&gt;&lt;/div&gt;&quot;</span>,
+        components: {
+            myComponent2,
+        },
+        inject: [<span class="hljs-string">&quot;msg&quot;</span>]
+    };
+
+    <span class="hljs-comment">//&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+            fathermsg: <span class="hljs-string">&quot;&#x1F468;&#x6211;&#x662F;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x3002;&quot;</span>,
+        },
+        components: {
+            myComponent1,
+        },
+        <span class="hljs-comment">// &#x4F9D;&#x8D56;&#x6CE8;&#x5165;</span>
+        provide() {
+            <span class="hljs-keyword">return</span> {
+                msg: <span class="hljs-keyword">this</span>.fathermsg
+            };
+        },
+    });
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+<p><a href="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/image-20220111125654802.png" data-lightbox="4f86b96d-5f4f-4b94-a9e4-7eaf194509c4" data-title="image-20220111125654802" target="_blank"><img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/image-20220111125654802.png" alt="image-20220111125654802"></a></p>
+</div></div>
 <h3 id="3&#x3001;v-bindattrs&#x3001;v-onlisteners"><a name="3&#x3001;v-bindattrs&#x3001;v-onlisteners" class="anchor-navigation-ex-anchor" href="#3&#x3001;v-bindattrs&#x3001;v-onlisteners"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;v-bind=&apos;$attrs&apos;&#x3001;v-on=&apos;$listeners&apos;</h3>
 <blockquote>
 <p><strong>&#x53EF;&#x7528;&#x4E8E;&#x5199;&#x9AD8;&#x7EA7;&#x7EC4;&#x4EF6;&#x5C01;&#x88C5;&#x3002;</strong></p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;mycomponent2 :msg=<span class="hljs-string">&quot;msg&quot;</span> @myevent=<span class="hljs-string">&quot;myevent($event)&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">mycomponent2</span>&gt;</span></span>
+<pre><code class="lang-js">&lt;mycomponent2 :msg=<span class="hljs-string">&quot;msg&quot;</span> @myevent=<span class="hljs-string">&quot;myevent($event)&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">mycomponent2</span>&gt;</span></span>
 
 <span class="hljs-keyword">let</span> mycomponent0 = {
   props: {
@@ -1843,7 +2184,7 @@ new Vue({
       required: <span class="hljs-literal">true</span>,
     },
   },
-  template: <span class="hljs-string">&quot;&lt;div&gt;z&#x7EC4;&#x4EF6;{ {msg} }&lt;/div&gt;&quot;</span>,
+  template: <span class="hljs-string">&quot;&lt;div&gt;z&#x7EC4;&#x4EF6;&lt;/div&gt;&quot;</span>,
   created() {
     <span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&quot;myevent&quot;</span>,<span class="hljs-number">123</span>)
   },
@@ -1880,9 +2221,146 @@ new Vue({
   },
 });
 </code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x1F528;&#x9694;&#x4EE3;&#x9057;&#x4F20;  &#x7237;&#x7237;&#x4F20;&#x4E5F;&#x5B59;&#x5B50; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span> <span class="hljs-attr">:msg</span>=<span class="hljs-string">&quot;111&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;script&gt;
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;</span>
+    <span class="hljs-keyword">let</span> myComponent3 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F476;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;3&lt;/div&gt;&quot;</span>,
+        props: [<span class="hljs-string">&quot;msg&quot;</span>],
+    };
+
+    <span class="hljs-keyword">let</span> myComponent2 = {
+        template:
+            <span class="hljs-string">&quot;&lt;div&gt;&#x1F466;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;2&lt;my-component3 v-bind=&apos;$attrs&apos;&gt;&lt;/my-component3&gt;&lt;/div&gt;&quot;</span>,
+        components: {
+            myComponent3,
+        },
+    };
+
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        template:
+            <span class="hljs-string">&quot;&lt;div&gt;&#x1F9D1;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;1&lt;my-component2 v-bind=&apos;$attrs&apos;&gt;&lt;/my-component2&gt;&lt;/div&gt;&quot;</span>,
+        components: {
+            myComponent2,
+        },
+    };
+
+    <span class="hljs-comment">//&#x1F468;&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        components: {
+            myComponent1,
+        }
+    });
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x1F528;&#x1F528;&#x9694;&#x4EE3;&#x9057;&#x4F20;  &#x7237;&#x7237;&#x4F20;&#x4E5F;&#x5B59;&#x5B50; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">
+&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span> <span class="hljs-attr">:msg1</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">:msg2</span>=<span class="hljs-string">&quot;2&quot;</span> <span class="hljs-attr">:msg3</span>=<span class="hljs-string">&quot;3&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;script&gt;
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;</span>
+    <span class="hljs-keyword">let</span> myComponent3 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F476;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;3&lt;/div&gt;&quot;</span>,
+        props: [<span class="hljs-string">&quot;msg1&quot;</span>, <span class="hljs-string">&quot;msg2&quot;</span>, <span class="hljs-string">&quot;msg3&quot;</span>],
+    };
+
+    <span class="hljs-keyword">let</span> myComponent2 = {
+        template:
+            <span class="hljs-string">&quot;&lt;div&gt;&#x1F466;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;2&lt;my-component3 v-bind=&apos;$attrs&apos;&gt;&lt;/my-component3&gt;&lt;/div&gt;&quot;</span>,
+        components: {
+            myComponent3,
+        },
+    };
+
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        template:
+            <span class="hljs-string">&quot;&lt;div&gt;&#x1F9D1;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;1&lt;my-component2 v-bind=&apos;$attrs&apos;&gt;&lt;/my-component2&gt;&lt;/div&gt;&quot;</span>,
+        components: {
+            myComponent2,
+        },
+    };
+
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        components: {
+            myComponent1,
+        },
+        data: {
+            fathermsg: <span class="hljs-string">&quot;&#x1F468;&#x6211;&#x662F;&#x7236;&#x7EC4;&#x4EF6;&#x6570;&#x636E;&#x3002;&quot;</span>,
+        },
+    });
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x1F528;&#x1F528;&#x1F528;&#x9694;&#x4EE3;&#x9057;&#x4F20;  &#x7237;&#x7237;&#x4F20;&#x4E5F;&#x5B59;&#x5B50; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">
+&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span> <span class="hljs-attr">:msg1</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">:msg2</span>=<span class="hljs-string">&quot;2&quot;</span> <span class="hljs-attr">:msg3</span>=<span class="hljs-string">&quot;3&quot;</span> @<span class="hljs-attr">event</span>=<span class="hljs-string">&quot;fn($event)&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;script&gt;
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;</span>
+    <span class="hljs-keyword">let</span> myComponent3 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F476;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;3&lt;/div&gt;&quot;</span>,
+        props: [<span class="hljs-string">&quot;msg1&quot;</span>, <span class="hljs-string">&quot;msg2&quot;</span>, <span class="hljs-string">&quot;msg3&quot;</span>],
+        created() {
+            <span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&quot;event&quot;</span>, <span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x7EC4;&#x4EF6;3&#x7684;&#x6570;&#x636E;&quot;</span>); <span class="hljs-comment">//&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;</span>
+            <span class="hljs-comment">// console.log(this.$attrs);</span>
+        },
+    };
+
+    <span class="hljs-keyword">let</span> myComponent2 = {
+        template:
+            <span class="hljs-string">&quot;&lt;div&gt;&#x1F466;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;2&lt;my-component3 v-bind=&apos;$attrs&apos; v-on=&apos;$listeners&apos;&gt;&lt;/my-component3&gt;&lt;/div&gt;&quot;</span>,
+        components: {
+            myComponent3,
+        },
+    };
+
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        template:
+            <span class="hljs-string">&quot;&lt;div&gt;&#x1F9D1;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;1&lt;my-component2 v-bind=&apos;$attrs&apos; @event=&apos;fn($event)&apos; v-on=&apos;$listeners&apos;&gt;&lt;/my-component2&gt;&lt;/div&gt;&quot;</span>,
+        components: {
+            myComponent2,
+        },
+        methods: {
+            fn(e) {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>, e); <span class="hljs-comment">//1 &quot;&#x8FD9;&#x662F;&#x7EC4;&#x4EF6;3&#x7684;&#x6570;&#x636E;&quot;</span>
+            },
+        },
+        <span class="hljs-comment">// created() {</span>
+        <span class="hljs-comment">//     console.log(this.$attrs);</span>
+        <span class="hljs-comment">// }</span>
+    };
+
+    <span class="hljs-comment">//&#x1F468;&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        components: {
+            myComponent1,
+        },
+        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x6570;&#x636E;</span>
+        methods: {
+            fn(e) {
+                <span class="hljs-built_in">console</span>.log(e);<span class="hljs-comment">//&#x8FD9;&#x662F;&#x7EC4;&#x4EF6;3&#x7684;&#x6570;&#x636E;</span>
+                <span class="hljs-comment">// console.log(this.$attrs);</span>
+            },
+        },
+    });
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+</div></div>
 <h3 id="4&#x3001;vuex"><a name="4&#x3001;vuex" class="anchor-navigation-ex-anchor" href="#4&#x3001;vuex"><i class="fa fa-link" aria-hidden="true"></i></a>4&#x3001;vuex</h3>
 <footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-01-10 23:59:37
+2022-01-11 23:23:49
 </span></footer>
                                 
                                 </section>
@@ -1926,7 +2404,7 @@ new Vue({
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"13组件之间传递数据方式","level":"1.4.1.13","depth":3,"next":{"title":"待续中...","level":"1.4.2","depth":2,"path":"repair.md","ref":"repair.md","articles":[{"title":"待续中...","level":"1.4.2.1","depth":3,"path":"repair.md","ref":"repair.md","articles":[]}]},"previous":{"title":"12组件","level":"1.4.1.12","depth":3,"path":"12组件.md","ref":"12组件.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"13组件之间传递数据方式.md","mtime":"2022-01-10T15:59:37.822Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-10T15:59:49.826Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"13组件之间传递数据方式","level":"1.4.1.13","depth":3,"next":{"title":"待续中...","level":"1.4.2","depth":2,"path":"repair.md","ref":"repair.md","articles":[{"title":"待续中...","level":"1.4.2.1","depth":3,"path":"repair.md","ref":"repair.md","articles":[]}]},"previous":{"title":"12组件","level":"1.4.1.12","depth":3,"path":"12组件.md","ref":"12组件.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"13组件之间传递数据方式.md","mtime":"2022-01-11T15:23:49.067Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-11T15:39:40.206Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

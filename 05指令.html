@@ -1401,7 +1401,7 @@
 <p>&#x6307;&#x4EE4;&#x5C31;&#x662F;vue&#x63D0;&#x4F9B;&#x7ED9;&#x6211;&#x4EEC;&#x7684;&#x4E00;&#x4E9B;&#x5FEB;&#x6377;&#x64CD;&#x4F5C;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
 </blockquote>
 <h2 id="v-html-&#x6E32;&#x67D3;&#x6807;&#x7B7E;"><a name="v-html-&#x6E32;&#x67D3;&#x6807;&#x7B7E;" class="anchor-navigation-ex-anchor" href="#v-html-&#x6E32;&#x67D3;&#x6807;&#x7B7E;"><i class="fa fa-link" aria-hidden="true"></i></a>v-html &#x6E32;&#x67D3;&#x6807;&#x7B7E;</h2>
-<pre><code class="lang-jsx">//&#x6E32;&#x67D3;&#x6807;&#x7B7E;
+<pre><code class="lang-js">//&#x6E32;&#x67D3;&#x6807;&#x7B7E;
 &lt;p v-html=&quot;msg&quot;&gt;&lt;/p&gt;
 
 new Vue({
@@ -1442,7 +1442,7 @@ new Vue({
 </code></pre>
 </blockquote>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;div V-html=&quot;element&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;script&gt;1
@@ -1454,7 +1454,7 @@ new Vue({
     })
 &lt;/script&gt;
 </code></pre>
-<pre><code class="lang-jsx"><span class="hljs-keyword">new</span> Vue({
+<pre><code class="lang-js"><span class="hljs-keyword">new</span> Vue({
     el: <span class="hljs-string">&quot;#app&quot;</span>,
     data: {
         element: <span class="hljs-string">`
@@ -1468,7 +1468,7 @@ new Vue({
 </code></pre>
 </div></div>
 <h2 id="v-bind-&#x7ED1;&#x5B9A;&#x5C5E;&#x6027;"><a name="v-bind-&#x7ED1;&#x5B9A;&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#v-bind-&#x7ED1;&#x5B9A;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>v-bind &#x7ED1;&#x5B9A;&#x5C5E;&#x6027;</h2>
-<pre><code class="lang-jsx">&lt;div v-bind:<span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;msg&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<pre><code class="lang-js">&lt;div v-bind:<span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;msg&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 <span class="hljs-comment">//&#x7B80;&#x5199;</span>
 &lt;div :<span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;msg&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 
@@ -1488,7 +1488,7 @@ new Vue({
 })
 </code></pre>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F4A2; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;3
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;3
     //&lt;div V-bind:class=&quot;className&quot;&gt;&lt;/div&gt;
     //&lt;div V-bind:class=&quot;bool ? &apos;a&apos; : &apos;b&apos; &quot;&gt;&lt;/div&gt;
         //&#x7B80;&#x5199;
@@ -1510,7 +1510,7 @@ new Vue({
 <blockquote>
 <p>&#x663E;&#x793A;&#x4E0E;&#x6D88;&#x5931;&#x662F;&#x6574;&#x4E2A;&#x539F;&#x751F;&#x663E;&#x793A;&#x548C;&#x9500;&#x6BC1;&#x3002;</p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;div v-if=&quot;bool&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt;
+<pre><code class="lang-js">&lt;div v-if=&quot;bool&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt;
 
 new Vue({
   el:&quot;##app&quot;,
@@ -1542,7 +1542,7 @@ new Vue({
 <blockquote>
 <p>v-show&#x7684;&#x5207;&#x6362;&#x5F00;&#x9500;&#x4F1A;&#x66F4;&#x5C0F;&#xFF0C;&#x800C;v-if&#x4F1A;&#x66F4;&#x591A;</p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;div v-show=&quot;bool&quot;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;//&#x5728;&#x6807;&#x7B7E;&#x4E0A;&#x6DFB;&#x52A0;display:none
+<pre><code class="lang-js">&lt;div v-show=&quot;bool&quot;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;//&#x5728;&#x6807;&#x7B7E;&#x4E0A;&#x6DFB;&#x52A0;display:none
 &lt;div v-if=&quot;bool&quot;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;//&#x6574;&#x4E2A;&#x6807;&#x7B7E;&#x6D88;&#x5931;
 
 new Vue({
@@ -1553,7 +1553,7 @@ new Vue({
 })
 </code></pre>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x89E3;&#x8BF4;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-jsx">&#x91CD;&#x4F1A;&#x4E0E;&#x56DE;&#x6D41;
+<pre><code class="lang-js">&#x91CD;&#x4F1A;&#x4E0E;&#x56DE;&#x6D41;
 &#x6837;&#x5F0F;&#x5BF9;&#x5143;&#x7D20;&#x7684;&#x8BBE;&#x7F6E;&#x7684;&#x8BA1;&#x7B97;
 
 &#x8BA1;&#x7B97;&#x6D88;&#x8017;
@@ -1574,7 +1574,7 @@ volar&#x2014;&#x2014;Vue3
 <p>v-show:&#x9996;&#x6B21;&#x6E32;&#x67D3;&#x5F00;&#x9500;&#x66F4;&#x5927;&#xFF0C;&#x53CD;&#x590D;&#x6E32;&#x67D3;&#x5F00;&#x9500;&#x5C0F;</p>
 </blockquote>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> v-if&#x4E0E;v-show </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;div v-if=&quot;bool&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt; //&#x8FD9;&#x79CD;&#x76F4;&#x63A5;&#x5728;&#x5143;&#x7D20;&#x4E2D;&#x6D88;&#x5931;&#x754C;&#x9762;&#x4E5F;&#x6D88;&#x5931;
     &lt;div v-show=&quot;bool&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt; //&#x8FD9;&#x79CD;&#x5143;&#x7D20;&#x8FD8;&#x5728;&#x4F46;&#x662F;&#x754C;&#x9762;&#x662F;&#x770B;&#x4E0D;&#x89C1;&#x4E86; &#x2728;
 
@@ -1591,7 +1591,7 @@ volar&#x2014;&#x2014;Vue3
 </code></pre>
 </div></div>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F4A2; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;div v-if=&quot;num===1&quot;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;
     &lt;div v-else-if=&quot;num===2&quot;&gt;&#x5185;&#x5BB9;2&lt;/div&gt;
     &lt;div v-else&gt;&#x5185;&#x5BB9;3&lt;/div&gt;
@@ -1608,7 +1608,7 @@ volar&#x2014;&#x2014;Vue3
 </div></div>
 <h2 id="v-for-&#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;"><a name="v-for-&#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#v-for-&#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>v-for &#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;</h2>
 <h3 id="1&#x3001;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;"><a name="1&#x3001;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;</h3>
-<pre><code class="lang-jsx">//item&#x662F;&#x6570;&#x7EC4;&#x6210;&#x5458;&#xFF0C;idx&#x662F;&#x7D22;&#x5F15;&#x503C;
+<pre><code class="lang-js">//item&#x662F;&#x6570;&#x7EC4;&#x6210;&#x5458;&#xFF0C;idx&#x662F;&#x7D22;&#x5F15;&#x503C;
 &lt;div v-for=&quot;(item,idx) of arr&quot;&gt;{ {idx} }{ {item} }&lt;/div&gt;
 
 new Vue({
@@ -1656,7 +1656,7 @@ new Vue({
 });
 </code></pre>
 <h3 id="2&#x3001;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;"><a name="2&#x3001;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;</h3>
-<pre><code class="lang-jsx">&lt;div v-for=&quot;(val,key,idx) of obj&quot;&gt;{ {idx} }{ {key} }{ {val} }&lt;/div&gt;
+<pre><code class="lang-js">&lt;div v-for=&quot;(val,key,idx) of obj&quot;&gt;{ {idx} }{ {key} }{ {val} }&lt;/div&gt;
 
 new Vue({
   el: &quot;##app&quot;,
@@ -1670,7 +1670,7 @@ new Vue({
 });
 </code></pre>
 <h3 id="3&#x3001;v-for&#x548C;v-if&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x95EE;&#x9898;"><a name="3&#x3001;v-for&#x548C;v-if&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#3&#x3001;v-for&#x548C;v-if&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;v-for&#x548C;v-if&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x95EE;&#x9898;</h3>
-<pre><code class="lang-jsx">//vue2 v-for&#x7684;&#x6743;&#x91CD;&#x9AD8;&#x4E8E;v-if
+<pre><code class="lang-js">//vue2 v-for&#x7684;&#x6743;&#x91CD;&#x9AD8;&#x4E8E;v-if
 //vue3 &#x53CD;&#x8FC7;&#x6765;
 //&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x628A;v-for&#x548C;v-if&#x5199;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E0A;
 
@@ -1693,7 +1693,7 @@ new Vue({
 <p>[!cogs]</p>
 </blockquote>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> v-for </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;!- idx:&#x7D22;&#x5F15;&#x503C;&#x653E;&#x5728;&#x524D;&#x9762;&#x5C31;&#x51FA;&#x73B0;&#x5728;&#x524D; --
     &lt;div v-for=&quot;(item,idx) of arr&quot;&gt;{ {idx} }{ {item} }&lt;/div&gt;
     &lt;div v-for=&quot;(val,key,idx) of obj&quot;&gt;{ {idx} }{ {val} }{ {key} }&lt;/div&gt;
@@ -1714,7 +1714,7 @@ new Vue({
 </code></pre>
 </div></div>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;div v-for=&quot;items in arr&quot;&gt;
         &lt;div v-for=&quot;item of items.cities&quot;&gt;{ { item.cityName } }&lt;/div&gt;
         { { item.countryName } }
@@ -1757,7 +1757,7 @@ new Vue({
 </code></pre>
 </div></div>
 <h2 id="v-on-&#x4E8B;&#x4EF6;"><a name="v-on-&#x4E8B;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#v-on-&#x4E8B;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>v-on &#x4E8B;&#x4EF6;</h2>
-<pre><code class="lang-jsx">&lt;div v-on:click=&quot;fn&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt;
+<pre><code class="lang-js">&lt;div v-on:click=&quot;fn&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt;
 
 //&#x7B80;&#x5199;&#x3002;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x662F;$event
 &lt;div @click=&quot;fn($event)&quot;&gt;&#x5185;&#x5BB9;&lt;/div&gt;
@@ -1793,7 +1793,7 @@ new Vue({
 <p>[!cogs]</p>
 </blockquote>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;@click </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;button v-on:click=&quot;fn&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt;
     &lt;button @click=&quot;fn($event)&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt;
 &lt;/div&gt;
@@ -1812,7 +1812,7 @@ new Vue({
 </code></pre>
 </div></div>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x8FD0;&#x7528;@click </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;div v-for=&quot;item of arr&quot; @click=&quot;fn(item)&quot;&gt;{ {item} }&lt;/div&gt;
 &lt;/div&gt;
 &lt;script&gt;
@@ -1835,7 +1835,7 @@ new Vue({
 <blockquote>
 <p>&#x5BF9;&#x8868;&#x5355;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x53CC;&#x5411;&#x7684;&#x6570;&#x636E;&#x7ED1;&#x5B9A;</p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> v-model=<span class="hljs-string">&quot;msg&quot;</span>&gt;
+<pre><code class="lang-js">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> v-model=<span class="hljs-string">&quot;msg&quot;</span>&gt;
 { {msg} }
 
 <span class="hljs-keyword">new</span> Vue({
@@ -1848,7 +1848,7 @@ new Vue({
 <blockquote>
 <p>v-mode&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;</p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> @input=<span class="hljs-string">&quot;fn($event)&quot;</span>&gt;
+<pre><code class="lang-js">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> @input=<span class="hljs-string">&quot;fn($event)&quot;</span>&gt;
 { {msg} }
 
 <span class="hljs-keyword">new</span> Vue({
@@ -1903,7 +1903,7 @@ new Vue({
 <p>  &#x2728; &#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x539F;&#x7406;&#xFF0C;&#x6307;&#x7684;&#x662F;data&#x5728;&#x6807;&#x7B7E;&#x4E0A;&#x9762;&#x7684;&#x6E32;&#x67D3;</p>
 <p>&#x200B;        &#x800C;&#x4E0D;&#x662F; v-model &#x4ED6;&#x53EA;&#x662F;&#x4E2A;&#x6307;&#x4EE4;&#x800C;&#x5DF2;</p>
 </blockquote>
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;form&gt;
         &lt;input type=&quot;text&quot; v-model=&quot;msg&quot;&gt;
         { {msg} }
@@ -1923,7 +1923,7 @@ new Vue({
 <p>[!cogs]</p>
 </blockquote>
 <div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x8BED;&#x6CD5;&#x7CD6; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-jsx">&lt;div id=&quot;app&quot;&gt;
+<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
     &lt;form&gt;
         &lt;input type=&quot;text&quot; @input=&quot;fn($event)&quot;&gt;
         { {msg} }
@@ -1946,12 +1946,12 @@ new Vue({
 </code></pre>
 </div></div>
 <h2 id="&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x548C;&#x4FEE;&#x9970;&#x7B26;"><a name="&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x548C;&#x4FEE;&#x9970;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x548C;&#x4FEE;&#x9970;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x548C;&#x4FEE;&#x9970;&#x7B26;</h2>
-<pre><code class="lang-jsx">//:click&#x662F;&#x53C2;&#x6570;
+<pre><code class="lang-js">//:click&#x662F;&#x53C2;&#x6570;
 //.prevent&#x662F;&#x4FEE;&#x9970;&#x7B26;
 &lt;button v-on:click.prevent=&quot;fn&quot;&gt;&#x63D0;&#x4EA4;&lt;/button&gt;
 </code></pre>
 <footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-01-10 13:04:10
+2022-01-11 23:23:27
 </span></footer>
                                 
                                 </section>
@@ -1995,7 +1995,7 @@ new Vue({
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"05指令","level":"1.4.1.5","depth":3,"next":{"title":"06方法-计算属性-监听器","level":"1.4.1.6","depth":3,"path":"06方法-计算属性-监听器.md","ref":"06方法-计算属性-监听器.md","articles":[]},"previous":{"title":"04生命周期","level":"1.4.1.4","depth":3,"path":"04生命周期.md","ref":"04生命周期.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"05指令.md","mtime":"2022-01-10T05:04:10.180Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-10T15:59:49.826Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"05指令","level":"1.4.1.5","depth":3,"next":{"title":"06方法-计算属性-监听器","level":"1.4.1.6","depth":3,"path":"06方法-计算属性-监听器.md","ref":"06方法-计算属性-监听器.md","articles":[]},"previous":{"title":"04生命周期","level":"1.4.1.4","depth":3,"path":"04生命周期.md","ref":"04生命周期.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"05指令.md","mtime":"2022-01-11T15:23:27.915Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-11T15:39:40.206Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
