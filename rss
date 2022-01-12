@@ -4,7 +4,7 @@
         <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
         <link>http://gitbook.zhangjikai.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 11 Jan 2022 15:39:57 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 12 Jan 2022 11:53:10 GMT</lastBuildDate>
         <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Jikai Zhang]]></author>
         <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
@@ -389,6 +389,40 @@
             <description><![CDATA[%accordion%  参考...💢 %accordion%]]></description>
             <link>http://gitbook.zhangjikai.com/13组件之间传递数据方式.html</link>
             <guid isPermaLink="true">http://gitbook.zhangjikai.com/13组件之间传递数据方式.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[%accordion% props校验练习🚀 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/14props验证.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/14props验证.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[插槽]]></title>
+            <description><![CDATA[%accordion% 创建插槽练习🚀 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/15插槽.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/15插槽.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[动态组件]]></title>
+            <description><![CDATA[%accordion% keep-alive可以缓存组件🚀 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/16动态组件.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/16动态组件.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[处理边界情况]]></title>
+            <description><![CDATA[%accordion% 获取父组件的数据和方法🚀 %accordion%]]></description>
+            <link>http://gitbook.zhangjikai.com/17处理边界情况.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/17处理边界情况.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[脚手架]]></title>
+            <link>http://gitbook.zhangjikai.com/18脚手架.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/18脚手架.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>

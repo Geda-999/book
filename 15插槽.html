@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>01mvvm和mvc · 前端秘籍</title>
+        <title>15插槽 · 前端秘籍</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -163,8 +163,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="16动态组件.html" />
     
-    <link rel="prev" href="vue.html" />
+    
+    <link rel="prev" href="14props验证.html" />
     
 
     <link href="http://gitbook.zhangjikai.com/rss" title="GitBook 使用教程" rel="alternate" type="application/rss+xml" />
@@ -922,7 +924,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1.1" data-path="01mvvm和mvc.html">
+        <li class="chapter " data-level="1.4.1.1" data-path="01mvvm和mvc.html">
             
                 <a href="01mvvm和mvc.html">
             
@@ -1104,7 +1106,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.15" data-path="15插槽.html">
+        <li class="chapter active" data-level="1.4.1.15" data-path="15插槽.html">
             
                 <a href="15插槽.html">
             
@@ -1427,7 +1429,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >01mvvm和mvc</a>
+        <a href="." >15插槽</a>
     </h1>
 </div>
 
@@ -1442,26 +1444,389 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#mvvm&#x548C;mvc"><b></b>mvvm&#x548C;mvc</a></li></ul></div><a href="#mvvm&#x548C;mvc" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mvvm&#x548C;mvc"><a name="mvvm&#x548C;mvc" class="anchor-navigation-ex-anchor" href="#mvvm&#x548C;mvc"><i class="fa fa-link" aria-hidden="true"></i></a>mvvm&#x548C;mvc</h1>
-<pre><code class="lang-js"><span class="hljs-comment">//mvc&#xFF08;&#x540E;&#x7AEF;&#xFF09;</span>
-m model  &#x6570;&#x636E;&#x6A21;&#x578B; &#x6570;&#x636E;&#x5E93;
-v view   &#x89C6;&#x56FE;    &#x6807;&#x7B7E;
-c control&#x63A7;&#x5236;&#x5668;  &#x903B;&#x8F91;&#x4EE3;&#x7801;
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x63D2;&#x69FD;"><b></b>&#x63D2;&#x69FD;</a></li><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x63D2;&#x69FD;"><b></b>&#x521B;&#x5EFA;&#x63D2;&#x69FD;</a></li><li><span class="title-icon "></span><a href="#&#x5177;&#x540D;&#x63D2;&#x69FD;"><b></b>&#x5177;&#x540D;&#x63D2;&#x69FD;</a></li><li><span class="title-icon "></span><a href="#&#x9ED8;&#x8BA4;&#x63D2;&#x69FD;"><b></b>&#x9ED8;&#x8BA4;&#x63D2;&#x69FD;</a></li><li><span class="title-icon "></span><a href="#&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;"><b></b>&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;</a></li><li><span class="title-icon "></span><a href="#&#x6848;&#x4F8B;&#x63D2;&#x69FD;&#x5B8C;&#x6574;&#x7248;"><b></b>&#x6848;&#x4F8B;&#x63D2;&#x69FD;&#x5B8C;&#x6574;&#x7248;</a></li></ul></ul></div><a href="#&#x63D2;&#x69FD;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><div class="treeview__container-title"></div><ul>
+<li><div><a href="#&#x521B;&#x5EFA;&#x63D2;&#x69FD;">&#x521B;&#x5EFA;&#x63D2;&#x69FD;</a><i></i></div></li>
+<li><div><a href="#&#x5177;&#x540D;&#x63D2;&#x69FD;">&#x5177;&#x540D;&#x63D2;&#x69FD;</a><i></i></div></li>
+<li><div><a href="#&#x9ED8;&#x8BA4;&#x63D2;&#x69FD;">&#x9ED8;&#x8BA4;&#x63D2;&#x69FD;</a><i></i></div></li>
+<li><div><a href="#&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;">&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;</a><i></i></div></li>
+<li><div><a href="#&#x6848;&#x4F8B;&#x63D2;&#x69FD;&#x5B8C;&#x6574;&#x7248;">&#x6848;&#x4F8B;&#x63D2;&#x69FD;&#x5B8C;&#x6574;&#x7248;</a><i></i></div></li>
+</ul>
+</div>
 
-<span class="hljs-comment">//mvvm&#xFF08;&#x524D;&#x7AEF;&#xFF09;</span>
-m model &#x6570;&#x636E;&#x6A21;&#x578B; &#x5728;vue&#x91CC;&#x9762;&#x6307;&#x4EE3;data&#xFF0C;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x5730;&#x65B9;
-v view  &#x89C6;&#x56FE; &#x5728;vue&#x91CC;&#x9762;&#x6307;&#x4EE3;html&#x6807;&#x7B7E;&#xFF0C;&#x6570;&#x636E;&#x6E32;&#x67D3;&#x7684;&#x5730;&#x65B9;
-vm view-model &#x89C6;&#x56FE;&#x6A21;&#x578B; &#x5728;vue&#x91CC;&#x9762;&#x6307;&#x7684;&#x7684;&#x662F;vue&#x672C;&#x8EAB;&#xFF0C;&#x5E2E;&#x6211;&#x4EEC;&#x628A;&#x6570;&#x636E;&#x4ECE;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x5730;&#x65B9;&#x8F6C;&#x5230;&#x6570;&#x636E;&#x6E32;&#x67D3;&#x7684;&#x5730;&#x65B9;&#x8FDB;&#x884C;&#x6E32;&#x67D3;
+<h1 id="&#x63D2;&#x69FD;"><a name="&#x63D2;&#x69FD;" class="anchor-navigation-ex-anchor" href="#&#x63D2;&#x69FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63D2;&#x69FD;</h1>
+<h2 id="&#x521B;&#x5EFA;&#x63D2;&#x69FD;"><a name="&#x521B;&#x5EFA;&#x63D2;&#x69FD;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x63D2;&#x69FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x63D2;&#x69FD;</h2>
+<pre><code class="lang-js">&lt;mycomponent&gt;
+  &#x5185;&#x5BB9;
+&lt;/mycomponent&gt;
+
+let mycomponent = {
+  template:
+    &quot;&lt;div&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/div&gt;&quot;,
+};
+
+//&#x6839;&#x7EC4;&#x4EF6;
+new Vue({
+  el: &quot;#app&quot;,
+  components: {
+    mycomponent,
+  }
+});
 </code></pre>
-<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> js&amp;vue </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-js"><span class="hljs-comment">//vue&#x548C;jq&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;</span>
-<span class="hljs-number">1</span>&#x3001;vue&#x662F;&#x6570;&#x636E;&#x9A71;&#x52A8;&#xFF0C;jqdom&#x9A71;&#x52A8;
-<span class="hljs-number">2</span>&#x3001;Vue =&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x521B;&#x5EFA;&#x63D2;&#x69FD;&#x7EC3;&#x4E60;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span>&gt;</span>
+        &#x6211;&#x662F;&#x4E00;&#x4E2A;&#x63D2;&#x69FD;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;script&gt;
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        <span class="hljs-comment">//slot&#xFF1A;&#x63D2;&#x69FD;</span>
+        template: <span class="hljs-string">&quot;&lt;div&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/div&gt;&quot;</span>,
+
+    };
+
+    <span class="hljs-comment">//&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+        },
+        components: {
+            myComponent1,
+        },
+    });
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
 </code></pre>
-<p>%/accordion% </p>
+</div></div>
+<h2 id="&#x5177;&#x540D;&#x63D2;&#x69FD;"><a name="&#x5177;&#x540D;&#x63D2;&#x69FD;" class="anchor-navigation-ex-anchor" href="#&#x5177;&#x540D;&#x63D2;&#x69FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5177;&#x540D;&#x63D2;&#x69FD;</h2>
+<pre><code class="lang-js">&lt;mycomponent&gt;
+  &lt;div slot=&apos;a&apos;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;
+  &lt;div slot=&apos;b&apos;&gt;&#x5185;&#x5BB9;2&lt;/div&gt;
+&lt;/mycomponent&gt;
+
+let mycomponent = {
+  template:
+    &quot;&lt;div&gt;&lt;slot name=&apos;a&apos;&gt;&lt;/slot&gt;&#x5185;&#x5BB9;x&lt;slot name=&apos;b&apos;&gt;&lt;/slot&gt;&lt;/div&gt;&quot;,
+};
+
+//&#x6839;&#x7EC4;&#x4EF6;
+new Vue({
+  el: &quot;#app&quot;,
+  components: {
+    mycomponent,
+  }
+});
+</code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x5177;&#x540D;&#x63D2;&#x69FD; &#x2014;&#x2014;&#x5C31;&#x7ED9;&#x4ED6;&#x8D77;&#x540D;&#x5B57;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;a&quot;</span>&gt;</span>&#x6211;&#x662F;&#x63D2;&#x69FD;1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;b&quot;</span>&gt;</span>&#x6211;&#x662F;&#x63D2;&#x69FD;2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;script&gt;
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        <span class="hljs-comment">//slot&#xFF1A;&#x63D2;&#x69FD;</span>
+        template: <span class="hljs-string">&quot;&lt;div&gt;&lt;slot name=&apos;a&apos;&gt;&lt;/slot&gt; ==&#x695A;&#x6CB3;&#x6C49;&#x754C;== &lt;slot name=&apos;b&apos;&gt;&lt;/slot&gt;&lt;/div&gt;&quot;</span>,
+
+    };
+
+    <span class="hljs-comment">//&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+        },
+        components: {
+            myComponent1,
+        },
+    });
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+<blockquote>
+<p>&#x6253;&#x5370;&#x51FA;&#x6765;&#x7684;&#x6548;&#x679C;</p>
+</blockquote>
+<pre><code class="lang-js">&#x6211;&#x662F;&#x63D2;&#x69FD;<span class="hljs-number">1</span>
+==&#x695A;&#x6CB3;&#x6C49;&#x754C;==
+&#x6211;&#x662F;&#x63D2;&#x69FD;<span class="hljs-number">2</span>
+</code></pre>
+</div></div>
+<h2 id="&#x9ED8;&#x8BA4;&#x63D2;&#x69FD;"><a name="&#x9ED8;&#x8BA4;&#x63D2;&#x69FD;" class="anchor-navigation-ex-anchor" href="#&#x9ED8;&#x8BA4;&#x63D2;&#x69FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9ED8;&#x8BA4;&#x63D2;&#x69FD;</h2>
+<pre><code class="lang-js">&lt;mycomponent&gt;
+  &lt;div&gt;&#x5185;&#x5BB9;1&lt;/div&gt;
+  &lt;div slot=&apos;b&apos;&gt;&#x5185;&#x5BB9;2&lt;/div&gt;
+&lt;/mycomponent&gt;
+
+let mycomponent = {
+  template:
+    &quot;&lt;div&gt;&lt;slot name=&apos;default&apos;&gt;&lt;/slot&gt;&#x5185;&#x5BB9;x&lt;slot name=&apos;b&apos;&gt;&lt;/slot&gt;&lt;/div&gt;&quot;,
+};
+
+//&#x6839;&#x7EC4;&#x4EF6;
+new Vue({
+  el: &quot;#app&quot;,
+  components: {
+    mycomponent,
+  }
+});
+</code></pre>
+<h2 id="&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;"><a name="&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;</h2>
+<blockquote>
+<p><strong>&#x4F7F;&#x7528;v-slot&#x53EF;&#x4EE5;&#x63D0;&#x53D6;&#x51FA;&#x5F53;&#x524D;&#x63D2;&#x69FD;&#x7684;&#x6570;&#x636E;</strong></p>
+</blockquote>
+<pre><code class="lang-js">&lt;mycomponent :arr=&quot;arr&quot;&gt;
+  &lt;template v-slot=&quot;{row,idx}&quot;&gt;
+    &lt;button @click=&apos;show(row,idx)&apos;&gt;&#x67E5;&#x770B;&lt;/button&gt;
+  &lt;/template&gt;
+&lt;/mycomponent&gt;
+
+let mycomponent = {
+  props:{
+    arr:{
+      type:Array,
+      required:true
+    }
+  },
+  template: `
+    &lt;table border=&apos;1&apos; cellspacing=&apos;0&apos;&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&#x5546;&#x54C1;&#x540D;&#x79F0;&lt;/td&gt;
+        &lt;td&gt;&#x5546;&#x54C1;&#x6570;&#x91CF;&lt;/td&gt;
+        &lt;td&gt;&#x5546;&#x54C1;&#x4EF7;&#x94B1;&lt;/td&gt;
+        &lt;td&gt;&#x64CD;&#x4F5C;&lt;/td&gt;     
+      &lt;/tr&gt;
+      &lt;tr v-for=&quot;(item,idx) of arr&quot;&gt;
+        &lt;td&gt;{ {item.name} }&lt;/td&gt;
+        &lt;td&gt;{ {item.num} }&lt;/td&gt;
+        &lt;td&gt;{ {item.price} }&lt;/td&gt;
+        &lt;td&gt;
+          &lt;slot :row=&apos;item&apos; :idx=&quot;idx&quot;&gt;&lt;/slot&gt;
+        &lt;/td&gt;     
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    `,
+};
+
+//&#x6839;&#x7EC4;&#x4EF6;
+new Vue({
+  el: &quot;#app&quot;,
+  components: {
+    mycomponent,
+  },
+  data: {
+    arr: [
+      { name: &quot;&#x82F9;&#x679C;13&quot;, num: 1, price: 1000 },
+      { name: &quot;&#x82F9;&#x679C;14&quot;, num: 2, price: 2000 },
+      { name: &quot;&#x82F9;&#x679C;15&quot;, num: 3, price: 3000 },
+    ],
+  },
+  methods: {
+    show(row,idx){
+      console.log(row)
+      console.log(idx)
+    }
+  },
+});
+</code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;&#x7EC3;&#x4E60;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- &#x4F7F;&#x7528;v-slot&#x53EF;&#x4EE5;&#x63D0;&#x53D6;&#x51FA;&#x5F53;&#x524D;&#x63D2;&#x69FD;&#x7684;&#x6570;&#x636E; --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot</span>=<span class="hljs-string">&quot;{data}&quot;</span>&gt;</span>&#x1F431;&#x200D;&#x1F409;&#x63D2;&#x69FD;{ {data} }<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;script&gt;
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        <span class="hljs-comment">//slot&#xFF1A;&#x63D2;&#x69FD;</span>
+        template: <span class="hljs-string">&quot;&lt;div&gt;&lt;slot :data=&apos;msg&apos;&gt;&lt;/slot&gt;&lt;/div&gt;&quot;</span>,
+
+        data() {
+            <span class="hljs-keyword">return</span> {
+                msg: <span class="hljs-string">&quot;&#xFF0C;&#x1F440;&#x4F5C;&#x7528;&#x57DF;&quot;</span>
+            }
+        }
+    };
+
+    <span class="hljs-comment">//&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+        },
+        components: {
+            myComponent1,
+        },
+    });
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+<blockquote>
+<p>&#x6253;&#x5370;&#x51FA;&#x6765;&#x7684;&#x6548;&#x679C;</p>
+</blockquote>
+<pre><code>&#x1F431;&#x200D;&#x1F409;&#x63D2;&#x69FD;&#xFF0C;&#x1F440;&#x4F5C;&#x7528;&#x57DF;
+</code></pre></div></div>
+<blockquote>
+<p><strong>&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;&#x91CC;&#x9762;&#x4F7F;&#x7528;&#x5177;&#x540D;&#x63D2;&#x69FD;</strong></p>
+</blockquote>
+<pre><code class="lang-js">&lt;mycomponent :arr=&quot;arr&quot;&gt;
+  &lt;template v-slot:a=&quot;{row,idx}&quot;&gt;
+    &lt;button @click=&apos;show(row,idx)&apos;&gt;&#x67E5;&#x770B;&lt;/button&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:b=&quot;{row,idx}&quot;&gt;
+    &lt;button @click=&apos;show(row,idx)&apos;&gt;&#x7F16;&#x8F91;&lt;/button&gt;
+  &lt;/template&gt;
+&lt;/mycomponent&gt;
+
+let mycomponent = {
+  props:{
+    arr:{
+      type:Array,
+      required:true
+    }
+  },
+  template: `
+    &lt;table border=&apos;1&apos; cellspacing=&apos;0&apos;&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&#x5546;&#x54C1;&#x540D;&#x79F0;&lt;/td&gt;
+        &lt;td&gt;&#x5546;&#x54C1;&#x6570;&#x91CF;&lt;/td&gt;
+        &lt;td&gt;&#x5546;&#x54C1;&#x4EF7;&#x94B1;&lt;/td&gt;
+        &lt;td&gt;&#x64CD;&#x4F5C;&lt;/td&gt;     
+      &lt;/tr&gt;
+      &lt;tr v-for=&quot;(item,idx) of arr&quot;&gt;
+        &lt;td&gt;{ {item.name} }&lt;/td&gt;
+        &lt;td&gt;{ {item.num} }&lt;/td&gt;
+        &lt;td&gt;{ {item.price} }&lt;/td&gt;
+        &lt;td&gt;
+          &lt;slot name=&apos;a&apos; :row=&apos;item&apos; :idx=&quot;idx&quot;&gt;&lt;/slot&gt;
+          &lt;slot name=&apos;b&apos; :row=&apos;item&apos; :idx=&quot;idx&quot;&gt;&lt;/slot&gt;
+        &lt;/td&gt;     
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    `,
+};
+
+//&#x6839;&#x7EC4;&#x4EF6;
+new Vue({
+  el: &quot;#app&quot;,
+  components: {
+    mycomponent,
+  },
+  data: {
+    arr: [
+      { name: &quot;&#x82F9;&#x679C;13&quot;, num: 1, price: 1000 },
+      { name: &quot;&#x82F9;&#x679C;14&quot;, num: 2, price: 2000 },
+      { name: &quot;&#x82F9;&#x679C;15&quot;, num: 3, price: 3000 },
+    ],
+  },
+  methods: {
+    show(row,idx){
+      console.log(row)
+      console.log(idx)
+    }
+  },
+});
+</code></pre>
+<h2 id="&#x6848;&#x4F8B;&#x63D2;&#x69FD;&#x5B8C;&#x6574;&#x7248;"><a name="&#x6848;&#x4F8B;&#x63D2;&#x69FD;&#x5B8C;&#x6574;&#x7248;" class="anchor-navigation-ex-anchor" href="#&#x6848;&#x4F8B;&#x63D2;&#x69FD;&#x5B8C;&#x6574;&#x7248;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6848;&#x4F8B;&#x63D2;&#x69FD;&#x5B8C;&#x6574;&#x7248;</h2>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD; &#x2014;&#x2014;&#x5C31;&#x7ED9;&#x4ED6;&#x8D77;&#x540D;&#x5B57;1&#xFE0F;&#x20E3;</span>
+&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span> <span class="hljs-attr">:list</span>=<span class="hljs-string">&quot;goodsList&quot;</span>&gt;</span>
+        //&#x4F7F;&#x7528;v-slot&#x53EF;&#x4EE5;&#x63D0;&#x53D6;&#x51FA;&#x5F53;&#x524D;&#x63D2;&#x69FD;&#x7684;&#x6570;&#x636E;
+        <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>&#x7B2C;&#x4E00;&#x4E2A;&#x8868;&#x683C;<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:b</span>=<span class="hljs-string">&quot;{row,idx}&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;show(row,idx)&quot;</span>&gt;</span>&#x67E5;&#x770B;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span> <span class="hljs-attr">:list</span>=<span class="hljs-string">&quot;goodsList1&quot;</span>&gt;</span>
+        //&#x4F7F;&#x7528;v-slot&#x53EF;&#x4EE5;&#x63D0;&#x53D6;&#x51FA;&#x5F53;&#x524D;&#x63D2;&#x69FD;&#x7684;&#x6570;&#x636E;
+        <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>&#x7B2C;&#x4E8C;&#x4E2A;&#x8868;&#x683C;<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:b</span>=<span class="hljs-string">&quot;{row,idx}&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;show(row,idx)&quot;</span>&gt;</span>&#x7F16;&#x8F91;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="handlebars"><span class="xml">
+    //&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;2&#xFE0F;&#x20E3;
+    let myComponent1 = {
+        props: {
+            list: {
+                type: Array,
+                required: true,
+            },
+        },
+        //slot&#xFF1A;&#x63D2;&#x69FD;
+        template: `
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&apos;a&apos;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">border</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">cellspacing</span>=<span class="hljs-string">&quot;0&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&apos;(item,idx) of list&apos;</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">&apos;idx&apos;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{ {item.name} }<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{ {item.price} }<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&apos;b&apos;</span> <span class="hljs-attr">:row</span>=<span class="hljs-string">&quot;item&quot;</span> <span class="hljs-attr">:idx</span>=<span class="hljs-string">&apos;idx&apos;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        `,
+    };
+
+    //&#x7236;&#x7EC4;&#x4EF6;3&#xFE0F;&#x20E3;
+    new Vue({
+        el: &quot;#app&quot;,
+        data: {
+            goodsList: [
+                {
+                    name: &quot;&#x1F34E;&#x82F9;&#x679C;&quot;,
+                    price: 100,
+                },
+                {
+                    name: &quot;&#x1F34D;&#x83E0;&#x841D;&quot;,
+                    price: 200,
+                },
+                {
+                    name: &quot;&#x1F34C;&#x9999;&#x8549;&quot;,
+                    price: 300,
+                },
+            ],
+            goodsList1: [
+                {
+                    name: &quot;&#x1F349;&#x897F;&#x74DC;&quot;,
+                    price: 100,
+                },
+                {
+                    name: &quot;&#x1F352;&#x6A31;&#x6843;&quot;,
+                    price: 200,
+                },
+                {
+                    name: &quot;&#x1F95D;&#x7315;&#x7334;&#x6843;&quot;,
+                    price: 300,
+                },
+            ],
+        },
+        components: {
+            myComponent1,
+        },
+        methods: {
+            show(row, idx) {
+                console.log(idx);
+            },
+        },
+    });
+</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</span></code></pre>
+<p><a href="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/image-20220112125337760.png" data-lightbox="7e9e5380-c54f-4dfa-9125-e10e5578de41" data-title="image-20220112125337760" target="_blank"><img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/image-20220112125337760.png" alt="image-20220112125337760"></a> </p>
 <footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-01-11 23:23:22
-</span></footer></div></div>
+2022-01-12 19:42:37
+</span></footer>
                                 
                                 </section>
                             
@@ -1488,10 +1853,14 @@ vm view-model &#x89C6;&#x56FE;&#x6A21;&#x578B; &#x5728;vue&#x91CC;&#x9762;&#x630
 
             
                 
-                <a href="vue.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Vue">
+                <a href="14props验证.html" class="navigation navigation-prev " aria-label="Previous page: 14props验证">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="16动态组件.html" class="navigation navigation-next " aria-label="Next page: 16动态组件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1500,7 +1869,7 @@ vm view-model &#x89C6;&#x56FE;&#x6A21;&#x578B; &#x5728;vue&#x91CC;&#x9762;&#x630
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"01mvvm和mvc","level":"1.4.1.1","depth":3,"next":{"title":"02安装和使用","level":"1.4.1.2","depth":3,"url":"https://ashun.cf/02安装和使用.html","ref":"https://ashun.cf/02安装和使用.html","articles":[]},"previous":{"title":"Vue","level":"1.4.1","depth":2,"path":"vue.md","ref":"vue.md","articles":[{"title":"01mvvm和mvc","level":"1.4.1.1","depth":3,"path":"01mvvm和mvc.md","ref":"01mvvm和mvc.md","articles":[]},{"title":"02安装和使用","level":"1.4.1.2","depth":3,"url":"https://ashun.cf/02安装和使用.html","ref":"https://ashun.cf/02安装和使用.html","articles":[]},{"title":"03模版语法","level":"1.4.1.3","depth":3,"url":"https://ashun.cf/03模版语法.html","ref":"https://ashun.cf/03模版语法.html","articles":[]},{"title":"04生命周期","level":"1.4.1.4","depth":3,"path":"04生命周期.md","ref":"04生命周期.md","articles":[]},{"title":"05指令","level":"1.4.1.5","depth":3,"path":"05指令.md","ref":"05指令.md","articles":[]},{"title":"06方法-计算属性-监听器","level":"1.4.1.6","depth":3,"path":"06方法-计算属性-监听器.md","ref":"06方法-计算属性-监听器.md","articles":[]},{"title":"07class和style绑定","level":"1.4.1.7","depth":3,"path":"07class和style绑定.md","ref":"07class和style绑定.md","articles":[]},{"title":"08条件渲染","level":"1.4.1.8","depth":3,"path":"08条件渲染.md","ref":"08条件渲染.md","articles":[]},{"title":"09列表渲染","level":"1.4.1.9","depth":3,"path":"09列表渲染.md","ref":"09列表渲染.md","articles":[]},{"title":"10事件处理","level":"1.4.1.10","depth":3,"path":"10事件处理.md","ref":"10事件处理.md","articles":[]},{"title":"11表单输入绑定","level":"1.4.1.11","depth":3,"path":"11表单输入绑定.md","ref":"11表单输入绑定.md","articles":[]},{"title":"12组件","level":"1.4.1.12","depth":3,"path":"12组件.md","ref":"12组件.md","articles":[]},{"title":"13组件之间传递数据方式","level":"1.4.1.13","depth":3,"path":"13组件之间传递数据方式.md","ref":"13组件之间传递数据方式.md","articles":[]},{"title":"14props验证","level":"1.4.1.14","depth":3,"path":"14props验证.md","ref":"14props验证.md","articles":[]},{"title":"15插槽","level":"1.4.1.15","depth":3,"path":"15插槽.md","ref":"15插槽.md","articles":[]},{"title":"16动态组件","level":"1.4.1.16","depth":3,"path":"16动态组件.md","ref":"16动态组件.md","articles":[]},{"title":"17处理边界情况","level":"1.4.1.17","depth":3,"path":"17处理边界情况.md","ref":"17处理边界情况.md","articles":[]},{"title":"18脚手架","level":"1.4.1.18","depth":3,"path":"18脚手架.md","ref":"18脚手架.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"01mvvm和mvc.md","mtime":"2022-01-11T15:23:22.760Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-12T11:52:58.821Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"15插槽","level":"1.4.1.15","depth":3,"next":{"title":"16动态组件","level":"1.4.1.16","depth":3,"path":"16动态组件.md","ref":"16动态组件.md","articles":[]},"previous":{"title":"14props验证","level":"1.4.1.14","depth":3,"path":"14props验证.md","ref":"14props验证.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"15插槽.md","mtime":"2022-01-12T11:42:37.356Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-12T11:52:58.821Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

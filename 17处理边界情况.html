@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>01mvvm和mvc · 前端秘籍</title>
+        <title>17处理边界情况 · 前端秘籍</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -163,8 +163,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="18脚手架.html" />
     
-    <link rel="prev" href="vue.html" />
+    
+    <link rel="prev" href="16动态组件.html" />
     
 
     <link href="http://gitbook.zhangjikai.com/rss" title="GitBook 使用教程" rel="alternate" type="application/rss+xml" />
@@ -922,7 +924,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1.1" data-path="01mvvm和mvc.html">
+        <li class="chapter " data-level="1.4.1.1" data-path="01mvvm和mvc.html">
             
                 <a href="01mvvm和mvc.html">
             
@@ -1130,7 +1132,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.17" data-path="17处理边界情况.html">
+        <li class="chapter active" data-level="1.4.1.17" data-path="17处理边界情况.html">
             
                 <a href="17处理边界情况.html">
             
@@ -1427,7 +1429,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >01mvvm和mvc</a>
+        <a href="." >17处理边界情况</a>
     </h1>
 </div>
 
@@ -1442,25 +1444,198 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#mvvm&#x548C;mvc"><b></b>mvvm&#x548C;mvc</a></li></ul></div><a href="#mvvm&#x548C;mvc" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mvvm&#x548C;mvc"><a name="mvvm&#x548C;mvc" class="anchor-navigation-ex-anchor" href="#mvvm&#x548C;mvc"><i class="fa fa-link" aria-hidden="true"></i></a>mvvm&#x548C;mvc</h1>
-<pre><code class="lang-js"><span class="hljs-comment">//mvc&#xFF08;&#x540E;&#x7AEF;&#xFF09;</span>
-m model  &#x6570;&#x636E;&#x6A21;&#x578B; &#x6570;&#x636E;&#x5E93;
-v view   &#x89C6;&#x56FE;    &#x6807;&#x7B7E;
-c control&#x63A7;&#x5236;&#x5668;  &#x903B;&#x8F91;&#x4EE3;&#x7801;
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5904;&#x7406;&#x8FB9;&#x754C;&#x60C5;&#x51B5;"><b></b>&#x5904;&#x7406;&#x8FB9;&#x754C;&#x60C5;&#x51B5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;"><b></b>&#x83B7;&#x53D6;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;"><b></b>&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;</a></li></ul></ul></div><a href="#&#x5904;&#x7406;&#x8FB9;&#x754C;&#x60C5;&#x51B5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><div class="treeview__container-title"></div><ul>
+<li><div><a href="#&#x83B7;&#x53D6;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;">&#x83B7;&#x53D6;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;</a><i></i></div></li>
+<li><div><a href="#&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;">&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;</a><i></i></div></li>
+</ul>
+</div>
 
-<span class="hljs-comment">//mvvm&#xFF08;&#x524D;&#x7AEF;&#xFF09;</span>
-m model &#x6570;&#x636E;&#x6A21;&#x578B; &#x5728;vue&#x91CC;&#x9762;&#x6307;&#x4EE3;data&#xFF0C;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x5730;&#x65B9;
-v view  &#x89C6;&#x56FE; &#x5728;vue&#x91CC;&#x9762;&#x6307;&#x4EE3;html&#x6807;&#x7B7E;&#xFF0C;&#x6570;&#x636E;&#x6E32;&#x67D3;&#x7684;&#x5730;&#x65B9;
-vm view-model &#x89C6;&#x56FE;&#x6A21;&#x578B; &#x5728;vue&#x91CC;&#x9762;&#x6307;&#x7684;&#x7684;&#x662F;vue&#x672C;&#x8EAB;&#xFF0C;&#x5E2E;&#x6211;&#x4EEC;&#x628A;&#x6570;&#x636E;&#x4ECE;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x5730;&#x65B9;&#x8F6C;&#x5230;&#x6570;&#x636E;&#x6E32;&#x67D3;&#x7684;&#x5730;&#x65B9;&#x8FDB;&#x884C;&#x6E32;&#x67D3;
+<h1 id="&#x5904;&#x7406;&#x8FB9;&#x754C;&#x60C5;&#x51B5;"><a name="&#x5904;&#x7406;&#x8FB9;&#x754C;&#x60C5;&#x51B5;" class="anchor-navigation-ex-anchor" href="#&#x5904;&#x7406;&#x8FB9;&#x754C;&#x60C5;&#x51B5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5904;&#x7406;&#x8FB9;&#x754C;&#x60C5;&#x51B5;</h1>
+<h2 id="&#x83B7;&#x53D6;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;"><a name="&#x83B7;&#x53D6;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;</h2>
+<pre><code class="lang-js">&lt;mycomponent&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">mycomponent</span>&gt;</span></span>
+
+<span class="hljs-keyword">let</span> mycomponent = {
+  template: <span class="hljs-string">`&lt;div&gt;&lt;/div&gt;`</span>,
+  created() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.$parent._data.msg)<span class="hljs-comment">//&#x83B7;&#x53D6;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;</span>
+    <span class="hljs-keyword">this</span>.$parent.fn()<span class="hljs-comment">//&#x6267;&#x884C;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;</span>
+  },
+};
+
+<span class="hljs-comment">//&#x6839;&#x7EC4;&#x4EF6;</span>
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&quot;#app&quot;</span>,
+  components: {
+    mycomponent,
+  },
+  data:{
+    msg:<span class="hljs-string">&quot;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;</span>
+  },
+  methods: {
+    fn(){
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&quot;</span>)
+    }
+  },
+});
 </code></pre>
-<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> js&amp;vue </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-js"><span class="hljs-comment">//vue&#x548C;jq&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;</span>
-<span class="hljs-number">1</span>&#x3001;vue&#x662F;&#x6570;&#x636E;&#x9A71;&#x52A8;&#xFF0C;jqdom&#x9A71;&#x52A8;
-<span class="hljs-number">2</span>&#x3001;Vue =&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x83B7;&#x53D6;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    { {msg} }
+    &lt;my-component1&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+&lt;script&gt;
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F466;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&lt;/div&gt;&quot;</span>,
+        created() {
+            <span class="hljs-keyword">this</span>.$parent.change();<span class="hljs-comment">//&#x6267;&#x884C;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;</span>
+        },
+    };
+
+    <span class="hljs-comment">//&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+            msg: <span class="hljs-string">&quot;&#x1F468;&#x6211;&#x662F;&#x7236;&#x7EC4;&#x4EF6;&quot;</span>
+        },
+        components: {
+            myComponent1,
+        },
+        methods: {
+            change() {
+                <span class="hljs-keyword">this</span>.msg = <span class="hljs-string">&quot;&#x1F468;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4FEE;&#x6539;...&quot;</span>
+            }
+        },
+    });
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
 </code></pre>
-<p>%/accordion% </p>
+</div></div>
+<h2 id="&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;"><a name="&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;</h2>
+<pre><code class="lang-js">&lt;mycomponent ref=<span class="hljs-string">&quot;a&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">mycomponent</span>&gt;</span></span>
+
+<span class="hljs-keyword">let</span> mycomponent = {
+  template: <span class="hljs-string">`&lt;div&gt;&lt;/div&gt;`</span>,
+  data(){
+    <span class="hljs-keyword">return</span>{
+      msg:<span class="hljs-string">&quot;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;</span>
+    }
+  },
+  methods: {
+    fn(){
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&quot;</span>)
+    }
+  },
+};
+
+<span class="hljs-comment">//&#x6839;&#x7EC4;&#x4EF6;</span>
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&quot;#app&quot;</span>,
+  components: {
+    mycomponent,
+  },
+  <span class="hljs-comment">// created() {//&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x8FD8;&#x6CA1;&#x6709;&#x6E32;&#x67D3;&#x7EC4;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;</span>
+  <span class="hljs-comment">//   console.log(this.$children)</span>
+  <span class="hljs-comment">// },</span>
+  mounted() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.$children[<span class="hljs-number">0</span>]._data.msg)
+    <span class="hljs-keyword">this</span>.$children[<span class="hljs-number">0</span>].fn()
+
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.$refs.a._data.msg)
+    <span class="hljs-keyword">this</span>.$refs.a.fn()
+  },
+});
+</code></pre>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x3010;mounted&#x3011;&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">my-component2</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component2</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F466;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;1&lt;/div&gt;&quot;</span>,
+        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x6570;&#x636E;</span>
+        data() {
+            <span class="hljs-keyword">return</span> {
+                msg: <span class="hljs-string">&quot;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;</span>,
+            };
+        },
+    };
+
+    <span class="hljs-keyword">let</span> myComponent2 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F467;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;2&lt;/div&gt;&quot;</span>,
+        data() {
+            <span class="hljs-keyword">return</span> {
+                msg: <span class="hljs-string">&quot;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;</span>,
+            };
+        },
+    };
+
+    <span class="hljs-comment">//&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {},
+        components: {
+            myComponent1,
+            myComponent2,
+        },
+        <span class="hljs-comment">// created() {//&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x8FD8;&#x6CA1;&#x6709;&#x6E32;&#x67D3;&#x7EC4;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;</span>
+        <span class="hljs-comment">//    console.log(this.$children)</span>
+        <span class="hljs-comment">// },</span>
+        mounted() {<span class="hljs-comment">//&#x6E32;&#x67D3;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5F97;&#x5230;&#x4E86;</span>
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.$children);
+        },
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</span></code></pre>
+</div></div>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x3010;created&#x3011;&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<pre><code class="lang-js">&lt;div id=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">my-component1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">my-component2</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component2</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-comment">//&#x5C40;&#x90E8;&#x7EC4;&#x4EF6;&#xFF08;&#x533A;&#x57DF;&#x6CE8;&#x518C;&#xFF09;&#x5B50;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">let</span> myComponent1 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F466;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;1&lt;/div&gt;&quot;</span>,
+        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x6570;&#x636E;</span>
+        data() {
+            <span class="hljs-keyword">return</span> {
+                msg: <span class="hljs-string">&quot;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;</span>,
+            };
+        },
+    };
+
+    <span class="hljs-keyword">let</span> myComponent2 = {
+        template: <span class="hljs-string">&quot;&lt;div&gt;&#x1F467;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;2&lt;/div&gt;&quot;</span>,
+        data() {
+            <span class="hljs-keyword">return</span> {
+                msg: <span class="hljs-string">&quot;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;</span>,
+            };
+        },
+    };
+
+    <span class="hljs-comment">//&#x7236;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {},
+        components: {
+            myComponent1,
+            myComponent2,
+        },
+        created() {<span class="hljs-comment">//&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x8FD8;&#x6CA1;&#x6709;&#x6E32;&#x67D3;&#x7EC4;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;</span>
+            <span class="hljs-keyword">this</span>.$nextTick(() =&gt; {<span class="hljs-comment">//&#x4E8B;&#x4EF6;&#x8F6E;&#x5FAA;&#x673A;&#x5236;</span>
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.$children)
+            })
+        },
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</span></code></pre>
 <footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-01-11 23:23:22
+2022-01-12 19:42:39
 </span></footer></div></div>
                                 
                                 </section>
@@ -1488,10 +1663,14 @@ vm view-model &#x89C6;&#x56FE;&#x6A21;&#x578B; &#x5728;vue&#x91CC;&#x9762;&#x630
 
             
                 
-                <a href="vue.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Vue">
+                <a href="16动态组件.html" class="navigation navigation-prev " aria-label="Previous page: 16动态组件">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="18脚手架.html" class="navigation navigation-next " aria-label="Next page: 18脚手架">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1500,7 +1679,7 @@ vm view-model &#x89C6;&#x56FE;&#x6A21;&#x578B; &#x5728;vue&#x91CC;&#x9762;&#x630
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"01mvvm和mvc","level":"1.4.1.1","depth":3,"next":{"title":"02安装和使用","level":"1.4.1.2","depth":3,"url":"https://ashun.cf/02安装和使用.html","ref":"https://ashun.cf/02安装和使用.html","articles":[]},"previous":{"title":"Vue","level":"1.4.1","depth":2,"path":"vue.md","ref":"vue.md","articles":[{"title":"01mvvm和mvc","level":"1.4.1.1","depth":3,"path":"01mvvm和mvc.md","ref":"01mvvm和mvc.md","articles":[]},{"title":"02安装和使用","level":"1.4.1.2","depth":3,"url":"https://ashun.cf/02安装和使用.html","ref":"https://ashun.cf/02安装和使用.html","articles":[]},{"title":"03模版语法","level":"1.4.1.3","depth":3,"url":"https://ashun.cf/03模版语法.html","ref":"https://ashun.cf/03模版语法.html","articles":[]},{"title":"04生命周期","level":"1.4.1.4","depth":3,"path":"04生命周期.md","ref":"04生命周期.md","articles":[]},{"title":"05指令","level":"1.4.1.5","depth":3,"path":"05指令.md","ref":"05指令.md","articles":[]},{"title":"06方法-计算属性-监听器","level":"1.4.1.6","depth":3,"path":"06方法-计算属性-监听器.md","ref":"06方法-计算属性-监听器.md","articles":[]},{"title":"07class和style绑定","level":"1.4.1.7","depth":3,"path":"07class和style绑定.md","ref":"07class和style绑定.md","articles":[]},{"title":"08条件渲染","level":"1.4.1.8","depth":3,"path":"08条件渲染.md","ref":"08条件渲染.md","articles":[]},{"title":"09列表渲染","level":"1.4.1.9","depth":3,"path":"09列表渲染.md","ref":"09列表渲染.md","articles":[]},{"title":"10事件处理","level":"1.4.1.10","depth":3,"path":"10事件处理.md","ref":"10事件处理.md","articles":[]},{"title":"11表单输入绑定","level":"1.4.1.11","depth":3,"path":"11表单输入绑定.md","ref":"11表单输入绑定.md","articles":[]},{"title":"12组件","level":"1.4.1.12","depth":3,"path":"12组件.md","ref":"12组件.md","articles":[]},{"title":"13组件之间传递数据方式","level":"1.4.1.13","depth":3,"path":"13组件之间传递数据方式.md","ref":"13组件之间传递数据方式.md","articles":[]},{"title":"14props验证","level":"1.4.1.14","depth":3,"path":"14props验证.md","ref":"14props验证.md","articles":[]},{"title":"15插槽","level":"1.4.1.15","depth":3,"path":"15插槽.md","ref":"15插槽.md","articles":[]},{"title":"16动态组件","level":"1.4.1.16","depth":3,"path":"16动态组件.md","ref":"16动态组件.md","articles":[]},{"title":"17处理边界情况","level":"1.4.1.17","depth":3,"path":"17处理边界情况.md","ref":"17处理边界情况.md","articles":[]},{"title":"18脚手架","level":"1.4.1.18","depth":3,"path":"18脚手架.md","ref":"18脚手架.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"01mvvm和mvc.md","mtime":"2022-01-11T15:23:22.760Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-12T11:52:58.821Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"17处理边界情况","level":"1.4.1.17","depth":3,"next":{"title":"18脚手架","level":"1.4.1.18","depth":3,"path":"18脚手架.md","ref":"18脚手架.md","articles":[]},"previous":{"title":"16动态组件","level":"1.4.1.16","depth":3,"path":"16动态组件.md","ref":"16动态组件.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://geda-999.github.io/shun","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://geda-999.github.io/book"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"17处理边界情况.md","mtime":"2022-01-12T11:42:39.922Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-12T11:52:58.821Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
