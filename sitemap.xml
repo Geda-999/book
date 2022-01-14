@@ -63,6 +63,7 @@
 <url> <loc>http://gitbook.zhangjikai.com/16动态组件.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://gitbook.zhangjikai.com/17处理边界情况.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://gitbook.zhangjikai.com/18脚手架.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://gitbook.zhangjikai.com/19Vuex.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://gitbook.zhangjikai.com/phase04.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://gitbook.zhangjikai.com/testing.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://gitbook.zhangjikai.com/weekly.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>

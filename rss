@@ -4,7 +4,7 @@
         <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
         <link>http://gitbook.zhangjikai.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 12 Jan 2022 11:53:10 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 14 Jan 2022 02:40:03 GMT</lastBuildDate>
         <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Jikai Zhang]]></author>
         <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
@@ -423,6 +423,12 @@
             <title><![CDATA[脚手架]]></title>
             <link>http://gitbook.zhangjikai.com/18脚手架.html</link>
             <guid isPermaLink="true">http://gitbook.zhangjikai.com/18脚手架.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Vuex]]></title>
+            <link>http://gitbook.zhangjikai.com/19Vuex.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/19Vuex.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>
