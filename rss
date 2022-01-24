@@ -4,7 +4,7 @@
         <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
         <link>http://gitbook.zhangjikai.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 14 Jan 2022 03:36:18 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 24 Jan 2022 13:22:33 GMT</lastBuildDate>
         <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Jikai Zhang]]></author>
         <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
@@ -301,6 +301,26 @@
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[1  git是什么？]]></title>
+            <link>http://gitbook.zhangjikai.com/git.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/git.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Git]]></title>
+            <description><![CDATA[Github教程]]></description>
+            <link>http://gitbook.zhangjikai.com/git教程.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/git教程.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[常用 Git 命令清单]]></title>
+            <description><![CDATA[参考]]></description>
+            <link>http://gitbook.zhangjikai.com/常用Git命令清单.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/常用Git命令清单.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[正在修复中，请稍待...]]></title>
             <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/how.jpg"/>]]></description>
             <link>http://gitbook.zhangjikai.com/phase03.html</link>
@@ -480,6 +500,12 @@
             <title><![CDATA[每周测试05]]></title>
             <link>http://gitbook.zhangjikai.com/每周测试05.html</link>
             <guid isPermaLink="true">http://gitbook.zhangjikai.com/每周测试05.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[每周测试06]]></title>
+            <link>http://gitbook.zhangjikai.com/每周测试06.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/每周测试06.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
     </channel>
