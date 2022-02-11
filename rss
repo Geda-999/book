@@ -4,7 +4,7 @@
         <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
         <link>http://gitbook.zhangjikai.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 24 Jan 2022 13:22:33 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 11 Feb 2022 14:10:42 GMT</lastBuildDate>
         <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Jikai Zhang]]></author>
         <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
@@ -452,6 +452,18 @@
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[自定义指令]]></title>
+            <link>http://gitbook.zhangjikai.com/20自定义指令.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/20自定义指令.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[渲染函数]]></title>
+            <link>http://gitbook.zhangjikai.com/21渲染函数.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/21渲染函数.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[正在修复中，请稍待...]]></title>
             <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/how.jpg"/>]]></description>
             <link>http://gitbook.zhangjikai.com/phase04.html</link>
@@ -506,6 +518,12 @@
             <title><![CDATA[每周测试06]]></title>
             <link>http://gitbook.zhangjikai.com/每周测试06.html</link>
             <guid isPermaLink="true">http://gitbook.zhangjikai.com/每周测试06.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[每周测试07]]></title>
+            <link>http://gitbook.zhangjikai.com/每周测试07.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/每周测试07.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
     </channel>
