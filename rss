@@ -4,7 +4,7 @@
         <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
         <link>http://gitbook.zhangjikai.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 11 Feb 2022 14:10:42 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Feb 2022 04:30:34 GMT</lastBuildDate>
         <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Jikai Zhang]]></author>
         <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
@@ -452,15 +452,62 @@
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[VueRouter]]></title>
+            <link>http://gitbook.zhangjikai.com/20VueRouter.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/20VueRouter.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[自定义指令]]></title>
-            <link>http://gitbook.zhangjikai.com/20自定义指令.html</link>
-            <guid isPermaLink="true">http://gitbook.zhangjikai.com/20自定义指令.html</guid>
+            <link>http://gitbook.zhangjikai.com/21自定义指令.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/21自定义指令.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[渲染函数]]></title>
-            <link>http://gitbook.zhangjikai.com/21渲染函数.html</link>
-            <guid isPermaLink="true">http://gitbook.zhangjikai.com/21渲染函数.html</guid>
+            <link>http://gitbook.zhangjikai.com/22渲染函数.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/22渲染函数.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[插件]]></title>
+            <description><![CDATA[使用]]></description>
+            <link>http://gitbook.zhangjikai.com/23插件.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/23插件.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[VueConfig]]></title>
+            <description><![CDATA[然后就开始你的表演]]></description>
+            <link>http://gitbook.zhangjikai.com/24VueConfig.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/24VueConfig.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[安装和使用]]></title>
+            <description><![CDATA[Vue3官网]]></description>
+            <link>http://gitbook.zhangjikai.com/01安装和使用.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/01安装和使用.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[ref和reactive]]></title>
+            <description><![CDATA[vue2的双向数据绑定原理和vue3有什么区别？]]></description>
+            <link>http://gitbook.zhangjikai.com/02ref和reactive.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/02ref和reactive.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[toRefs的解构]]></title>
+            <link>http://gitbook.zhangjikai.com/03toRefs的解构.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/03toRefs的解构.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[组件之间的传递]]></title>
+            <description><![CDATA[父组件]]></description>
+            <link>http://gitbook.zhangjikai.com/04组件之间的传递.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/04组件之间的传递.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>

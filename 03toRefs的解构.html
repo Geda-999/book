@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>10事件处理 · 前端秘籍</title>
+        <title>03toRefs的解构 · 前端秘籍</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -163,10 +163,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="11表单输入绑定.html" />
+    <link rel="next" href="04组件之间的传递.html" />
     
     
-    <link rel="prev" href="09列表渲染.html" />
+    <link rel="prev" href="02ref和reactive.html" />
     
 
     <link href="http://gitbook.zhangjikai.com/rss" title="GitBook 使用教程" rel="alternate" type="application/rss+xml" />
@@ -1118,7 +1118,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.1.10" data-path="10事件处理.html">
+        <li class="chapter " data-level="1.4.1.10" data-path="10事件处理.html">
             
                 <a href="10事件处理.html">
             
@@ -1371,7 +1371,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2.3" data-path="03toRefs的解构.html">
+        <li class="chapter active" data-level="1.4.2.3" data-path="03toRefs的解构.html">
             
                 <a href="03toRefs的解构.html">
             
@@ -1694,7 +1694,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >10事件处理</a>
+        <a href="." >03toRefs的解构</a>
     </h1>
 </div>
 
@@ -1709,267 +1709,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4E8B;&#x4EF6;&#x5904;&#x7406;"><b></b>&#x4E8B;&#x4EF6;&#x5904;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E8B;&#x4EF6;&#x4FEE;&#x9970;&#x7B26;"><b></b>&#x4E8B;&#x4EF6;&#x4FEE;&#x9970;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;"><b></b>&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x7EC3;&#x4E60;"><b></b>&#x7EC3;&#x4E60;</a></li></ul></ul></div><a href="#&#x4E8B;&#x4EF6;&#x5904;&#x7406;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><div class="treeview__container-title"></div><ul>
-<li><div><a href="#&#x4E8B;&#x4EF6;&#x4FEE;&#x9970;&#x7B26;">&#x4E8B;&#x4EF6;&#x4FEE;&#x9970;&#x7B26;</a><i></i></div></li>
-<li><div><a href="#&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;">&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;</a><i></i></div></li>
-<li><div><a href="#&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60;</a><i></i></div></li>
-</ul>
-</div>
-
-<h1 id="&#x4E8B;&#x4EF6;&#x5904;&#x7406;"><a name="&#x4E8B;&#x4EF6;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x4EF6;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8B;&#x4EF6;&#x5904;&#x7406;</h1>
-<h2 id="&#x4E8B;&#x4EF6;&#x4FEE;&#x9970;&#x7B26;"><a name="&#x4E8B;&#x4EF6;&#x4FEE;&#x9970;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x4EF6;&#x4FEE;&#x9970;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8B;&#x4EF6;&#x4FEE;&#x9970;&#x7B26;</h2>
-<blockquote>
-<p>&#x4FEE;&#x9970;&#x7B26;3&#x4E2A;&#xFF1A;<code>event</code>&#xFF0C;<code>stop</code>&#xFF0C;<code>self</code></p>
-</blockquote>
-<pre><code class="lang-js">//stop &#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x4F20;&#x64AD;
-
-&lt;div @click=&quot;fn($event)&quot;&gt;
-  &#x5185;&#x5BB9;2
-  &lt;div @click.stop=&quot;fn($event)&quot;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;
-&lt;/div&gt;
-
-new Vue({
-  el: &quot;#app&quot;,
-  data: {
-
-  },
-  methods: {
-    fn(e){
-      console.log(e.currentTarget)
-    }
-  },
-});
-//prevent &#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;
-
-&lt;form&gt;
-  &lt;input type=&quot;text&quot;&gt;
-  &lt;button @click.prevent=&quot;submit&quot;&gt;&#x63D0;&#x4EA4;&lt;/button&gt;
-&lt;/form&gt;
-
-new Vue({
-    el: &quot;#app&quot;,
-    data: {
-
-    },
-    methods: {
-      submit(){
-        console.log(123)
-      }
-    },
-  });
-//capture &#x628A;&#x5192;&#x6CE1;&#x6539;&#x4E3A;&#x6355;&#x83B7;
-
-&lt;div @click.capture=&quot;fn($event)&quot;&gt;
-  &#x5185;&#x5BB9;2
-  &lt;div @click.capture=&quot;fn($event)&quot;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;
-&lt;/div&gt;
-
-new Vue({
-    el: &quot;#app&quot;,
-    data: {
-
-    },
-    methods: {
-      fn(e){
-        console.log(e.currentTarget)
-      }
-    },
-  });
-//self &#x5F53;currentTarget&#x548C;target&#x90FD;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x65F6;&#x5019;&#x624D;&#x89E6;&#x53D1;
-
-&lt;div @click.self=&quot;fn($event)&quot;&gt;
-  &#x5185;&#x5BB9;2
-  &lt;div @click.self=&quot;fn($event)&quot;&gt;&#x5185;&#x5BB9;1&lt;/div&gt;
-&lt;/div&gt;
-
-new Vue({
-  el: &quot;#app&quot;,
-  data: {
-
-  },
-  methods: {
-    fn(e){
-      console.log(e.currentTarget)
-      console.log(e.target)
-    }
-  },
-});
-//once &#x53EA;&#x89E6;&#x53D1;&#x4E00;&#x6B21;
-
-&lt;div @click.once=&quot;fn($event)&quot;&gt;
-  &#x5185;&#x5BB9;
-&lt;/div&gt;
-
-new Vue({
-  el: &quot;#app&quot;,
-  data: {
-
-  },
-  methods: {
-    fn(e){
-      console.log(e.currentTarget)
-    }
-  },
-});
-//passive &#x4E3B;&#x52A8;&#x544A;&#x8BC9;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x9700;&#x8981;&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;
-
-//&#x79FB;&#x52A8;&#x7AEF; &#x6ED1;&#x52A8;&#x5C4F;&#x5E55; &#x4F1A;&#x53D1;&#x8BE2;&#x95EE;&#x7ED9;&#x6D4F;&#x89C8;&#x5668; &#x9700;&#x4E0D;&#x9700;&#x8981;&#x963B;&#x6B62;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;
-//passive &#x4E0D;&#x9700;&#x8981;&#x95EE;&#x6211;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x4E0D;&#x963B;&#x6B62;&#x3002;&#x76EE;&#x7684;&#x662F;&#x63D0;&#x5347;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8FD0;&#x884C;&#x6548;&#x7387;
-</code></pre>
-<h2 id="&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;"><a name="&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6309;&#x952E;&#x4FEE;&#x9970;&#x7B26;</h2>
-<pre><code class="lang-js">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> @keydown.q=<span class="hljs-string">&quot;fn&quot;</span>&gt;
-
-<span class="hljs-keyword">new</span> Vue({
-  el: <span class="hljs-string">&quot;#app&quot;</span>,
-  data: {
-
-  },
-  methods: {
-    fn(){
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-number">123</span>)
-    }
-  },
-});
-</code></pre>
-<h2 id="&#x7EC3;&#x4E60;"><a name="&#x7EC3;&#x4E60;" class="anchor-navigation-ex-anchor" href="#&#x7EC3;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC3;&#x4E60;</h2>
-<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x4EC5;&#x53C2;&#x8003;&#x1F4A2; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
-    &lt;button @click=&quot;handlerClick($event)&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt;
-&lt;/div&gt;
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#torefs&#x7684;&#x89E3;&#x6784;"><b></b>toRefs&#x7684;&#x89E3;&#x6784;</a></li></ul></div><a href="#torefs&#x7684;&#x89E3;&#x6784;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="torefs&#x7684;&#x89E3;&#x6784;"><a name="torefs&#x7684;&#x89E3;&#x6784;" class="anchor-navigation-ex-anchor" href="#torefs&#x7684;&#x89E3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>toRefs&#x7684;&#x89E3;&#x6784;</h1>
+<pre><code class="lang-jsx">&lt;template&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;/template&gt;
 
 &lt;script&gt;
-    new Vue({
-        el: &quot;#app&quot;,
-        data: {},
-        methods: {
-            handlerClick(e) {
-                console.log(e);
-            }
-        }
-    })
-&lt;/script&gt;
-</code></pre>
-<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
-    &lt;form&gt;
-        &lt;input type=&quot;text&quot;&gt;
-        &lt;button @click=&quot;submit($event)&quot;&gt;&#x63D0;&#x4EA4;&lt;/button&gt;
-    &lt;/form&gt;
-&lt;/div&gt;
+import { reactive, toRefs } from &quot;vue&quot;;
 
-&lt;script&gt;
-    new Vue({
-        el: &quot;#app&quot;,
-        data: {},
-        methods: {
-            submit(e) {
-                e.preventDefault();//&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;
-                console.log(123);
-            }
-        }
-    })
-&lt;/script&gt;
-</code></pre>
-</div></div>
-<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x7EC3;&#x4E60;&#x1F680; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<pre><code class="lang-js">&lt;div id=&quot;app&quot;&gt;
-    &lt;form&gt;
-        &lt;input type=&quot;text&quot;&gt;
-        &lt;!-- &lt;button @click.stop=&quot;submit()&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt; --&gt;
-        &lt;button @click.prevent=&quot;submit()&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt;
-    &lt;/form&gt;
-&lt;/div&gt;
+export default {
+  setup() {
+    const result = reactive({
+      msg1: &quot;hi world 1&quot;,
+      msg2: &quot;hi world 2&quot;,
+      msg3: &quot;hi world 3&quot;,
+    });
 
-&lt;script&gt;
-    new Vue({
-        el: &quot;#app&quot;,
-        data: {
-        },
-        methods: {
-            submit() {
-                console.log(123);
-            }
-        }
-    })
-&lt;/script&gt;
-</code></pre>
-</div></div>
-<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle"> &#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x7EC3;&#x4E60;&#x1F528; </div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
-<blockquote>
-<p>&#x6DFB;&#x52A0;&#x4E86;<code>.self</code></p>
-</blockquote>
-<pre><code class="lang-js">&lt;style&gt;
-    .a {
-        width: 500px;
-        height: 500px;
-        background: red;
-    }
-
-    .b {
-        width: 300px;
-        height: 300px;
-        background: #f0f;
-    }
-&lt;/style&gt;
-&lt;div id=&quot;app&quot;&gt;
-    &lt;div class=&quot;a&quot; @click.self=&quot;handler($event)&quot;&gt;
-        &lt;div class=&quot;b&quot; @click.self=&quot;handler($event)&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-    new Vue({
-        el: &quot;#app&quot;,
-        data: {
-        },
-        methods: {
-            handler(e) {
-                // console.log(e.currentTarget) //&#x5192;&#x6CE1;&#x4E8B;&#x4EF6; &#x5192;&#x6CE1;&#x4E0A;&#x53BB;&#x4E86;&#x5C31;&#x5148;b&#x7136;&#x540E;a
-                console.log(e.target) //&#x89E6;&#x53D1;&#x8BE5;&#x5143;&#x7D20;&#xFF0C;&#x6DFB;&#x52A0;.self&#x70B9;&#x51FB;&#x8C01;&#x5C31;&#x662F;&#x8C01;
-            }
-        },
-    })
-&lt;/script&gt;
-</code></pre>
-<blockquote>
-<p>&#x4F20;&#x64AD;&#x4E8B;&#x4EF6;</p>
-</blockquote>
-<pre><code class="lang-js">
-&lt;style&gt;
-    .a {
-        width: 500px;
-        height: 500px;
-        background: red;
-    }
-
-    .b {
-        width: 300px;
-        height: 300px;
-        background: #f0f;
-    }
-&lt;/style&gt;
-&lt;div id=&quot;app&quot;&gt;
-    &lt;div class=&quot;a&quot; @click=&quot;handler($event)&quot;&gt;
-        &lt;div class=&quot;b&quot; @click=&quot;handler($event)&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-    new Vue({
-        el: &quot;#app&quot;,
-        data: {
-        },
-        methods: {
-            handler(e) {
-                // console.log(e.currentTarget) //&#x5192;&#x6CE1;&#x4E8B;&#x4EF6; &#x5192;&#x6CE1;&#x4E0A;&#x53BB;&#x4E86;&#x5C31;&#x5148;b&#x7136;&#x540E;a
-                console.log(e.target) //&#x89E6;&#x53D1;&#x8BE5;&#x5143;&#x7D20;&#xFF0C;&#x89E6;&#x53D1;b&#x5C31;&#x4E24;&#x4E2A;b&#x54AF;&#xFF0C;&#x89E6;&#x53D1;a&#x5C31;a&#x54AF;
-            }
-        },
-    })
+    return {
+      ...toRefs(result),
+    };
+  },
+};
 &lt;/script&gt;
 </code></pre>
 <footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-01-11 23:23:43
-</span></footer></div></div>
+2022-02-15 15:26:53
+</span></footer>
                                 
                                 </section>
                             
@@ -1996,12 +1763,12 @@ new Vue({
 
             
                 
-                <a href="09列表渲染.html" class="navigation navigation-prev " aria-label="Previous page: 09列表渲染">
+                <a href="02ref和reactive.html" class="navigation navigation-prev " aria-label="Previous page: 02ref和reactive">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="11表单输入绑定.html" class="navigation navigation-next " aria-label="Next page: 11表单输入绑定">
+                <a href="04组件之间的传递.html" class="navigation navigation-next " aria-label="Next page: 04组件之间的传递">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2012,7 +1779,7 @@ new Vue({
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"10事件处理","level":"1.4.1.10","depth":3,"next":{"title":"11表单输入绑定","level":"1.4.1.11","depth":3,"path":"11表单输入绑定.md","ref":"11表单输入绑定.md","articles":[]},"previous":{"title":"09列表渲染","level":"1.4.1.9","depth":3,"path":"09列表渲染.md","ref":"09列表渲染.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://ashun.tk","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://ashun.cf"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"10事件处理.md","mtime":"2022-01-11T15:23:43.242Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-16T04:30:17.757Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"03toRefs的解构","level":"1.4.2.3","depth":3,"next":{"title":"04组件之间的传递","level":"1.4.2.4","depth":3,"path":"04组件之间的传递.md","ref":"04组件之间的传递.md","articles":[]},"previous":{"title":"02ref和reactive","level":"1.4.2.2","depth":3,"path":"02ref和reactive.md","ref":"02ref和reactive.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"livereload":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://ashun.tk","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://ashun.cf"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"03toRefs的解构.md","mtime":"2022-02-15T07:26:53.350Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-16T04:30:17.757Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
