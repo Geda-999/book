@@ -4,7 +4,7 @@
         <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
         <link>http://gitbook.zhangjikai.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 16 Feb 2022 04:30:34 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 24 Mar 2022 11:13:33 GMT</lastBuildDate>
         <atom:link href="http://gitbook.zhangjikai.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Jikai Zhang]]></author>
         <managingEditor><![CDATA[me@zhangjikai.com]]></managingEditor>
@@ -207,6 +207,19 @@
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[npm包管理系统]]></title>
+            <link>http://gitbook.zhangjikai.com/npm包管理系统.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/npm包管理系统.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[webpack]]></title>
+            <description><![CDATA[正常安装三条命令]]></description>
+            <link>http://gitbook.zhangjikai.com/webpack.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/webpack.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[ES6]]></title>
             <description><![CDATA[<img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/程潇壁纸.jpg"/>]]></description>
             <link>http://gitbook.zhangjikai.com/es6.html</link>
@@ -318,6 +331,116 @@
             <description><![CDATA[参考]]></description>
             <link>http://gitbook.zhangjikai.com/常用Git命令清单.html</link>
             <guid isPermaLink="true">http://gitbook.zhangjikai.com/常用Git命令清单.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[scss]]></title>
+            <link>http://gitbook.zhangjikai.com/scss.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/scss.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[安装和配置文件]]></title>
+            <link>http://gitbook.zhangjikai.com/01安装和配置文件.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/01安装和配置文件.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[静态检查]]></title>
+            <link>http://gitbook.zhangjikai.com/02静态检查.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/02静态检查.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[类型推论]]></title>
+            <link>http://gitbook.zhangjikai.com/03类型推论.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/03类型推论.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[原始数据类型]]></title>
+            <link>http://gitbook.zhangjikai.com/04原始数据类型.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/04原始数据类型.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[any]]></title>
+            <link>http://gitbook.zhangjikai.com/05any.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/05any.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[unknown]]></title>
+            <link>http://gitbook.zhangjikai.com/06unknown.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/06unknown.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[never]]></title>
+            <link>http://gitbook.zhangjikai.com/07never.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/07never.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[数组]]></title>
+            <link>http://gitbook.zhangjikai.com/08数组.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/08数组.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[枚举类型]]></title>
+            <link>http://gitbook.zhangjikai.com/09枚举类型.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/09枚举类型.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[函数]]></title>
+            <link>http://gitbook.zhangjikai.com/10函数.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/10函数.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[接口(interface)]]></title>
+            <description><![CDATA[==注意：接口只能作用于对象类型。==]]></description>
+            <link>http://gitbook.zhangjikai.com/12接口.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/12接口.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[联合类型&交叉类型]]></title>
+            <link>http://gitbook.zhangjikai.com/13联合类型&amp;交叉类型.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/13联合类型&amp;交叉类型.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[泛型]]></title>
+            <link>http://gitbook.zhangjikai.com/14泛型.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/14泛型.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[类型断言]]></title>
+            <description><![CDATA[==语法==]]></description>
+            <link>http://gitbook.zhangjikai.com/15类型断言.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/15类型断言.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[命名空间]]></title>
+            <link>http://gitbook.zhangjikai.com/16命名空间.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/16命名空间.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[声明文件]]></title>
+            <link>http://gitbook.zhangjikai.com/17声明文件.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/17声明文件.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[装饰器]]></title>
+            <link>http://gitbook.zhangjikai.com/18装饰器.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/18装饰器.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>
@@ -508,6 +631,54 @@
             <description><![CDATA[父组件]]></description>
             <link>http://gitbook.zhangjikai.com/04组件之间的传递.html</link>
             <guid isPermaLink="true">http://gitbook.zhangjikai.com/04组件之间的传递.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[订阅发布模式]]></title>
+            <description><![CDATA[安装]]></description>
+            <link>http://gitbook.zhangjikai.com/05订阅发布模式.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/05订阅发布模式.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[计算属性]]></title>
+            <link>http://gitbook.zhangjikai.com/06计算属性.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/06计算属性.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[响应式计算和侦听]]></title>
+            <description><![CDATA[路径配置]]></description>
+            <link>http://gitbook.zhangjikai.com/07响应式计算和侦听.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/07响应式计算和侦听.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[vue3_shop项目]]></title>
+            <description><![CDATA[搭建Vite 项目]]></description>
+            <link>http://gitbook.zhangjikai.com/vue3_shop项目.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/vue3_shop项目.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[UniApp框架教程]]></title>
+            <description><![CDATA[环境安装]]></description>
+            <link>http://gitbook.zhangjikai.com/UniApp框架教程.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/UniApp框架教程.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[微信小程序]]></title>
+            <description><![CDATA[1、公众平台 开发文档（项目本身是小程序、发微信公众、文档、微信小游戏）]]></description>
+            <link>http://gitbook.zhangjikai.com/微信小程序.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/微信小程序.html</guid>
+            <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[小程序教程]]></title>
+            <description><![CDATA[1、公众平台 开发文档（项目本身是小程序、发微信公众、文档、微信小游戏）]]></description>
+            <link>http://gitbook.zhangjikai.com/小程序教程.html</link>
+            <guid isPermaLink="true">http://gitbook.zhangjikai.com/小程序教程.html</guid>
             <dc:creator><![CDATA[Jikai Zhang]]></dc:creator>
         </item>
         <item>

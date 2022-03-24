@@ -1,0 +1,2565 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>webpack练习 · 前端秘籍</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ashun">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="es6.html" />
+    
+    
+    <link rel="prev" href="repair.html" />
+    
+
+    <link href="http://gitbook.zhangjikai.com/rss" title="GitBook 使用教程" rel="alternate" type="application/rss+xml" />
+
+    
+        <link rel="shortcut icon" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://ashun.cf" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="phase01.html">
+            
+                <a href="phase01.html">
+            
+                    
+                    Phase I
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01html.html">
+            
+                <a href="01html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02css.html">
+            
+                <a href="02css.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03响应式.html">
+            
+                <a href="03响应式.html">
+            
+                    
+                    响应式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="phase02.html">
+            
+                <a href="phase02.html">
+            
+                    
+                    Phase II
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="JavaScriptES5.html">
+            
+                <a href="JavaScriptES5.html">
+            
+                    
+                    JavaScriptES5
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="01变量.html">
+            
+                <a href="01变量.html">
+            
+                    
+                    01变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="02常量.html">
+            
+                <a href="02常量.html">
+            
+                    
+                    02常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="03js数据类型.html">
+            
+                <a href="03js数据类型.html">
+            
+                    
+                    03js数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" >
+            
+                <a target="_blank" href="https://ashun.cf/04运算判断条件.html">
+            
+                    
+                    04运算判断条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="05数字类型.html">
+            
+                <a href="05数字类型.html">
+            
+                    
+                    05数字类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="06字符串.html">
+            
+                <a href="06字符串.html">
+            
+                    
+                    06字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="07布尔值.html">
+            
+                <a href="07布尔值.html">
+            
+                    
+                    07布尔值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="08空值.html">
+            
+                <a href="08空值.html">
+            
+                    
+                    08空值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="09未定义.html">
+            
+                <a href="09未定义.html">
+            
+                    
+                    09未定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="10唯一值.html">
+            
+                <a href="10唯一值.html">
+            
+                    
+                    10唯一值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="11对象.html">
+            
+                <a href="11对象.html">
+            
+                    
+                    11对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="12内置全局对象.html">
+            
+                <a href="12内置全局对象.html">
+            
+                    
+                    12内置全局对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="13数组.html">
+            
+                <a href="13数组.html">
+            
+                    
+                    13数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="14函数.html">
+            
+                <a href="14函数.html">
+            
+                    
+                    14函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="15日期对象.html">
+            
+                <a href="15日期对象.html">
+            
+                    
+                    15日期对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.16" data-path="16正则表达式.html">
+            
+                <a href="16正则表达式.html">
+            
+                    
+                    16正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.17" data-path="17异常错误对象.html">
+            
+                <a href="17异常错误对象.html">
+            
+                    
+                    17异常错误对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.18" data-path="18BOM浏览器对象模型.html">
+            
+                <a href="18BOM浏览器对象模型.html">
+            
+                    
+                    18BOM浏览器对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.19" data-path="19DOM文档对象模型.html">
+            
+                <a href="19DOM文档对象模型.html">
+            
+                    
+                    19DOM文档对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.20" data-path="20json.html">
+            
+                <a href="20json.html">
+            
+                    
+                    20json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.21" data-path="21Ajax.html">
+            
+                <a href="21Ajax.html">
+            
+                    
+                    21Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.22" data-path="22jQuery.html">
+            
+                <a href="22jQuery.html">
+            
+                    
+                    22jQuery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.23" data-path="23函数进阶.html">
+            
+                <a href="23函数进阶.html">
+            
+                    
+                    23函数进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.24" data-path="24面向对象.html">
+            
+                <a href="24面向对象.html">
+            
+                    
+                    24面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    npm包管理系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="npm包管理系统.html">
+            
+                <a href="npm包管理系统.html">
+            
+                    
+                    npm包管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.3.1" data-path="webpack.html">
+            
+                <a href="webpack.html">
+            
+                    
+                    webpack练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="es6.html">
+            
+                <a href="es6.html">
+            
+                    
+                    Es6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="01变量-es6.html">
+            
+                <a href="01变量-es6.html">
+            
+                    
+                    01变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="02常量-es6.html">
+            
+                <a href="02常量-es6.html">
+            
+                    
+                    02常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="03解构赋值-es6.html">
+            
+                <a href="03解构赋值-es6.html">
+            
+                    
+                    03解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="04字符串拓展-es6.html">
+            
+                <a href="04字符串拓展-es6.html">
+            
+                    
+                    04字符串拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="05数字拓展-es6.html">
+            
+                <a href="05数字拓展-es6.html">
+            
+                    
+                    05数字拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="06数组拓展-es6.html">
+            
+                <a href="06数组拓展-es6.html">
+            
+                    
+                    06数组拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="07函数拓展-es6.html">
+            
+                <a href="07函数拓展-es6.html">
+            
+                    
+                    07函数拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.8" data-path="08对象拓展-es6.html">
+            
+                <a href="08对象拓展-es6.html">
+            
+                    
+                    08对象拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.9" data-path="09类拓展-es6.html">
+            
+                <a href="09类拓展-es6.html">
+            
+                    
+                    09类拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.10" data-path="10扩展运算符-es6.html">
+            
+                <a href="10扩展运算符-es6.html">
+            
+                    
+                    10扩展运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.11" data-path="11set数据结构-es6.html">
+            
+                <a href="11set数据结构-es6.html">
+            
+                    
+                    11set数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.12" data-path="12map数据结构-es6.html">
+            
+                <a href="12map数据结构-es6.html">
+            
+                    
+                    12map数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.13" data-path="13同步和异步-es6.html">
+            
+                <a href="13同步和异步-es6.html">
+            
+                    
+                    13同步和异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="git.html">
+            
+                <a href="git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="git教程.html">
+            
+                <a href="git教程.html">
+            
+                    
+                    git教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="常用Git命令清单.html">
+            
+                <a href="常用Git命令清单.html">
+            
+                    
+                    常用Git命令清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    SCSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="scss.html">
+            
+                <a href="scss.html">
+            
+                    
+                    scss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    Typescript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="01安装和配置文件.html">
+            
+                <a href="01安装和配置文件.html">
+            
+                    
+                    01安装和配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="02静态检查.html">
+            
+                <a href="02静态检查.html">
+            
+                    
+                    02静态检查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="03类型推论.html">
+            
+                <a href="03类型推论.html">
+            
+                    
+                    03类型推论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" data-path="04原始数据类型.html">
+            
+                <a href="04原始数据类型.html">
+            
+                    
+                    04原始数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.5" data-path="05any.html">
+            
+                <a href="05any.html">
+            
+                    
+                    05any
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.6" data-path="06unknown.html">
+            
+                <a href="06unknown.html">
+            
+                    
+                    06unknown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.7" data-path="07never.html">
+            
+                <a href="07never.html">
+            
+                    
+                    07never
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.8" data-path="08数组.html">
+            
+                <a href="08数组.html">
+            
+                    
+                    08数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.9" data-path="09枚举类型.html">
+            
+                <a href="09枚举类型.html">
+            
+                    
+                    09枚举类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.10" data-path="10函数.html">
+            
+                <a href="10函数.html">
+            
+                    
+                    10函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.11" data-path="11类(class">
+            
+                <span>
+            
+                    
+                    11类(class)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.12" data-path="12接口.html">
+            
+                <a href="12接口.html">
+            
+                    
+                    12接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.13" data-path="13联合类型&交叉类型.html">
+            
+                <a href="13联合类型&交叉类型.html">
+            
+                    
+                    13联合类型&交叉类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.14" data-path="14泛型.html">
+            
+                <a href="14泛型.html">
+            
+                    
+                    14泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.15" data-path="15类型断言.html">
+            
+                <a href="15类型断言.html">
+            
+                    
+                    15类型断言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.16" data-path="16命名空间.html">
+            
+                <a href="16命名空间.html">
+            
+                    
+                    16命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.17" data-path="17声明文件.html">
+            
+                <a href="17声明文件.html">
+            
+                    
+                    17声明文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.18" data-path="18装饰器.html">
+            
+                <a href="18装饰器.html">
+            
+                    
+                    18装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="phase03.html">
+            
+                <a href="phase03.html">
+            
+                    
+                    Phase III
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="vue.html">
+            
+                <a href="vue.html">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="01mvvm和mvc.html">
+            
+                <a href="01mvvm和mvc.html">
+            
+                    
+                    01mvvm和mvc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" >
+            
+                <a target="_blank" href="https://ashun.cf/02安装和使用.html">
+            
+                    
+                    02安装和使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" >
+            
+                <a target="_blank" href="https://ashun.cf/03模版语法.html">
+            
+                    
+                    03模版语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="04生命周期.html">
+            
+                <a href="04生命周期.html">
+            
+                    
+                    04生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="05指令.html">
+            
+                <a href="05指令.html">
+            
+                    
+                    05指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="06方法-计算属性-监听器.html">
+            
+                <a href="06方法-计算属性-监听器.html">
+            
+                    
+                    06方法-计算属性-监听器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="07class和style绑定.html">
+            
+                <a href="07class和style绑定.html">
+            
+                    
+                    07class和style绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="08条件渲染.html">
+            
+                <a href="08条件渲染.html">
+            
+                    
+                    08条件渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="09列表渲染.html">
+            
+                <a href="09列表渲染.html">
+            
+                    
+                    09列表渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="10事件处理.html">
+            
+                <a href="10事件处理.html">
+            
+                    
+                    10事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="11表单输入绑定.html">
+            
+                <a href="11表单输入绑定.html">
+            
+                    
+                    11表单输入绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="12组件.html">
+            
+                <a href="12组件.html">
+            
+                    
+                    12组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.13" data-path="13组件之间传递数据方式.html">
+            
+                <a href="13组件之间传递数据方式.html">
+            
+                    
+                    13组件之间传递数据方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.14" data-path="14props验证.html">
+            
+                <a href="14props验证.html">
+            
+                    
+                    14props验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.15" data-path="15插槽.html">
+            
+                <a href="15插槽.html">
+            
+                    
+                    15插槽
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.16" data-path="16动态组件.html">
+            
+                <a href="16动态组件.html">
+            
+                    
+                    16动态组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.17" data-path="17处理边界情况.html">
+            
+                <a href="17处理边界情况.html">
+            
+                    
+                    17处理边界情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.18" data-path="18脚手架.html">
+            
+                <a href="18脚手架.html">
+            
+                    
+                    18脚手架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.19" data-path="19Vuex.html">
+            
+                <a href="19Vuex.html">
+            
+                    
+                    19Vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.20" data-path="20VueRouter.html">
+            
+                <a href="20VueRouter.html">
+            
+                    
+                    20VueRouter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.21" data-path="21自定义指令.html">
+            
+                <a href="21自定义指令.html">
+            
+                    
+                    21自定义指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.22" data-path="22渲染函数.html">
+            
+                <a href="22渲染函数.html">
+            
+                    
+                    22渲染函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.23" data-path="22渲染函数.html">
+            
+                <a href="22渲染函数.html">
+            
+                    
+                    22渲染函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.24" data-path="23插件.html">
+            
+                <a href="23插件.html">
+            
+                    
+                    23插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.25" data-path="24VueConfig.html">
+            
+                <a href="24VueConfig.html">
+            
+                    
+                    24VueConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    Vue3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="01安装和使用.html">
+            
+                <a href="01安装和使用.html">
+            
+                    
+                    01安装和使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="02ref和reactive.html">
+            
+                <a href="02ref和reactive.html">
+            
+                    
+                    02ref和reactive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="03toRefs的解构.html">
+            
+                <a href="03toRefs的解构.html">
+            
+                    
+                    03toRefs的解构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="04组件之间的传递.html">
+            
+                <a href="04组件之间的传递.html">
+            
+                    
+                    04组件之间的传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="05订阅发布模式.html">
+            
+                <a href="05订阅发布模式.html">
+            
+                    
+                    05订阅发布模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="06计算属性.html">
+            
+                <a href="06计算属性.html">
+            
+                    
+                    06计算属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="07响应式计算和侦听.html">
+            
+                <a href="07响应式计算和侦听.html">
+            
+                    
+                    07响应式计算和侦听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="vue3_shop项目.html">
+            
+                <a href="vue3_shop项目.html">
+            
+                    
+                    vue3_shop项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    微信小程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="UniApp框架教程.html">
+            
+                <a href="UniApp框架教程.html">
+            
+                    
+                    01UniApp框架教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="微信小程序.html">
+            
+                <a href="微信小程序.html">
+            
+                    
+                    02微信小程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="小程序教程.html">
+            
+                <a href="小程序教程.html">
+            
+                    
+                    03小程序教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="phase04.html">
+            
+                <a href="phase04.html">
+            
+                    
+                    Phase IV
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="weekly.html">
+            
+                <a href="weekly.html">
+            
+                    
+                    Weekly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="每周测试01.html">
+            
+                <a href="每周测试01.html">
+            
+                    
+                    每周测试01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="每周测试02.html">
+            
+                <a href="每周测试02.html">
+            
+                    
+                    每周测试02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="每周测试03.html">
+            
+                <a href="每周测试03.html">
+            
+                    
+                    每周测试03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="每周测试04.html">
+            
+                <a href="每周测试04.html">
+            
+                    
+                    每周测试04
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="每周测试05.html">
+            
+                <a href="每周测试05.html">
+            
+                    
+                    每周测试05
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.6" data-path="每周测试06.html">
+            
+                <a href="每周测试06.html">
+            
+                    
+                    每周测试06
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.7" data-path="每周测试07.html">
+            
+                <a href="每周测试07.html">
+            
+                    
+                    每周测试07
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >webpack练习</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#webpack"><b></b>webpack</a></li><ul><li><span class="title-icon "></span><a href="#&#x6253;&#x5305;&#x5668;"><b></b>&#x6253;&#x5305;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;webpack"><b></b>&#x5B89;&#x88C5;webpack</a></li><li><span class="title-icon "></span><a href="#webpack&#x914D;&#x7F6E;"><b></b>webpack&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x76EE;&#x5F55;&#x89C4;&#x8303;"><b></b>&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x76EE;&#x5F55;&#x89C4;&#x8303;</a></li><li><span class="title-icon "></span><a href="#&#x6838;&#x5FC3;&#x6982;&#x5FF5;"><b></b>&#x6838;&#x5FC3;&#x6982;&#x5FF5;</a></li><li><span class="title-icon "></span><a href="#&#x5165;&#x53E3;"><b></b>&#x5165;&#x53E3;</a></li><li><span class="title-icon "></span><a href="#&#x51FA;&#x53E3;"><b></b>&#x51FA;&#x53E3;</a></li><li><span class="title-icon "></span><a href="#loader&#x7FFB;&#x8BD1;&#x5668;"><b></b>loader&#x7FFB;&#x8BD1;&#x5668;</a></li><li><span class="title-icon "></span><a href="#plugins&#x63D2;&#x4EF6;"><b></b>plugins&#x63D2;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#webpack&#x5E38;&#x7528;&#x63D2;&#x4EF6;"><b></b>webpack&#x5E38;&#x7528;&#x63D2;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#webpack&#x5B9E;&#x73B0;vue&#x4EE3;&#x7801;&#x8FD0;&#x884C;"><b></b>webpack&#x5B9E;&#x73B0;vue&#x4EE3;&#x7801;&#x8FD0;&#x884C;</a></li></ul></ul></div><a href="#webpack" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><div class="treeview__container-title"></div><ul>
+<li><div><a href="#&#x6253;&#x5305;&#x5668;">&#x6253;&#x5305;&#x5668;</a><i></i></div></li>
+<li><div><a href="#&#x5B89;&#x88C5;webpack">&#x5B89;&#x88C5;webpack</a><i></i></div></li>
+<li><div><a href="#webpack&#x914D;&#x7F6E;">webpack&#x914D;&#x7F6E;</a><i></i></div></li>
+<li><div><a href="#&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x76EE;&#x5F55;&#x89C4;&#x8303;">&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x76EE;&#x5F55;&#x89C4;&#x8303;</a><i></i></div></li>
+<li><div><a href="#&#x6838;&#x5FC3;&#x6982;&#x5FF5;">&#x6838;&#x5FC3;&#x6982;&#x5FF5;</a><i></i></div></li>
+<li><div><a href="#&#x5165;&#x53E3;">&#x5165;&#x53E3;</a><i></i></div></li>
+<li><div><a href="#&#x51FA;&#x53E3;">&#x51FA;&#x53E3;</a><i></i></div></li>
+<li><div><a href="#loader&#x7FFB;&#x8BD1;&#x5668;">loader&#x7FFB;&#x8BD1;&#x5668;</a><i></i></div></li>
+<li><div><a href="#plugins&#x63D2;&#x4EF6;">plugins&#x63D2;&#x4EF6;</a><i></i></div></li>
+<li><div><a href="#webpack&#x5E38;&#x7528;&#x63D2;&#x4EF6;">webpack&#x5E38;&#x7528;&#x63D2;&#x4EF6;</a><i></i></div></li>
+<li><div><a href="#webpack&#x5B9E;&#x73B0;vue&#x4EE3;&#x7801;&#x8FD0;&#x884C;">webpack&#x5B9E;&#x73B0;vue&#x4EE3;&#x7801;&#x8FD0;&#x884C;</a><i></i></div></li>
+</ul>
+</div>
+
+<h1 id="webpack"><a name="webpack" class="anchor-navigation-ex-anchor" href="#webpack"><i class="fa fa-link" aria-hidden="true"></i></a>webpack</h1>
+<blockquote>
+<p>&#x672C;&#x8D28;&#x4E0A;&#xFF0C;webpack &#x662F;&#x4E00;&#x4E2A;&#x73B0;&#x4EE3; JavaScript &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x9759;&#x6001;&#x6A21;&#x5757;&#x6253;&#x5305;&#x5668;(module bundler)&#x3002;&#x5F53; webpack &#x5904;&#x7406;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x9012;&#x5F52;&#x5730;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x56FE;(dependency graph)&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x7684;&#x6BCF;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x6A21;&#x5757;&#x6253;&#x5305;&#x6210;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A; bundle&#x3002;</p>
+</blockquote>
+<h2 id="&#x6253;&#x5305;&#x5668;"><a name="&#x6253;&#x5305;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x6253;&#x5305;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6253;&#x5305;&#x5668;</h2>
+<blockquote>
+<p>&#x4EC0;&#x4E48;&#x662F;&#x6253;&#x5305;&#x5668;&#xFF1F; &#x4EE5;&#x524D;&#xFF1A;html\css\js   &#x6CA1;&#x6709;&#x6A21;&#x5757;&#x5316; &#x73B0;&#x5728;&#xFF1A;vue&#x9879;&#x76EE;        &#x6A21;&#x5757;&#x5316;&#xFF08;&#x590D;&#x7528;&#x6027;&#x9AD8;&#x3001;&#x7EF4;&#x62A4;&#x4FBF;&#x5229;&#xFF09; npm run build &#x6253;&#x5305;:&#x628A;&#x73B0;&#x4EE3;&#x7684;&#x9879;&#x76EE;&#x53D8;&#x56DE;&#x4EE5;&#x524D;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x8BA9;&#x6D4F;&#x89C8;&#x5668;&#x80FD;&#x8BC6;&#x522B;&#x7684;&#x540C;&#x65F6;&#x53C8;&#x80FD;&#x8BA9;&#x6211;&#x4EEC;&#x5F00;&#x53D1;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x73B0;&#x4EE3;&#x7684;&#x6A21;&#x5757;&#x5316;&#x5F00;&#x53D1;</p>
+</blockquote>
+<h2 id="&#x5B89;&#x88C5;webpack"><a name="&#x5B89;&#x88C5;webpack" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;webpack"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;webpack</h2>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x5305;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#xFF08;&#x6CE8;&#x610F;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x540D;&#x5B57;&#x4E0D;&#x8981;&#x5199;webpack&#xFF09;</span>
+npm init -y
+
+<span class="hljs-comment">//&#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7248;webpack&#x548C;&#x6307;&#x5B9A;&#x7248;&#x672C;webpack&#xFF08;&#x4E0D;&#x5EFA;&#x8BAE;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#xFF09;</span>
+npm install --save-dev webpack
+npm install --save-dev webpack@&lt;version&gt;
+
+<span class="hljs-comment">//&#x5168;&#x5C40;&#x5B89;&#x88C5;&#xFF0C;&#x56E0;&#x4E3A;webpack&#x5404;&#x7248;&#x672C;&#x4E4B;&#x95F4;&#x4E92;&#x4E0D;&#x517C;&#x5BB9;&#xFF0C;&#x6240;&#x4EE5;&#x3010;&#x4E0D;&#x5EFA;&#x8BAE;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x3011;</span>
+npm i webpack -g
+
+<span class="hljs-comment">//&#x5982;&#x679C;&#x662F;4&#x53CA;&#x4EE5;&#x4E0A;&#x7684;&#x7248;&#x672C;&#x8FD8;&#x9700;&#x8981;&#x989D;&#x5916;&#x5B89;&#x88C5;cli</span>
+npm install --save-dev webpack-cli
+</code></pre>
+<p>&#x6B63;&#x5E38;&#x5B89;&#x88C5;<code>&#x4E09;&#x6761;&#x547D;&#x4EE4;</code></p>
+<pre><code class="lang-bash">npm init -y
+npm install --save-dev webpack
+npm install --save-dev webpack-cli
+</code></pre>
+<h2 id="webpack&#x914D;&#x7F6E;"><a name="webpack&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#webpack&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>webpack&#x914D;&#x7F6E;</h2>
+<blockquote>
+<p>&#x5728;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;webpack.config.js&#x6587;&#x4EF6;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>)<span class="hljs-comment">//npm&#x81EA;&#x5E26;&#x7684;&#x8DEF;&#x5F84;&#x7BA1;&#x7406;&#x5668;</span>
+
+<span class="hljs-built_in">module</span>.exports = {
+    entry:<span class="hljs-string">&quot;./index.js&quot;</span>,<span class="hljs-comment">//&#x5165;&#x53E3;</span>
+    output:{<span class="hljs-comment">//&#x51FA;&#x53E3;(&#x53EA;&#x652F;&#x6301;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;)</span>
+        path:path.resolve(__dirname,<span class="hljs-string">&quot;dist&quot;</span>)
+    }
+}
+</code></pre>
+<blockquote>
+<p>&#x914D;&#x7F6E;package.json&#x6587;&#x4EF6;</p>
+</blockquote>
+<pre><code class="lang-jsx">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;webapck_test&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \\&quot;</span><span class="hljs-built_in">Error</span>: no test specified\\<span class="hljs-string">&quot; &amp;&amp; exit 1&quot;</span>,
+    <span class="hljs-string">&quot;build&quot;</span>:<span class="hljs-string">&quot;webpack --config webpack.config.js&quot;</span>
+  },
+  <span class="hljs-string">&quot;keywords&quot;</span>: [],
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>,
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-string">&quot;webpack&quot;</span>: <span class="hljs-string">&quot;^5.52.0&quot;</span>,
+    <span class="hljs-string">&quot;webpack-cli&quot;</span>: <span class="hljs-string">&quot;^4.8.0&quot;</span>
+  }
+}
+</code></pre>
+<h2 id="&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x76EE;&#x5F55;&#x89C4;&#x8303;"><a name="&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x76EE;&#x5F55;&#x89C4;&#x8303;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x76EE;&#x5F55;&#x89C4;&#x8303;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x76EE;&#x5F55;&#x89C4;&#x8303;</h2>
+<ul>
+<li>public&#x5B58;&#x653E;&#x4E0D;&#x9700;&#x8981;&#x6539;&#x52A8;&#x7684;&#x6587;&#x4EF6;</li>
+<li>src&#x5B58;&#x653E;&#x6838;&#x5FC3;&#x6587;&#x4EF6;</li>
+</ul>
+<p><a href="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/001.png" data-lightbox="b7e1d9d9-39f8-41d2-9cbc-b28c91c5acf7" data-title="" target="_blank"><img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/001.png" alt=""></a></p>
+<h2 id="&#x6838;&#x5FC3;&#x6982;&#x5FF5;"><a name="&#x6838;&#x5FC3;&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#&#x6838;&#x5FC3;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6838;&#x5FC3;&#x6982;&#x5FF5;</h2>
+<h2 id="&#x5165;&#x53E3;"><a name="&#x5165;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x5165;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5165;&#x53E3;</h2>
+<blockquote>
+<p>webapck&#x4F1A;&#x6839;&#x636E;&#x67D0;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x4F5C;&#x4E3A;&#x6838;&#x5FC3;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x4EE5;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E3A;&#x4F9D;&#x8D56;&#x8FDB;&#x884C;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x56FE;&#x8BBE;&#x7F6E;&#xFF0C;&#x4ECE;&#x800C;&#x627E;&#x5230;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-built_in">module</span>.exports = {
+    entry: <span class="hljs-string">&quot;./src/main.js&quot;</span>,<span class="hljs-comment">//&#x5165;&#x53E3;</span>
+}
+</code></pre>
+<h2 id="&#x51FA;&#x53E3;"><a name="&#x51FA;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x51FA;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51FA;&#x53E3;</h2>
+<blockquote>
+<p>&#x6839;&#x636E;&#x6838;&#x5FC3;&#x6587;&#x4EF6;&#x6253;&#x5305;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>)<span class="hljs-comment">//npm&#x81EA;&#x5E26;&#x7684;&#x8DEF;&#x5F84;&#x7BA1;&#x7406;&#x5668;</span>
+
+<span class="hljs-built_in">module</span>.exports = {
+    entry: <span class="hljs-string">&quot;./src/main.js&quot;</span>,<span class="hljs-comment">//&#x5165;&#x53E3;</span>
+    output: {<span class="hljs-comment">//&#x51FA;&#x53E3;(&#x53EA;&#x652F;&#x6301;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;)</span>
+        path: path.resolve(__dirname, <span class="hljs-string">&quot;dist&quot;</span>)
+    }
+}
+</code></pre>
+<h2 id="loader&#x7FFB;&#x8BD1;&#x5668;"><a name="loader&#x7FFB;&#x8BD1;&#x5668;" class="anchor-navigation-ex-anchor" href="#loader&#x7FFB;&#x8BD1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>loader&#x7FFB;&#x8BD1;&#x5668;</h2>
+<blockquote>
+<p>&#x8FD9;&#x91CC;&#x5148;&#x5B89;&#x88C5;&#x4E24;&#x4E2A;&#x63D2;&#x4EF6; </p>
+</blockquote>
+<pre><code class="lang-bash">npm i style-loader css-loader -D
+</code></pre>
+<blockquote>
+<p>&#x5904;&#x7406;&#x975E;js&#x6587;&#x4EF6;&#xFF0C;&#x56E0;&#x4E3A;webpack&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#x975E;js&#x6587;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;loader&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>)<span class="hljs-comment">//npm&#x81EA;&#x5E26;&#x7684;&#x8DEF;&#x5F84;&#x7BA1;&#x7406;&#x5668;</span>
+
+<span class="hljs-built_in">module</span>.exports = {
+    entry: <span class="hljs-string">&quot;./src/main.js&quot;</span>,<span class="hljs-comment">//&#x5165;&#x53E3;</span>
+    output: {<span class="hljs-comment">//&#x51FA;&#x53E3;(&#x53EA;&#x652F;&#x6301;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;)</span>
+        path: path.resolve(__dirname, <span class="hljs-string">&quot;dist&quot;</span>)
+    },
+    <span class="hljs-built_in">module</span>: {<span class="hljs-comment">//loader&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x662F;&#x4E0B;&#x5F80;&#x4E0A;&#xFF0C;&#x53F3;&#x5F80;&#x5DE6;</span>
+        rules: [
+            {
+                test: <span class="hljs-regexp">/\\.css$/</span>,
+                use: [
+                    {
+                        loader: <span class="hljs-string">&apos;style-loader&apos;</span>  <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x628A;css&#x653E;&#x5728;&#x9875;&#x9762;&#x4E0A;</span>
+                    },
+                    {
+                        loader: <span class="hljs-string">&apos;css-loader&apos;</span>    <span class="hljs-comment">// &#x653E;&#x5728;&#x540E;&#x9762;&#x7684;&#x5148;&#x88AB;&#x89E3;&#x6790;</span>
+                    }
+                ]
+            }
+        ]
+    }
+}
+</code></pre>
+<h2 id="plugins&#x63D2;&#x4EF6;"><a name="plugins&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#plugins&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>plugins&#x63D2;&#x4EF6;</h2>
+<blockquote>
+<p>&#x8FD9;&#x91CC;&#x5148;&#x5B89;&#x88C5;&#x4E00;&#x4E0B;</p>
+</blockquote>
+<pre><code class="lang-bash">npm i html-webpack-plugin -D
+</code></pre>
+<blockquote>
+<p>&#x4E13;&#x95E8;&#x5904;&#x7406;&#x4E00;&#x4E9B;webpack&#x672C;&#x8EAB;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x6BD4;&#x5982;css&#x3001;js&#x3001;&#x56FE;&#x7247;&#x538B;&#x7F29;&#x7B49;&#x989D;&#x5916;&#x64CD;&#x4F5C;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>)<span class="hljs-comment">//npm&#x81EA;&#x5E26;&#x7684;&#x8DEF;&#x5F84;&#x7BA1;&#x7406;&#x5668;</span>
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;html-webpack-plugin&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = {
+    entry: <span class="hljs-string">&quot;./src/main.js&quot;</span>,<span class="hljs-comment">//&#x5165;&#x53E3;</span>
+    output: {<span class="hljs-comment">//&#x51FA;&#x53E3;(&#x53EA;&#x652F;&#x6301;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;)</span>
+        path: path.resolve(__dirname, <span class="hljs-string">&quot;dist&quot;</span>)
+    },
+    <span class="hljs-built_in">module</span>: {
+        rules: [
+            {
+                test: <span class="hljs-regexp">/\\.css$/</span>,
+                use: [
+                    {
+                        loader: <span class="hljs-string">&apos;style-loader&apos;</span>  <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x628A;css&#x653E;&#x5728;&#x9875;&#x9762;&#x4E0A;</span>
+                    },
+                    {
+                        loader: <span class="hljs-string">&apos;css-loader&apos;</span>    <span class="hljs-comment">// &#x653E;&#x5728;&#x540E;&#x9762;&#x7684;&#x5148;&#x88AB;&#x89E3;&#x6790;</span>
+                    }
+                ]
+            }
+        ]
+    },
+    plugins:[
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin()
+    ]
+}
+</code></pre>
+<h2 id="webpack&#x5E38;&#x7528;&#x63D2;&#x4EF6;"><a name="webpack&#x5E38;&#x7528;&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#webpack&#x5E38;&#x7528;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>webpack&#x5E38;&#x7528;&#x63D2;&#x4EF6;</h2>
+<blockquote>
+<p>&#x8FD9;&#x91CC;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5305;</p>
+</blockquote>
+<pre><code class="lang-bash">npm install webpack-dev-server -D
+</code></pre>
+<ul>
+<li>HtmlWebpackPlugin &#x521B;&#x5EFA;html&#x6A21;&#x7248;</li>
+<li>webpack-dev-server &#x8FD0;&#x884C;&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;</li>
+</ul>
+<blockquote>
+<p>package.json&#x6587;&#x4EF6;</p>
+</blockquote>
+<pre><code class="lang-jsx">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;webapck_test&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \\&quot;</span><span class="hljs-built_in">Error</span>: no test specified\\<span class="hljs-string">&quot; &amp;&amp; exit 1&quot;</span>,
+    <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;webpack --config webpack.config.js&quot;</span>,
+    <span class="hljs-string">&quot;dev&quot;</span>:<span class="hljs-string">&quot;webpack serve&quot;</span> <span class="hljs-comment">//&#x8BB0;&#x5F97;&#x52A0;&#x5165;&#x8FD9;&#x4E00;&#x53E5;</span>
+  },
+  <span class="hljs-string">&quot;keywords&quot;</span>: [],
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>,
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-string">&quot;css-loader&quot;</span>: <span class="hljs-string">&quot;^6.2.0&quot;</span>,
+    <span class="hljs-string">&quot;html-webpack-plugin&quot;</span>: <span class="hljs-string">&quot;^5.3.2&quot;</span>,
+    <span class="hljs-string">&quot;style-loader&quot;</span>: <span class="hljs-string">&quot;^3.2.1&quot;</span>,
+    <span class="hljs-string">&quot;webpack&quot;</span>: <span class="hljs-string">&quot;^5.52.0&quot;</span>,
+    <span class="hljs-string">&quot;webpack-cli&quot;</span>: <span class="hljs-string">&quot;^4.8.0&quot;</span>,
+    <span class="hljs-string">&quot;webpack-dev-server&quot;</span>: <span class="hljs-string">&quot;^4.1.1&quot;</span>
+  }
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  mode: <span class="hljs-string">&quot;development&quot;</span>, <span class="hljs-comment">//&#x8BB0;&#x5F97;&#x52A0;&#x5165;&#x8FD9;&#x4E00;&#x53E5;</span>
+  entry: <span class="hljs-string">&quot;./src/main.js&quot;</span>, <span class="hljs-comment">//&#x5165;&#x53E3;</span>
+};
+</code></pre>
+<blockquote>
+<p>&#x7136;&#x540E;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;<a href="http://localhost:8080&#x5373;&#x53EF;&#x67E5;&#x770B;&#x6548;&#x679C;" target="_blank">http://localhost:8080&#x5373;&#x53EF;&#x67E5;&#x770B;&#x6548;&#x679C;</a></p>
+</blockquote>
+<h2 id="webpack&#x5B9E;&#x73B0;vue&#x4EE3;&#x7801;&#x8FD0;&#x884C;"><a name="webpack&#x5B9E;&#x73B0;vue&#x4EE3;&#x7801;&#x8FD0;&#x884C;" class="anchor-navigation-ex-anchor" href="#webpack&#x5B9E;&#x73B0;vue&#x4EE3;&#x7801;&#x8FD0;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>webpack&#x5B9E;&#x73B0;vue&#x4EE3;&#x7801;&#x8FD0;&#x884C;</h2>
+<p>1&#x3001;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;&#x548C;<code>loader</code></p>
+<pre><code class="lang-bash">npm i vue@2 vue-loader@14.2.2 babel-loader @babel/core @babel/preset-env -D
+</code></pre>
+<pre><code class="lang-jsx">vue                    vue&#x6838;&#x5FC3;&#x6587;&#x4EF6;
+vue-loader             vue&#x7FFB;&#x8BD1;&#x5668;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x4F7F;&#x7528;vue&#x6587;&#x4EF6;
+vue-template-compiler  &#x7FFB;&#x8BD1;vue&#x7684;template&#x6807;&#x7B7E;
+babel-loader           &#x8BA9;es6&#x6216;&#x8005;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#x7684;js&#x4EE3;&#x7801;&#x964D;&#x7EA7;&#x4E3A;&#x5927;&#x90E8;&#x5206;&#x6D4F;&#x89C8;&#x5668;&#x80FD;&#x8BC6;&#x522B;&#x7684;es5&#x4EE3;&#x7801;
+@babel/core            babel&#x7684;&#x6838;&#x5FC3;&#x6838;&#x5FC3;&#xFF08;&#x65B0;&#x7248;&#x7684;babel&#x90FD;&#x9700;&#x8981;&#x5B89;&#x88C5;&#xFF09;
+@babel/preset-env      babel&#x7684;&#x9884;&#x8BBE;&#x6587;&#x4EF6;&#xFF08;&#x5C31;&#x662F;&#x5185;&#x90E8;&#x914D;&#x7F6E;&#x597D;&#x7684;&#x6587;&#x4EF6;&#xFF09;
+
+<span class="hljs-string">&quot;vue&quot;</span>: <span class="hljs-string">&quot;^2.6.14&quot;</span>,
+<span class="hljs-string">&quot;vue-loader&quot;</span>: <span class="hljs-string">&quot;^14.2.2&quot;</span>,
+</code></pre>
+<p>2&#x3001;&#x914D;&#x7F6E;<code>.babelrc</code>&#x6587;&#x4EF6;</p>
+<pre><code class="lang-jsx">{
+    <span class="hljs-string">&quot;presets&quot;</span>: [
+      <span class="hljs-string">&quot;@babel/env&quot;</span>
+    ]
+  }
+</code></pre>
+<p>3&#x3001;<code>webpack</code>&#x8FDB;&#x884C;<code>vue-loader</code>&#x548C;<code>babel</code>&#x914D;&#x7F6E;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>)<span class="hljs-comment">//npm&#x81EA;&#x5E26;&#x7684;&#x8DEF;&#x5F84;&#x7BA1;&#x7406;&#x5668;</span>
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;html-webpack-plugin&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = {
+    mode: <span class="hljs-string">&quot;development&quot;</span>,
+    entry: <span class="hljs-string">&quot;./src/main.js&quot;</span>,<span class="hljs-comment">//&#x5165;&#x53E3;</span>
+    output: {<span class="hljs-comment">//&#x51FA;&#x53E3;(&#x53EA;&#x652F;&#x6301;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;)</span>
+        path: path.resolve(__dirname, <span class="hljs-string">&quot;dist&quot;</span>)
+    },
+    <span class="hljs-built_in">module</span>: {
+        rules: [
+            {
+                test: <span class="hljs-regexp">/\.css$/</span>,
+                use: [
+                    {
+                        loader: <span class="hljs-string">&apos;style-loader&apos;</span>  <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x628A;css&#x653E;&#x5728;&#x9875;&#x9762;&#x4E0A;</span>
+                    },
+                    {
+                        loader: <span class="hljs-string">&apos;css-loader&apos;</span>    <span class="hljs-comment">// &#x653E;&#x5728;&#x540E;&#x9762;&#x7684;&#x5148;&#x88AB;&#x89E3;&#x6790;</span>
+                    }
+                ]
+            },
+            {
+                test: <span class="hljs-regexp">/\.vue$/</span>,
+                use: [
+                    {
+                        loader: <span class="hljs-string">&apos;vue-loader&apos;</span>
+                    },
+                ]
+            },
+            {
+                test: <span class="hljs-regexp">/\.js$/</span>,
+                <span class="hljs-comment">// exclude&#xFF1A;&#x6392;&#x9664;</span>
+                exclude: <span class="hljs-regexp">/(node_modules|bower_components)/</span>,
+                use: {
+                  loader: <span class="hljs-string">&quot;babel-loader&quot;</span>,
+                },
+              }
+        ]
+    },
+    plugins: [
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+            template: <span class="hljs-string">&apos;./public/index.html&apos;</span><span class="hljs-comment">//&#x5FC5;&#x987B;&#x8981;&#x6709;&#x8FD9;&#x4E2A;&#x6B65;&#x9AA4;</span>
+        })
+    ]
+}
+</code></pre>
+<p>4&#x3001;&#x6839;&#x76EE;&#x5F55;&#x4E0B;<code>public/index.html</code></p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>5&#x3001;&#x521B;&#x5EFA;<code>src/App.vue</code></p>
+<pre><code class="lang-js">&lt;template&gt;
+  &lt;div&gt;
+
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      msg: &quot;&#x4F60;&#x662F;&#x7334;&#x5B50;&#x6D3E;&#x6765;&#x7684;&#x6551;&#x5175;&#x5417;&#xFF1F;&quot;,
+    };
+  },
+};
+&lt;/script&gt;
+</code></pre>
+<p>6&#x3001;&#x66F4;&#x6539;<code>main.js</code>&#x6587;&#x4EF6;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./App.vue&quot;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;./index.css&quot;</span>
+
+<span class="hljs-keyword">new</span> Vue({
+  render: (h) =&gt; h(App),
+}).$mount(<span class="hljs-string">&quot;#app&quot;</span>);
+</code></pre>
+<p><a href="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/image-20220225153457486.png" data-lightbox="cff4dd42-dd4d-4ec5-92d6-59351c3e2e36" data-title="" target="_blank"><img src="https://cdn.jsdelivr.net/gh/ashunun/Picture/img/image-20220225153457486.png" alt=""></a></p>
+<p>&#x8FD9;&#x662F;&#x6240;&#x6709;&#x914D;&#x7F6E;<code>package.json</code></p>
+<pre><code class="lang-js">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;webpack_test&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>,
+    <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;webpack --config webpack.config.js&quot;</span>,
+    <span class="hljs-string">&quot;dev&quot;</span>: <span class="hljs-string">&quot;webpack serve&quot;</span>
+  },
+  <span class="hljs-string">&quot;keywords&quot;</span>: [],
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>,
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-string">&quot;@babel/core&quot;</span>: <span class="hljs-string">&quot;^7.17.5&quot;</span>,
+    <span class="hljs-string">&quot;@babel/preset-env&quot;</span>: <span class="hljs-string">&quot;^7.16.11&quot;</span>,
+    <span class="hljs-string">&quot;babel-loader&quot;</span>: <span class="hljs-string">&quot;^8.2.3&quot;</span>,
+    <span class="hljs-string">&quot;css-loader&quot;</span>: <span class="hljs-string">&quot;^6.6.0&quot;</span>,
+    <span class="hljs-string">&quot;html-webpack-plugin&quot;</span>: <span class="hljs-string">&quot;^5.5.0&quot;</span>,
+    <span class="hljs-string">&quot;style-loader&quot;</span>: <span class="hljs-string">&quot;^3.3.1&quot;</span>,
+    <span class="hljs-string">&quot;vue&quot;</span>: <span class="hljs-string">&quot;^2.6.14&quot;</span>,
+    <span class="hljs-string">&quot;vue-loader&quot;</span>: <span class="hljs-string">&quot;^14.2.2&quot;</span>,
+    <span class="hljs-string">&quot;webpack&quot;</span>: <span class="hljs-string">&quot;^5.69.1&quot;</span>,
+    <span class="hljs-string">&quot;webpack-cli&quot;</span>: <span class="hljs-string">&quot;^4.9.2&quot;</span>,
+    <span class="hljs-string">&quot;webpack-dev-server&quot;</span>: <span class="hljs-string">&quot;^4.7.4&quot;</span>
+  }
+}
+</code></pre>
+<footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-02-25 18:48:34
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="repair.html" class="navigation navigation-prev " aria-label="Previous page: webpack">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="es6.html" class="navigation navigation-next " aria-label="Next page: Es6">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"webpack练习","level":"1.3.3.1","depth":3,"next":{"title":"Es6","level":"1.3.4","depth":2,"path":"es6.md","ref":"es6.md","articles":[{"title":"01变量","level":"1.3.4.1","depth":3,"path":"01变量-es6.md","ref":"01变量-es6.md","articles":[]},{"title":"02常量","level":"1.3.4.2","depth":3,"path":"02常量-es6.md","ref":"02常量-es6.md","articles":[]},{"title":"03解构赋值","level":"1.3.4.3","depth":3,"path":"03解构赋值-es6.md","ref":"03解构赋值-es6.md","articles":[]},{"title":"04字符串拓展","level":"1.3.4.4","depth":3,"path":"04字符串拓展-es6.md","ref":"04字符串拓展-es6.md","articles":[]},{"title":"05数字拓展","level":"1.3.4.5","depth":3,"path":"05数字拓展-es6.md","ref":"05数字拓展-es6.md","articles":[]},{"title":"06数组拓展","level":"1.3.4.6","depth":3,"path":"06数组拓展-es6.md","ref":"06数组拓展-es6.md","articles":[]},{"title":"07函数拓展","level":"1.3.4.7","depth":3,"path":"07函数拓展-es6.md","ref":"07函数拓展-es6.md","articles":[]},{"title":"08对象拓展","level":"1.3.4.8","depth":3,"path":"08对象拓展-es6.md","ref":"08对象拓展-es6.md","articles":[]},{"title":"09类拓展","level":"1.3.4.9","depth":3,"path":"09类拓展-es6.md","ref":"09类拓展-es6.md","articles":[]},{"title":"10扩展运算符","level":"1.3.4.10","depth":3,"path":"10扩展运算符-es6.md","ref":"10扩展运算符-es6.md","articles":[]},{"title":"11set数据结构","level":"1.3.4.11","depth":3,"path":"11set数据结构-es6.md","ref":"11set数据结构-es6.md","articles":[]},{"title":"12map数据结构","level":"1.3.4.12","depth":3,"path":"12map数据结构-es6.md","ref":"12map数据结构-es6.md","articles":[]},{"title":"13同步和异步","level":"1.3.4.13","depth":3,"path":"13同步和异步-es6.md","ref":"13同步和异步-es6.md","articles":[]}]},"previous":{"title":"webpack","level":"1.3.3","depth":2,"path":"repair.md","ref":"repair.md","articles":[{"title":"webpack练习","level":"1.3.3.1","depth":3,"path":"webpack.md","ref":"webpack.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://ashun.tk","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://ashun.cf"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"webpack.md","mtime":"2022-02-25T10:48:34.453Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-24T11:13:13.224Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

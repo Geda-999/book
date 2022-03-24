@@ -1,0 +1,3256 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>02微信小程序 · 前端秘籍</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ashun">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="小程序教程.html" />
+    
+    
+    <link rel="prev" href="UniApp框架教程.html" />
+    
+
+    <link href="http://gitbook.zhangjikai.com/rss" title="GitBook 使用教程" rel="alternate" type="application/rss+xml" />
+
+    
+        <link rel="shortcut icon" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='https:/cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://ashun.cf" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="phase01.html">
+            
+                <a href="phase01.html">
+            
+                    
+                    Phase I
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01html.html">
+            
+                <a href="01html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02css.html">
+            
+                <a href="02css.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03响应式.html">
+            
+                <a href="03响应式.html">
+            
+                    
+                    响应式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="phase02.html">
+            
+                <a href="phase02.html">
+            
+                    
+                    Phase II
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="JavaScriptES5.html">
+            
+                <a href="JavaScriptES5.html">
+            
+                    
+                    JavaScriptES5
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="01变量.html">
+            
+                <a href="01变量.html">
+            
+                    
+                    01变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="02常量.html">
+            
+                <a href="02常量.html">
+            
+                    
+                    02常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="03js数据类型.html">
+            
+                <a href="03js数据类型.html">
+            
+                    
+                    03js数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" >
+            
+                <a target="_blank" href="https://ashun.cf/04运算判断条件.html">
+            
+                    
+                    04运算判断条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="05数字类型.html">
+            
+                <a href="05数字类型.html">
+            
+                    
+                    05数字类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="06字符串.html">
+            
+                <a href="06字符串.html">
+            
+                    
+                    06字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="07布尔值.html">
+            
+                <a href="07布尔值.html">
+            
+                    
+                    07布尔值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="08空值.html">
+            
+                <a href="08空值.html">
+            
+                    
+                    08空值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="09未定义.html">
+            
+                <a href="09未定义.html">
+            
+                    
+                    09未定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="10唯一值.html">
+            
+                <a href="10唯一值.html">
+            
+                    
+                    10唯一值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="11对象.html">
+            
+                <a href="11对象.html">
+            
+                    
+                    11对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="12内置全局对象.html">
+            
+                <a href="12内置全局对象.html">
+            
+                    
+                    12内置全局对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="13数组.html">
+            
+                <a href="13数组.html">
+            
+                    
+                    13数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="14函数.html">
+            
+                <a href="14函数.html">
+            
+                    
+                    14函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="15日期对象.html">
+            
+                <a href="15日期对象.html">
+            
+                    
+                    15日期对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.16" data-path="16正则表达式.html">
+            
+                <a href="16正则表达式.html">
+            
+                    
+                    16正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.17" data-path="17异常错误对象.html">
+            
+                <a href="17异常错误对象.html">
+            
+                    
+                    17异常错误对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.18" data-path="18BOM浏览器对象模型.html">
+            
+                <a href="18BOM浏览器对象模型.html">
+            
+                    
+                    18BOM浏览器对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.19" data-path="19DOM文档对象模型.html">
+            
+                <a href="19DOM文档对象模型.html">
+            
+                    
+                    19DOM文档对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.20" data-path="20json.html">
+            
+                <a href="20json.html">
+            
+                    
+                    20json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.21" data-path="21Ajax.html">
+            
+                <a href="21Ajax.html">
+            
+                    
+                    21Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.22" data-path="22jQuery.html">
+            
+                <a href="22jQuery.html">
+            
+                    
+                    22jQuery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.23" data-path="23函数进阶.html">
+            
+                <a href="23函数进阶.html">
+            
+                    
+                    23函数进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.24" data-path="24面向对象.html">
+            
+                <a href="24面向对象.html">
+            
+                    
+                    24面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    npm包管理系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="npm包管理系统.html">
+            
+                <a href="npm包管理系统.html">
+            
+                    
+                    npm包管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="webpack.html">
+            
+                <a href="webpack.html">
+            
+                    
+                    webpack练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="es6.html">
+            
+                <a href="es6.html">
+            
+                    
+                    Es6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="01变量-es6.html">
+            
+                <a href="01变量-es6.html">
+            
+                    
+                    01变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="02常量-es6.html">
+            
+                <a href="02常量-es6.html">
+            
+                    
+                    02常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="03解构赋值-es6.html">
+            
+                <a href="03解构赋值-es6.html">
+            
+                    
+                    03解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="04字符串拓展-es6.html">
+            
+                <a href="04字符串拓展-es6.html">
+            
+                    
+                    04字符串拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="05数字拓展-es6.html">
+            
+                <a href="05数字拓展-es6.html">
+            
+                    
+                    05数字拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="06数组拓展-es6.html">
+            
+                <a href="06数组拓展-es6.html">
+            
+                    
+                    06数组拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="07函数拓展-es6.html">
+            
+                <a href="07函数拓展-es6.html">
+            
+                    
+                    07函数拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.8" data-path="08对象拓展-es6.html">
+            
+                <a href="08对象拓展-es6.html">
+            
+                    
+                    08对象拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.9" data-path="09类拓展-es6.html">
+            
+                <a href="09类拓展-es6.html">
+            
+                    
+                    09类拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.10" data-path="10扩展运算符-es6.html">
+            
+                <a href="10扩展运算符-es6.html">
+            
+                    
+                    10扩展运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.11" data-path="11set数据结构-es6.html">
+            
+                <a href="11set数据结构-es6.html">
+            
+                    
+                    11set数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.12" data-path="12map数据结构-es6.html">
+            
+                <a href="12map数据结构-es6.html">
+            
+                    
+                    12map数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.13" data-path="13同步和异步-es6.html">
+            
+                <a href="13同步和异步-es6.html">
+            
+                    
+                    13同步和异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="git.html">
+            
+                <a href="git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="git教程.html">
+            
+                <a href="git教程.html">
+            
+                    
+                    git教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="常用Git命令清单.html">
+            
+                <a href="常用Git命令清单.html">
+            
+                    
+                    常用Git命令清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    SCSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="scss.html">
+            
+                <a href="scss.html">
+            
+                    
+                    scss
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    Typescript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="01安装和配置文件.html">
+            
+                <a href="01安装和配置文件.html">
+            
+                    
+                    01安装和配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="02静态检查.html">
+            
+                <a href="02静态检查.html">
+            
+                    
+                    02静态检查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="03类型推论.html">
+            
+                <a href="03类型推论.html">
+            
+                    
+                    03类型推论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" data-path="04原始数据类型.html">
+            
+                <a href="04原始数据类型.html">
+            
+                    
+                    04原始数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.5" data-path="05any.html">
+            
+                <a href="05any.html">
+            
+                    
+                    05any
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.6" data-path="06unknown.html">
+            
+                <a href="06unknown.html">
+            
+                    
+                    06unknown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.7" data-path="07never.html">
+            
+                <a href="07never.html">
+            
+                    
+                    07never
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.8" data-path="08数组.html">
+            
+                <a href="08数组.html">
+            
+                    
+                    08数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.9" data-path="09枚举类型.html">
+            
+                <a href="09枚举类型.html">
+            
+                    
+                    09枚举类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.10" data-path="10函数.html">
+            
+                <a href="10函数.html">
+            
+                    
+                    10函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.11" data-path="11类(class">
+            
+                <span>
+            
+                    
+                    11类(class)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.12" data-path="12接口.html">
+            
+                <a href="12接口.html">
+            
+                    
+                    12接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.13" data-path="13联合类型&交叉类型.html">
+            
+                <a href="13联合类型&交叉类型.html">
+            
+                    
+                    13联合类型&交叉类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.14" data-path="14泛型.html">
+            
+                <a href="14泛型.html">
+            
+                    
+                    14泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.15" data-path="15类型断言.html">
+            
+                <a href="15类型断言.html">
+            
+                    
+                    15类型断言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.16" data-path="16命名空间.html">
+            
+                <a href="16命名空间.html">
+            
+                    
+                    16命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.17" data-path="17声明文件.html">
+            
+                <a href="17声明文件.html">
+            
+                    
+                    17声明文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.18" data-path="18装饰器.html">
+            
+                <a href="18装饰器.html">
+            
+                    
+                    18装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="phase03.html">
+            
+                <a href="phase03.html">
+            
+                    
+                    Phase III
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="vue.html">
+            
+                <a href="vue.html">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="01mvvm和mvc.html">
+            
+                <a href="01mvvm和mvc.html">
+            
+                    
+                    01mvvm和mvc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" >
+            
+                <a target="_blank" href="https://ashun.cf/02安装和使用.html">
+            
+                    
+                    02安装和使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" >
+            
+                <a target="_blank" href="https://ashun.cf/03模版语法.html">
+            
+                    
+                    03模版语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="04生命周期.html">
+            
+                <a href="04生命周期.html">
+            
+                    
+                    04生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="05指令.html">
+            
+                <a href="05指令.html">
+            
+                    
+                    05指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="06方法-计算属性-监听器.html">
+            
+                <a href="06方法-计算属性-监听器.html">
+            
+                    
+                    06方法-计算属性-监听器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="07class和style绑定.html">
+            
+                <a href="07class和style绑定.html">
+            
+                    
+                    07class和style绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="08条件渲染.html">
+            
+                <a href="08条件渲染.html">
+            
+                    
+                    08条件渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="09列表渲染.html">
+            
+                <a href="09列表渲染.html">
+            
+                    
+                    09列表渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="10事件处理.html">
+            
+                <a href="10事件处理.html">
+            
+                    
+                    10事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="11表单输入绑定.html">
+            
+                <a href="11表单输入绑定.html">
+            
+                    
+                    11表单输入绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="12组件.html">
+            
+                <a href="12组件.html">
+            
+                    
+                    12组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.13" data-path="13组件之间传递数据方式.html">
+            
+                <a href="13组件之间传递数据方式.html">
+            
+                    
+                    13组件之间传递数据方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.14" data-path="14props验证.html">
+            
+                <a href="14props验证.html">
+            
+                    
+                    14props验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.15" data-path="15插槽.html">
+            
+                <a href="15插槽.html">
+            
+                    
+                    15插槽
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.16" data-path="16动态组件.html">
+            
+                <a href="16动态组件.html">
+            
+                    
+                    16动态组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.17" data-path="17处理边界情况.html">
+            
+                <a href="17处理边界情况.html">
+            
+                    
+                    17处理边界情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.18" data-path="18脚手架.html">
+            
+                <a href="18脚手架.html">
+            
+                    
+                    18脚手架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.19" data-path="19Vuex.html">
+            
+                <a href="19Vuex.html">
+            
+                    
+                    19Vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.20" data-path="20VueRouter.html">
+            
+                <a href="20VueRouter.html">
+            
+                    
+                    20VueRouter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.21" data-path="21自定义指令.html">
+            
+                <a href="21自定义指令.html">
+            
+                    
+                    21自定义指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.22" data-path="22渲染函数.html">
+            
+                <a href="22渲染函数.html">
+            
+                    
+                    22渲染函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.23" data-path="22渲染函数.html">
+            
+                <a href="22渲染函数.html">
+            
+                    
+                    22渲染函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.24" data-path="23插件.html">
+            
+                <a href="23插件.html">
+            
+                    
+                    23插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.25" data-path="24VueConfig.html">
+            
+                <a href="24VueConfig.html">
+            
+                    
+                    24VueConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    Vue3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="01安装和使用.html">
+            
+                <a href="01安装和使用.html">
+            
+                    
+                    01安装和使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="02ref和reactive.html">
+            
+                <a href="02ref和reactive.html">
+            
+                    
+                    02ref和reactive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="03toRefs的解构.html">
+            
+                <a href="03toRefs的解构.html">
+            
+                    
+                    03toRefs的解构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="04组件之间的传递.html">
+            
+                <a href="04组件之间的传递.html">
+            
+                    
+                    04组件之间的传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="05订阅发布模式.html">
+            
+                <a href="05订阅发布模式.html">
+            
+                    
+                    05订阅发布模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="06计算属性.html">
+            
+                <a href="06计算属性.html">
+            
+                    
+                    06计算属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="07响应式计算和侦听.html">
+            
+                <a href="07响应式计算和侦听.html">
+            
+                    
+                    07响应式计算和侦听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="vue3_shop项目.html">
+            
+                <a href="vue3_shop项目.html">
+            
+                    
+                    vue3_shop项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    微信小程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="UniApp框架教程.html">
+            
+                <a href="UniApp框架教程.html">
+            
+                    
+                    01UniApp框架教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3.2" data-path="微信小程序.html">
+            
+                <a href="微信小程序.html">
+            
+                    
+                    02微信小程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="小程序教程.html">
+            
+                <a href="小程序教程.html">
+            
+                    
+                    03小程序教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="phase04.html">
+            
+                <a href="phase04.html">
+            
+                    
+                    Phase IV
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="weekly.html">
+            
+                <a href="weekly.html">
+            
+                    
+                    Weekly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="每周测试01.html">
+            
+                <a href="每周测试01.html">
+            
+                    
+                    每周测试01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="每周测试02.html">
+            
+                <a href="每周测试02.html">
+            
+                    
+                    每周测试02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="每周测试03.html">
+            
+                <a href="每周测试03.html">
+            
+                    
+                    每周测试03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="每周测试04.html">
+            
+                <a href="每周测试04.html">
+            
+                    
+                    每周测试04
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="每周测试05.html">
+            
+                <a href="每周测试05.html">
+            
+                    
+                    每周测试05
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.6" data-path="每周测试06.html">
+            
+                <a href="每周测试06.html">
+            
+                    
+                    每周测试06
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.7" data-path="每周测试07.html">
+            
+                <a href="每周测试07.html">
+            
+                    
+                    每周测试07
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                    待续中...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >02微信小程序</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;"><b></b>&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x5E73;&#x53F0;"><b></b>&#x5C0F;&#x7A0B;&#x5E8F;&#x5E73;&#x53F0;</a></li><li><span class="title-icon "></span><a href="#&#x5F00;&#x53D1;&#x8005;id"><b></b>&#x5F00;&#x53D1;&#x8005;id</a></li><li><span class="title-icon "></span><a href="#&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;"><b></b>&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;</a></li><li><span class="title-icon "></span><a href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x9879;&#x76EE;&#x76EE;&#x5F55;"><b></b>&#x5C0F;&#x7A0B;&#x5E8F;&#x9879;&#x76EE;&#x76EE;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x548C;&#x5C40;&#x90E8;&#x914D;&#x7F6E;"><b></b>&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x548C;&#x5C40;&#x90E8;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#vscode&#x7F16;&#x8F91;&#x5668;&#x63D2;&#x4EF6;"><b></b>vscode&#x7F16;&#x8F91;&#x5668;&#x63D2;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x903B;&#x8F91;&#x5C42;"><b></b>&#x903B;&#x8F91;&#x5C42;</a></li><ul><li><span class="title-icon "></span><a href="#&#x751F;&#x547D;&#x5468;&#x671F;"><b></b>&#x751F;&#x547D;&#x5468;&#x671F;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x6E32;&#x67D3;"><b></b>&#x6570;&#x636E;&#x6E32;&#x67D3;</a></li><li><span class="title-icon "></span><a href="#&#x5217;&#x8868;&#x6E32;&#x67D3;"><b></b>&#x5217;&#x8868;&#x6E32;&#x67D3;</a></li><li><span class="title-icon "></span><a href="#&#x5217;&#x8868;&#x6E32;&#x67D3;&#x522B;&#x540D;&#x8BBE;&#x7F6E;"><b></b>&#x5217;&#x8868;&#x6E32;&#x67D3;&#x522B;&#x540D;&#x8BBE;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x591A;&#x5C42;&#x5217;&#x8868;&#x6E32;&#x67D3;"><b></b>&#x591A;&#x5C42;&#x5217;&#x8868;&#x6E32;&#x67D3;</a></li><li><span class="title-icon "></span><a href="#&#x6761;&#x4EF6;&#x6E32;&#x67D3;"><b></b>&#x6761;&#x4EF6;&#x6E32;&#x67D3;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;"><b></b>&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;</a></li><li><span class="title-icon "></span><a href="#&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;"><b></b>&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;</a></li><li><span class="title-icon "></span><a href="#&#x8DEF;&#x7531;&#x8DF3;&#x8F6C;&#x65B9;&#x5F0F;"><b></b>&#x8DEF;&#x7531;&#x8DF3;&#x8F6C;&#x65B9;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x8DEF;&#x7531;&#x4F20;&#x53C2;"><b></b>&#x8DEF;&#x7531;&#x4F20;&#x53C2;</a></li><ul><li><span class="title-icon "></span><a href="#&#x975E;tab&#x9875;&#x4F20;&#x53C2;&#x6570;"><b></b>&#x975E;tab&#x9875;&#x4F20;&#x53C2;&#x6570;</a></li><li><span class="title-icon "></span><a href="#tab&#x9875;&#x4F20;&#x53C2;&#x6570;"><b></b>tab&#x9875;&#x4F20;&#x53C2;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6A21;&#x5757;&#x5316;"><b></b>&#x6A21;&#x5757;&#x5316;</a></li><ul><li><span class="title-icon "></span><a href="#&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x6A21;&#x5757;&#x5316;"><b></b>&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x6A21;&#x5757;&#x5316;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x548C;&#x5168;&#x5C40;&#x65B9;&#x6CD5;"><b></b>&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x548C;&#x5168;&#x5C40;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;promise&#x4E8B;&#x4EF6;&#x4E0E;h5&#x7684;&#x533A;&#x522B;"><b></b>&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;promise&#x4E8B;&#x4EF6;&#x4E0E;h5&#x7684;&#x533A;&#x522B;</a></li><li><span class="title-icon "></span><a href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x7684;api&#x80FD;&#x529B;"><b></b>&#x5C0F;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x7684;api&#x80FD;&#x529B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x672C;&#x5730;&#x5B58;&#x50A8;"><b></b>&#x672C;&#x5730;&#x5B58;&#x50A8;</a></li><li><span class="title-icon "></span><a href="#&#x8BF7;&#x6C42;&#x63A5;&#x53E3;"><b></b>&#x8BF7;&#x6C42;&#x63A5;&#x53E3;</a></li><li><span class="title-icon "></span><a href="#&#x8BF7;&#x6C42;&#x62A5;&#x6587;"><b></b>&#x8BF7;&#x6C42;&#x62A5;&#x6587;</a></li><li><span class="title-icon "></span><a href="#&#x63A5;&#x53E3;-&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5199;&#x6CD5;"><b></b>&#x63A5;&#x53E3;-&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5199;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x63A5;&#x53E3;-promise&#x5199;&#x6CD5;"><b></b>&#x63A5;&#x53E3;-promise&#x5199;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x63A5;&#x53E3;-async-await&#x5199;&#x6CD5;"><b></b>&#x63A5;&#x53E3;-async await&#x5199;&#x6CD5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7EC4;&#x4EF6;"><b></b>&#x7EC4;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;"><b></b>&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x63D2;&#x69FD;"><b></b>&#x63D2;&#x69FD;</a></li><li><span class="title-icon "></span><a href="#&#x6837;&#x5F0F;&#x9694;&#x79BB;"><b></b>&#x6837;&#x5F0F;&#x9694;&#x79BB;</a></li><li><span class="title-icon "></span><a href="#&#x7EC4;&#x4EF6;&#x7684;data&#x5C5E;&#x6027;"><b></b>&#x7EC4;&#x4EF6;&#x7684;data&#x5C5E;&#x6027;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;"><b></b>&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7236;&#x4F20;&#x5B50;"><b></b>&#x7236;&#x4F20;&#x5B50;</a></li><li><span class="title-icon "></span><a href="#&#x5B50;&#x4F20;&#x7236;"><b></b>&#x5B50;&#x4F20;&#x7236;</a></li><li><span class="title-icon "></span><a href="#&#x975E;&#x7236;&#x5B50;"><b></b>&#x975E;&#x7236;&#x5B50;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;"><b></b>&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;</a></li><li><span class="title-icon "></span><a href="#&#x7EC4;&#x4EF6;&#x5185;&#x6570;&#x636E;&#x76D1;&#x542C;"><b></b>&#x7EC4;&#x4EF6;&#x5185;&#x6570;&#x636E;&#x76D1;&#x542C;</a></li></ul><li><span class="title-icon "></span><a href="#vant-ui&#x5B89;&#x88C5;&#x6B65;&#x9AA4;"><b></b>vant-ui&#x5B89;&#x88C5;&#x6B65;&#x9AA4;</a></li><li><span class="title-icon "></span><a href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;&#x3001;&#x7528;&#x6237;&#x548C;&#x4FE1;&#x606F;&#x76F8;&#x5173;&#x63A5;&#x53E3;&#x6700;&#x65B0;&#x4FEE;&#x6539;"><b></b>&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;&#x3001;&#x7528;&#x6237;&#x548C;&#x4FE1;&#x606F;&#x76F8;&#x5173;&#x63A5;&#x53E3;&#x6700;&#x65B0;&#x4FEE;&#x6539;</a></li></ul></ul></div><a href="#&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><div class="treeview__container-title"></div><ul>
+<li><div><a href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x5E73;&#x53F0;">&#x5C0F;&#x7A0B;&#x5E8F;&#x5E73;&#x53F0;</a><i></i></div></li>
+<li><div><a href="#&#x5F00;&#x53D1;&#x8005;id">&#x5F00;&#x53D1;&#x8005;id</a><i></i></div></li>
+<li><div><a href="#&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;">&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;</a><i></i></div></li>
+<li><div><a href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x9879;&#x76EE;&#x76EE;&#x5F55;">&#x5C0F;&#x7A0B;&#x5E8F;&#x9879;&#x76EE;&#x76EE;&#x5F55;</a><i></i></div></li>
+<li><div><a href="#&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x548C;&#x5C40;&#x90E8;&#x914D;&#x7F6E;">&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x548C;&#x5C40;&#x90E8;&#x914D;&#x7F6E;</a><i></i></div></li>
+<li><div><a href="#vscode&#x7F16;&#x8F91;&#x5668;&#x63D2;&#x4EF6;">vscode&#x7F16;&#x8F91;&#x5668;&#x63D2;&#x4EF6;</a><i></i></div></li>
+<li><div><a href="#&#x903B;&#x8F91;&#x5C42;">&#x903B;&#x8F91;&#x5C42;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x751F;&#x547D;&#x5468;&#x671F;">&#x751F;&#x547D;&#x5468;&#x671F;</a><i></i></div></li>
+<li><div><a href="#&#x6570;&#x636E;&#x6E32;&#x67D3;">&#x6570;&#x636E;&#x6E32;&#x67D3;</a><i></i></div></li>
+<li><div><a href="#&#x5217;&#x8868;&#x6E32;&#x67D3;">&#x5217;&#x8868;&#x6E32;&#x67D3;</a><i></i></div></li>
+<li><div><a href="#&#x5217;&#x8868;&#x6E32;&#x67D3;&#x522B;&#x540D;&#x8BBE;&#x7F6E;">&#x5217;&#x8868;&#x6E32;&#x67D3;&#x522B;&#x540D;&#x8BBE;&#x7F6E;</a><i></i></div></li>
+<li><div><a href="#&#x591A;&#x5C42;&#x5217;&#x8868;&#x6E32;&#x67D3;">&#x591A;&#x5C42;&#x5217;&#x8868;&#x6E32;&#x67D3;</a><i></i></div></li>
+<li><div><a href="#&#x6761;&#x4EF6;&#x6E32;&#x67D3;">&#x6761;&#x4EF6;&#x6E32;&#x67D3;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;">&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;</a><i></i></div></li>
+<li><div><a href="#&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;">&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;</a><i></i></div></li>
+<li><div><a href="#&#x8DEF;&#x7531;&#x8DF3;&#x8F6C;&#x65B9;&#x5F0F;">&#x8DEF;&#x7531;&#x8DF3;&#x8F6C;&#x65B9;&#x5F0F;</a><i></i></div></li>
+<li><div><a href="#&#x8DEF;&#x7531;&#x4F20;&#x53C2;">&#x8DEF;&#x7531;&#x4F20;&#x53C2;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x975E;tab&#x9875;&#x4F20;&#x53C2;&#x6570;">&#x975E;tab&#x9875;&#x4F20;&#x53C2;&#x6570;</a><i></i></div></li>
+<li><div><a href="#tab&#x9875;&#x4F20;&#x53C2;&#x6570;">tab&#x9875;&#x4F20;&#x53C2;&#x6570;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x6A21;&#x5757;&#x5316;">&#x6A21;&#x5757;&#x5316;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x6A21;&#x5757;&#x5316;">&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x6A21;&#x5757;&#x5316;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x548C;&#x5168;&#x5C40;&#x65B9;&#x6CD5;">&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x548C;&#x5168;&#x5C40;&#x65B9;&#x6CD5;</a><i></i></div></li>
+<li><div><a href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;promise&#x4E8B;&#x4EF6;&#x4E0E;h5&#x7684;&#x533A;&#x522B;">&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;promise&#x4E8B;&#x4EF6;&#x4E0E;h5&#x7684;&#x533A;&#x522B;</a><i></i></div></li>
+<li><div><a href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x7684;api&#x80FD;&#x529B;">&#x5C0F;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x7684;api&#x80FD;&#x529B;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x672C;&#x5730;&#x5B58;&#x50A8;">&#x672C;&#x5730;&#x5B58;&#x50A8;</a><i></i></div></li>
+<li><div><a href="#&#x8BF7;&#x6C42;&#x63A5;&#x53E3;">&#x8BF7;&#x6C42;&#x63A5;&#x53E3;</a><i></i></div></li>
+<li><div><a href="#&#x8BF7;&#x6C42;&#x62A5;&#x6587;">&#x8BF7;&#x6C42;&#x62A5;&#x6587;</a><i></i></div></li>
+<li><div><a href="#&#x63A5;&#x53E3;-&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5199;&#x6CD5;">&#x63A5;&#x53E3;-&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5199;&#x6CD5;</a><i></i></div></li>
+<li><div><a href="#&#x63A5;&#x53E3;-promise&#x5199;&#x6CD5;">&#x63A5;&#x53E3;-promise&#x5199;&#x6CD5;</a><i></i></div></li>
+<li><div><a href="#&#x63A5;&#x53E3;-async-await&#x5199;&#x6CD5;">&#x63A5;&#x53E3;-async await&#x5199;&#x6CD5;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x7EC4;&#x4EF6;">&#x7EC4;&#x4EF6;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;">&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</a><i></i></div></li>
+<li><div><a href="#&#x63D2;&#x69FD;">&#x63D2;&#x69FD;</a><i></i></div></li>
+<li><div><a href="#&#x6837;&#x5F0F;&#x9694;&#x79BB;">&#x6837;&#x5F0F;&#x9694;&#x79BB;</a><i></i></div></li>
+<li><div><a href="#&#x7EC4;&#x4EF6;&#x7684;data&#x5C5E;&#x6027;">&#x7EC4;&#x4EF6;&#x7684;data&#x5C5E;&#x6027;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;">&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x7236;&#x4F20;&#x5B50;">&#x7236;&#x4F20;&#x5B50;</a><i></i></div></li>
+<li><div><a href="#&#x5B50;&#x4F20;&#x7236;">&#x5B50;&#x4F20;&#x7236;</a><i></i></div></li>
+<li><div><a href="#&#x975E;&#x7236;&#x5B50;">&#x975E;&#x7236;&#x5B50;</a><i></i></div></li>
+<li><div><a href="#&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;">&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;</a><i></i></div></li>
+<li><div><a href="#&#x7EC4;&#x4EF6;&#x5185;&#x6570;&#x636E;&#x76D1;&#x542C;">&#x7EC4;&#x4EF6;&#x5185;&#x6570;&#x636E;&#x76D1;&#x542C;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#vant-ui&#x5B89;&#x88C5;&#x6B65;&#x9AA4;">vant-ui&#x5B89;&#x88C5;&#x6B65;&#x9AA4;</a><i></i></div></li>
+<li><div><a href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;&#x3001;&#x7528;&#x6237;&#x548C;&#x4FE1;&#x606F;&#x76F8;&#x5173;&#x63A5;&#x53E3;&#x6700;&#x65B0;&#x4FEE;&#x6539;">&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;&#x3001;&#x7528;&#x6237;&#x548C;&#x4FE1;&#x606F;&#x76F8;&#x5173;&#x63A5;&#x53E3;&#x6700;&#x65B0;&#x4FEE;&#x6539;</a><i></i></div></li>
+</ul>
+</div>
+
+<h1 id="&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;"><a name="&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;</h1>
+<blockquote>
+<p>&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x4E00;&#x79CD;&#xFF0C;&#x82F1;&#x6587;&#x540D;<code>Wechat Mini Program</code>&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x4E0D;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x5373;&#x53EF;&#x4F7F;&#x7528;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x5B83;&#x5B9E;&#x73B0;&#x4E86;&#x5E94;&#x7528;&#x201C;&#x89E6;&#x624B;&#x53EF;&#x53CA;&#x201D;&#x7684;&#x68A6;&#x60F3;&#xFF0C;&#x7528;&#x6237;&#x626B;&#x4E00;&#x626B;&#x6216;&#x641C;&#x4E00;&#x4E0B;&#x5373;&#x53EF;&#x6253;&#x5F00;&#x5E94;&#x7528;&#x3002;</p>
+</blockquote>
+<h2 id="&#x5C0F;&#x7A0B;&#x5E8F;&#x5E73;&#x53F0;"><a name="&#x5C0F;&#x7A0B;&#x5E8F;&#x5E73;&#x53F0;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x5E73;&#x53F0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x7A0B;&#x5E8F;&#x5E73;&#x53F0;</h2>
+<p><strong>1&#x3001;&#x516C;&#x4F17;&#x5E73;&#x53F0; &#x5F00;&#x53D1;&#x6587;&#x6863;</strong>&#xFF08;&#x9879;&#x76EE;&#x672C;&#x8EAB;&#x662F;&#x5C0F;&#x7A0B;&#x5E8F;&#x3001;&#x53D1;&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x3001;&#x6587;&#x6863;&#x3001;&#x5FAE;&#x4FE1;&#x5C0F;&#x6E38;&#x620F;&#xFF09;</p>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/" target="_blank">&#x516C;&#x4F17;&#x5E73;&#x53F0;</a></p>
+</blockquote>
+<p><strong>2&#x3001;&#x5F00;&#x653E;&#x5E73;&#x53F0; &#x5F00;&#x53D1;&#x6587;&#x6863;</strong>&#xFF08;&#x9879;&#x76EE;&#x672C;&#x8EAB;&#x4E0D;&#x662F;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981;&#x7528;&#x5230;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x529F;&#x80FD;&#xFF09;</p>
+<blockquote>
+<p><a href="https://open.weixin.qq.com/cgi-bin/index?t=home/index&amp;lang=zh_CN&amp;token=4c9d8cf4e8158a36a4cbf43e496e50d68d1466b1" target="_blank">&#x5F00;&#x653E;&#x5E73;&#x53F0;</a></p>
+</blockquote>
+<p><strong>3&#x3001;&#x5F00;&#x653E;&#x793E;&#x533A;</strong> &#x793E;&#x533A;&#x529F;&#x80FD;&#x7C7B;&#x4F3C;<strong>&#x767E;&#x5EA6;&#x8D34;&#x5427;</strong>&#xFF08;&#x5FAE;&#x4FE1;&#x53D1;&#x5E03;&#x65B0;&#x7684;&#x7248;&#x672C;&#x4F1A;&#x5728;&#x8FD9;&#x91CC;&#x8FDB;&#x884C;&#x901A;&#x77E5;&#x3001;&#x63D0;&#x95EE;&#x95EE;&#x9898;&#xFF09;</p>
+<blockquote>
+<p><a href="https://developers.weixin.qq.com/community/develop/mixflow" target="_blank">&#x5F00;&#x653E;&#x793E;&#x533A;</a></p>
+</blockquote>
+<h2 id="&#x5F00;&#x53D1;&#x8005;id"><a name="&#x5F00;&#x53D1;&#x8005;id" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x53D1;&#x8005;id"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F00;&#x53D1;&#x8005;id</h2>
+<pre><code class="lang-js">appid &#x9879;&#x76EE;&#x7684;&#x552F;&#x4E00;id
+
+openid
+
+unionid
+</code></pre>
+<h2 id="&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;"><a name="&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;</h2>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x5FAE;&#x4FE1;&#x5B98;&#x65B9;&#x81EA;&#x5E26;&#x7684;&#x7F16;&#x8F91;&#x5668;</li>
+</ul>
+<blockquote>
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html" target="_blank">&#x7A33;&#x5B9A;&#x7248; Stable Build | &#x5FAE;&#x4FE1;&#x5F00;&#x653E;&#x6587;&#x6863;</a></p>
+</blockquote>
+<h2 id="&#x5C0F;&#x7A0B;&#x5E8F;&#x9879;&#x76EE;&#x76EE;&#x5F55;"><a name="&#x5C0F;&#x7A0B;&#x5E8F;&#x9879;&#x76EE;&#x76EE;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x9879;&#x76EE;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x7A0B;&#x5E8F;&#x9879;&#x76EE;&#x76EE;&#x5F55;</h2>
+<p><a href="https://qi.ashun01.eu.org/img/Untitled.png" data-lightbox="be276180-a84e-466d-9fe5-896d0c49875e" data-title="" target="_blank"><img src="https://qi.ashun01.eu.org/img/Untitled.png" alt=""></a></p>
+<pre><code class="lang-js">pages &#x9879;&#x76EE;&#x9875;&#x9762;
+
+utils &#x5DE5;&#x5177;&#x51FD;&#x6570;
+
+app.js &#x9879;&#x76EE;&#x7684;&#x552F;&#x4E00;&#x51FA;&#x53E3;&#xFF0C;&#x4E5F;&#x662F;&#x5168;&#x5C40;js&#x6587;&#x4EF6;
+
+app.json app&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+
+app.wxss app&#x5168;&#x5C40;&#x6837;&#x5F0F;
+
+project.config.json &#x9879;&#x76EE;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+
+sitemap.json &#x9879;&#x76EE;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#xFF0C;&#x65E0;&#x610F;&#x4E49;
+
+&#x5FAE;&#x4FE1;&#x9875;&#x9762;&#x91CC;&#x9762;&#x7684;<span class="hljs-number">4</span>&#x79CD;&#x6587;&#x4EF6;
+
+.js    &#x5F53;&#x524D;&#x9875;&#x7684;js&#x6587;&#x4EF6;
+
+.json  &#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+
+.wxml  &#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;html&#x6587;&#x4EF6;
+
+.wxss  &#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x6837;&#x5F0F;&#x6587;&#x4EF6;
+</code></pre>
+<h2 id="&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x548C;&#x5C40;&#x90E8;&#x914D;&#x7F6E;"><a name="&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x548C;&#x5C40;&#x90E8;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x548C;&#x5C40;&#x90E8;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x548C;&#x5C40;&#x90E8;&#x914D;&#x7F6E;</h2>
+<blockquote>
+<p>&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x662F;&#x6574;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x4F1A;&#x4F5C;&#x7528;&#x4E8E;&#x6574;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;</p>
+<p>&#x5C40;&#x90E8;&#x914D;&#x7F6E;(&#x9875;&#x9762;&#x914D;&#x7F6E;)&#x662F;&#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x914D;&#x7F6E;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x53EA;&#x4F1A;&#x4F5C;&#x7528;&#x4E8E;&#x5F53;&#x524D;&#x9875;&#x9762;</p>
+</blockquote>
+<h2 id="vscode&#x7F16;&#x8F91;&#x5668;&#x63D2;&#x4EF6;"><a name="vscode&#x7F16;&#x8F91;&#x5668;&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#vscode&#x7F16;&#x8F91;&#x5668;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>vscode&#x7F16;&#x8F91;&#x5668;&#x63D2;&#x4EF6;</h2>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x76F4;&#x63A5;&#x641C;&#x7D22;&#x5BF9;&#x5E94;&#x540D;&#x79F0;&#x4E0B;&#x8F7D;&#x63D2;&#x4EF6;</span>
+minapp &#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x6807;&#x7B7E;&#x3001;&#x5C5E;&#x6027;&#x7684;&#x667A;&#x80FD;&#x8865;&#x5168;
+
+wechat-snippet &#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x8865;&#x5168;
+
+wxml &#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;wxml&#x683C;&#x5F0F;&#x5316;&#x4EE5;&#x53CA;&#x9AD8;&#x4EAE;&#x7EC4;&#x4EF6;(&#x9AD8;&#x5EA6;&#x81EA;&#x5B9A;&#x4E49;)
+</code></pre>
+<h2 id="&#x903B;&#x8F91;&#x5C42;"><a name="&#x903B;&#x8F91;&#x5C42;" class="anchor-navigation-ex-anchor" href="#&#x903B;&#x8F91;&#x5C42;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x903B;&#x8F91;&#x5C42;</h2>
+<pre><code class="lang-jsx"><span class="hljs-comment">// app.js</span>
+&#x5C0F;&#x7A0B;&#x5E8F;&#x5173;&#x95ED;&#x540E;&#x5E76;&#x4E0D;&#x662F;&#x771F;&#x6B63;&#x7684;&#x5173;&#x95ED;&#xFF0C;&#x800C;&#x662F;&#x8FDB;&#x5165;&#x540E;&#x53F0;&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x65B9;&#x4FBF;&#x91CD;&#x65B0;&#x6253;&#x5F00;&#x65F6;&#x5019;&#x7684;&#x901F;&#x5EA6;&#x3002;&#x8FDB;&#x5165;&#x540E;&#x53F0;&#x5927;&#x6982;&#x662F;&#x5341;&#x51E0;&#x5206;&#x949F;&#x540E;
+&#x624D;&#x662F;&#x771F;&#x6B63;&#x7684;&#x5173;&#x95ED;&#x3002;
+App({
+  onLaunch (options) {
+    <span class="hljs-comment">//&#x7B2C;&#x4E00;&#x6B21;&#x8FDB;&#x5165;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x6216;&#x8005;&#x6740;&#x6389;&#x540E;&#x53F0;&#x4E4B;&#x540E;&#x91CD;&#x65B0;&#x8FDB;&#x5165;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x8FD9;&#x91CC;&#x7684;&#x4EE3;&#x7801;</span>
+  },
+  onShow (options) {
+    <span class="hljs-comment">// &#x5C0F;&#x7A0B;&#x5E8F;&#x6CA1;&#x88AB;&#x6740;&#x6389;&#x4E4B;&#x524D;&#xFF0C;&#x91CD;&#x65B0;&#x8FDB;&#x5165;&#x5C0F;&#x7A0B;&#x5E8F;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x8FD9;&#x91CC;&#x7684;&#x4EE3;&#x7801;</span>
+  },
+  onHide () {
+    <span class="hljs-comment">// &#x5173;&#x95ED;&#x5C0F;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;</span>
+  },
+  onError (msg) {
+    <span class="hljs-comment">//&#x5C0F;&#x7A0B;&#x5E8F;&#x62A5;&#x9519;&#x4F1A;&#x6267;&#x884C;&#x8FD9;&#x91CC;&#x7684;&#x4EE3;&#x7801;</span>
+  },
+  globalData: <span class="hljs-string">&apos;I am global data&apos;</span><span class="hljs-comment">//&#x5168;&#x5C40;&#x6570;&#x636E;</span>
+})
+</code></pre>
+<h3 id="&#x751F;&#x547D;&#x5468;&#x671F;"><a name="&#x751F;&#x547D;&#x5468;&#x671F;" class="anchor-navigation-ex-anchor" href="#&#x751F;&#x547D;&#x5468;&#x671F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x751F;&#x547D;&#x5468;&#x671F;</h3>
+<pre><code class="lang-jsx">&#x5168;&#x5C40;&#x751F;&#x547D;&#x5468;&#x671F;
+    onLaunch &#x7B2C;&#x4E00;&#x6B21;&#x5168;&#x5C40;&#x6267;&#x884C;
+    onShow  &#x7B2C;&#x4E00;&#x6B21;&#x6267;&#x884C;&#xFF0C;&#x6216;&#x8005;&#x5173;&#x95ED;&#x540E;&#x91CD;&#x65B0;&#x6253;&#x5F00;&#x540E;&#x6267;&#x884C;
+    onHide  &#x5173;&#x95ED;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x5B8C;&#x5168;&#x5173;&#x95ED;&#xFF0C;&#x5207;&#x6362;&#x5230;&#x540E;&#x53F0;
+    onError &#x5C0F;&#x7A0B;&#x5E8F;&#x62A5;&#x9519;
+
+&#x9875;&#x9762;&#x751F;&#x547D;&#x5468;&#x671F;
+    onLoad &#x5F53;&#x524D;&#x9875;&#x9762;&#x7B2C;&#x4E00;&#x6B21;&#x52A0;&#x8F7D;&#x7684;&#x65F6;&#x5019;
+    onShow &#x7B2C;&#x4E00;&#x6B21;&#x6267;&#x884C;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x6216;&#x8005;&#x5173;&#x95ED;&#x540E;&#x91CD;&#x65B0;&#x6253;&#x5F00;&#x540E;&#x6267;&#x884C;
+    onReady &#x5F53;&#x6E32;&#x67D3;&#x9875;&#xFF08;&#x89C6;&#x56FE;&#x5C42;-wxml&#xFF09;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;&#x6267;&#x884C;
+    onHide &#x5173;&#x95ED;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x5B8C;&#x5168;&#x5173;&#x95ED;&#xFF0C;&#x5207;&#x6362;&#x5230;&#x540E;&#x53F0;
+    onUnload &#x9500;&#x6BC1;&#x5F53;&#x524D;&#x9875;
+    onPullDownRefresh &#x4E0B;&#x62C9;&#x5237;&#x65B0;
+    onReachBottom &#x9875;&#x9762;&#x89E6;&#x5E95;&#x65F6;&#x6267;&#x884C;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x505A;&#x4E0A;&#x62C9;&#x52A0;&#x8F7D;
+    onShareAppMessage &#x5206;&#x4EAB;&#x9875;&#x9762;&#x6267;&#x884C;
+    onPageScroll &#x5F53;&#x524D;&#x9875;&#x9762;&#x6EDA;&#x52A8;&#x6267;&#x884C;
+    onResize &#x653E;&#x5927;&#x7F29;&#x5C0F;&#x9875;&#x9762;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;
+    onTabItemTap &#x70B9;&#x51FB;&#x5E95;&#x90E8;&#x5BFC;&#x822A;&#x680F;&#x89E6;&#x53D1;
+
+&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;
+    created &#x521B;&#x5EFA;&#x7EC4;&#x4EF6;&#x65F6;&#x6267;&#x884C;
+    attached &#x88AB;&#x63D2;&#x5165;&#x5230;&#x7236;&#x7EC4;&#x4EF6;&#x8282;&#x70B9;&#x65F6;&#x6267;&#x884C;
+    ready &#x6E32;&#x67D3;&#x5B8C;&#x540E;&#x6267;&#x884C;
+    moved &#x79FB;&#x52A8;&#x7EC4;&#x4EF6;&#x8282;&#x70B9;
+    detached &#x4ECE;&#x7236;&#x7EC4;&#x4EF6;&#x8282;&#x70B9;&#x79FB;&#x9664;&#x65F6;&#x6267;&#x884C;
+    error &#x7EC4;&#x4EF6;&#x65B9;&#x6CD5;&#x629B;&#x51FA;&#x9519;&#x8BEF;&#x65F6;&#x6267;&#x884C;
+</code></pre>
+<h3 id="&#x6570;&#x636E;&#x6E32;&#x67D3;"><a name="&#x6570;&#x636E;&#x6E32;&#x67D3;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x6E32;&#x67D3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x6E32;&#x67D3;</h3>
+<pre><code class="lang-jsx"><span class="hljs-comment">// index.js</span>
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">const</span> app = getApp()
+
+Page({
+  data: {<span class="hljs-comment">//&#x8FD9;&#x91CC;&#x5199;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x4F1A;&#x76F4;&#x63A5;&#x5728;wxml&#x9875;&#x9762;&#x6E32;&#x67D3;</span>
+    msg:{
+      name:<span class="hljs-string">&quot;&#x5C0F;&#x660E;&quot;</span>
+    },
+        message:<span class="hljs-string">&quot;hello &#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&quot;</span>
+  }
+})
+&lt;!--index.wxml--&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span></span>
+</code></pre>
+<h3 id="&#x5217;&#x8868;&#x6E32;&#x67D3;"><a name="&#x5217;&#x8868;&#x6E32;&#x67D3;" class="anchor-navigation-ex-anchor" href="#&#x5217;&#x8868;&#x6E32;&#x67D3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5217;&#x8868;&#x6E32;&#x67D3;</h3>
+<pre><code class="lang-jsx">// index.js
+// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;
+const app = getApp()
+
+Page({
+  data: {
+    arr:[&quot;&#x5C0F;&#x660E;&quot;,&quot;&#x5C0F;&#x7EA2;&quot;,&quot;&#x5C0F;&#x4E3D;&quot;]
+  }
+})
+&lt;!--index.wxml--&gt;
+//arr&#x662F;&#x6E32;&#x67D3;&#x7684;&#x6570;&#x7EC4;&#xFF0C;item&#x662F;&#x6570;&#x7EC4;&#x91CC;&#x9762;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x6210;&#x5458;,index&#x662F;&#x6570;&#x7EC4;&#x7684;&#x6210;&#x5458;&#x7684;&#x7D22;&#x5F15;&#x503C;
+
+&lt;view class=&quot;container&quot;&gt;
+  &lt;view wx:for=&quot;&quot;&gt;
+
+
+  &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
+<h3 id="&#x5217;&#x8868;&#x6E32;&#x67D3;&#x522B;&#x540D;&#x8BBE;&#x7F6E;"><a name="&#x5217;&#x8868;&#x6E32;&#x67D3;&#x522B;&#x540D;&#x8BBE;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5217;&#x8868;&#x6E32;&#x67D3;&#x522B;&#x540D;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5217;&#x8868;&#x6E32;&#x67D3;&#x522B;&#x540D;&#x8BBE;&#x7F6E;</h3>
+<pre><code class="lang-jsx">&lt;view wx:<span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;&quot;</span> wx:<span class="hljs-keyword">for</span>-item=<span class="hljs-string">&quot;itemName&quot;</span> wx:<span class="hljs-keyword">for</span>-index=<span class="hljs-string">&quot;idx&quot;</span>&gt;
+
+
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span></span>
+</code></pre>
+<h3 id="&#x591A;&#x5C42;&#x5217;&#x8868;&#x6E32;&#x67D3;"><a name="&#x591A;&#x5C42;&#x5217;&#x8868;&#x6E32;&#x67D3;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x5C42;&#x5217;&#x8868;&#x6E32;&#x67D3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x591A;&#x5C42;&#x5217;&#x8868;&#x6E32;&#x67D3;</h3>
+<pre><code class="lang-jsx">// index.js
+// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;
+const app = getApp()
+
+Page({
+  data: {
+    arr3: [
+      { 
+        countryName: &quot;&#x4E2D;&#x56FD;&quot;, 
+        cities: [{ cityName: &quot;&#x5E7F;&#x5DDE;&quot; }, { cityName: &quot;&#x6DF1;&#x5733;&quot; }, { cityName: &quot;&#x4E0A;&#x6D77;&quot; }] 
+      }, 
+      { 
+        countryName: &quot;&#x7F8E;&#x56FD;&quot;, 
+        cities: [{ cityName: &quot;&#x534E;&#x76DB;&#x987F;&quot; }, { cityName: &quot;&#x7EBD;&#x7EA6;&quot; }, { cityName: &quot;&#x6D1B;&#x6749;&#x77F6;&quot; }] 
+      }, 
+      { 
+        countryName: &quot;&#x65E5;&#x672C;&quot;, 
+        cities: [{ cityName: &quot;&#x4E1C;&#x4EAC;&quot; }, { cityName: &quot;&#x5317;&#x6D77;&#x9053;&quot; }, { cityName: &quot;&#x540D;&#x53E4;&#x5C4B;&quot; }] 
+      }
+    ]
+  }
+})
+&lt;view wx:for=&quot;&quot; wx:key=&quot;idxs&quot; wx:for-item=&quot;items&quot; wx:for-index=&quot;idxs&quot;&gt;
+  &lt;view wx:for=&quot;&quot; wx:key=&quot;index&quot;&gt;
+
+  &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
+<h3 id="&#x6761;&#x4EF6;&#x6E32;&#x67D3;"><a name="&#x6761;&#x4EF6;&#x6E32;&#x67D3;" class="anchor-navigation-ex-anchor" href="#&#x6761;&#x4EF6;&#x6E32;&#x67D3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6761;&#x4EF6;&#x6E32;&#x67D3;</h3>
+<pre><code class="lang-jsx"><span class="hljs-comment">// index.js</span>
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">const</span> app = getApp()
+
+Page({
+  data: {
+    bool:<span class="hljs-literal">false</span>
+  },
+  fn(){
+    <span class="hljs-keyword">this</span>.setData({
+      bool:!<span class="hljs-keyword">this</span>.data.bool
+    })
+  }
+})
+&lt;!--index.wxml--&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+  &#x9996;&#x9875;
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+    &#x5185;&#x5BB9;
+  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bind:tap</span>=<span class="hljs-string">&quot;fn&quot;</span>&gt;</span>
+    &#x6309;&#x94AE;
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span></span>
+</code></pre>
+<h2 id="&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;"><a name="&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;</h2>
+<pre><code class="lang-jsx"><span class="hljs-comment">// index.js</span>
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">const</span> app = getApp()
+
+Page({
+  data: {
+
+  },
+  fn(){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-number">123</span>)
+  }
+})
+&lt;!--index.wxml--&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bind:tap</span>=<span class="hljs-string">&quot;fn&quot;</span>&gt;</span>
+    &#x5185;&#x5BB9;
+  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span></span>
+</code></pre>
+<h2 id="&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;"><a name="&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;</h2>
+<blockquote>
+<p><code>currentTarget</code>  &#x7ED1;&#x5B9A;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684;&#x5143;&#x7D20;</p>
+<p><code>target</code>  &#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x7684;&#x5143;&#x7D20;</p>
+</blockquote>
+<pre><code class="lang-jsx">//&#x6848;&#x4F8B;&#x4E2D; currentTarget&#x662F;container&#x3002;target&#x662F;test&#x3002;
+&lt;view class=&quot;container&quot; bind:tap=&quot;fn&quot;&gt;
+  &lt;view class=&quot;test&quot; data-msg=&quot;&quot;&gt;
+
+  &lt;/view&gt;
+&lt;/view&gt;
+//&#x6848;&#x4F8B;&#x4E2D; currentTarget&#x662F;test&#x3002;target&#x662F;test&#x3002;
+&lt;view class=&quot;container&quot;&gt;
+  &lt;view bind:tap=&quot;fn&quot; class=&quot;test&quot; data-msg=&quot;&quot;&gt;
+
+  &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
+<h2 id="&#x8DEF;&#x7531;&#x8DF3;&#x8F6C;&#x65B9;&#x5F0F;"><a name="&#x8DEF;&#x7531;&#x8DF3;&#x8F6C;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x7531;&#x8DF3;&#x8F6C;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8DEF;&#x7531;&#x8DF3;&#x8F6C;&#x65B9;&#x5F0F;</h2>
+<blockquote>
+<p>1&#x3001;<code>wx.navigateTo</code> &#x6253;&#x5F00;&#x65B0;&#x9875;&#x9762;(&#x4E0D;&#x80FD;&#x6253;&#x5F00;tab&#x9875;)</p>
+</blockquote>
+<pre><code class="lang-jsx">&lt;navigator open-type=&quot;navigateTo&quot; url=&quot;/pages/test/test&quot;&gt;&#x8DF3;&#x8F6C;&#x5230;&#x6D4B;&#x8BD5;&#x9875;&lt;/navigator&gt;
+</code></pre>
+<blockquote>
+<p>2&#x3001;<code>wx.switchTab Tab</code> &#x5207;&#x6362;(&#x53EA;&#x80FD;&#x6253;&#x5F00;tab&#x9875;)</p>
+</blockquote>
+<pre><code class="lang-jsx">&lt;navigator open-type=&quot;switchTab&quot; url=&quot;/pages/logs/logs&quot;&gt;&#x8DF3;&#x8F6C;&#x5230;&#x65E5;&#x5FD7;&#x9875;&lt;/navigator&gt;
+</code></pre>
+<blockquote>
+<p>3&#x3001;<code>wx.redirectTo</code> &#x9875;&#x9762;&#x91CD;&#x5B9A;&#x5411;(&#x6CA1;&#x6709;&#x5386;&#x53F2;&#x8BB0;&#x5F55;,&#x4E0D;&#x80FD;&#x6267;&#x884C;&#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x9875;&#x8FD9;&#x79CD;&#x64CD;&#x4F5C;)</p>
+<p>4&#x3001;<code>wx.navigateBack</code> &#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x9875;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">// pages/test/test.js</span>
+Page({
+  goBack(){
+    wx.navigateBack()
+  }
+})
+</code></pre>
+<h2 id="&#x8DEF;&#x7531;&#x4F20;&#x53C2;"><a name="&#x8DEF;&#x7531;&#x4F20;&#x53C2;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x7531;&#x4F20;&#x53C2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8DEF;&#x7531;&#x4F20;&#x53C2;</h2>
+<h3 id="&#x975E;tab&#x9875;&#x4F20;&#x53C2;&#x6570;"><a name="&#x975E;tab&#x9875;&#x4F20;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x975E;tab&#x9875;&#x4F20;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x975E;tab&#x9875;&#x4F20;&#x53C2;&#x6570;</h3>
+<pre><code class="lang-jsx"><span class="hljs-comment">// index.js</span>
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">const</span> app = getApp()
+
+Page({
+  go(){
+    <span class="hljs-keyword">let</span> id = <span class="hljs-number">2</span>
+    wx.navigateTo({
+      url: <span class="hljs-string">`/pages/index2/index2?id=<span class="hljs-subst">${id}</span>`</span>,
+      success: (result)=&gt;{
+
+      }
+    });
+  }
+})
+<span class="hljs-comment">// pages/index2/index2.js</span>
+Page({
+  onLoad: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">options</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(options)
+  }
+})
+</code></pre>
+<h3 id="tab&#x9875;&#x4F20;&#x53C2;&#x6570;"><a name="tab&#x9875;&#x4F20;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#tab&#x9875;&#x4F20;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>tab&#x9875;&#x4F20;&#x53C2;&#x6570;</h3>
+<blockquote>
+<p><strong>1&#x3001;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4F20;&#x6570;&#x636E;</strong></p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">// index.js</span>
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">const</span> app = getApp()
+
+Page({
+  go(){
+    <span class="hljs-keyword">let</span> id = <span class="hljs-number">1</span>
+    app.globalData.id = id
+    wx.switchTab({
+      url: <span class="hljs-string">&apos;/pages/index3/index3&apos;</span>
+    });
+  }
+})
+<span class="hljs-comment">// pages/index3/index3.js</span>
+<span class="hljs-keyword">const</span> app = getApp()
+Page({
+  onLoad: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(app.globalData.id)
+  }
+})
+</code></pre>
+<blockquote>
+<p><strong>2&#x3001;&#x4F7F;&#x7528;<code>storage</code>&#x5B58;&#x6570;&#x636E;</strong></p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">// index.js</span>
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">const</span> app = getApp()
+
+Page({
+  go(){
+    wx.setStorageSync(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-number">1</span>);
+    wx.switchTab({
+      url: <span class="hljs-string">&apos;/pages/index3/index3?id&apos;</span>,
+    });
+  }
+})
+<span class="hljs-comment">// pages/index3/index3.js</span>
+<span class="hljs-keyword">const</span> app = getApp()
+Page({
+  onLoad: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(wx.getStorageSync(<span class="hljs-string">&quot;id&quot;</span>))
+  }
+})
+</code></pre>
+<h2 id="&#x6A21;&#x5757;&#x5316;"><a name="&#x6A21;&#x5757;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x5757;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x5757;&#x5316;</h2>
+<ul>
+<li><p>&#x6700;&#x65B0;&#x7248;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>es6</code>&#x8BED;&#x6CD5;</p>
+</li>
+<li><p>&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x91C7;&#x7528;&#x7684;&#x662F;<code>node.js</code>&#x7684;&#x8BED;&#x6CD5;(<code>commonjs</code>&#x89C4;&#x8303;)</p>
+</li>
+<li><p>&#x8865;&#x5145;&#x77E5;&#x8BC6;&#x70B9;&#xFF1A;<code>js</code>&#x7684;&#x6A21;&#x5757;&#x5316;&#x6709;4&#x4E2A;(<code>commonjs\es6\amd\cmd</code>)</p>
+</li>
+</ul>
+<pre><code class="lang-jsx"><span class="hljs-comment">// index.js</span>
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">const</span> app = getApp()
+<span class="hljs-keyword">const</span> test = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;../../utils/test.js&quot;</span>)
+
+Page({
+  data: {
+
+  },
+  fn(e){
+
+  },
+  onShow(){
+    test.fn()
+    test.fn2()
+  }
+})
+<span class="hljs-comment">//test.js</span>
+<span class="hljs-keyword">let</span> fn = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&quot;</span>)
+}
+
+<span class="hljs-keyword">let</span> fn2 = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x6D4B;&#x8BD5;2&quot;</span>)
+}
+
+<span class="hljs-comment">// module.exports.fn = fn</span>
+<span class="hljs-comment">// module.exports.fn2 = fn2</span>
+
+<span class="hljs-comment">// &#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x7B49;&#x4EF7;&#x4E8E;&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;</span>
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//     fn:function(){},</span>
+<span class="hljs-comment">//     fn2:function(){}</span>
+<span class="hljs-comment">// }</span>
+
+<span class="hljs-comment">// &#x7B80;&#x5199;</span>
+<span class="hljs-built_in">module</span>.exports = {
+    fn,
+    fn2
+}
+</code></pre>
+<h3 id="&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x6A21;&#x5757;&#x5316;"><a name="&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x6A21;&#x5757;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x6A21;&#x5757;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x6A21;&#x5757;&#x5316;</h3>
+<pre><code class="lang-jsx"><span class="hljs-comment">// index.js</span>
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">const</span> app = getApp()
+<span class="hljs-keyword">const</span> test = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;../../utils/test.js&quot;</span>)
+<span class="hljs-comment">// &#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684;test&#x7B49;&#x4EF7;&#x4E8E;</span>
+<span class="hljs-comment">// {fn:function(){},fn2:function(){}}</span>
+<span class="hljs-comment">// &#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;es6&#x7684;&#x7ED3;&#x6784;&#x8D4B;&#x503C;</span>
+<span class="hljs-keyword">const</span> {fn,fn2} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;../../utils/test.js&quot;</span>)
+
+Page({
+  data: {
+
+  },
+  fn(e){
+
+  },
+  onShow(){
+    fn()
+    fn2()
+  }
+})
+<span class="hljs-comment">//test.js</span>
+exports.fn = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&quot;</span>)
+}
+exports.fn2 = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x6D4B;&#x8BD5;2&quot;</span>)
+}
+</code></pre>
+<h2 id="&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x548C;&#x5168;&#x5C40;&#x65B9;&#x6CD5;"><a name="&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x548C;&#x5168;&#x5C40;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x548C;&#x5168;&#x5C40;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x548C;&#x5168;&#x5C40;&#x65B9;&#x6CD5;</h2>
+<pre><code class="lang-jsx"><span class="hljs-comment">// app.js</span>
+App({
+  globalData: {
+    message:<span class="hljs-string">&quot;hello world&quot;</span>,<span class="hljs-comment">//&#x5168;&#x5C40;&#x5C5E;&#x6027;</span>
+    fn:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-comment">//&#x5168;&#x5C40;&#x65B9;&#x6CD5;</span>
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;hi&quot;</span>)
+    }
+  }
+})
+<span class="hljs-comment">// index.js</span>
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">const</span> app = getApp()
+
+Page({
+  onShow(){
+    <span class="hljs-built_in">console</span>.log(app.globalData.message)
+    app.globalData.fn()
+    <span class="hljs-built_in">console</span>.log(app)<span class="hljs-comment">//&#x5C0F;&#x7A0B;&#x5E8F;&#x5B9E;&#x4F8B;</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>)<span class="hljs-comment">//&#x6253;&#x5370;&#x7684;&#x662F;&#x5F53;&#x524D;&#x9875;&#x9762;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x662F;&#x5C0F;&#x7A0B;&#x5E8F;&#x5B9E;&#x4F8B;</span>
+  }
+})
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5728;&#x9875;&#x9762;&#x6253;&#x5370;&#x7684;<code>this</code>&#x4E0D;&#x662F;&#x5C0F;&#x7A0B;&#x5E8F;&#x5B9E;&#x4F8B;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x8DDF;<code>vue</code>&#x4E00;&#x6837;&#x7684;<code>this.xxx</code>&#x83B7;&#x53D6;&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
+</blockquote>
+<h2 id="&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;promise&#x4E8B;&#x4EF6;&#x4E0E;h5&#x7684;&#x533A;&#x522B;"><a name="&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;promise&#x4E8B;&#x4EF6;&#x4E0E;h5&#x7684;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;promise&#x4E8B;&#x4EF6;&#x4E0E;h5&#x7684;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;promise&#x4E8B;&#x4EF6;&#x4E0E;h5&#x7684;&#x533A;&#x522B;</h2>
+<pre><code class="lang-jsx"><span class="hljs-comment">//&#x4E8B;&#x4EF6;&#x8F6E;&#x8BE2;&#x673A;&#x5236;&#xFF08;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x673A;&#x5236;&#xFF09;</span>
+<span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>() &#x5B8F;&#x4E8B;&#x4EF6;
+.then() &#x5FAE;&#x4E8B;&#x4EF6;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve,reject)=&gt;{
+        resolve()
+    })
+}
+fn().then(()=&gt;{
+
+})
+
+<span class="hljs-comment">//&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x91CC;&#x9762;&#xFF0C;.then()&#x5C5E;&#x4E8E;&#x5B8F;&#x4E8B;&#x4EF6;</span>
+<span class="hljs-comment">//async await&#x4E00;&#x6837;</span>
+</code></pre>
+<h2 id="&#x5C0F;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x7684;api&#x80FD;&#x529B;"><a name="&#x5C0F;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x7684;api&#x80FD;&#x529B;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x7684;api&#x80FD;&#x529B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x7684;api&#x80FD;&#x529B;</h2>
+<blockquote>
+<p>&#x6240;&#x6709;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;<code>api</code>&#x90FD;&#x662F;&#x8C03;&#x7528;<code>wx.xxx</code>&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x8C03;&#x7528;</p>
+</blockquote>
+<h3 id="&#x672C;&#x5730;&#x5B58;&#x50A8;"><a name="&#x672C;&#x5730;&#x5B58;&#x50A8;" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x5730;&#x5B58;&#x50A8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x5730;&#x5B58;&#x50A8;</h3>
+<pre><code class="lang-jsx"><span class="hljs-comment">// &#x540C;&#x6B65;</span>
+wx.setStorageSync(<span class="hljs-string">&quot;msg&quot;</span>, <span class="hljs-string">&quot;hello&quot;</span>);
+
+<span class="hljs-built_in">console</span>.log(wx.getStorageSync(<span class="hljs-string">&quot;msg&quot;</span>));
+<span class="hljs-comment">// &#x5F02;&#x6B65;</span>
+wx.setStorage({
+  key: <span class="hljs-string">&apos;msg2&apos;</span>,
+  data: <span class="hljs-string">&quot;hi&quot;</span>,
+  success: (result)=&gt;{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>)
+  },
+  fail: ()=&gt;{},
+  complete: ()=&gt;{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span>)
+  }
+});
+
+wx.getStorage({
+  key: <span class="hljs-string">&apos;msg2&apos;</span>,
+  success: (result)=&gt;{
+    <span class="hljs-built_in">console</span>.log(result.data)
+  },
+  fail: ()=&gt;{},
+  complete: ()=&gt;{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-number">123</span>)
+  }
+});
+</code></pre>
+<h3 id="&#x8BF7;&#x6C42;&#x63A5;&#x53E3;"><a name="&#x8BF7;&#x6C42;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x8BF7;&#x6C42;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BF7;&#x6C42;&#x63A5;&#x53E3;</h3>
+<pre><code class="lang-jsx">wx.request({
+  url: <span class="hljs-string">&apos;&lt;http://vt.ossjk.com/goods/getIndexInfo&gt;&apos;</span>,
+  header: {<span class="hljs-string">&apos;content-type&apos;</span>:<span class="hljs-string">&apos;application/json&apos;</span>},
+  method: <span class="hljs-string">&apos;GET&apos;</span>,
+  success: (result)=&gt;{
+    <span class="hljs-built_in">console</span>.log(result)
+  },
+  fail: ()=&gt;{},
+  complete: ()=&gt;{}
+});
+</code></pre>
+<h3 id="&#x8BF7;&#x6C42;&#x62A5;&#x6587;"><a name="&#x8BF7;&#x6C42;&#x62A5;&#x6587;" class="anchor-navigation-ex-anchor" href="#&#x8BF7;&#x6C42;&#x62A5;&#x6587;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BF7;&#x6C42;&#x62A5;&#x6587;</h3>
+<pre><code class="lang-jsx">&#x8BF7;&#x6C42;&#x62A5;&#x6587;
+    &#x8BF7;&#x6C42;&#x884C; general&#xFF1A;Request URL &#x8BF7;&#x6C42;&#x5730;&#x5740;&#x3001;Request Method &#x8BF7;&#x6C42;&#x7C7B;&#x578B;&#x3001;Status Code&#x72B6;&#x6001;&#x7801;
+        <span class="hljs-number">1</span>xx &#x8BF7;&#x6C42;&#x4E2D;
+        <span class="hljs-number">2</span>xx &#x53D1;&#x9001;&#x6210;&#x529F;
+        <span class="hljs-number">3</span>xx &#x91CD;&#x5B9A;&#x5411;
+        <span class="hljs-number">4</span>xx &#x8BF7;&#x6C42;&#x9519;&#x8BEF;&#xFF08;&#x524D;&#x7AEF;&#x9519;&#x8BEF;&#xFF09;
+            <span class="hljs-number">404</span> &#x5730;&#x5740;&#x9519;
+        <span class="hljs-number">5</span>xx &#x670D;&#x52A1;&#x7AEF;&#x9519;&#x8BEF;(&#x4E5F;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x524D;&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#x9519;)
+    &#x8BF7;&#x6C42;&#x5934;
+        content-type &#x53D1;&#x9001;&#x7684;&#x8BF7;&#x6C42;&#x6587;&#x672C;&#x7C7B;&#x578B;
+            application/json <span class="hljs-built_in">JSON</span>&#x7C7B;&#x578B;&#x6570;&#x636E;
+            application/x-www-form-urlencoded &#x8868;&#x5355;&#x7C7B;&#x578B;&#x6570;&#x636E;
+        token &#x4EE4;&#x724C;-&#x8BC6;&#x522B;&#x767B;&#x5F55;&#x7528;&#x6237;&#x7684;&#x72B6;&#x6001;
+    &#x8BF7;&#x6C42;&#x4F53;
+        &#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x662F;post&#x4F1A;&#x5728;&#x8FD9;&#x91CC;&#x76F4;&#x63A5;&#x663E;&#x793A;&#xFF0C;&#x5982;&#x679C;&#x662F;get&#x4F1A;&#x5728;&#x5730;&#x5740;&#x680F;&#x663E;&#x793A;&#x3002;
+&#x54CD;&#x5E94;&#x62A5;&#x6587;
+    &#x54CD;&#x5E94;&#x884C;
+    &#x54CD;&#x5E94;&#x5934;
+    &#x54CD;&#x5E94;&#x4F53; &#x8FD4;&#x56DE;&#x7ED9;&#x524D;&#x7AEF;&#x7684;&#x6570;&#x636E;
+
+http&#x7684;&#x7F3A;&#x9677;&#xFF0C;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#x72B6;&#x6001;
+</code></pre>
+<h3 id="&#x63A5;&#x53E3;-&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5199;&#x6CD5;"><a name="&#x63A5;&#x53E3;-&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5199;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x53E3;-&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5199;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;-&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5199;&#x6CD5;</h3>
+<pre><code class="lang-jsx">wx.request({
+  url: <span class="hljs-string">&apos;&lt;http://vt.ossjk.com/goods/getDetailGoodsInfo&gt;&apos;</span>,
+  header: { <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span> },
+  data: {
+    goodsId: result.data.data.slides[<span class="hljs-number">0</span>].goodsId
+  },
+  method: <span class="hljs-string">&apos;POST&apos;</span>,
+  success: (result) =&gt; {
+    <span class="hljs-built_in">console</span>.log(result)
+  },
+  fail: () =&gt; { },
+  complete: () =&gt; { }
+})
+</code></pre>
+<h3 id="&#x63A5;&#x53E3;-promise&#x5199;&#x6CD5;"><a name="&#x63A5;&#x53E3;-promise&#x5199;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x53E3;-promise&#x5199;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;-promise&#x5199;&#x6CD5;</h3>
+<h3 id="&#x63A5;&#x53E3;-async-await&#x5199;&#x6CD5;"><a name="&#x63A5;&#x53E3;-async-await&#x5199;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x53E3;-async-await&#x5199;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;-async await&#x5199;&#x6CD5;</h3>
+<h2 id="&#x7EC4;&#x4EF6;"><a name="&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x4EF6;</h2>
+<ul>
+<li><p>&#x53EF;&#x4EE5;&#x590D;&#x7528;&#x7684;&#x529F;&#x80FD;&#x6A21;&#x5757;&#x3002;</p>
+</li>
+<li><p>&#x539F;&#x751F;&#x7EC4;&#x4EF6;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x81EA;&#x5E26;&#x7684;&#x7EC4;&#x4EF6;&#x3002;</p>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/component/cover-image.html" target="_blank">cover-image | &#x5FAE;&#x4FE1;&#x5F00;&#x653E;&#x6587;&#x6863;</a></p>
+</blockquote>
+<p><strong>&#x7B2C;&#x4E09;&#x65B9;&#x7EC4;&#x4EF6;&#x5E93;<code>ui&#xFF0C;elment\ant-dsign\vant</code></strong></p>
+<blockquote>
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html" target="_blank">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</a></p>
+</blockquote>
+<h3 id="&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;"><a name="&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</h3>
+<blockquote>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>button</code>&#x76EE;&#x5F55;&#xFF0C;&#x5728;&#x91CC;&#x9762;&#x518D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>component</code>&#x7EC4;&#x4EF6;</p>
+</blockquote>
+<p><a href="https://qi.ashun01.eu.org/img/https%253A%252F%252Fs3-us-west-2.amazonaws.com%252Fsecure.notion-static.com%252F46cba12d-bf5e-4bc5-b6da-ebc502845866%252FUntitled.png" data-lightbox="a4d4af7f-fb18-43e6-b9ce-e488cd5d9fbe" data-title="" target="_blank"><img src="https://qi.ashun01.eu.org/img/https%253A%252F%252Fs3-us-west-2.amazonaws.com%252Fsecure.notion-static.com%252F46cba12d-bf5e-4bc5-b6da-ebc502845866%252FUntitled.png" alt=""></a></p>
+<pre><code class="lang-jsx">//button.wxml
+&lt;button&gt;&#x6D4B;&#x8BD5;&#x6309;&#x94AE;&lt;/button&gt;
+</code></pre>
+<blockquote>
+<p>&#x5728;&#x4F7F;&#x7528;&#x7684;&#x9875;&#x9762;&#x7684;json&#x6587;&#x4EF6;&#x5F15;&#x5165;</p>
+</blockquote>
+<p><a href="https://qi.ashun01.eu.org/img/https%253A%252F%252Fs3-us-west-2.amazonaws.com%252Fsecure.notion-static.com%252F6f9bbd82-aba4-41b7-b0c2-352d1d438f97%252FUntitled.png" data-lightbox="c8fd4506-95ae-4ef3-8b6a-9375d8f3a6b2" data-title="" target="_blank"><img src="https://qi.ashun01.eu.org/img/https%253A%252F%252Fs3-us-west-2.amazonaws.com%252Fsecure.notion-static.com%252F6f9bbd82-aba4-41b7-b0c2-352d1d438f97%252FUntitled.png" alt=""></a></p>
+<pre><code class="lang-jsx"><span class="hljs-comment">//index.json</span>
+{
+  <span class="hljs-string">&quot;usingComponents&quot;</span>: {
+    <span class="hljs-string">&quot;mybutton&quot;</span>:<span class="hljs-string">&quot;../../components/button/button&quot;</span>
+  }
+}
+&lt;!--index.wxml--&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mybutton</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mybutton</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span></span>
+</code></pre>
+<h3 id="&#x63D2;&#x69FD;"><a name="&#x63D2;&#x69FD;" class="anchor-navigation-ex-anchor" href="#&#x63D2;&#x69FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63D2;&#x69FD;</h3>
+<pre><code class="lang-jsx">&lt;!--index.wxml--&gt;
+&lt;view class=&quot;container&quot;&gt;
+  &lt;mybutton&gt;&#x54C8;&#x54C8;&lt;/mybutton&gt;
+  &lt;mybutton&gt;&#x5475;&#x5475;&lt;/mybutton&gt;
+  &lt;mybutton&gt;&#x563F;&#x563F;&lt;/mybutton&gt;
+&lt;/view&gt;
+&lt;button&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+&lt;/button&gt;
+</code></pre>
+<blockquote>
+<p>&#x591A;&#x4E2A;&#x63D2;&#x69FD;</p>
+</blockquote>
+<pre><code class="lang-jsx">&lt;!--index.wxml--&gt;
+&lt;view class=&quot;container&quot;&gt;
+  &lt;mybutton&gt;
+    &lt;view slot=&quot;a&quot;&gt;
+      &#x674E;&#x5927;&#x7237;
+    &lt;/view&gt;
+
+    &lt;view slot=&quot;b&quot;&gt;
+      &#x674E;&#x5927;&#x5988;
+    &lt;/view&gt;
+  &lt;/mybutton&gt;
+&lt;/view&gt;
+//button.wxml
+&lt;button&gt;
+    &lt;slot name=&quot;a&quot;&gt;&lt;/slot&gt;
+    &#x5185;&#x5BB9;
+    &lt;slot name=&quot;b&quot;&gt;&lt;/slot&gt;
+&lt;/button&gt;
+// components/button/button.js
+Component({
+  options: {
+    multipleSlots: true // &#x5728;&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x65F6;&#x7684;&#x9009;&#x9879;&#x4E2D;&#x542F;&#x7528;&#x591A;slot&#x652F;&#x6301;
+  },
+})
+</code></pre>
+<h3 id="&#x6837;&#x5F0F;&#x9694;&#x79BB;"><a name="&#x6837;&#x5F0F;&#x9694;&#x79BB;" class="anchor-navigation-ex-anchor" href="#&#x6837;&#x5F0F;&#x9694;&#x79BB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6837;&#x5F0F;&#x9694;&#x79BB;</h3>
+<blockquote>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6837;&#x5F0F;&#x65E0;&#x6CD5;&#x66F4;&#x6539;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x9664;&#x975E;&#x8BBE;&#x7F6E;<code>styleIsolation</code>&#x5C5E;&#x6027;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-jsx">Component({
+  options: {
+    styleIsolation: <span class="hljs-string">&apos;isolated&apos;</span>
+  }
+})
+</code></pre>
+<ul>
+<li><code>isolated</code>&#x9ED8;&#x8BA4;&#x5C5E;&#x6027;&#xFF0C;&#x7236;&#x7EC4;&#x4EF6;&#x65E0;&#x6CD5;&#x5F71;&#x54CD;&#x5230;&#x5B50;&#x7EC4;&#x4EF6;</li>
+<li><code>apply-shared</code> &#x7236;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x5F71;&#x54CD;&#x5230;&#x5B50;&#x7EC4;&#x4EF6;</li>
+<li><code>shared</code>&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x5F71;&#x54CD;</li>
+</ul>
+<h3 id="&#x7EC4;&#x4EF6;&#x7684;data&#x5C5E;&#x6027;"><a name="&#x7EC4;&#x4EF6;&#x7684;data&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x4EF6;&#x7684;data&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x4EF6;&#x7684;data&#x5C5E;&#x6027;</h3>
+<blockquote>
+<p>&#x7EC4;&#x4EF6;&#x7684;<code>data</code>&#x5C5E;&#x6027;&#x548C;<code>page</code>&#x7684;<code>data</code>&#x5C5E;&#x6027;&#x4E00;&#x6A21;&#x4E00;&#x6837;,&#x4F46;&#x662F;&#x65B0;&#x7248;&#x7684;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x65B9;&#x6CD5;&#x5EFA;&#x8BAE;&#x5199;&#x5728;<code>methods</code>&#x91CC;&#x9762;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">// components/button/button.js</span>
+Component({
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;
+   */</span>
+  properties: {
+
+  },
+
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x521D;&#x59CB;&#x6570;&#x636E;
+   */</span>
+  data: {
+    msg:<span class="hljs-string">&quot;hello &#x7EC4;&#x4EF6;&quot;</span>
+  },
+
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;
+   */</span>
+  methods: {
+    fn(){
+      <span class="hljs-keyword">this</span>.setData({
+        msg:<span class="hljs-string">&quot;hi &#x7EC4;&#x4EF6;&quot;</span>
+      })
+    }
+  }
+})
+</code></pre>
+<h2 id="&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;"><a name="&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;</h2>
+<h3 id="&#x7236;&#x4F20;&#x5B50;"><a name="&#x7236;&#x4F20;&#x5B50;" class="anchor-navigation-ex-anchor" href="#&#x7236;&#x4F20;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7236;&#x4F20;&#x5B50;</h3>
+<pre><code class="lang-jsx">&lt;!--index.wxml--&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mybutton</span> <span class="hljs-attr">a</span>=<span class="hljs-string">&quot;&#x674E;&#x5927;&#x7237;&quot;</span> <span class="hljs-attr">b</span>=<span class="hljs-string">&quot;&#x674E;&#x5927;&#x5988;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mybutton</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span></span>
+&lt;button bind:tap=<span class="hljs-string">&quot;fn&quot;</span>&gt;
+
+
+
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+<span class="hljs-comment">// components/button/button.js</span>
+Component({
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;
+   */</span>
+  properties: {
+    a:<span class="hljs-built_in">String</span>,<span class="hljs-comment">//props&#x6821;&#x9A8C;-&#x68C0;&#x67E5;props&#x7C7B;&#x578B;</span>
+    b:<span class="hljs-built_in">String</span>
+  },
+
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x521D;&#x59CB;&#x6570;&#x636E;
+   */</span>
+  data: {
+    msg:<span class="hljs-string">&quot;hello &#x7EC4;&#x4EF6;&quot;</span>
+  },
+
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;
+   */</span>
+  methods: {
+    fn(){
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.data.msg)
+
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.properties.a)<span class="hljs-comment">//&#x7B49;&#x4EF7;&#x4E8E;&#x4E0B;&#x9762;</span>
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.data.a)
+    }
+  }
+})
+</code></pre>
+<h3 id="&#x5B50;&#x4F20;&#x7236;"><a name="&#x5B50;&#x4F20;&#x7236;" class="anchor-navigation-ex-anchor" href="#&#x5B50;&#x4F20;&#x7236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B50;&#x4F20;&#x7236;</h3>
+<blockquote>
+<p>&#x6D41;&#x7A0B;:</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-number">1</span>&#x3001;&#x5B50;&#x7EC4;&#x4EF6;button&#x70B9;&#x51FB;&#xFF0C;&#x89E6;&#x53D1;fn&#x51FD;&#x6570;
+<span class="hljs-number">2</span>&#x3001;&#x5B50;&#x7EC4;&#x4EF6;fn&#x51FD;&#x6570;&#x89E6;&#x53D1;triggerEvent
+<span class="hljs-number">3</span>&#x3001;triggerEvent&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;childevent&#x4E8B;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x5E26;&#x4E0A;&#x53C2;&#x6570;&#xFF0C;&#x901A;&#x8FC7;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x4F20;&#x7ED9;&#x7236;&#x7EC4;&#x4EF6;index
+<span class="hljs-number">4</span>&#x3001;&#x7236;&#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;childevent&#x4E8B;&#x4EF6;&#xFF0C;&#x89E6;&#x53D1;&#x81EA;&#x5DF1;&#x7684;fathterfn&#x51FD;&#x6570;&#x3002;bind:childevent=<span class="hljs-string">&quot;fathterfn&quot;</span>
+<span class="hljs-number">5</span>&#x3001;&#x7236;&#x7EC4;&#x4EF6;&#x7684;fathterfn&#x83B7;&#x53D6;&#x5230;e.detail&#x6570;&#x636E;
+</code></pre>
+<blockquote>
+<p><code>button</code>&#x7EC4;&#x4EF6;</p>
+</blockquote>
+<pre><code class="lang-jsx">//button.wxml
+&lt;button bind:tap=&quot;childfn&quot;&gt;&#x6309;&#x94AE;&lt;/button&gt;
+// components/button/button.js
+Component({
+  data: {
+    msg:&quot;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;
+  },
+  methods: {
+    childfn(){
+        //&#x901A;&#x8FC7;triggerEvent&#x63D0;&#x4EA4;&#x4E00;&#x4E2A;childevent&#x4E8B;&#x4EF6;&#xFF0C;&#x8BA9;&#x7236;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;childevent&#x4E8B;&#x4EF6;
+      this.triggerEvent(&quot;childevent&quot;,this.data.msg)
+    }
+  }
+})
+</code></pre>
+<blockquote>
+<p><code>index</code>&#x9875;&#x9762;</p>
+</blockquote>
+<pre><code class="lang-jsx">//index.wxml
+//&#x7236;&#x7EC4;&#x4EF6;&#x901A;&#x8FC7;&#x5B50;&#x7EC4;&#x4EF6;&#x63D0;&#x4EA4;&#x4E0A;&#x6765;&#x7684;childevent&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x81EA;&#x5DF1;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x6B64;&#x63A5;&#x6536;&#x5B50;&#x7EC4;&#x4EF6;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;
+&lt;view class=&quot;container&quot;&gt;
+  &lt;mybutton class=&quot;btn&quot; bind:childevent=&quot;fathterfn&quot;&gt;&lt;/mybutton&gt;
+&lt;/view&gt;
+// index.js
+// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;
+const app = getApp()
+
+Page({
+    fathterfn(e){
+        console.log(e.detail)
+    }
+})
+</code></pre>
+<h3 id="&#x975E;&#x7236;&#x5B50;"><a name="&#x975E;&#x7236;&#x5B50;" class="anchor-navigation-ex-anchor" href="#&#x975E;&#x7236;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x975E;&#x7236;&#x5B50;</h3>
+<blockquote>
+<p><code>eventBus js</code>&#x8BA2;&#x9605;&#x53D1;&#x5E03;&#x6A21;&#x5F0F;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">//utils/eventBus.js</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EventBus</span> </span>{
+    <span class="hljs-keyword">constructor</span>() {<span class="hljs-comment">//&#x6784;&#x9020;&#x5668;</span>
+        <span class="hljs-keyword">this</span>.list = []<span class="hljs-comment">//&#x5B58;&#x4E66;&#x7684;&#x5730;&#x65B9;</span>
+    }
+    $on(eventName, fn) {<span class="hljs-comment">//&#x8BA2;&#x9605;&#x5668;-&#x7ED9;&#x8BA2;&#x9605;&#x8005;&#xFF08;&#x5C0F;&#x660E;&#xFF09;&#x8BB0;&#x5F55;&#x4ED6;&#x9700;&#x8981;&#x8BA2;&#x9605;&#x7684;&#x4E66;&#x7C4D;&#x4EE5;&#x53CA;&#x4ED6;&#x672C;&#x4EBA;&#x7684;&#x4FE1;&#x606F;</span>
+        <span class="hljs-keyword">if</span>(eventName){
+            <span class="hljs-keyword">this</span>.list.push({ <span class="hljs-string">&quot;eventName&quot;</span>: eventName, eventHandler: fn })
+        }
+    }
+    $emit(eventName, data) {<span class="hljs-comment">//&#x53D1;&#x5E03;&#x5668;-&#x7ED9;&#x8BA2;&#x9605;&#x8005;(&#x5C0F;&#x660E;)&#x53D1;&#x5E03;&#x4ED6;&#x6240;&#x8BA2;&#x9605;&#x7684;&#x4E66;&#x7C4D;</span>
+        <span class="hljs-keyword">if</span>(eventName){
+            <span class="hljs-keyword">this</span>.list.forEach((item)=&gt;{
+                <span class="hljs-keyword">if</span>(item.eventName === eventName){
+                    item.eventHandler(data)
+                }
+            })
+        }
+    }
+    $off(eventName){<span class="hljs-comment">//&#x53D6;&#x6D88;&#x53D1;&#x5E03;</span>
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.list.length){
+            <span class="hljs-keyword">this</span>.list.forEach((item,idx)=&gt;{
+                <span class="hljs-keyword">if</span>(item.eventName === eventName){
+                    <span class="hljs-keyword">this</span>.list.splice(idx,<span class="hljs-number">1</span>)
+                }
+            })
+        }
+    }
+}
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-keyword">new</span> EventBus()
+<span class="hljs-comment">// components/acom/acom.js</span>
+<span class="hljs-keyword">const</span> eventBus =  <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;../../utils/eventBus.js&quot;</span>)
+
+Component({
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;
+   */</span>
+  properties: {
+
+  },
+
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x521D;&#x59CB;&#x6570;&#x636E;
+   */</span>
+  data: {
+    msg: <span class="hljs-string">&quot;a&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;</span>,
+  },
+
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;
+   */</span>
+  methods: {
+    fn() {
+      eventBus.$emit(<span class="hljs-string">&quot;aevent&quot;</span>,<span class="hljs-keyword">this</span>.data.msg)<span class="hljs-comment">//&#x53D1;&#x5E03;b&#x7EC4;&#x4EF6;&#x8BA2;&#x9605;&#x7684;&#x6570;&#x636E;</span>
+    }
+  }
+})
+<span class="hljs-comment">// components/bcom/bcom.js</span>
+<span class="hljs-keyword">const</span> eventBus =  <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;../../utils/eventBus.js&quot;</span>)
+Component({
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;
+   */</span>
+  properties: {
+
+  },
+
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x521D;&#x59CB;&#x6570;&#x636E;
+   */</span>
+  data: {
+
+  },
+
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;
+   */</span>
+  methods: {
+
+  },
+  lifetimes:{
+    attached(){
+      eventBus.$on(<span class="hljs-string">&quot;aevent&quot;</span>,(res)=&gt;{<span class="hljs-comment">//b&#x7EC4;&#x4EF6;&#x8BA2;&#x9605;aevent&#x4E8B;&#x4EF6;</span>
+        <span class="hljs-built_in">console</span>.log(res)
+      })
+
+      eventBus.$off(<span class="hljs-string">&quot;aevent&quot;</span>)<span class="hljs-comment">//&#x53D6;&#x6D88;&#x8BA2;&#x9605;</span>
+    }
+  }
+})
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;"><a name="&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;</h3>
+<pre><code class="lang-jsx"><span class="hljs-comment">// index.js</span>
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">const</span> app = getApp()
+
+Page({
+  data: {
+
+  },
+  fn(){
+    <span class="hljs-keyword">let</span> acom = <span class="hljs-keyword">this</span>.selectComponent(<span class="hljs-string">&quot;.acom&quot;</span>)<span class="hljs-comment">//&#x901A;&#x8FC7;&#x9009;&#x62E9;&#x5668;&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x4F8B;</span>
+    acom.fn()
+  }
+})
+</code></pre>
+<h3 id="&#x7EC4;&#x4EF6;&#x5185;&#x6570;&#x636E;&#x76D1;&#x542C;"><a name="&#x7EC4;&#x4EF6;&#x5185;&#x6570;&#x636E;&#x76D1;&#x542C;" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x4EF6;&#x5185;&#x6570;&#x636E;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x4EF6;&#x5185;&#x6570;&#x636E;&#x76D1;&#x542C;</h3>
+<pre><code class="lang-jsx"><span class="hljs-comment">// components/acom/acom.js</span>
+
+Component({
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;
+   */</span>
+  properties: {
+
+  },
+
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x521D;&#x59CB;&#x6570;&#x636E;
+   */</span>
+  data: {
+    num:<span class="hljs-number">1</span>,
+    num2:<span class="hljs-number">2</span>,
+    num3:<span class="hljs-number">3</span>
+  },
+
+  <span class="hljs-comment">/**
+   * &#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;
+   */</span>
+  methods: {
+    fn() {
+      <span class="hljs-keyword">this</span>.setData({
+        num:<span class="hljs-number">2</span>
+      })
+
+
+    }
+  },
+  observers:{
+    <span class="hljs-string">&apos;num&apos;</span>:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>)</span>{
+      <span class="hljs-built_in">console</span>.log(val)
+    }
+  }
+})
+</code></pre>
+<h2 id="vant-ui&#x5B89;&#x88C5;&#x6B65;&#x9AA4;"><a name="vant-ui&#x5B89;&#x88C5;&#x6B65;&#x9AA4;" class="anchor-navigation-ex-anchor" href="#vant-ui&#x5B89;&#x88C5;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>vant-ui&#x5B89;&#x88C5;&#x6B65;&#x9AA4;</h2>
+<p><strong>1&#x3001;&#x901A;&#x8FC7;<code>npm</code>&#x5B89;&#x88C5;<code>vant</code></strong></p>
+<pre><code class="lang-jsx">npm i @vant/weapp -S --production
+</code></pre>
+<p><strong>2&#x3001;&#x4FEE;&#x6539; <code>app.json</code></strong></p>
+<blockquote>
+<p>&#x5C06; <code>app.json</code> &#x4E2D;&#x7684;<code>&quot;style&quot;: &quot;v2&quot;</code>&#x53BB;&#x9664;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x65B0;&#x7248;&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x5F3A;&#x884C;&#x52A0;&#x4E0A;&#x4E86;&#x8BB8;&#x591A;&#x6837;&#x5F0F;&#xFF0C;&#x96BE;&#x4EE5;&#x8986;&#x76D6;&#xFF0C;&#x4E0D;&#x5173;&#x95ED;&#x5C06;&#x9020;&#x6210;&#x90E8;&#x5206;&#x7EC4;&#x4EF6;&#x6837;&#x5F0F;&#x6DF7;&#x4E71;&#x3002;</p>
+</blockquote>
+<p><strong>3&#x3001;&#x4FEE;&#x6539; <code>project.config.json</code></strong></p>
+<pre><code class="lang-jsx">{
+  ...
+  <span class="hljs-string">&quot;setting&quot;</span>: {
+    ...
+    <span class="hljs-string">&quot;packNpmManually&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;packNpmRelationList&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;packageJsonPath&quot;</span>: <span class="hljs-string">&quot;./package.json&quot;</span>,
+        <span class="hljs-string">&quot;miniprogramNpmDistDir&quot;</span>: <span class="hljs-string">&quot;./&quot;</span>
+      }
+    ]
+  }
+}
+</code></pre>
+<p><strong>4&#x3001;&#x6784;&#x5EFA;<code>npm</code>&#x5305;</strong></p>
+<blockquote>
+<p>&#x6253;&#x5F00;&#x5FAE;&#x4FE1;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#xFF0C;&#x70B9;&#x51FB; &#x5DE5;&#x5177; <code>-&gt;</code>&#x6784;&#x5EFA; <code>npm</code>&#xFF0C;&#x5E76;&#x52FE;&#x9009; &#x4F7F;&#x7528; <code>npm</code>&#x6A21;&#x5757; &#x9009;&#x9879;&#xFF0C;&#x6784;&#x5EFA;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5373;&#x53EF;&#x5F15;&#x5165;&#x7EC4;&#x4EF6;&#x3002;</p>
+</blockquote>
+<p><a href="https://qi.ashun01.eu.org/img/fa0549210055976cb63798503611ce3d.png" data-lightbox="628c793b-89ec-4fd3-b2ac-96417faead03" data-title="" target="_blank"><img src="https://qi.ashun01.eu.org/img/fa0549210055976cb63798503611ce3d.png" alt=""></a></p>
+<p><strong>5&#x3001;&#x4F7F;&#x7528;</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// &#x901A;&#x8FC7; npm &#x5B89;&#x88C5;</span>
+<span class="hljs-comment">// app.json</span>
+<span class="hljs-string">&quot;usingComponents&quot;</span>: {
+  <span class="hljs-string">&quot;van-button&quot;</span>: <span class="hljs-string">&quot;@vant/weapp/button/index&quot;</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x5728;&#x4EFB;&#x610F;&#x5730;&#x65B9;&#x4F7F;&#x7528;<strong>&#x7EC4;&#x4EF6;</strong></p>
+</blockquote>
+<pre><code class="lang-jsx">&lt;van-button type=&quot;primary&quot;&gt;&#x6309;&#x94AE;&lt;/van-button&gt;
+</code></pre>
+<h2 id="&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;&#x3001;&#x7528;&#x6237;&#x548C;&#x4FE1;&#x606F;&#x76F8;&#x5173;&#x63A5;&#x53E3;&#x6700;&#x65B0;&#x4FEE;&#x6539;"><a name="&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;&#x3001;&#x7528;&#x6237;&#x548C;&#x4FE1;&#x606F;&#x76F8;&#x5173;&#x63A5;&#x53E3;&#x6700;&#x65B0;&#x4FEE;&#x6539;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;&#x3001;&#x7528;&#x6237;&#x548C;&#x4FE1;&#x606F;&#x76F8;&#x5173;&#x63A5;&#x53E3;&#x6700;&#x65B0;&#x4FEE;&#x6539;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;&#x3001;&#x7528;&#x6237;&#x548C;&#x4FE1;&#x606F;&#x76F8;&#x5173;&#x63A5;&#x53E3;&#x6700;&#x65B0;&#x4FEE;&#x6539;</h2>
+<blockquote>
+<p><a href="https://developers.weixin.qq.com/community/develop/doc/000cacfa20ce88df04cb468bc52801" target="_blank">&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;&#x3001;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x76F8;&#x5173;&#x63A5;&#x53E3;&#x8C03;&#x6574;&#x8BF4;&#x660E; | &#x5FAE;&#x4FE1;&#x5F00;&#x653E;&#x793E;&#x533A;</a></p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-number">1</span>&#x3001;(&#x4FEE;&#x6539;&#x4E86;&#x83B7;&#x53D6;unionId&#x65B9;&#x5F0F;)
+   &#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x5728;&#x5FAE;&#x4FE1;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#xFF0C;
+   &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;wx.login&#x83B7;&#x53D6;&#x7684;&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#xFF0C;
+   &#x62FF;&#x5230;unionID
+
+&#x65E7;&#x7248;&#xFF1A; 
+    wx.login&#x83B7;&#x53D6;code 
+    &#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x83B7;&#x53D6;openid&#x548C;sessionKey 
+    &#x5FAE;&#x4FE1;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x654F;&#x611F;&#x4FE1;&#x606F; 
+    &#x8C03;&#x7528;&#x540E;&#x7AEF;&#x83B7;&#x53D6;&#x654F;&#x611F;&#x4FE1;&#x606F;&#xFF08;unionID&#xFF09;
+
+&#x65B0;&#x7248;&#xFF1A; 
+    wx.login&#x83B7;&#x53D6;code 
+    &#x4F20;code&#x7ED9;&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#xFF0C;&#x8FD4;&#x56DE;openid&#x3001;sessionKey&#x3001;unionID
+
+<span class="hljs-number">2</span>&#x3001;wx.getUserInfo&#x548C;
+   &lt;button open-type=<span class="hljs-string">&quot;getUserInfo&quot;</span>/&gt;
+   &#x83B7;&#x53D6;&#x7684;&#x662F;&#x533F;&#x540D;&#x6570;&#x636E;
+
+<span class="hljs-number">3</span>&#x3001;&#x9AD8;&#x7248;&#x672C;<span class="hljs-number">7.0</span><span class="hljs-number">.9</span>&#x65B0;&#x589E;getUserProfile&#x63A5;&#x53E3;&#xFF0C;
+   &#x53EF;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x5934;&#x50CF;&#x3001;&#x6635;&#x79F0;&#x3001;&#x6027;&#x522B;&#x53CA;&#x5730;&#x533A;&#x4FE1;&#x606F;&#xFF0C;
+   &#x6BCF;&#x6B21;&#x7528;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x90FD;&#x9700;&#x8981;&#x7528;&#x6237;&#x786E;&#x8BA4;&#xFF0C; 
+   &#x8001;&#x7248;&#x672C;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;getUserInfo
+
+<span class="hljs-number">4</span>&#x3001;wx.getUserProfile()&#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;
+   &#x6BCF;&#x6B21;&#x7528;&#x6237;&#x6388;&#x6743;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x81EA;&#x5DF1;&#x5199;&#x6388;&#x6743;
+</code></pre>
+<footer class="page-footer"><span class="copyright">Ashun &#xA9; aiavnf@gmail.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-02-22 12:44:54
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="UniApp框架教程.html" class="navigation navigation-prev " aria-label="Previous page: 01UniApp框架教程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="小程序教程.html" class="navigation navigation-next " aria-label="Next page: 03小程序教程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"02微信小程序","level":"1.4.3.2","depth":3,"next":{"title":"03小程序教程","level":"1.4.3.3","depth":3,"path":"小程序教程.md","ref":"小程序教程.md","articles":[]},"previous":{"title":"01UniApp框架教程","level":"1.4.3.1","depth":3,"path":"UniApp框架教程.md","ref":"UniApp框架教程.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","expandable-chapters","back-to-top-button","pageview-count","splitter","tbfed-pagefooter","code","search-plus","-lunr","-search","donate","favicon","anchor-navigation-ex","sidebar-style","page-treeview","disqus","change_girls","insert-logo","advanced-emoji","accordion","click-reveal","sectionx","auto-scroll-table","local-video","versions-select","rss","sitemap-general","lightbox","alerts","emphasize","flexible-alerts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"Ashun","title":"《前端秘籍》"},"tbfed-pagefooter":{"copyright":"Ashun © aiavnf@gmail.com 2021","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"disqus":{"useIdentifier":false,"shortName":"introducetogitbook"},"emphasize":{},"splitter":{},"change_girls":{"time":10,"urls":["https://www.scoc.cc/background/api.php","https://api.123home.page/api.php?category=all"]},"accordion":{},"auto-scroll-table":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"donate":{"alipay":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/wechat.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://gitbook.zhangjikai.com"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"Jikai Zhang","feed_url":"http://gitbook.zhangjikai.com/rss","site_url":"http://gitbook.zhangjikai.com/","managingEditor":"me@zhangjikai.com","webMaster":"me@zhangjikai.com"},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","bookmark":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouch":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo.ico","appleTouchMore":{"120x120":"assets/images/apple-touch-icon-120x120.png","180x180":"assets/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"elements":[".gitbook-link"],"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"cogs":{"label":"练习💦","icon":"fa fa-cogs","className":"info"}},"local-video":{},"versions":{"options":[{"value":"#","text":"资源导航"},{"value":"https://ashun.tk","text":"Ashun"},{"value":"#","text":"期待中..."},{"value":"#","text":"期待中..."}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 80px; min-height: 30px","url":"https://cdn.jsdelivr.net/gh/ashunun/Picture/img/logo-1.jpeg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Ashun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端秘籍","language":"zh-hans","links":{"sidebar":{"Home":"https://ashun.cf"}},"gitbook":"*","description":"这是一本简单秘籍而已"},"file":{"path":"微信小程序.md","mtime":"2022-02-22T04:44:54.054Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-24T11:13:13.224Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
